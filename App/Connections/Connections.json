@@ -1,0 +1,45 @@
+{
+  "05bca85e-d27b-4b0c-b940-b6620bd3edfd": {
+    "appActions": [
+      "Get-user-schedule",
+      "Get-classes-from-room"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Test-Connection",
+      "iconUri": "https://az787822.vo.msecnd.net/defaulticons/api-dedicated.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_test-2dconnection-5f6308104fc18e9839-5f85fa411be1896273",
+      "isCustomApiConnection": true,
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Serwer Studia"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "05bca85e-d27b-4b0c-b940-b6620bd3edfd"
+  },
+  "5114463c-ab7d-4222-94b2-467fbc6d07a5": {
+    "appActions": [
+      "CalendarGetTables_V2",
+      "V4CalendarGetItems"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Outlook",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1677/1.0.1677.3637/office365/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Outlook"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "5114463c-ab7d-4222-94b2-467fbc6d07a5"
+  }
+}

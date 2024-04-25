@@ -1,0 +1,96 @@
+<application xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:service="https://europe-001.azure-apim.net/apim/test-2dconnection-5f6308104fc18e9839-5f85fa411be1896273" xmlns:siena="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11" siena:serviceId="Test-Connection" xmlns="http://wadl.dev.java.net/2009/02">
+  <doc title="Test-Connection"></doc>
+  <grammars>
+    <jsonTypes targetNamespace="https://europe-001.azure-apim.net/apim/test-2dconnection-5f6308104fc18e9839-5f85fa411be1896273" xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+      <string name="Get-user-schedule_responses_200_def_plan_def_items_def_date_def" />
+      <string name="Get-user-schedule_responses_200_def_plan_def_items_def_hour_def" />
+      <string name="Get-user-schedule_responses_200_def_plan_def_items_def_type_def" />
+      <string name="Get-user-schedule_responses_200_def_plan_def_items_def_length_def" />
+      <string name="Get-user-schedule_responses_200_def_plan_def_items_def_skr_def" />
+      <string name="Get-user-schedule_responses_200_def_plan_def_items_def_room_def" />
+      <string name="Get-user-schedule_responses_200_def_plan_def_items_def_clnr_def" />
+      <object name="Get-user-schedule_responses_200_def_plan_def_items_def">
+        <property name="date" type="string" />
+        <property name="hour" type="string" />
+        <property name="type" type="string" />
+        <property name="length" type="string" />
+        <property name="skr" type="string" />
+        <property name="room" type="string" />
+        <property name="clnr" type="string" />
+      </object>
+      <array typeRef="Get-user-schedule_responses_200_def_plan_def_items_def" name="Get-user-schedule_responses_200_def_plan_def" />
+      <string name="Get-user-schedule_responses_200_def_status_def" />
+      <object name="Get-user-schedule_responses_200_def">
+        <property name="plan" typeRef="Get-user-schedule_responses_200_def_plan_def" />
+        <property name="status" type="string" />
+      </object>
+      <string name="Get-classes-from-room_responses_200_def_plan_def_items_def_date_def" />
+      <string name="Get-classes-from-room_responses_200_def_plan_def_items_def_hour_def" />
+      <string name="Get-classes-from-room_responses_200_def_plan_def_items_def_type_def" />
+      <string name="Get-classes-from-room_responses_200_def_plan_def_items_def_length_def" />
+      <string name="Get-classes-from-room_responses_200_def_plan_def_items_def_skr_def" />
+      <string name="Get-classes-from-room_responses_200_def_plan_def_items_def_room_def" />
+      <string name="Get-classes-from-room_responses_200_def_plan_def_items_def_clnr_def" />
+      <object name="Get-classes-from-room_responses_200_def_plan_def_items_def">
+        <property name="date" type="string" />
+        <property name="hour" type="string" />
+        <property name="type" type="string" />
+        <property name="length" type="string" />
+        <property name="skr" type="string" />
+        <property name="room" type="string" />
+        <property name="clnr" type="string" />
+      </object>
+      <array typeRef="Get-classes-from-room_responses_200_def_plan_def_items_def" name="Get-classes-from-room_responses_200_def_plan_def" />
+      <string name="Get-classes-from-room_responses_200_def_status_def" />
+      <object name="Get-classes-from-room_responses_200_def">
+        <property name="plan" typeRef="Get-classes-from-room_responses_200_def_plan_def" />
+        <property name="status" type="string" />
+      </object>
+      <string name="Get-classes-from-room_responses_default_def_status_def" />
+      <untypedObject name="Get-classes-from-room_responses_default_def_plan_def_items_def" />
+      <array typeRef="Get-classes-from-room_responses_default_def_plan_def_items_def" name="Get-classes-from-room_responses_default_def_plan_def" />
+      <object name="Get-classes-from-room_responses_default_def">
+        <property name="status" type="string" />
+        <property name="plan" typeRef="Get-classes-from-room_responses_default_def_plan_def" />
+      </object>
+    </jsonTypes>
+  </grammars>
+  <resources siena:authenticationProviderHref="#PowerAppAuth" base="https://europe-001.azure-apim.net/apim/test-2dconnection-5f6308104fc18e9839-5f85fa411be1896273">
+    <resource path="/{connectionId}/m-plan-my/">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <method siena:requiresAuthentication="true" name="GET" id="Getuserschedule" actionName="Get-user-schedule" visibility="important" siena:isDeprecated="false">
+        <doc title="Get user schedule&#xA;Get user schedule from date" />
+        <request>
+          <param style="query" name="mode" type="xs:string" required="true" default="json">
+            <doc title="Type of the return" />
+          </param>
+          <param style="query" name="date" type="xs:string" required="true" />
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:Get-user-schedule_responses_200_def" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/m-plan-json/">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <method siena:requiresAuthentication="true" name="GET" id="Getclassesfromroom" actionName="Get-classes-from-room" visibility="important" siena:isDeprecated="false">
+        <doc title="Get all classes from room on date&#xA;This will get all classes scheduled for given room in given date." />
+        <request>
+          <param style="query" name="room" type="xs:string" required="true" />
+          <param style="query" name="date" type="xs:string" />
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:Get-classes-from-room_responses_200_def" />
+        </response>
+      </method>
+    </resource>
+  </resources>
+  <authenticationProviders xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+    <connectionProvider id="PowerAppAuth" siena:connectionProviderId="shared_test-2dconnection-5f6308104fc18e9839-5f85fa411be1896273" />
+  </authenticationProviders>
+  <template xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+    <variable name="connectionId">
+      <modifyParams style="template" name="connectionId" attribute="fixed" />
+    </variable>
+  </template>
+</application>
