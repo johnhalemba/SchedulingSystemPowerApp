@@ -4113,7 +4113,7 @@ Screen1_1 As screen:
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutGap: =10
                 LayoutJustifyContent: =LayoutJustifyContent.Center
-                LayoutMinHeight: =100
+                LayoutMinHeight: =50
                 LayoutMinWidth: =100
                 LayoutMode: =LayoutMode.Auto
                 LayoutOverflowY: =LayoutOverflow.Scroll
@@ -4146,6 +4146,7 @@ Screen1_1 As screen:
                         LayoutMinHeight: =100
                         LayoutMinWidth: =Parent.Width
                         LayoutMode: =LayoutMode.Auto
+                        LayoutOverflowY: =LayoutOverflow.Scroll
                         ZIndex: =1
 
                         Label3_4 As label:
@@ -4177,9 +4178,10 @@ Screen1_1 As screen:
                     Container12 As groupContainer.verticalAutoLayoutContainer:
                         LayoutAlignItems: =LayoutAlignItems.Center
                         LayoutDirection: =LayoutDirection.Vertical
-                        LayoutMinHeight: =100
+                        LayoutMinHeight: =50
                         LayoutMinWidth: =Parent.Width
                         LayoutMode: =LayoutMode.Auto
+                        Visible: =DropdownCalendarType_2.Selected.Value = "Outlook"
                         ZIndex: =4
 
                         Label3_3 As label:
@@ -4380,13 +4382,14 @@ Screen1_1 As screen:
                         RadiusTopRight: =60
                         Text: =""
                         Width: =Parent.TemplateWidth - 16
-                        X: =1
+                        X: =8
                         Y: =8
                         ZIndex: =1
 
                     ClassNameGalleryServerStudia_5 As label:
+                        AutoHeight: =true
                         FontWeight: =FontWeight.Semibold
-                        Height: =89
+                        Height: =37
                         OnSelect: =Select(Parent)
                         PaddingBottom: =0
                         PaddingLeft: =0
@@ -4394,28 +4397,15 @@ Screen1_1 As screen:
                         PaddingTop: =0
                         Size: =30
                         Text: =Last(Split(ThisItem.skr, "-")).Value
-                        Width: =1
-                        Y: =8
+                        Width: =128
+                        X: =Parent.X + Parent.TemplateWidth / 2 - Self.Width
+                        Y: =11
                         ZIndex: =2
-
-                    Subtitle2_30 As label:
-                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                        Height: =23
-                        OnSelect: =Select(Parent)
-                        PaddingBottom: =0
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Text: =
-                        VerticalAlign: =VerticalAlign.Top
-                        Width: =1
-                        Y: =40
-                        ZIndex: =3
 
                     ClassTypeGalleryServerStudia_5 As label:
                         Align: =Align.Center
+                        AutoHeight: =true
                         FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                        Height: =89
                         OnSelect: =Select(Parent)
                         PaddingBottom: =0
                         PaddingLeft: =0
@@ -4423,8 +4413,9 @@ Screen1_1 As screen:
                         PaddingTop: =0
                         Size: =20
                         Text: =ThisItem.type
-                        Width: =1
-                        Y: =7
+                        Width: =77
+                        X: =ClassNameGalleryServerStudia_5.X + ClassNameGalleryServerStudia_5.Width + 5
+                        Y: =19
                         ZIndex: =6
 
                     Group1_5 As group:
@@ -4436,7 +4427,6 @@ Screen1_1 As screen:
 
                         Subtitle2_29 As label:
                             Align: =Align.Center
-                            AutoHeight: =true
                             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                             Height: =34
                             OnSelect: =Select(Parent)
@@ -4447,8 +4437,9 @@ Screen1_1 As screen:
                             Size: =20
                             Text: |-
                                 =DateAdd(TimeValue(ThisItem.hour&":00"),15,TimeUnit.Minutes)&" - "&DateAdd(TimeValue(ThisItem.hour&":00"),ThisItem.length,TimeUnit.Hours)
-                            Width: =1
-                            Y: =19
+                            Width: =165
+                            X: =Parent.X + Parent.TemplateWidth / 2 - Self.Width
+                            Y: =55
                             ZIndex: =7
 
                         Subtitle2_31 As label:
@@ -4470,8 +4461,9 @@ Screen1_1 As screen:
                                     Last(FirstN(Split(ThisItem.room,"-"), CountRows(Split(ThisItem.room,"-")) - 1)).Value & "-" & Last(Split(ThisItem.room,"-")).Value,
                                     Last(Split(ThisItem.room,"-")).Value
                                 )
-                            Width: =1
-                            Y: =51
+                            Width: =172
+                            X: =Subtitle2_29.X + Subtitle2_29.Width
+                            Y: =55
                             ZIndex: =8
 
         newContainerFooter As groupContainer.manualLayoutContainer:
