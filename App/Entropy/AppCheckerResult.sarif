@@ -1273,17 +1273,107 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.WEITI_Wrzosowy"
+                  "fullyQualifiedName": "App.varToogleRoomSelection"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.WEITI_Wrzosowy",
+                  "fullyQualifiedName": "App.varToogleRoomSelection",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "WEITI_Wrzosowy",
+                "member": "varToogleRoomSelection",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.varTodayDate"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.varTodayDate",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varTodayDate",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.varUserPlan"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.varUserPlan",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varUserPlan",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.varUserCalendars"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.varUserCalendars",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varUserCalendars",
                 "module": "App",
                 "type": "App"
               }
@@ -1333,17 +1423,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.varUserCalendars"
+                  "fullyQualifiedName": "App.WEITI_Wrzosowy"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.varUserCalendars",
+                  "fullyQualifiedName": "App.WEITI_Wrzosowy",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "varUserCalendars",
+                "member": "WEITI_Wrzosowy",
                 "module": "App",
                 "type": "App"
               }
@@ -1434,96 +1524,6 @@
               },
               "properties": {
                 "member": "EndDateTimeUTC",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.varUserPlan"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.varUserPlan",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "varUserPlan",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.varTodayDate"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.varTodayDate",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "varTodayDate",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.varToogleRoomSelection"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.varToogleRoomSelection",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "varToogleRoomSelection",
                 "module": "App",
                 "type": "App"
               }

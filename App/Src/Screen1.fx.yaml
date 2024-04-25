@@ -492,7 +492,12 @@ Screen1 As screen:
                 ZIndex: =13
 
         Container3 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.None
             Height: =297
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
             Width: =391
             X: =423
             Y: =233
@@ -501,17 +506,58 @@ Screen1 As screen:
             btn_MakeReservation As button:
                 Color: |-
                     =If(
-                        btn_MakeReservation.Pressed,
-                        ColorFade(WEITI_Szafirowy, 20%),
+                        btn_Overlay.Pressed,
+                        WEITI_Szafirowy,
                         Color.White
                     )
                 Fill: |-
                     =If(
-                        btn_MakeReservation.Pressed,
-                        ColorFade(WEITI_Szafirowy, 20%),
+                        btn_Overlay.Pressed,
+                        Color.White,
                         WEITI_Szafirowy
                     )
                 Height: =Parent.Height - Self.BorderThickness
+                OnSelect: |
+                    =Set(ShowLoading, true);
+                    UpdateContext({varRoomSelection: true});
+                    Set(DateSelected, Today());
+                    Set(DateTimeRoomChange, true);
+                    If( Mod(Minute(Now()), 30) <= 14,
+                        Set(StartDateTime, DateAdd(Now(), -Mod(Minute(Now()), 30), TimeUnit.Minutes));
+                        Set(EndDateTime, DateAdd(StartDateTime, 30, TimeUnit.Minutes)),
+                        Mod(Minute(Now()), 30) > 15,
+                        Set(StartDateTime, DateAdd(Now(), -Mod(Minute(Now()), 30), TimeUnit.Minutes));
+                        Set(EndDateTime, DateAdd(StartDateTime, 30, TimeUnit.Minutes)),
+                        Set(StartDateTime, Now());
+                        Set(EndDateTime, DateAdd(Now(), -Mod(Minute(Now()), 30) + 60, TimeUnit.Minutes))
+                    );
+                    Concurrent(
+                        ClearCollect(ScheduleRoom102, 'Serwer Studia'.Getclassesfromroom("1030-ETI-102", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                        ClearCollect(ScheduleRoom103, 'Serwer Studia'.Getclassesfromroom("1030-ETI-103", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                        ClearCollect(ScheduleRoom104, 'Serwer Studia'.Getclassesfromroom("1030-ETI-104", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                        ClearCollect(ScheduleRoom105, 'Serwer Studia'.Getclassesfromroom("1030-ETI-105-AR", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
+                    );
+                    
+                    Concurrent(
+                        ClearCollect(ScheduleRoom106, 'Serwer Studia'.Getclassesfromroom("1030-ETI-106", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                        ClearCollect(ScheduleRoom107, 'Serwer Studia'.Getclassesfromroom("1030-ETI-107", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                        ClearCollect(ScheduleRoom161, 'Serwer Studia'.Getclassesfromroom("1030-ETI-161", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                        ClearCollect(ScheduleRoom108, 'Serwer Studia'.Getclassesfromroom("1030-ETI-108", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
+                    );
+                    
+                    Concurrent(
+                        ClearCollect(ScheduleRoom116, 'Serwer Studia'.Getclassesfromroom("1030-ETI-116", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                        ClearCollect(ScheduleRoom117, 'Serwer Studia'.Getclassesfromroom("1030-ETI-117", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                        ClearCollect(ScheduleRoom116AR, 'Serwer Studia'.Getclassesfromroom("1030-ETI-116-AR", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                        ClearCollect(ScheduleRoom133, 'Serwer Studia'.Getclassesfromroom("1030-ETI-108", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
+                    );
+                    
+                    Concurrent(
+                        ClearCollect(ScheduleRoom120, 'Serwer Studia'.Getclassesfromroom("1030-ETI-120", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                        ClearCollect(ScheduleRoom121, 'Serwer Studia'.Getclassesfromroom("1030-ETI-121", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                        ClearCollect(ScheduleRoom122, 'Serwer Studia'.Getclassesfromroom("1030-ETI-122", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
+                    );
+                    Set(ShowLoading, false);
                 Text: ="Make a reservation"
                 Width: =Parent.Width - Self.BorderThickness
                 X: =2
@@ -527,6 +573,7 @@ Screen1 As screen:
                 Height: =btn_MakeReservation.Height
                 HoverColor: =Color.Transparent
                 HoverFill: =RGBA(0, 0, 0, 0.05)
+                OnSelect: =Select(btn_MakeReservation)
                 PressedColor: =Color.Transparent
                 PressedFill: =Color.Transparent
                 Text: ="Button"
