@@ -502,8 +502,8 @@ Screen1 As screen:
                 Color: |-
                     =If(
                         btn_MakeReservation.Pressed,
-                        WEITI_Szafirowy,
                         ColorFade(WEITI_Szafirowy, 20%),
+                        Color.White
                     )
                 Fill: |-
                     =If(
@@ -512,7 +512,7 @@ Screen1 As screen:
                         WEITI_Szafirowy
                     )
                 Height: =Parent.Height - Self.BorderThickness
-                Text: =""
+                Text: ="Make a reservation"
                 Width: =Parent.Width - Self.BorderThickness
                 X: =2
                 Y: =2
