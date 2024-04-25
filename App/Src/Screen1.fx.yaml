@@ -131,7 +131,7 @@ Screen1 As screen:
             Y: =78
             ZIndex: =6
 
-        MakeReservationButton As button:
+        MakeReservationButton_old As button:
             BorderThickness: =0
             Height: =236
             OnSelect: |
@@ -457,6 +457,8 @@ Screen1 As screen:
                 ZIndex: =4
 
         Image1 As image:
+            AutoDisableOnSelect: =false
+            DisplayMode: =DisplayMode.View
             Image: ='Reservation icon'
             X: =147
             Y: =133
@@ -496,6 +498,22 @@ Screen1 As screen:
                 X: =456
                 Y: =404
                 ZIndex: =13
+
+        Container3 As groupContainer.manualLayoutContainer:
+            Height: =297
+            Width: =391
+            X: =423
+            Y: =233
+            ZIndex: =15
+
+            Button2 As button:
+                Fill: =RGBA(120, 150, 207, 1)
+                Height: =Parent.Height - Self.BorderThickness
+                Text: =""
+                Width: =Parent.Width - Self.BorderThickness
+                X: =2
+                Y: =2
+                ZIndex: =1
 
     Dropdown1 As dropdown:
         Items: =Office365Outlook.CalendarGetTablesV2().value
@@ -581,6 +599,7 @@ Screen1 As screen:
             ZIndex: =6
 
         Label10 As label:
+            Font: ="Adagio Slab"
             FontWeight: =FontWeight.Semibold
             Size: =15
             Text: ="FEIT Reservation System"
