@@ -1,0 +1,49 @@
+"'2b1e1998-afba-482e-ae65-df6de4cafb1a' As TestSuite":
+    Description: =""
+    DisplayName: ="Suite"
+
+    "'8d378368-78aa-4f5c-8b90-45dc8319f478' As TestCase":
+        Description: =""
+        DisplayName: ="Case"
+
+        Step1 As TestStep:
+            Description: ="Wybierz kontrolkę 'Button2_2'"
+            Screen: =Screen1
+            Value: =Select(Button2_2)
+
+        Step2 As TestStep:
+            Description: ="Wybierz kontrolkę 'Button2_5'"
+            Screen: =Screen1
+            Value: =Select(Button2_5)
+
+        Step3 As TestStep:
+            Description: ="Wybierz kontrolkę 'Title3' w wierszu 19 w kontrolce 'MonthDayGallery'"
+            Screen: =Screen1
+            Value: =Select(MonthDayGallery, 19, Title3)
+
+        Step4 As TestStep:
+            Description: ="Wybierz kontrolkę 'Button2_6'"
+            Screen: =Screen1
+            Value: =Select(Button2_6)
+
+        Step5 As TestStep:
+            Description: ="Wybierz kontrolkę 'Button2_7'"
+            Screen: =Screen1
+            Value: =Select(Button2_7)
+
+        Step6 As TestStep:
+            Description: |-
+                ="Ustaw właściwość 'DropdownStartTime'.Selected na wartość {'Value':""2:00 am""}"
+            Screen: =Screen1
+            Value: |-
+                =SetProperty(DropdownStartTime.Selected, {Value:"2:00 am"})
+
+        Step7 As TestStep:
+            Description: ="Wybierz kontrolkę 'DropdownEndTime'"
+            Screen: =Screen1
+            Value: =Select(DropdownEndTime)
+
+    "'9cdf37a2-4eed-40d6-be49-abc5794e39ca' As TestCase":
+        Description: =""
+        DisplayName: ="Działanie Case"
+

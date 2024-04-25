@@ -1,0 +1,8 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_test-2dconnection-5f6308104fc18e9839-5f85fa411be1896273",
+    "Name": "Serwer Studia",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo"
+  }
+]
