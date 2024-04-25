@@ -64,7 +64,7 @@ Screen1 As screen:
             Text: ="Welcome, "&Left(User().FullName, Find(" ",User().FullName) - 1)&"!"
             Width: =581
             X: =30
-            Y: =20
+            Y: =10
             ZIndex: =2
 
         Button2_1 As button:
@@ -127,59 +127,9 @@ Screen1 As screen:
                 )
             Tooltip: ="Select calendar..."
             Width: =200
-            X: =463
-            Y: =78
+            X: =713
+            Y: =20
             ZIndex: =6
-
-        MakeReservationButton_old As button:
-            BorderThickness: =0
-            Height: =236
-            OnSelect: |
-                =Set(ShowLoading, true);
-                UpdateContext({varRoomSelection: true});
-                Set(DateSelected, Today());
-                Set(DateTimeRoomChange, true);
-                If( Mod(Minute(Now()), 30) <= 14,
-                    Set(StartDateTime, DateAdd(Now(), -Mod(Minute(Now()), 30), TimeUnit.Minutes));
-                    Set(EndDateTime, DateAdd(StartDateTime, 30, TimeUnit.Minutes)),
-                    Mod(Minute(Now()), 30) > 15,
-                    Set(StartDateTime, DateAdd(Now(), -Mod(Minute(Now()), 30), TimeUnit.Minutes));
-                    Set(EndDateTime, DateAdd(StartDateTime, 30, TimeUnit.Minutes)),
-                    Set(StartDateTime, Now());
-                    Set(EndDateTime, DateAdd(Now(), -Mod(Minute(Now()), 30) + 60, TimeUnit.Minutes))
-                );
-                Concurrent(
-                    ClearCollect(ScheduleRoom102, 'Serwer Studia'.Getclassesfromroom("1030-ETI-102", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                    ClearCollect(ScheduleRoom103, 'Serwer Studia'.Getclassesfromroom("1030-ETI-103", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                    ClearCollect(ScheduleRoom104, 'Serwer Studia'.Getclassesfromroom("1030-ETI-104", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                    ClearCollect(ScheduleRoom105, 'Serwer Studia'.Getclassesfromroom("1030-ETI-105-AR", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
-                );
-                
-                Concurrent(
-                    ClearCollect(ScheduleRoom106, 'Serwer Studia'.Getclassesfromroom("1030-ETI-106", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                    ClearCollect(ScheduleRoom107, 'Serwer Studia'.Getclassesfromroom("1030-ETI-107", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                    ClearCollect(ScheduleRoom161, 'Serwer Studia'.Getclassesfromroom("1030-ETI-161", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                    ClearCollect(ScheduleRoom108, 'Serwer Studia'.Getclassesfromroom("1030-ETI-108", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
-                );
-                
-                Concurrent(
-                    ClearCollect(ScheduleRoom116, 'Serwer Studia'.Getclassesfromroom("1030-ETI-116", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                    ClearCollect(ScheduleRoom117, 'Serwer Studia'.Getclassesfromroom("1030-ETI-117", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                    ClearCollect(ScheduleRoom116AR, 'Serwer Studia'.Getclassesfromroom("1030-ETI-116-AR", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                    ClearCollect(ScheduleRoom133, 'Serwer Studia'.Getclassesfromroom("1030-ETI-108", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
-                );
-                
-                Concurrent(
-                    ClearCollect(ScheduleRoom120, 'Serwer Studia'.Getclassesfromroom("1030-ETI-120", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                    ClearCollect(ScheduleRoom121, 'Serwer Studia'.Getclassesfromroom("1030-ETI-121", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                    ClearCollect(ScheduleRoom122, 'Serwer Studia'.Getclassesfromroom("1030-ETI-122", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
-                );
-                Set(ShowLoading, false);
-            Text: ="Make a reservation"
-            Width: =335
-            X: =30
-            Y: =121
-            ZIndex: =7
 
         "Gallery2_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
             '#CopilotOverlayLabel': ="Filtered"
@@ -193,7 +143,9 @@ Screen1 As screen:
             TemplatePadding: =0
             TemplateSize: =105
             Transition: =Transition.Push
-            Visible: =serwerStudia
+            Visible: |-
+                =//serwerStudia
+                false
             Width: =(Parent.Width - 20)/2 - 20
             X: =Parent.Width / 2
             Y: =121
@@ -322,7 +274,9 @@ Screen1 As screen:
             TemplatePadding: =0
             TemplateSize: =105
             Transition: =Transition.Push
-            Visible: =!serwerStudia
+            Visible: |-
+                =//!serwerStudia
+                false
             Width: =(Parent.Width - 20)/2 - 20
             X: =683
             Y: =116
@@ -410,6 +364,7 @@ Screen1 As screen:
         Container1 As groupContainer:
             DropShadow: =DropShadow.None
             Height: =40
+            Visible: =false
             Width: =255
             X: =872
             Y: =78
@@ -498,9 +453,10 @@ Screen1 As screen:
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
+            Visible: =false
             Width: =391
-            X: =423
-            Y: =233
+            X: =30
+            Y: =88
             ZIndex: =15
 
             btn_MakeReservation As button:
@@ -517,47 +473,6 @@ Screen1 As screen:
                         WEITI_Szafirowy
                     )
                 Height: =Parent.Height - Self.BorderThickness
-                OnSelect: |-
-                    =Set(ShowLoading, true);
-                    UpdateContext({varRoomSelection: true});
-                    Set(DateSelected, Today());
-                    Set(DateTimeRoomChange, true);
-                    If( Mod(Minute(Now()), 30) <= 14,
-                        Set(StartDateTime, DateAdd(Now(), -Mod(Minute(Now()), 30), TimeUnit.Minutes));
-                        Set(EndDateTime, DateAdd(StartDateTime, 30, TimeUnit.Minutes)),
-                        Mod(Minute(Now()), 30) > 15,
-                        Set(StartDateTime, DateAdd(Now(), -Mod(Minute(Now()), 30), TimeUnit.Minutes));
-                        Set(EndDateTime, DateAdd(StartDateTime, 30, TimeUnit.Minutes)),
-                        Set(StartDateTime, Now());
-                        Set(EndDateTime, DateAdd(Now(), -Mod(Minute(Now()), 30) + 60, TimeUnit.Minutes))
-                    );
-                    Concurrent(
-                        ClearCollect(ScheduleRoom102, 'Serwer Studia'.Getclassesfromroom("1030-ETI-102", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                        ClearCollect(ScheduleRoom103, 'Serwer Studia'.Getclassesfromroom("1030-ETI-103", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                        ClearCollect(ScheduleRoom104, 'Serwer Studia'.Getclassesfromroom("1030-ETI-104", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                        ClearCollect(ScheduleRoom105, 'Serwer Studia'.Getclassesfromroom("1030-ETI-105-AR", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
-                    );
-                    
-                    Concurrent(
-                        ClearCollect(ScheduleRoom106, 'Serwer Studia'.Getclassesfromroom("1030-ETI-106", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                        ClearCollect(ScheduleRoom107, 'Serwer Studia'.Getclassesfromroom("1030-ETI-107", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                        ClearCollect(ScheduleRoom161, 'Serwer Studia'.Getclassesfromroom("1030-ETI-161", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                        ClearCollect(ScheduleRoom108, 'Serwer Studia'.Getclassesfromroom("1030-ETI-108", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
-                    );
-                    
-                    Concurrent(
-                        ClearCollect(ScheduleRoom116, 'Serwer Studia'.Getclassesfromroom("1030-ETI-116", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                        ClearCollect(ScheduleRoom117, 'Serwer Studia'.Getclassesfromroom("1030-ETI-117", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                        ClearCollect(ScheduleRoom116AR, 'Serwer Studia'.Getclassesfromroom("1030-ETI-116-AR", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                        ClearCollect(ScheduleRoom133, 'Serwer Studia'.Getclassesfromroom("1030-ETI-108", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
-                    );
-                    
-                    Concurrent(
-                        ClearCollect(ScheduleRoom120, 'Serwer Studia'.Getclassesfromroom("1030-ETI-120", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                        ClearCollect(ScheduleRoom121, 'Serwer Studia'.Getclassesfromroom("1030-ETI-121", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                        ClearCollect(ScheduleRoom122, 'Serwer Studia'.Getclassesfromroom("1030-ETI-122", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
-                    );
-                    Set(ShowLoading, false);
                 Text: ="Make a reservation"
                 Width: =Parent.Width - Self.BorderThickness
                 X: =2
@@ -619,8 +534,494 @@ Screen1 As screen:
                 Text: ="Button"
                 Width: =btn_MakeReservation.Width
                 X: =btn_MakeReservation.X
-                Y: =btn_MakeReservation.Y
+                Y: =2
                 ZIndex: =3
+
+        Container5 As groupContainer.verticalAutoLayoutContainer:
+            Height: =556
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =10
+            LayoutMode: =LayoutMode.Auto
+            Width: =513
+            X: =30
+            Y: =88
+            ZIndex: =16
+
+            Container3_1 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.None
+                Height: =297
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Width: =391
+                X: =30
+                Y: =88
+                ZIndex: =1
+
+                btn_MakeReservation_1 As button:
+                    Color: |-
+                        =If(
+                            btn_Overlay_1.Pressed,
+                            WEITI_Szafirowy,
+                            Color.White
+                        )
+                    Fill: |-
+                        =If(
+                            btn_Overlay_1.Pressed,
+                            Color.White,
+                            WEITI_Szafirowy
+                        )
+                    Height: =Parent.Height - Self.BorderThickness
+                    Text: ="Make a reservation"
+                    Width: =Parent.Width - Self.BorderThickness
+                    X: =2
+                    Y: =2
+                    ZIndex: =1
+
+                btn_Overlay_1 As button:
+                    BorderStyle: =BorderStyle.None
+                    Color: =Color.Transparent
+                    DisabledColor: =Color.Transparent
+                    DisabledFill: =Color.Transparent
+                    Fill: =Color.Transparent
+                    Height: =btn_MakeReservation_1.Height
+                    HoverColor: =Color.Transparent
+                    HoverFill: =RGBA(0, 0, 0, 0.05)
+                    OnSelect: |-
+                        =Set(ShowLoading, true);
+                        UpdateContext({varRoomSelection: true});
+                        Set(DateSelected, Today());
+                        Set(DateTimeRoomChange, true);
+                        If( Mod(Minute(Now()), 30) <= 14,
+                            Set(StartDateTime, DateAdd(Now(), -Mod(Minute(Now()), 30), TimeUnit.Minutes));
+                            Set(EndDateTime, DateAdd(StartDateTime, 30, TimeUnit.Minutes)),
+                            Mod(Minute(Now()), 30) > 15,
+                            Set(StartDateTime, DateAdd(Now(), -Mod(Minute(Now()), 30), TimeUnit.Minutes));
+                            Set(EndDateTime, DateAdd(StartDateTime, 30, TimeUnit.Minutes)),
+                            Set(StartDateTime, Now());
+                            Set(EndDateTime, DateAdd(Now(), -Mod(Minute(Now()), 30) + 60, TimeUnit.Minutes))
+                        );
+                        Concurrent(
+                            ClearCollect(ScheduleRoom102, 'Serwer Studia'.Getclassesfromroom("1030-ETI-102", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                            ClearCollect(ScheduleRoom103, 'Serwer Studia'.Getclassesfromroom("1030-ETI-103", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                            ClearCollect(ScheduleRoom104, 'Serwer Studia'.Getclassesfromroom("1030-ETI-104", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                            ClearCollect(ScheduleRoom105, 'Serwer Studia'.Getclassesfromroom("1030-ETI-105-AR", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
+                        );
+                        
+                        Concurrent(
+                            ClearCollect(ScheduleRoom106, 'Serwer Studia'.Getclassesfromroom("1030-ETI-106", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                            ClearCollect(ScheduleRoom107, 'Serwer Studia'.Getclassesfromroom("1030-ETI-107", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                            ClearCollect(ScheduleRoom161, 'Serwer Studia'.Getclassesfromroom("1030-ETI-161", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                            ClearCollect(ScheduleRoom108, 'Serwer Studia'.Getclassesfromroom("1030-ETI-108", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
+                        );
+                        
+                        Concurrent(
+                            ClearCollect(ScheduleRoom116, 'Serwer Studia'.Getclassesfromroom("1030-ETI-116", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                            ClearCollect(ScheduleRoom117, 'Serwer Studia'.Getclassesfromroom("1030-ETI-117", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                            ClearCollect(ScheduleRoom116AR, 'Serwer Studia'.Getclassesfromroom("1030-ETI-116-AR", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                            ClearCollect(ScheduleRoom133, 'Serwer Studia'.Getclassesfromroom("1030-ETI-108", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
+                        );
+                        
+                        Concurrent(
+                            ClearCollect(ScheduleRoom120, 'Serwer Studia'.Getclassesfromroom("1030-ETI-120", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                            ClearCollect(ScheduleRoom121, 'Serwer Studia'.Getclassesfromroom("1030-ETI-121", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                            ClearCollect(ScheduleRoom122, 'Serwer Studia'.Getclassesfromroom("1030-ETI-122", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
+                        );
+                        Set(ShowLoading, false);
+                    PressedColor: =Color.Transparent
+                    PressedFill: =Color.Transparent
+                    Text: ="Button"
+                    Width: =btn_MakeReservation_1.Width
+                    X: =btn_MakeReservation_1.X
+                    Y: =2
+                    ZIndex: =3
+
+            Container3_2 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.None
+                Height: =297
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Width: =391
+                X: =30
+                Y: =88
+                ZIndex: =2
+
+                btn_MakeReservation_2 As button:
+                    Color: |-
+                        =If(
+                            btn_Overlay_2.Pressed,
+                            WEITI_Szafirowy,
+                            Color.White
+                        )
+                    Fill: |-
+                        =If(
+                            btn_Overlay_2.Pressed,
+                            Color.White,
+                            WEITI_Szafirowy
+                        )
+                    Height: =Parent.Height - Self.BorderThickness
+                    Text: ="Check schedule"
+                    Width: =Parent.Width - Self.BorderThickness
+                    X: =2
+                    Y: =2
+                    ZIndex: =1
+
+                btn_Overlay_2 As button:
+                    BorderStyle: =BorderStyle.None
+                    Color: =Color.Transparent
+                    DisabledColor: =Color.Transparent
+                    DisabledFill: =Color.Transparent
+                    Fill: =Color.Transparent
+                    Height: =btn_MakeReservation_2.Height
+                    HoverColor: =Color.Transparent
+                    HoverFill: =RGBA(0, 0, 0, 0.05)
+                    OnSelect: |-
+                        =Set(ShowLoading, true);
+                        UpdateContext({varRoomSelection: true});
+                        Set(DateSelected, Today());
+                        Set(DateTimeRoomChange, true);
+                        If( Mod(Minute(Now()), 30) <= 14,
+                            Set(StartDateTime, DateAdd(Now(), -Mod(Minute(Now()), 30), TimeUnit.Minutes));
+                            Set(EndDateTime, DateAdd(StartDateTime, 30, TimeUnit.Minutes)),
+                            Mod(Minute(Now()), 30) > 15,
+                            Set(StartDateTime, DateAdd(Now(), -Mod(Minute(Now()), 30), TimeUnit.Minutes));
+                            Set(EndDateTime, DateAdd(StartDateTime, 30, TimeUnit.Minutes)),
+                            Set(StartDateTime, Now());
+                            Set(EndDateTime, DateAdd(Now(), -Mod(Minute(Now()), 30) + 60, TimeUnit.Minutes))
+                        );
+                        Concurrent(
+                            ClearCollect(ScheduleRoom102, 'Serwer Studia'.Getclassesfromroom("1030-ETI-102", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                            ClearCollect(ScheduleRoom103, 'Serwer Studia'.Getclassesfromroom("1030-ETI-103", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                            ClearCollect(ScheduleRoom104, 'Serwer Studia'.Getclassesfromroom("1030-ETI-104", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                            ClearCollect(ScheduleRoom105, 'Serwer Studia'.Getclassesfromroom("1030-ETI-105-AR", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
+                        );
+                        
+                        Concurrent(
+                            ClearCollect(ScheduleRoom106, 'Serwer Studia'.Getclassesfromroom("1030-ETI-106", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                            ClearCollect(ScheduleRoom107, 'Serwer Studia'.Getclassesfromroom("1030-ETI-107", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                            ClearCollect(ScheduleRoom161, 'Serwer Studia'.Getclassesfromroom("1030-ETI-161", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                            ClearCollect(ScheduleRoom108, 'Serwer Studia'.Getclassesfromroom("1030-ETI-108", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
+                        );
+                        
+                        Concurrent(
+                            ClearCollect(ScheduleRoom116, 'Serwer Studia'.Getclassesfromroom("1030-ETI-116", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                            ClearCollect(ScheduleRoom117, 'Serwer Studia'.Getclassesfromroom("1030-ETI-117", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                            ClearCollect(ScheduleRoom116AR, 'Serwer Studia'.Getclassesfromroom("1030-ETI-116-AR", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                            ClearCollect(ScheduleRoom133, 'Serwer Studia'.Getclassesfromroom("1030-ETI-108", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
+                        );
+                        
+                        Concurrent(
+                            ClearCollect(ScheduleRoom120, 'Serwer Studia'.Getclassesfromroom("1030-ETI-120", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                            ClearCollect(ScheduleRoom121, 'Serwer Studia'.Getclassesfromroom("1030-ETI-121", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                            ClearCollect(ScheduleRoom122, 'Serwer Studia'.Getclassesfromroom("1030-ETI-122", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
+                        );
+                        Set(ShowLoading, false);
+                    PressedColor: =Color.Transparent
+                    PressedFill: =Color.Transparent
+                    Text: ="Button"
+                    Width: =btn_MakeReservation_2.Width
+                    X: =btn_MakeReservation_2.X
+                    Y: =2
+                    ZIndex: =3
+
+        Container7 As groupContainer.verticalAutoLayoutContainer:
+            Height: =584
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =10
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMode: =LayoutMode.Auto
+            Width: =625
+            X: =Parent.Width / 2 + 10
+            Y: =70
+            ZIndex: =17
+
+            Container1_1 As groupContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                Height: =40
+                LayoutMinHeight: =20
+                LayoutMinWidth: =250
+                Width: =255
+                X: =872
+                Y: =78
+                ZIndex: =1
+
+                Icon1_1 As icon.ArrowRight:
+                    Height: =40
+                    Icon: =Icon.ArrowRight
+                    OnSelect: |-
+                        =(DatePicker1_2.SelectedDate);
+                        Set(varShowDate, DateAdd(varShowDate, 1, TimeUnit.Days))
+                    Width: =31
+                    X: =215
+                    ZIndex: =1
+
+                Icon2_1 As icon.ArrowLeft:
+                    Height: =40
+                    Icon: =Icon.ArrowLeft
+                    OnSelect: =Set(varShowDate, DateAdd(varShowDate, -1, TimeUnit.Days))
+                    Width: =31
+                    ZIndex: =2
+
+                DatePicker1_2 As datepicker:
+                    BorderThickness: =0
+                    Color: =Background.DisabledFill
+                    DefaultDate: =
+                    DisabledFill: =Parent.Fill
+                    Fill: =Background.DisabledFill
+                    Height: |
+                        =40
+                    InputTextPlaceholder: =
+                    OnChange: =Set(varShowDate, DateValue(DatePicker1_2.SelectedDate))
+                    OnSelect: |-
+                        =UpdateContext({plan:Filter('Serwer Studia'.Getuserschedule("json", Text(Self.SelectedDate, "yyyy-mm-dd")).plan, date = Text(Self.SelectedDate,"yyyymmdd"))})
+                    Width: =166
+                    X: =44
+                    ZIndex: =3
+
+                Label2_1 As label:
+                    Align: =Align.Center
+                    AutoHeight: =true
+                    Size: =17
+                    Text: =Text(varShowDate, "dd/mm/yyyy")
+                    Width: =132
+                    X: =39
+                    ZIndex: =4
+
+            "Gallery2_2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                '#CopilotOverlayLabel': ="Filtered"
+                AlignInContainer: =AlignInContainer.SetByContainer
+                DelayItemLoading: =true
+                DisplayMode: =DisplayMode.View
+                Height: =562
+                Items: =Sort(Filter(Office365Outlook.V4CalendarGetItems(Dropdown1.Selected.id).value, DateValue(startWithTimeZone)=DateValue(varShowDate)),TimeValue(startWithTimeZone))
+                Layout: =Layout.Vertical
+                LayoutMinHeight: =287
+                LayoutMinWidth: =320
+                LoadingSpinner: =LoadingSpinner.Data
+                Selectable: =false
+                ShowScrollbar: =false
+                TemplatePadding: =0
+                TemplateSize: =105
+                Transition: =Transition.Push
+                Visible: =!serwerStudia
+                Width: =(Parent.Width - 20)/2 - 20
+                X: =683
+                Y: =116
+                ZIndex: =2
+
+                Button1_2 As button:
+                    DisabledFill: =RGBA(244, 244, 244, 0.2)
+                    DisplayMode: =DisplayMode.Disabled
+                    Height: =Parent.TemplateHeight - 16
+                    OnSelect: =Select(Parent)
+                    RadiusBottomLeft: =60
+                    RadiusBottomRight: =60
+                    RadiusTopLeft: =60
+                    RadiusTopRight: =60
+                    Text: =""
+                    Width: =Parent.TemplateWidth - 16
+                    X: =1
+                    Y: =8
+                    ZIndex: =1
+
+                Title2_1 As label:
+                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                    Height: =36
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =20
+                    Text: =ThisItem.subject
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =272
+                    Y: =34
+                    ZIndex: =2
+
+                Subtitle2_7 As label:
+                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                    Height: =23
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =45
+                    Y: =40
+                    ZIndex: =3
+
+                NextArrow2_1 As icon.ChevronRight:
+                    AccessibleLabel: =Self.Tooltip
+                    Color: =RGBA(166, 166, 166, 1)
+                    Height: =50
+                    Icon: =Icon.ChevronRight
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =16
+                    PaddingLeft: =16
+                    PaddingRight: =16
+                    PaddingTop: =16
+                    Tooltip: ="View item details"
+                    Width: =50
+                    Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                    ZIndex: =4
+
+                Subtitle2_2 As label:
+                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                    Height: =36
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =24
+                    Text: |-
+                        =Text(ThisItem.startWithTimeZone, "hh:mm")&" - "&Text(ThisItem.endWithTimeZone, "hh:mm")
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =206
+                    Y: =34
+                    ZIndex: =6
+
+            "Gallery2_3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                '#CopilotOverlayLabel': ="Filtered"
+                DelayItemLoading: =true
+                DisplayMode: =DisplayMode.View
+                Height: =557
+                Items: =Sort(Filter('Serwer Studia'.Getuserschedule("json", Text(DatePicker1_2.SelectedDate, "yyyy-mm-dd")).plan, DateValue(date) = DatePicker1_2.SelectedDate),hour)
+                Layout: =Layout.Vertical
+                LayoutMinHeight: =287
+                LayoutMinWidth: =320
+                LoadingSpinner: =LoadingSpinner.Data
+                Selectable: =false
+                TemplatePadding: =0
+                TemplateSize: =105
+                Transition: =Transition.Push
+                Visible: =serwerStudia
+                Width: =(Parent.Width - 20)/2 - 20
+                X: =Parent.Width / 2
+                Y: =121
+                ZIndex: =3
+
+                Button1_3 As button:
+                    DisabledFill: =RGBA(244, 244, 244, 0.2)
+                    DisplayMode: =DisplayMode.Disabled
+                    Height: =Parent.TemplateHeight - 16
+                    OnSelect: =Select(Parent)
+                    RadiusBottomLeft: =60
+                    RadiusBottomRight: =60
+                    RadiusTopLeft: =60
+                    RadiusTopRight: =60
+                    Text: =""
+                    Width: =Parent.TemplateWidth - 16
+                    X: =8
+                    Y: =8
+                    ZIndex: =1
+
+                ClassNameGalleryServerStudia_1 As label:
+                    FontWeight: =FontWeight.Semibold
+                    Height: =89
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =30
+                    Text: =Last(Split(ThisItem.skr, "-")).Value
+                    Width: =128
+                    X: =56
+                    Y: =8
+                    ZIndex: =2
+
+                Subtitle2_10 As label:
+                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                    Height: =23
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =45
+                    Y: =40
+                    ZIndex: =3
+
+                ClassTypeGalleryServerStudia_1 As label:
+                    Align: =Align.Center
+                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                    Height: =89
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =20
+                    Text: =ThisItem.type
+                    Width: =56
+                    X: =195
+                    Y: =7
+                    ZIndex: =6
+
+                Group1_1 As group:
+                    Height: =5
+                    Width: =5
+                    X: =60
+                    Y: =60
+                    ZIndex: =9
+
+                    Subtitle2_9 As label:
+                        Align: =Align.Center
+                        AutoHeight: =true
+                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                        Height: =34
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =20
+                        Text: |-
+                            =DateAdd(TimeValue(ThisItem.hour&":00"),15,TimeUnit.Minutes)&" - "&DateAdd(TimeValue(ThisItem.hour&":00"),ThisItem.length,TimeUnit.Hours)
+                        Width: =329
+                        X: =267
+                        Y: =19
+                        ZIndex: =7
+
+                    Subtitle2_11 As label:
+                        Align: =Align.Center
+                        AutoHeight: =true
+                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                        Height: =34
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =20
+                        Text: |-
+                            ="sala: "
+                            &
+                            If (
+                                EndsWith(Last(Split(ThisItem.room,"-")).Value, "AR"),
+                                Last(FirstN(Split(ThisItem.room,"-"), CountRows(Split(ThisItem.room,"-")) - 1)).Value & "-" & Last(Split(ThisItem.room,"-")).Value,
+                                Last(Split(ThisItem.room,"-")).Value
+                            )
+                        Width: =329
+                        X: =267
+                        Y: =51
+                        ZIndex: =8
 
     Dropdown1 As dropdown:
         Items: =Office365Outlook.CalendarGetTablesV2().value
