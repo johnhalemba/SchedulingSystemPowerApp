@@ -456,14 +456,6 @@ Screen1 As screen:
                 X: =39
                 ZIndex: =4
 
-        Image1 As image:
-            AutoDisableOnSelect: =false
-            DisplayMode: =DisplayMode.View
-            Image: ='Reservation icon'
-            X: =147
-            Y: =133
-            ZIndex: =14
-
         LoadingScreen As group:
             Height: =5
             Width: =5
@@ -506,14 +498,36 @@ Screen1 As screen:
             Y: =233
             ZIndex: =15
 
-            Button2 As button:
-                Fill: =RGBA(120, 150, 207, 1)
+            btn_MakeReservation As button:
+                Fill: |-
+                    =If(
+                        btn_MakeReservation.Pressed,
+                        ColorFade(WEITI_Szafirowy, 20%),
+                        WEITI_Szafirowy
+                    )
                 Height: =Parent.Height - Self.BorderThickness
                 Text: =""
                 Width: =Parent.Width - Self.BorderThickness
                 X: =2
                 Y: =2
                 ZIndex: =1
+
+            btn_Overlay As button:
+                BorderStyle: =BorderStyle.None
+                Color: =Color.Transparent
+                DisabledColor: =Color.Transparent
+                DisabledFill: =Color.Transparent
+                Fill: =Color.Transparent
+                Height: =btn_MakeReservation.Height
+                HoverColor: =Color.Transparent
+                HoverFill: =RGBA(0, 0, 0, 0.05)
+                PressedColor: =Color.Transparent
+                PressedFill: =Color.Transparent
+                Text: ="Button"
+                Width: =btn_MakeReservation.Width
+                X: =btn_MakeReservation.X
+                Y: =btn_MakeReservation.Y
+                ZIndex: =3
 
     Dropdown1 As dropdown:
         Items: =Office365Outlook.CalendarGetTablesV2().value

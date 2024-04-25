@@ -1333,36 +1333,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.WEITI_Szafirowy"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.WEITI_Szafirowy",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "WEITI_Szafirowy",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "App.varUserCalendars"
                 }
               ],
@@ -1584,6 +1554,36 @@
               },
               "properties": {
                 "member": "R",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedMediaResources",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.Reservation icon"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.Reservation icon",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Reservation icon",
                 "module": "App",
                 "type": "App"
               }
