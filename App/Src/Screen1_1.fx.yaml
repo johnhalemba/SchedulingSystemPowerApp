@@ -1,23 +1,24 @@
-Screen1 As screen:
+Screen1_1 As screen:
     Fill: =RGBA(224, 224, 224, 1)
     OnVisible: |
         =Set(DurationSelection, Blank());
         UpdateContext({ResetTrue: false});
         UpdateContext({ResetTrue: true});
 
-    ContainerFooter As groupContainer.manualLayoutContainer:
+    ContainerFooter_1 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Regular
         Height: =100
         RadiusBottomLeft: =10
         RadiusBottomRight: =10
         RadiusTopLeft: =10
         RadiusTopRight: =10
+        Visible: =false
         Width: =Parent.Width - (20 * 2)
         X: =20
-        Y: =42+19+ContainerMainBody.Height+10
+        Y: =42+19+ContainerMainBody_1.Height+10
         ZIndex: =1
 
-        Button3_2 As button:
+        Button3_11 As button:
             DisabledFill: |-
                 =ColorValue("#FFFFFF")
             DisplayMode: =DisplayMode.Disabled
@@ -26,7 +27,7 @@ Screen1 As screen:
             Width: =Parent.Width
             ZIndex: =1
 
-        TextInput1 As text:
+        TextInput1_1 As text:
             Align: =Align.Center
             Default: ="Jan Halemba (305979)"
             DisabledFill: |-
@@ -37,27 +38,29 @@ Screen1 As screen:
             Width: =Parent.Width
             ZIndex: =2
 
-    ContainerMainBody As groupContainer.manualLayoutContainer:
+    ContainerMainBody_1 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Regular
         Height: =Parent.Height - 90
         RadiusBottomLeft: =10
         RadiusBottomRight: =10
         RadiusTopLeft: =10
         RadiusTopRight: =10
-        Visible: =!varRoomSelection && !varViewSchedule
+        Visible: |-
+            =//!varRoomSelection && !varViewSchedule
+            false
         Width: =Parent.Width - (20 * 2)
         X: =20
         Y: =60
         ZIndex: =2
 
-        Background As button:
+        Background_1 As button:
             DisplayMode: =DisplayMode.Disabled
             Height: =Parent.Height
             Text: =""
             Width: =Parent.Width
             ZIndex: =1
 
-        Label1 As label:
+        Label1_1 As label:
             FontWeight: =FontWeight.Bold
             Height: =60
             Size: =25
@@ -67,7 +70,7 @@ Screen1 As screen:
             Y: =10
             ZIndex: =2
 
-        Button2_1 As button:
+        Button2_2 As button:
             BorderThickness: =0
             Height: =251
             OnSelect: |-
@@ -115,7 +118,7 @@ Screen1 As screen:
             Y: =393
             ZIndex: =4
 
-        DropdownCalendarType As dropdown:
+        DropdownCalendarType_1 As dropdown:
             AllowEmptySelection: =true
             Default: =""
             Items: =["Serwer Studia", "Outlook"]
@@ -131,12 +134,12 @@ Screen1 As screen:
             Y: =20
             ZIndex: =6
 
-        "Gallery2_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        "Gallery2_7 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
             '#CopilotOverlayLabel': ="Filtered"
             DelayItemLoading: =true
             DisplayMode: =DisplayMode.View
             Height: =557
-            Items: =Sort(Filter('Serwer Studia'.Getuserschedule("json", Text(DatePicker1_1.SelectedDate, "yyyy-mm-dd")).plan, DateValue(date) = DatePicker1_1.SelectedDate),hour)
+            Items: =Sort(Filter('Serwer Studia'.Getuserschedule("json", Text(DatePicker1_4.SelectedDate, "yyyy-mm-dd")).plan, DateValue(date) = DatePicker1_4.SelectedDate),hour)
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             Selectable: =false
@@ -151,7 +154,7 @@ Screen1 As screen:
             Y: =121
             ZIndex: =8
 
-            Button1_1 As button:
+            Button1_7 As button:
                 DisabledFill: =RGBA(244, 244, 244, 0.2)
                 DisplayMode: =DisplayMode.Disabled
                 Height: =Parent.TemplateHeight - 16
@@ -166,7 +169,7 @@ Screen1 As screen:
                 Y: =8
                 ZIndex: =1
 
-            ClassNameGalleryServerStudia As label:
+            ClassNameGalleryServerStudia_3 As label:
                 FontWeight: =FontWeight.Semibold
                 Height: =89
                 OnSelect: =Select(Parent)
@@ -181,7 +184,7 @@ Screen1 As screen:
                 Y: =10
                 ZIndex: =2
 
-            Subtitle2_3 As label:
+            Subtitle2_20 As label:
                 FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                 Height: =23
                 OnSelect: =Select(Parent)
@@ -196,7 +199,7 @@ Screen1 As screen:
                 Y: =40
                 ZIndex: =3
 
-            ClassTypeGalleryServerStudia As label:
+            ClassTypeGalleryServerStudia_3 As label:
                 Align: =Align.Center
                 FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                 Height: =89
@@ -212,14 +215,14 @@ Screen1 As screen:
                 Y: =8
                 ZIndex: =6
 
-            Group1 As group:
+            Group1_3 As group:
                 Height: =5
                 Width: =5
                 X: =60
                 Y: =60
                 ZIndex: =9
 
-                Subtitle2_4 As label:
+                Subtitle2_19 As label:
                     Align: =Align.Center
                     AutoHeight: =true
                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
@@ -234,10 +237,10 @@ Screen1 As screen:
                         =DateAdd(TimeValue(ThisItem.hour&":00"),15,TimeUnit.Minutes)&" - "&DateAdd(TimeValue(ThisItem.hour&":00"),ThisItem.length,TimeUnit.Hours)
                     Width: =396
                     X: =229
-                    Y: =Parent.TemplateHeight - Parent.TemplateHeight + 20
+                    Y: =13
                     ZIndex: =7
 
-                Subtitle2_5 As label:
+                Subtitle2_21 As label:
                     Align: =Align.Center
                     AutoHeight: =true
                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
@@ -258,15 +261,15 @@ Screen1 As screen:
                         )
                     Width: =396
                     X: =229
-                    Y: =Subtitle2_4.Y + Self.Height + 2
+                    Y: =13
                     ZIndex: =8
 
-        "Gallery2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        "Gallery2_6 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
             '#CopilotOverlayLabel': ="Filtered"
             DelayItemLoading: =true
             DisplayMode: =DisplayMode.View
             Height: =562
-            Items: =Sort(Filter(Office365Outlook.V4CalendarGetItems(Dropdown1.Selected.id).value, DateValue(startWithTimeZone)=DateValue(varShowDate)),TimeValue(startWithTimeZone))
+            Items: =Sort(Filter(Office365Outlook.V4CalendarGetItems(Dropdown1_1.Selected.id).value, DateValue(startWithTimeZone)=DateValue(varShowDate)),TimeValue(startWithTimeZone))
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             Selectable: =false
@@ -282,7 +285,7 @@ Screen1 As screen:
             Y: =116
             ZIndex: =9
 
-            Button1 As button:
+            Button1_6 As button:
                 DisabledFill: =RGBA(244, 244, 244, 0.2)
                 DisplayMode: =DisplayMode.Disabled
                 Height: =Parent.TemplateHeight - 16
@@ -297,7 +300,7 @@ Screen1 As screen:
                 Y: =8
                 ZIndex: =1
 
-            Title2 As label:
+            Title2_3 As label:
                 FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                 Height: =36
                 OnSelect: =Select(Parent)
@@ -313,7 +316,7 @@ Screen1 As screen:
                 Y: =34
                 ZIndex: =2
 
-            Subtitle2 As label:
+            Subtitle2_18 As label:
                 FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                 Height: =23
                 OnSelect: =Select(Parent)
@@ -328,7 +331,7 @@ Screen1 As screen:
                 Y: =40
                 ZIndex: =3
 
-            NextArrow2 As icon.ChevronRight:
+            NextArrow2_3 As icon.ChevronRight:
                 AccessibleLabel: =Self.Tooltip
                 Color: =RGBA(166, 166, 166, 1)
                 Height: =50
@@ -344,7 +347,7 @@ Screen1 As screen:
                 Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
                 ZIndex: =4
 
-            Subtitle2_1 As label:
+            Subtitle2_17 As label:
                 FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                 Height: =36
                 OnSelect: =Select(Parent)
@@ -361,7 +364,7 @@ Screen1 As screen:
                 Y: =34
                 ZIndex: =6
 
-        Container1 As groupContainer:
+        Container1_3 As groupContainer:
             DropShadow: =DropShadow.None
             Height: =40
             Visible: =false
@@ -370,39 +373,39 @@ Screen1 As screen:
             Y: =78
             ZIndex: =10
 
-            Icon1 As icon.ArrowRight:
+            Icon1_3 As icon.ArrowRight:
                 Height: =40
                 Icon: =Icon.ArrowRight
                 OnSelect: |-
-                    =(DatePicker1_1.SelectedDate);
+                    =(DatePicker1_4.SelectedDate);
                     Set(varShowDate, DateAdd(varShowDate, 1, TimeUnit.Days))
                 Width: =31
                 X: =215
                 ZIndex: =1
 
-            Icon2 As icon.ArrowLeft:
+            Icon2_3 As icon.ArrowLeft:
                 Height: =40
                 Icon: =Icon.ArrowLeft
                 OnSelect: =Set(varShowDate, DateAdd(varShowDate, -1, TimeUnit.Days))
                 Width: =31
                 ZIndex: =2
 
-            DatePicker1_1 As datepicker:
+            DatePicker1_4 As datepicker:
                 BorderThickness: =0
-                Color: =Background.DisabledFill
+                Color: =Background_1.DisabledFill
                 DefaultDate: =
                 DisabledFill: =Parent.Fill
-                Fill: =Background.DisabledFill
+                Fill: =Background_1.DisabledFill
                 Height: =Parent.Height
                 InputTextPlaceholder: =
-                OnChange: =Set(varShowDate, DateValue(DatePicker1_1.SelectedDate))
+                OnChange: =Set(varShowDate, DateValue(DatePicker1_4.SelectedDate))
                 OnSelect: |-
                     =UpdateContext({plan:Filter('Serwer Studia'.Getuserschedule("json", Text(Self.SelectedDate, "yyyy-mm-dd")).plan, date = Text(Self.SelectedDate,"yyyymmdd"))})
                 Width: =166
                 X: =44
                 ZIndex: =3
 
-            Label2 As label:
+            Label2_3 As label:
                 Align: =Align.Center
                 AutoHeight: =true
                 Size: =17
@@ -411,14 +414,14 @@ Screen1 As screen:
                 X: =39
                 ZIndex: =4
 
-        LoadingScreen As group:
+        LoadingScreen_1 As group:
             Height: =5
             Width: =5
             X: =40
             Y: =60
             ZIndex: =14
 
-            Rectangle2_1 As rectangle:
+            Rectangle2_4 As rectangle:
                 BorderColor: =RGBA(255, 255, 255, 1)
                 Fill: =RGBA(255, 255, 255, 1)
                 Height: =678
@@ -426,7 +429,7 @@ Screen1 As screen:
                 Width: =1326
                 ZIndex: =11
 
-            "Spinner1_1 As 'Okrągły wskaźnik przetwarzania'":
+            "Spinner1_4 As 'Okrągły wskaźnik przetwarzania'":
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 FontColor: =
@@ -437,7 +440,7 @@ Screen1 As screen:
                 Y: =217
                 ZIndex: =12
 
-            Label8_1 As label:
+            Label8_4 As label:
                 Align: =Align.Center
                 Text: ="Loading..."
                 Visible: =ShowLoading
@@ -446,7 +449,7 @@ Screen1 As screen:
                 Y: =404
                 ZIndex: =13
 
-        Container3 As groupContainer.manualLayoutContainer:
+        Container3_3 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.None
             Height: =297
             RadiusBottomLeft: =0
@@ -459,16 +462,16 @@ Screen1 As screen:
             Y: =88
             ZIndex: =15
 
-            btn_MakeReservation As button:
+            btn_MakeReservation_3 As button:
                 Color: |-
                     =If(
-                        btn_Overlay.Pressed,
+                        btn_Overlay_3.Pressed,
                         WEITI_Szafirowy,
                         Color.White
                     )
                 Fill: |-
                     =If(
-                        btn_Overlay.Pressed,
+                        btn_Overlay_3.Pressed,
                         Color.White,
                         WEITI_Szafirowy
                     )
@@ -479,13 +482,13 @@ Screen1 As screen:
                 Y: =2
                 ZIndex: =1
 
-            btn_Overlay As button:
+            btn_Overlay_3 As button:
                 BorderStyle: =BorderStyle.None
                 Color: =Color.Transparent
                 DisabledColor: =Color.Transparent
                 DisabledFill: =Color.Transparent
                 Fill: =Color.Transparent
-                Height: =btn_MakeReservation.Height
+                Height: =btn_MakeReservation_3.Height
                 HoverColor: =Color.Transparent
                 HoverFill: =RGBA(0, 0, 0, 0.05)
                 OnSelect: |-
@@ -532,12 +535,12 @@ Screen1 As screen:
                 PressedColor: =Color.Transparent
                 PressedFill: =Color.Transparent
                 Text: ="Button"
-                Width: =btn_MakeReservation.Width
-                X: =btn_MakeReservation.X
+                Width: =btn_MakeReservation_3.Width
+                X: =btn_MakeReservation_3.X
                 Y: =2
                 ZIndex: =3
 
-        Container5 As groupContainer.verticalAutoLayoutContainer:
+        Container5_1 As groupContainer.verticalAutoLayoutContainer:
             Height: =556
             LayoutDirection: =LayoutDirection.Vertical
             LayoutGap: =10
@@ -547,7 +550,7 @@ Screen1 As screen:
             Y: =88
             ZIndex: =16
 
-            Container3_1 As groupContainer.manualLayoutContainer:
+            Container3_4 As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.None
                 Height: =297
                 LayoutMinHeight: =100
@@ -561,16 +564,16 @@ Screen1 As screen:
                 Y: =88
                 ZIndex: =1
 
-                btn_MakeReservation_1 As button:
+                btn_MakeReservation_4 As button:
                     Color: |-
                         =If(
-                            btn_Overlay_1.Pressed,
+                            btn_Overlay_4.Pressed,
                             WEITI_Szafirowy,
                             Color.White
                         )
                     Fill: |-
                         =If(
-                            btn_Overlay_1.Pressed,
+                            btn_Overlay_4.Pressed,
                             Color.White,
                             WEITI_Szafirowy
                         )
@@ -581,13 +584,13 @@ Screen1 As screen:
                     Y: =2
                     ZIndex: =1
 
-                btn_Overlay_1 As button:
+                btn_Overlay_4 As button:
                     BorderStyle: =BorderStyle.None
                     Color: =Color.Transparent
                     DisabledColor: =Color.Transparent
                     DisabledFill: =Color.Transparent
                     Fill: =Color.Transparent
-                    Height: =btn_MakeReservation_1.Height
+                    Height: =btn_MakeReservation_4.Height
                     HoverColor: =Color.Transparent
                     HoverFill: =RGBA(0, 0, 0, 0.05)
                     OnSelect: |-
@@ -634,12 +637,12 @@ Screen1 As screen:
                     PressedColor: =Color.Transparent
                     PressedFill: =Color.Transparent
                     Text: ="Button"
-                    Width: =btn_MakeReservation_1.Width
-                    X: =btn_MakeReservation_1.X
+                    Width: =btn_MakeReservation_4.Width
+                    X: =btn_MakeReservation_4.X
                     Y: =2
                     ZIndex: =3
 
-            Container3_2 As groupContainer.manualLayoutContainer:
+            Container3_5 As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.None
                 Height: =297
                 LayoutMinHeight: =100
@@ -653,16 +656,16 @@ Screen1 As screen:
                 Y: =88
                 ZIndex: =2
 
-                btn_MakeReservation_2 As button:
+                btn_MakeReservation_5 As button:
                     Color: |-
                         =If(
-                            btn_Overlay_2.Pressed,
+                            btn_Overlay_5.Pressed,
                             WEITI_Szafirowy,
                             Color.White
                         )
                     Fill: |-
                         =If(
-                            btn_Overlay_2.Pressed,
+                            btn_Overlay_5.Pressed,
                             Color.White,
                             WEITI_Szafirowy
                         )
@@ -673,13 +676,13 @@ Screen1 As screen:
                     Y: =2
                     ZIndex: =1
 
-                btn_Overlay_2 As button:
+                btn_Overlay_5 As button:
                     BorderStyle: =BorderStyle.None
                     Color: =Color.Transparent
                     DisabledColor: =Color.Transparent
                     DisabledFill: =Color.Transparent
                     Fill: =Color.Transparent
-                    Height: =btn_MakeReservation_2.Height
+                    Height: =btn_MakeReservation_5.Height
                     HoverColor: =Color.Transparent
                     HoverFill: =RGBA(0, 0, 0, 0.05)
                     OnSelect: |-
@@ -726,12 +729,12 @@ Screen1 As screen:
                     PressedColor: =Color.Transparent
                     PressedFill: =Color.Transparent
                     Text: ="Button"
-                    Width: =btn_MakeReservation_2.Width
-                    X: =btn_MakeReservation_2.X
+                    Width: =btn_MakeReservation_5.Width
+                    X: =btn_MakeReservation_5.X
                     Y: =2
                     ZIndex: =3
 
-        Container7 As groupContainer.verticalAutoLayoutContainer:
+        Container7_1 As groupContainer.verticalAutoLayoutContainer:
             Height: =584
             LayoutAlignItems: =LayoutAlignItems.Center
             LayoutDirection: =LayoutDirection.Vertical
@@ -743,7 +746,7 @@ Screen1 As screen:
             Y: =70
             ZIndex: =17
 
-            Container1_1 As groupContainer:
+            Container1_2 As groupContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 DropShadow: =DropShadow.None
                 FillPortions: =0
@@ -755,40 +758,40 @@ Screen1 As screen:
                 Y: =78
                 ZIndex: =1
 
-                Icon1_1 As icon.ArrowRight:
+                Icon1_2 As icon.ArrowRight:
                     Height: =40
                     Icon: =Icon.ArrowRight
                     OnSelect: |-
-                        =(DatePicker1_2.SelectedDate);
+                        =(DatePicker1_3.SelectedDate);
                         Set(varShowDate, DateAdd(varShowDate, 1, TimeUnit.Days))
                     Width: =31
                     X: =215
                     ZIndex: =1
 
-                Icon2_1 As icon.ArrowLeft:
+                Icon2_2 As icon.ArrowLeft:
                     Height: =40
                     Icon: =Icon.ArrowLeft
                     OnSelect: =Set(varShowDate, DateAdd(varShowDate, -1, TimeUnit.Days))
                     Width: =31
                     ZIndex: =2
 
-                DatePicker1_2 As datepicker:
+                DatePicker1_3 As datepicker:
                     BorderThickness: =0
-                    Color: =Background.DisabledFill
+                    Color: =Background_1.DisabledFill
                     DefaultDate: =
                     DisabledFill: =Parent.Fill
-                    Fill: =Background.DisabledFill
+                    Fill: =Background_1.DisabledFill
                     Height: |
                         =40
                     InputTextPlaceholder: =
-                    OnChange: =Set(varShowDate, DateValue(DatePicker1_2.SelectedDate))
+                    OnChange: =Set(varShowDate, DateValue(DatePicker1_3.SelectedDate))
                     OnSelect: |-
                         =UpdateContext({plan:Filter('Serwer Studia'.Getuserschedule("json", Text(Self.SelectedDate, "yyyy-mm-dd")).plan, date = Text(Self.SelectedDate,"yyyymmdd"))})
                     Width: =166
                     X: =44
                     ZIndex: =3
 
-                Label2_1 As label:
+                Label2_2 As label:
                     Align: =Align.Center
                     AutoHeight: =true
                     Size: =17
@@ -797,13 +800,13 @@ Screen1 As screen:
                     X: =39
                     ZIndex: =4
 
-            "Gallery2_2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+            "Gallery2_5 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                 '#CopilotOverlayLabel': ="Filtered"
                 AlignInContainer: =AlignInContainer.SetByContainer
                 DelayItemLoading: =true
                 DisplayMode: =DisplayMode.View
                 Height: =562
-                Items: =Sort(Filter(Office365Outlook.V4CalendarGetItems(Dropdown1.Selected.id).value, DateValue(startWithTimeZone)=DateValue(varShowDate)),TimeValue(startWithTimeZone))
+                Items: =Sort(Filter(Office365Outlook.V4CalendarGetItems(Dropdown1_1.Selected.id).value, DateValue(startWithTimeZone)=DateValue(varShowDate)),TimeValue(startWithTimeZone))
                 Layout: =Layout.Vertical
                 LayoutMinHeight: =287
                 LayoutMinWidth: =320
@@ -819,7 +822,7 @@ Screen1 As screen:
                 Y: =116
                 ZIndex: =2
 
-                Button1_2 As button:
+                Button1_5 As button:
                     DisabledFill: =RGBA(244, 244, 244, 0.2)
                     DisplayMode: =DisplayMode.Disabled
                     Height: =Parent.TemplateHeight - 16
@@ -834,7 +837,7 @@ Screen1 As screen:
                     Y: =8
                     ZIndex: =1
 
-                Title2_1 As label:
+                Title2_2 As label:
                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                     Height: =36
                     OnSelect: =Select(Parent)
@@ -849,7 +852,7 @@ Screen1 As screen:
                     Y: =34
                     ZIndex: =2
 
-                Subtitle2_7 As label:
+                Subtitle2_16 As label:
                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                     Height: =23
                     OnSelect: =Select(Parent)
@@ -863,7 +866,7 @@ Screen1 As screen:
                     Y: =40
                     ZIndex: =3
 
-                NextArrow2_1 As icon.ChevronRight:
+                NextArrow2_2 As icon.ChevronRight:
                     AccessibleLabel: =Self.Tooltip
                     Color: =RGBA(166, 166, 166, 1)
                     Height: =50
@@ -878,7 +881,7 @@ Screen1 As screen:
                     Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
                     ZIndex: =4
 
-                Subtitle2_2 As label:
+                Subtitle2_15 As label:
                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                     Height: =36
                     OnSelect: =Select(Parent)
@@ -894,12 +897,12 @@ Screen1 As screen:
                     Y: =34
                     ZIndex: =6
 
-            "Gallery2_3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+            "Gallery2_4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                 '#CopilotOverlayLabel': ="Filtered"
                 DelayItemLoading: =true
                 DisplayMode: =DisplayMode.View
                 Height: =557
-                Items: =Sort(Filter('Serwer Studia'.Getuserschedule("json", Text(DatePicker1_2.SelectedDate, "yyyy-mm-dd")).plan, DateValue(date) = DatePicker1_2.SelectedDate),hour)
+                Items: =Sort(Filter('Serwer Studia'.Getuserschedule("json", Text(DatePicker1_3.SelectedDate, "yyyy-mm-dd")).plan, DateValue(date) = DatePicker1_3.SelectedDate),hour)
                 Layout: =Layout.Vertical
                 LayoutMinHeight: =287
                 LayoutMinWidth: =320
@@ -914,7 +917,7 @@ Screen1 As screen:
                 Y: =121
                 ZIndex: =3
 
-                Button1_3 As button:
+                Button1_4 As button:
                     DisabledFill: =RGBA(244, 244, 244, 0.2)
                     DisplayMode: =DisplayMode.Disabled
                     Height: =Parent.TemplateHeight - 16
@@ -925,11 +928,11 @@ Screen1 As screen:
                     RadiusTopRight: =60
                     Text: =""
                     Width: =Parent.TemplateWidth - 16
-                    X: =8
+                    X: =1
                     Y: =8
                     ZIndex: =1
 
-                ClassNameGalleryServerStudia_1 As label:
+                ClassNameGalleryServerStudia_2 As label:
                     FontWeight: =FontWeight.Semibold
                     Height: =89
                     OnSelect: =Select(Parent)
@@ -939,12 +942,11 @@ Screen1 As screen:
                     PaddingTop: =0
                     Size: =30
                     Text: =Last(Split(ThisItem.skr, "-")).Value
-                    Width: =128
-                    X: =56
+                    Width: =1
                     Y: =8
                     ZIndex: =2
 
-                Subtitle2_10 As label:
+                Subtitle2_13 As label:
                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                     Height: =23
                     OnSelect: =Select(Parent)
@@ -954,11 +956,11 @@ Screen1 As screen:
                     PaddingTop: =0
                     Text: =
                     VerticalAlign: =VerticalAlign.Top
-                    Width: =45
+                    Width: =1
                     Y: =40
                     ZIndex: =3
 
-                ClassTypeGalleryServerStudia_1 As label:
+                ClassTypeGalleryServerStudia_2 As label:
                     Align: =Align.Center
                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                     Height: =89
@@ -969,19 +971,18 @@ Screen1 As screen:
                     PaddingTop: =0
                     Size: =20
                     Text: =ThisItem.type
-                    Width: =56
-                    X: =195
+                    Width: =1
                     Y: =7
                     ZIndex: =6
 
-                Group1_1 As group:
+                Group1_2 As group:
                     Height: =5
                     Width: =5
                     X: =60
                     Y: =60
                     ZIndex: =9
 
-                    Subtitle2_9 As label:
+                    Subtitle2_12 As label:
                         Align: =Align.Center
                         AutoHeight: =true
                         FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
@@ -994,12 +995,11 @@ Screen1 As screen:
                         Size: =20
                         Text: |-
                             =DateAdd(TimeValue(ThisItem.hour&":00"),15,TimeUnit.Minutes)&" - "&DateAdd(TimeValue(ThisItem.hour&":00"),ThisItem.length,TimeUnit.Hours)
-                        Width: =329
-                        X: =267
+                        Width: =1
                         Y: =19
                         ZIndex: =7
 
-                    Subtitle2_11 As label:
+                    Subtitle2_14 As label:
                         Align: =Align.Center
                         AutoHeight: =true
                         FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
@@ -1018,38 +1018,37 @@ Screen1 As screen:
                                 Last(FirstN(Split(ThisItem.room,"-"), CountRows(Split(ThisItem.room,"-")) - 1)).Value & "-" & Last(Split(ThisItem.room,"-")).Value,
                                 Last(Split(ThisItem.room,"-")).Value
                             )
-                        Width: =329
-                        X: =267
+                        Width: =1
                         Y: =51
                         ZIndex: =8
 
-    Dropdown1 As dropdown:
+    Dropdown1_1 As dropdown:
         Items: =Office365Outlook.CalendarGetTablesV2().value
-        Visible: =DropdownCalendarType.SelectedText.Value = "Outlook"
+        Visible: =DropdownCalendarType_1.SelectedText.Value = "Outlook"
         X: =440
         Y: =205
         ZIndex: =6
 
-    ContainerHeader As groupContainer:
+    ContainerHeader_1 As groupContainer:
         DropShadow: =DropShadow.Regular
-        Height: =100
+        Height: =50
         RadiusBottomLeft: =10
         RadiusBottomRight: =10
         RadiusTopLeft: =10
         RadiusTopRight: =10
+        Visible: =false
         Width: =Parent.Width - (20 * 2)
         X: =20
-        Y: =-50
         ZIndex: =12
 
-        Button3 As button:
+        Button3_1 As button:
             DisplayMode: =DisplayMode.Disabled
             Height: =Parent.Height
             Text: =""
             Width: =Parent.Width
             ZIndex: =1
 
-        Header1 As Nagłówek:
+        Header1_1 As Nagłówek:
             BasePaletteColor: =RGBA(224, 224, 224, 1)
             DisplayMode: =DisplayMode.Edit
             Font: =Font.Lato
@@ -1058,7 +1057,7 @@ Screen1 As screen:
             IsProfilePictureVisible: =true
             IsTitleVisible: =true
             Logo: ='Screenshot 2024-03-02 184341'
-            OnSelectLogo: =Navigate(Screen1, Transition.Pop)
+            OnSelectLogo: =Navigate(Screen1_1, Transition.Pop)
             Style: ='Header.Style'.Neutral
             Title: ="FeiT Reservation System"
             UserEmail: =User().Email
@@ -1070,7 +1069,7 @@ Screen1 As screen:
             Y: =0
             ZIndex: =2
 
-        Rectangle3 As rectangle:
+        Rectangle3_1 As rectangle:
             Fill: |-
                 =ColorValue("#FFFFFF")
             Height: =50
@@ -1078,7 +1077,7 @@ Screen1 As screen:
             Y: =50
             ZIndex: =3
 
-        BadgeCanvas1 As Wskaźnik:
+        BadgeCanvas1_1 As Wskaźnik:
             BasePaletteColor: =
             Content: =Left(User().FullName, 1) & Mid(User().FullName, Find(" ", User().FullName) + 1, 1)
             DisplayMode: =DisplayMode.Edit
@@ -1086,37 +1085,37 @@ Screen1 As screen:
             Height: =37
             Width: =37
             X: =Parent.Width - Self.Width - 13
-            Y: =Parent.Height - Self.Height - (Rectangle3.Height / 2) + (Self.Height / 2)
+            Y: =Parent.Height - Self.Height - (Rectangle3_1.Height / 2) + (Self.Height / 2)
             ZIndex: =4
 
-        Label9 As label:
+        Label9_1 As label:
             Align: =Align.Right
             DisplayMode: =DisplayMode.View
             Text: =User().FullName
             Width: =383
             X: =883
-            Y: =Parent.Height - Self.Height - (Rectangle3.Height / 2) + (Self.Height / 2)
+            Y: =Parent.Height - Self.Height - (Rectangle3_1.Height / 2) + (Self.Height / 2)
             ZIndex: =5
 
-        Image4 As image:
+        Image4_1 As image:
             Height: =37
             Image: ='Screenshot 2024-03-02 184341'
             Width: =37
             X: =22
-            Y: =Parent.Height - Self.Height - (Rectangle3.Height / 2) + (Self.Height / 2)
+            Y: =Parent.Height - Self.Height - (Rectangle3_1.Height / 2) + (Self.Height / 2)
             ZIndex: =6
 
-        Label10 As label:
+        Label10_1 As label:
             Font: ="Adagio Slab"
             FontWeight: =FontWeight.Semibold
             Size: =15
             Text: ="FEIT Reservation System"
             Width: =459
             X: =70
-            Y: =Parent.Height - Self.Height - (Rectangle3.Height / 2) + (Self.Height / 2)
+            Y: =Parent.Height - Self.Height - (Rectangle3_1.Height / 2) + (Self.Height / 2)
             ZIndex: =7
 
-    RoomSelectionPopup As groupContainer.manualLayoutContainer:
+    RoomSelectionPopup_1 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Regular
         Height: =Parent.Height - 90
         RadiusBottomLeft: =10
@@ -1133,14 +1132,14 @@ Screen1 As screen:
         Y: =60
         ZIndex: =15
 
-        Button3_3 As button:
+        Button3_7 As button:
             DisplayMode: =DisplayMode.Disabled
             Height: =Parent.Height
             Text: =""
             Width: =Parent.Width
             ZIndex: =1
 
-        Icon3 As icon.Cancel:
+        Icon3_4 As icon.Cancel:
             Height: =44
             Icon: =Icon.Cancel
             OnSelect: |-
@@ -1156,7 +1155,7 @@ Screen1 As screen:
             Y: =10
             ZIndex: =2
 
-        Button2_5 As button:
+        Button2_13 As button:
             OnSelect: |
                 =Set(firstDayOfMonth, DateAdd(DateSelected, 1 - Day(DateSelected), TimeUnit.Days));
                 Set(firstDayInView, DateAdd(firstDayOfMonth, -(Mod(Weekday(firstDayOfMonth)-2,7)+1),TimeUnit.Days));
@@ -1170,7 +1169,7 @@ Screen1 As screen:
             Y: =130
             ZIndex: =3
 
-        Button2_7 As button:
+        Button2_14 As button:
             OnSelect: |
                 =Set(ShowTimePicker, true)
             Text: |+
@@ -1181,7 +1180,7 @@ Screen1 As screen:
             Y: =197
             ZIndex: =4
 
-        Container2 As groupContainer:
+        Container2_2 As groupContainer:
             Height: =Parent.Height - 20
             RadiusBottomLeft: =10
             RadiusBottomRight: =10
@@ -1192,14 +1191,14 @@ Screen1 As screen:
             Y: =10
             ZIndex: =5
 
-            Image2 As image:
+            Image2_2 As image:
                 Height: =Parent.Height
                 Image: ='Screenshot 2024-03-17 at 22.21.45'
                 ImagePosition: =ImagePosition.Stretch
                 Width: =Parent.Width
                 ZIndex: =1
 
-            room103 As button:
+            room103_2 As button:
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =1
                 Color: =If (SelectedRoom = Self, Color.Black, Color.White)
@@ -1279,7 +1278,7 @@ Screen1 As screen:
                 Y: =352
                 ZIndex: =2
 
-            room104 As button:
+            room104_2 As button:
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =1
                 Color: =If (SelectedRoom = Self, Color.Black, Color.White)
@@ -1359,7 +1358,7 @@ Screen1 As screen:
                 Y: =352
                 ZIndex: =3
 
-            room102 As button:
+            room102_2 As button:
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =1
                 Color: =If (SelectedRoom = Self, Color.Black, Color.White)
@@ -1439,7 +1438,7 @@ Screen1 As screen:
                 Y: =352
                 ZIndex: =4
 
-            room161 As button:
+            room161_2 As button:
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =1
                 Color: =If (SelectedRoom = Self, Color.Black, Color.White)
@@ -1519,7 +1518,7 @@ Screen1 As screen:
                 Y: =176
                 ZIndex: =11
 
-            room107 As button:
+            room107_2 As button:
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =1
                 Color: =If (SelectedRoom = Self, Color.Black, Color.White)
@@ -1599,7 +1598,7 @@ Screen1 As screen:
                 Y: =352
                 ZIndex: =12
 
-            room108 As button:
+            room108_2 As button:
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =1
                 Color: =If (SelectedRoom = Self, Color.Black, Color.White)
@@ -1679,7 +1678,7 @@ Screen1 As screen:
                 Y: =352
                 ZIndex: =13
 
-            room106 As button:
+            room106_2 As button:
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =1
                 Color: =If (SelectedRoom = Self, Color.Black, Color.White)
@@ -1759,7 +1758,7 @@ Screen1 As screen:
                 Y: =352
                 ZIndex: =14
 
-            room105 As button:
+            room105_2 As button:
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =1
                 Color: =If (SelectedRoom = Self, Color.Black, Color.White)
@@ -1839,7 +1838,7 @@ Screen1 As screen:
                 Y: =415
                 ZIndex: =15
 
-            room116 As button:
+            room116_2 As button:
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =1
                 Color: =If (SelectedRoom = Self, Color.Black, Color.White)
@@ -1919,7 +1918,7 @@ Screen1 As screen:
                 Y: =352
                 ZIndex: =16
 
-            room117 As button:
+            room117_2 As button:
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =1
                 Color: =If (SelectedRoom = Self, Color.Black, Color.White)
@@ -1999,7 +1998,7 @@ Screen1 As screen:
                 Y: =352
                 ZIndex: =17
 
-            room133 As button:
+            room133_2 As button:
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =1
                 Color: =If (SelectedRoom = Self, Color.Black, Color.White)
@@ -2079,7 +2078,7 @@ Screen1 As screen:
                 Y: =176
                 ZIndex: =18
 
-            "'room116-AR' As button":
+            "'room116-AR_2' As button":
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =1
                 Color: =If (SelectedRoom = Self, Color.Black, Color.White)
@@ -2159,7 +2158,7 @@ Screen1 As screen:
                 Y: =415
                 ZIndex: =19
 
-            room120 As button:
+            room120_2 As button:
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =1
                 Color: =If (SelectedRoom = Self, Color.Black, Color.White)
@@ -2239,7 +2238,7 @@ Screen1 As screen:
                 Y: =352
                 ZIndex: =20
 
-            room121 As button:
+            room121_2 As button:
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =1
                 Color: =If (SelectedRoom = Self, Color.Black, Color.White)
@@ -2319,7 +2318,7 @@ Screen1 As screen:
                 Y: =352
                 ZIndex: =21
 
-            room122 As button:
+            room122_2 As button:
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =1
                 Color: =If (SelectedRoom = Self, Color.Black, Color.White)
@@ -2399,14 +2398,14 @@ Screen1 As screen:
                 Y: =332
                 ZIndex: =22
 
-        Label7 As label:
+        Label7_2 As label:
             Text: |-
                 ="Selected room:"
             X: =987
             Y: =267
             ZIndex: =6
 
-        Button2_8 As button:
+        Button2_15 As button:
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =Color.Black
             DisplayMode: =DisplayMode.Disabled
@@ -2417,14 +2416,14 @@ Screen1 As screen:
             Y: =319
             ZIndex: =7
 
-        Spinner_2 As group:
+        Spinner_4 As group:
             Height: =5
             Width: =5
             X: =40
             Y: =60
             ZIndex: =12
 
-            Rectangle2_2 As rectangle:
+            Rectangle2_5 As rectangle:
                 BorderColor: =RGBA(255, 255, 255, 1)
                 Fill: =RGBA(255, 255, 255, 1)
                 Height: =678
@@ -2432,7 +2431,7 @@ Screen1 As screen:
                 Width: =1326
                 ZIndex: =8
 
-            "Spinner1_2 As 'Okrągły wskaźnik przetwarzania'":
+            "Spinner1_5 As 'Okrągły wskaźnik przetwarzania'":
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 FontColor: =
@@ -2443,7 +2442,7 @@ Screen1 As screen:
                 Y: =217
                 ZIndex: =9
 
-            Label8_2 As label:
+            Label8_5 As label:
                 Align: =Align.Center
                 Text: ="Loading..."
                 Visible: =ShowLoading
@@ -2452,7 +2451,7 @@ Screen1 As screen:
                 Y: =404
                 ZIndex: =10
 
-    DateSelectionPopup As groupContainer.manualLayoutContainer:
+    DateSelectionPopup_1 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Regular
         Height: =Parent.Height - 90
         RadiusBottomLeft: =10
@@ -2461,11 +2460,11 @@ Screen1 As screen:
         RadiusTopRight: =10
         Visible: =ShowDatePicker
         Width: =(Parent.Width - (20 * 2)) / 3
-        X: =RoomSelectionPopup.Width + 40
+        X: =RoomSelectionPopup_1.Width + 40
         Y: =60
         ZIndex: =16
 
-        Button3_4 As button:
+        Button3_9 As button:
             DisplayMode: =DisplayMode.Disabled
             Height: =Parent.Height
             Text: =""
@@ -2473,19 +2472,19 @@ Screen1 As screen:
             X: =
             ZIndex: =1
 
-        Rectangle1_1 As rectangle:
+        Rectangle1_5 As rectangle:
             Fill: =RGBA(71, 158, 245, 1)
             Height: =26
             Width: =442
             Y: =65
             ZIndex: =2
 
-        Rectangle1 As rectangle:
+        Rectangle1_4 As rectangle:
             Height: =65
             Width: =442
             ZIndex: =3
 
-        Icon3_1 As icon.Cancel:
+        Icon3_6 As icon.Cancel:
             Color: =RGBA(255, 255, 255, 1)
             Height: =44
             Icon: =Icon.Cancel
@@ -2495,34 +2494,34 @@ Screen1 As screen:
             Y: =10
             ZIndex: =4
 
-        Button2_4 As button:
+        Button2_20 As button:
             OnSelect: =
             Text: =Text(StartDateTime, DateTimeFormat.ShortTime) & " - " & Text(EndDateTime, DateTimeFormat.ShortTime)
             Width: =319
-            X: =987
+            X: =123
             Y: =196
             ZIndex: =5
 
-        Rectangle1_2 As rectangle:
+        Rectangle1_6 As rectangle:
             Height: =105
             Width: =442
             Y: =91
             ZIndex: =6
 
-        "WeekdayGallery As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver5.0'":
+        "WeekdayGallery_1 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver5.0'":
             '#CopilotOverlayLabel': ="Filtered"
             DelayItemLoading: =true
             Height: =40
             Items: =["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"]
             LoadingSpinner: =LoadingSpinner.Data
             TemplatePadding: =0
-            TemplateSize: =MonthDayGallery.TemplateWidth
+            TemplateSize: =MonthDayGallery_1.TemplateWidth
             Width: =361
             X: =40
             Y: =251
             ZIndex: =7
 
-            Title1 As label:
+            Title1_1 As label:
                 Align: =Align.Center
                 Height: =27
                 OnSelect: =Select(Parent)
@@ -2537,7 +2536,7 @@ Screen1 As screen:
                 Y: =Parent.TemplateHeight / 2 - Self.Height / 2
                 ZIndex: =2
 
-        Label4 As label:
+        Label4_7 As label:
             Align: =Align.Center
             Height: =26
             Text: =Text(DateSelected, "[$-en-US]dddd")
@@ -2545,7 +2544,7 @@ Screen1 As screen:
             Y: =65
             ZIndex: =8
 
-        "MonthDayGallery As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        "MonthDayGallery_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
             '#CopilotOverlayLabel': ="Filtered"
             DelayItemLoading: =true
             Height: =297
@@ -2561,16 +2560,16 @@ Screen1 As screen:
             Y: =276
             ZIndex: =9
 
-            Circle3_1 As circle:
+            Circle3_2 As circle:
                 Fill: =If(DateAdd(firstDayInView, ThisItem.Value) = DateSelected && DateAdd(firstDayInView, ThisItem.Value) >= Today() && DateAdd(firstDayInView, ThisItem.Value) >= firstDayOfMonth, RGBA(121, 121, 121, 1), RGBA(0,0,0,0))
                 Height: =33
-                Visible: =DateAdd(firstDayInView, ThisItem.Value, TimeUnit.Days) = DateSelected && Title3.Visible
+                Visible: =DateAdd(firstDayInView, ThisItem.Value, TimeUnit.Days) = DateSelected && Title3_1.Visible
                 Width: =33
-                X: =Title3.X
-                Y: =Title3.Y
+                X: =Title3_1.X
+                Y: =Title3_1.Y
                 ZIndex: =1
 
-            Title3 As label:
+            Title3_1 As label:
                 Align: =Align.Center
                 Color: =If(DateAdd(firstDayInView,ThisItem.Value) < Today(), ColorFade(RGBA(47,41,43,1), 80%), RGBA(47,41,43,1))
                 FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
@@ -2602,7 +2601,7 @@ Screen1 As screen:
                 Y: =Parent.TemplateHeight / 2 - Self.Height / 2
                 ZIndex: =2
 
-        Label4_1 As label:
+        Label4_8 As label:
             Align: =Align.Center
             Height: =32
             Text: =Text(DateSelected, "[$-en-US]mmmm")
@@ -2610,7 +2609,7 @@ Screen1 As screen:
             Y: =91
             ZIndex: =10
 
-        Label4_2 As label:
+        Label4_9 As label:
             Align: =Align.Center
             Height: =49
             Size: =40
@@ -2619,7 +2618,7 @@ Screen1 As screen:
             Y: =119
             ZIndex: =11
 
-        Label4_3 As label:
+        Label4_10 As label:
             Align: =Align.Center
             Height: =28
             Text: =Text(DateSelected, "[$-en-US]yyyy")
@@ -2627,7 +2626,7 @@ Screen1 As screen:
             Y: =168
             ZIndex: =12
 
-        Button2_6 As button:
+        Button2_21 As button:
             Height: =55
             OnSelect: |
                 =Set(DateSpinner, true);
@@ -2676,7 +2675,7 @@ Screen1 As screen:
             Y: =598
             ZIndex: =13
 
-        Label4_4 As label:
+        Label4_6 As label:
             Align: =Align.Center
             Height: =44
             Size: =20
@@ -2686,7 +2685,7 @@ Screen1 As screen:
             Y: =10
             ZIndex: =14
 
-        Icon4 As icon.ArrowLeft:
+        Icon4_1 As icon.ArrowLeft:
             Height: =35
             Icon: =Icon.ArrowLeft
             OnSelect: |-
@@ -2700,7 +2699,7 @@ Screen1 As screen:
             Y: =204
             ZIndex: =15
 
-        Icon5 As icon.ArrowRight:
+        Icon5_1 As icon.ArrowRight:
             Height: =35
             Icon: =Icon.ArrowRight
             OnSelect: |-
@@ -2712,21 +2711,21 @@ Screen1 As screen:
             Y: =204
             ZIndex: =16
 
-        Label5 As label:
+        Label5_1 As label:
             Align: =Align.Center
             Text: =Text(firstDayOfMonth, "[$-en-US]mmmm yyyy")
             X: =147
             Y: =201
             ZIndex: =17
 
-        Spinner As group:
+        Spinner_1 As group:
             Height: =5
             Width: =5
             X: =60
             Y: =60
             ZIndex: =21
 
-            Rectangle2 As rectangle:
+            Rectangle2_7 As rectangle:
                 BorderColor: =RGBA(255, 255, 255, 1)
                 Fill: =RGBA(255, 255, 255, 1)
                 Height: =678
@@ -2734,7 +2733,7 @@ Screen1 As screen:
                 Width: =442
                 ZIndex: =18
 
-            "Spinner1 As 'Okrągły wskaźnik przetwarzania'":
+            "Spinner1_7 As 'Okrągły wskaźnik przetwarzania'":
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 FontColor: =
@@ -2745,7 +2744,7 @@ Screen1 As screen:
                 Y: =226
                 ZIndex: =19
 
-            Label8 As label:
+            Label8_7 As label:
                 Align: =Align.Center
                 Text: ="Syncing with Server Studia..."
                 Visible: =DateSpinner
@@ -2753,7 +2752,7 @@ Screen1 As screen:
                 Y: =377
                 ZIndex: =20
 
-    TimeSelectionPopup As groupContainer.manualLayoutContainer:
+    TimeSelectionPopup_1 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Regular
         Height: =Parent.Height - 90
         RadiusBottomLeft: =10
@@ -2762,11 +2761,11 @@ Screen1 As screen:
         RadiusTopRight: =10
         Visible: =ShowTimePicker
         Width: =(Parent.Width - (20 * 2)) / 3
-        X: =RoomSelectionPopup.Width + 40
+        X: =RoomSelectionPopup_1.Width + 40
         Y: =60
         ZIndex: =17
 
-        Button3_5 As button:
+        Button3_10 As button:
             DisplayMode: =DisplayMode.Disabled
             Height: =Parent.Height
             Text: =""
@@ -2774,12 +2773,12 @@ Screen1 As screen:
             X: =
             ZIndex: =1
 
-        Rectangle1_3 As rectangle:
+        Rectangle1_7 As rectangle:
             Height: =65
             Width: =442
             ZIndex: =3
 
-        Icon3_2 As icon.Cancel:
+        Icon3_7 As icon.Cancel:
             Color: =RGBA(255, 255, 255, 1)
             Height: =44
             Icon: =Icon.Cancel
@@ -2789,11 +2788,11 @@ Screen1 As screen:
             Y: =10
             ZIndex: =4
 
-        ButtonSaveTime As button:
+        ButtonSaveTime_1 As button:
             Height: =55
             OnSelect: |
-                =Set(StartDateTime, DateAdd(DateSelected, DropdownStartTime.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes', TimeUnit.Minutes));
-                Set(EndDateTime, DateAdd(StartDateTime, If(DropdownStartTime.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' >= DropdownEndTime.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes', DropdownEndTime.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' + 1440 - DropdownStartTime.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes', DropdownEndTime.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' - DropdownStartTime.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes'), TimeUnit.Minutes));
+                =Set(StartDateTime, DateAdd(DateSelected, DropdownStartTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes', TimeUnit.Minutes));
+                Set(EndDateTime, DateAdd(StartDateTime, If(DropdownStartTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' >= DropdownEndTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes', DropdownEndTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' + 1440 - DropdownStartTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes', DropdownEndTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' - DropdownStartTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes'), TimeUnit.Minutes));
                 
                 Set(StartDateTimeUTC, Text(DateAdd(StartDateTime, TimeZoneOffset(), TimeUnit.Minutes), "[$-en-US]yyyy-mm-ddThh:mm") & ":00.000Z");
                 Set(EndDateTimeUTC, Text(DateAdd(EndDateTime, TimeZoneOffset(), TimeUnit.Minutes), "[$-en-US]yyyy-mm-ddThh:mm") & ":00.000Z");
@@ -2805,7 +2804,7 @@ Screen1 As screen:
             Y: =593
             ZIndex: =13
 
-        Label4_5 As label:
+        Label4_11 As label:
             Align: =Align.Center
             Height: =44
             Size: =20
@@ -2815,20 +2814,20 @@ Screen1 As screen:
             Y: =10
             ZIndex: =14
 
-        DropdownStartTime As dropdown:
-            BorderColor: =If(ButtonSaveTime.DisplayMode = DisplayMode.Edit, RGBA(120, 120, 120, 1), Color.Red)
+        DropdownStartTime_1 As dropdown:
+            BorderColor: =If(ButtonSaveTime_1.DisplayMode = DisplayMode.Edit, RGBA(120, 120, 120, 1), Color.Red)
             ChevronBackground: =RGBA(62, 96, 170, 0)
             ChevronDisabledBackground: =RGBA(159, 167, 165, 1)
             ChevronDisabledFill: =ColorFade(RGBA(47, 41, 43, 1), 70%)
             ChevronFill: =RGBA(18, 107, 240, 1)
             Default: =If(ResetTrue, LookUp(Times, Text = Lower(Text(StartDateTime, DateTimeFormat.ShortTime))).Text)
             Items: =Times
-            Width: =ButtonSaveTime.Width / 2 - 10
-            X: =ButtonSaveTime.X
+            Width: =ButtonSaveTime_1.Width / 2 - 10
+            X: =ButtonSaveTime_1.X
             Y: =116
             ZIndex: =15
 
-        Label6 As label:
+        Label6_2 As label:
             FontWeight: =FontWeight.Semibold
             Text: ="Start"
             Width: =158
@@ -2836,7 +2835,7 @@ Screen1 As screen:
             Y: =76
             ZIndex: =17
 
-        Label6_1 As label:
+        Label6_3 As label:
             FontWeight: =FontWeight.Semibold
             Text: ="End"
             Width: =158
@@ -2844,20 +2843,20 @@ Screen1 As screen:
             Y: =76
             ZIndex: =18
 
-        DropdownEndTime As dropdown:
-            BorderColor: =If(ButtonSaveTime.DisplayMode = DisplayMode.Edit, RGBA(120, 120, 120, 1), Color.Red)
+        DropdownEndTime_1 As dropdown:
+            BorderColor: =If(ButtonSaveTime_1.DisplayMode = DisplayMode.Edit, RGBA(120, 120, 120, 1), Color.Red)
             ChevronBackground: =RGBA(62, 96, 170, 0)
             ChevronDisabledBackground: =RGBA(159, 167, 165, 1)
             ChevronDisabledFill: =ColorFade(RGBA(47, 41, 43, 1), 70%)
             ChevronFill: =RGBA(18, 107, 240, 1)
-            Default: =If(IsBlank(DurationGallery.Selected) && IsBlank(DurationSelection) || ResetTrue, LookUp(Times, Text = Lower(Text(EndDateTime, DateTimeFormat.ShortTime))).Text, !IsBlank(DurationSelection), LookUp(Times, Minutes = Mod(DropdownStartTime.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' + DurationGallery.Selected.Minutes, 1440)).Text)
+            Default: =If(IsBlank(DurationGallery_1.Selected) && IsBlank(DurationSelection) || ResetTrue, LookUp(Times, Text = Lower(Text(EndDateTime, DateTimeFormat.ShortTime))).Text, !IsBlank(DurationSelection), LookUp(Times, Minutes = Mod(DropdownStartTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' + DurationGallery_1.Selected.Minutes, 1440)).Text)
             Items: =Times
-            Width: =ButtonSaveTime.Width / 2 - 10
+            Width: =ButtonSaveTime_1.Width / 2 - 10
             X: =232
             Y: =116
             ZIndex: =19
 
-        "DurationGallery As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        "DurationGallery_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
             '#CopilotOverlayLabel': ="Filtered"
             DelayItemLoading: =true
             Height: =355
@@ -2873,7 +2872,7 @@ Screen1 As screen:
             Y: =190
             ZIndex: =20
 
-            Button5_1 As button:
+            Button5_2 As button:
                 BorderColor: =RGBA(18, 107, 240, 1)
                 Color: =Self.BorderColor
                 Fill: =If(ThisItem.Minutes = DurationSelection.Minutes, RGBA(18, 107, 240, .2), RGBA(0, 0, 0, 0))
@@ -2886,7 +2885,7 @@ Screen1 As screen:
                 Width: =Parent.TemplateWidth
                 ZIndex: =3
 
-    CheckSchedulePopUp As groupContainer.manualLayoutContainer:
+    CheckSchedulePopUp_1 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Regular
         Height: =Parent.Height - 90
         RadiusBottomLeft: =10
@@ -2903,14 +2902,14 @@ Screen1 As screen:
         Y: =60
         ZIndex: =18
 
-        Button3_6 As button:
+        Button3_8 As button:
             DisplayMode: =DisplayMode.Disabled
             Height: =Parent.Height
             Text: =""
             Width: =Parent.Width
             ZIndex: =1
 
-        Icon3_3 As icon.Cancel:
+        Icon3_5 As icon.Cancel:
             Height: =44
             Icon: =Icon.Cancel
             OnSelect: |-
@@ -2924,7 +2923,7 @@ Screen1 As screen:
             Y: =10
             ZIndex: =2
 
-        Button2_9 As button:
+        Button2_16 As button:
             OnSelect: |
                 =Set(firstDayOfMonth, DateAdd(DateSelected, 1 - Day(DateSelected), TimeUnit.Days));
                 Set(firstDayInView, DateAdd(firstDayOfMonth, -(Mod(Weekday(firstDayOfMonth)-2,7)+1),TimeUnit.Days));
@@ -2938,7 +2937,7 @@ Screen1 As screen:
             Y: =70
             ZIndex: =3
 
-        Button2_10 As button:
+        Button2_17 As button:
             OnSelect: |
                 =Set(ShowTimePicker, true)
             Text: |+
@@ -2949,7 +2948,7 @@ Screen1 As screen:
             Y: =137
             ZIndex: =4
 
-        Container2_1 As groupContainer:
+        Container2_3 As groupContainer:
             Height: =Parent.Height - 20
             RadiusBottomLeft: =10
             RadiusBottomRight: =10
@@ -2960,14 +2959,14 @@ Screen1 As screen:
             Y: =10
             ZIndex: =5
 
-            Image2_1 As image:
+            Image2_3 As image:
                 Height: =Parent.Height
                 Image: ='Screenshot 2024-03-17 at 22.21.45'
                 ImagePosition: =ImagePosition.Stretch
                 Width: =Parent.Width
                 ZIndex: =1
 
-            room103_1 As button:
+            room103_3 As button:
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =1
                 Color: =If (SelectedRoom = Self, Color.Black, Color.White)
@@ -3006,7 +3005,7 @@ Screen1 As screen:
                 Y: =352
                 ZIndex: =2
 
-            room104_1 As button:
+            room104_3 As button:
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =1
                 Color: =If (SelectedRoom = Self, Color.Black, Color.White)
@@ -3045,7 +3044,7 @@ Screen1 As screen:
                 Y: =352
                 ZIndex: =3
 
-            room102_1 As button:
+            room102_3 As button:
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =1
                 Color: =If (SelectedRoom = Self, Color.Black, Color.White)
@@ -3084,7 +3083,7 @@ Screen1 As screen:
                 Y: =352
                 ZIndex: =4
 
-            room161_1 As button:
+            room161_3 As button:
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =1
                 Color: =If (SelectedRoom = Self, Color.Black, Color.White)
@@ -3123,7 +3122,7 @@ Screen1 As screen:
                 Y: =176
                 ZIndex: =11
 
-            room107_1 As button:
+            room107_3 As button:
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =1
                 Color: =If (SelectedRoom = Self, Color.Black, Color.White)
@@ -3162,7 +3161,7 @@ Screen1 As screen:
                 Y: =352
                 ZIndex: =12
 
-            room108_1 As button:
+            room108_3 As button:
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =1
                 Color: =If (SelectedRoom = Self, Color.Black, Color.White)
@@ -3201,7 +3200,7 @@ Screen1 As screen:
                 Y: =352
                 ZIndex: =13
 
-            room106_1 As button:
+            room106_3 As button:
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =1
                 Color: =If (SelectedRoom = Self, Color.Black, Color.White)
@@ -3240,7 +3239,7 @@ Screen1 As screen:
                 Y: =352
                 ZIndex: =14
 
-            room105_1 As button:
+            room105_3 As button:
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =1
                 Color: =If (SelectedRoom = Self, Color.Black, Color.White)
@@ -3279,7 +3278,7 @@ Screen1 As screen:
                 Y: =415
                 ZIndex: =15
 
-            room116_1 As button:
+            room116_3 As button:
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =1
                 Color: =If (SelectedRoom = Self, Color.Black, Color.White)
@@ -3318,7 +3317,7 @@ Screen1 As screen:
                 Y: =352
                 ZIndex: =16
 
-            room117_1 As button:
+            room117_3 As button:
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =1
                 Color: =If (SelectedRoom = Self, Color.Black, Color.White)
@@ -3357,7 +3356,7 @@ Screen1 As screen:
                 Y: =352
                 ZIndex: =17
 
-            room133_1 As button:
+            room133_3 As button:
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =1
                 Color: =If (SelectedRoom = Self, Color.Black, Color.White)
@@ -3396,7 +3395,7 @@ Screen1 As screen:
                 Y: =176
                 ZIndex: =18
 
-            "'room116-AR_1' As button":
+            "'room116-AR_3' As button":
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =1
                 Color: =If (SelectedRoom = Self, Color.Black, Color.White)
@@ -3435,7 +3434,7 @@ Screen1 As screen:
                 Y: =415
                 ZIndex: =19
 
-            room120_1 As button:
+            room120_3 As button:
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =1
                 Color: =If (SelectedRoom = Self, Color.Black, Color.White)
@@ -3474,7 +3473,7 @@ Screen1 As screen:
                 Y: =352
                 ZIndex: =20
 
-            room121_1 As button:
+            room121_3 As button:
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =1
                 Color: =If (SelectedRoom = Self, Color.Black, Color.White)
@@ -3513,7 +3512,7 @@ Screen1 As screen:
                 Y: =352
                 ZIndex: =21
 
-            room122_1 As button:
+            room122_3 As button:
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =1
                 Color: =If (SelectedRoom = Self, Color.Black, Color.White)
@@ -3551,14 +3550,14 @@ Screen1 As screen:
                 Y: =332
                 ZIndex: =22
 
-        Label7_1 As label:
+        Label7_3 As label:
             Text: |-
                 ="Selected room:"
             X: =985
             Y: =207
             ZIndex: =6
 
-        Button2_11 As button:
+        Button2_18 As button:
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =Color.Black
             DisplayMode: =DisplayMode.Disabled
@@ -3569,7 +3568,7 @@ Screen1 As screen:
             Y: =259
             ZIndex: =7
 
-        "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        "Gallery1_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
             '#CopilotOverlayLabel': ="Filtered"
             DelayItemLoading: =true
             Height: =322
@@ -3627,11 +3626,11 @@ Screen1 As screen:
             Transition: =Transition.Push
             Visible: =!(IsBlank(SelectedRoom))
             Width: =363
-            X: =Container2_1.X + Container2_1.Width + 6
+            X: =Container2_3.X + Container2_3.Width + 6
             Y: =319
             ZIndex: =11
 
-            Button2_12 As button:
+            Button2_19 As button:
                 Color: =RGBA(0, 0, 0, 1)
                 DisabledColor: =Color.Black
                 DisplayMode: =DisplayMode.Disabled
@@ -3644,7 +3643,7 @@ Screen1 As screen:
                 Y: =10
                 ZIndex: =1
 
-            Title4 As label:
+            Title4_1 As label:
                 FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                 Height: =25
                 OnSelect: =Select(Parent)
@@ -3659,7 +3658,7 @@ Screen1 As screen:
                 Y: =28
                 ZIndex: =2
 
-            Subtitle2_6 As label:
+            Subtitle2_23 As label:
                 Align: =Align.Center
                 FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                 Height: =23
@@ -3675,7 +3674,7 @@ Screen1 As screen:
                 Y: =53
                 ZIndex: =6
 
-            Subtitle2_8 As label:
+            Subtitle2_22 As label:
                 Align: =Align.Center
                 FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                 Height: =23
@@ -3691,14 +3690,14 @@ Screen1 As screen:
                 Y: =40
                 ZIndex: =8
 
-        Spinner_3 As group:
+        Spinner_5 As group:
             Height: =5
             Width: =5
             X: =40
             Y: =60
             ZIndex: =12
 
-            Rectangle2_3 As rectangle:
+            Rectangle2_6 As rectangle:
                 BorderColor: =RGBA(255, 255, 255, 1)
                 Fill: =RGBA(255, 255, 255, 1)
                 Height: =678
@@ -3706,7 +3705,7 @@ Screen1 As screen:
                 Width: =1326
                 ZIndex: =8
 
-            "Spinner1_3 As 'Okrągły wskaźnik przetwarzania'":
+            "Spinner1_6 As 'Okrągły wskaźnik przetwarzania'":
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 FontColor: =
@@ -3717,7 +3716,7 @@ Screen1 As screen:
                 Y: =217
                 ZIndex: =9
 
-            Label8_3 As label:
+            Label8_6 As label:
                 Align: =Align.Center
                 Text: ="Loading..."
                 Visible: =ShowLoading
@@ -3726,7 +3725,7 @@ Screen1 As screen:
                 Y: =404
                 ZIndex: =10
 
-    TextCanvas1 As Tekst:
+    TextCanvas1_1 As Tekst:
         DisplayMode: =DisplayMode.Edit
         FontColor: =
         Height: =32
@@ -3742,4 +3741,755 @@ Screen1 As screen:
         X: =31
         Y: =706
         ZIndex: =19
+
+    mainContainer As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Regular
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =10
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        Width: =Parent.Width
+        ZIndex: =20
+
+        ContainerHeader_2 As groupContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            DropShadow: =DropShadow.Regular
+            Fill: =RGBA(244,244,244,1)
+            FillPortions: =0
+            Height: =50
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Width: =Parent.Width - (20 * 2)
+            X: =20
+            ZIndex: =1
+
+            Button3_12 As button:
+                DisplayMode: =DisplayMode.Disabled
+                Height: =Parent.Height
+                Text: =""
+                Visible: =false
+                Width: =Parent.Width
+                ZIndex: =1
+
+            Header1_2 As Nagłówek:
+                BasePaletteColor: =RGBA(224, 224, 224, 1)
+                DisplayMode: =DisplayMode.Edit
+                Font: =Font.Lato
+                FontColor: =
+                Height: =Parent.Height - 50
+                IsProfilePictureVisible: =true
+                IsTitleVisible: =true
+                Logo: ='Screenshot 2024-03-02 184341'
+                OnSelectLogo: =Navigate(Screen1_1, Transition.Pop)
+                Style: ='Header.Style'.Neutral
+                Title: ="FeiT Reservation System"
+                UserEmail: =User().Email
+                UserImage: =User().Image
+                UserName: =User().FullName
+                Visible: =false
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =2
+
+            Rectangle3_2 As rectangle:
+                Fill: |-
+                    =ColorValue("#FFFFFF")
+                Height: =50
+                Visible: =false
+                Width: =1326
+                Y: =50
+                ZIndex: =3
+
+            BadgeCanvas1_2 As Wskaźnik:
+                BasePaletteColor: =
+                Content: =Left(User().FullName, 1) & Mid(User().FullName, Find(" ", User().FullName) + 1, 1)
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =37
+                Width: =37
+                X: =Parent.Width - Self.Width - 13
+                Y: =Parent.Height - Self.Height - (Rectangle3_2.Height / 2) + (Self.Height / 2)
+                ZIndex: =4
+
+            Label9_2 As label:
+                Align: =Align.Right
+                DisplayMode: =DisplayMode.View
+                Text: =User().FullName
+                Width: =383
+                X: =933
+                Y: =5
+                ZIndex: =5
+
+            Image4_2 As image:
+                Height: =37
+                Image: ='Screenshot 2024-03-02 184341'
+                Width: =37
+                X: =22
+                Y: =Parent.Height - Self.Height - (Rectangle3_2.Height / 2) + (Self.Height / 2)
+                ZIndex: =6
+
+            Label10_2 As label:
+                Font: ="Adagio Slab"
+                FontWeight: =FontWeight.Semibold
+                Size: =15
+                Text: ="FEIT Reservation System"
+                Width: =459
+                X: =70
+                Y: =Parent.Height - Self.Height - (Rectangle3_2.Height / 2) + (Self.Height / 2)
+                ZIndex: =7
+
+        Container6_1 As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            Fill: =RGBA(244,244,244,1)
+            FillPortions: =0
+            Height: =Parent.Height - 90
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutGap: =10
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            LayoutOverflowX: =LayoutOverflow.Scroll
+            LayoutOverflowY: =LayoutOverflow.Scroll
+            LayoutWrap: =true
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            ZIndex: =3
+
+            Container9 As groupContainer.verticalAutoLayoutContainer:
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =5
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =1
+
+                Container10 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =Label3.Height
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    ZIndex: =1
+
+                    Label3 As label:
+                        AutoHeight: =true
+                        FontWeight: =FontWeight.Bold
+                        Size: =25
+                        Text: ="Welcome, "&Left(User().FullName, Find(" ",User().FullName) - 1)&"!"
+                        Width: =417
+                        X: =20
+                        ZIndex: =1
+
+                Container5_3 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    DropShadow: =DropShadow.None
+                    Height: =556
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =5
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =10
+                    PaddingLeft: =10
+                    PaddingRight: =10
+                    PaddingTop: =10
+                    Width: =Parent.Width
+                    X: =30
+                    Y: =88
+                    ZIndex: =2
+
+                    Container10_1 As groupContainer.manualLayoutContainer:
+                        DropShadow: =DropShadow.None
+                        FillPortions: =0
+                        Height: =Label3_1.Height
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        ZIndex: =1
+
+                        Label3_1 As label:
+                            AutoHeight: =true
+                            Size: =15
+                            Text: ="What would you like to do?"
+                            Width: =623
+                            ZIndex: =1
+
+                    Container3_8 As groupContainer.manualLayoutContainer:
+                        DropShadow: =DropShadow.None
+                        Height: =297
+                        LayoutMinHeight: =50
+                        LayoutMinWidth: =50
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Width: =391
+                        X: =30
+                        Y: =88
+                        ZIndex: =2
+
+                        btn_MakeReservation_8 As button:
+                            Color: |-
+                                =If(
+                                    btn_Overlay_8.Pressed,
+                                    WEITI_Szafirowy,
+                                    Color.White
+                                )
+                            Fill: |-
+                                =If(
+                                    btn_Overlay_8.Pressed,
+                                    Color.White,
+                                    WEITI_Szafirowy
+                                )
+                            Height: =Parent.Height - Self.BorderThickness
+                            Text: ="Make a reservation"
+                            Width: =Parent.Width - Self.BorderThickness
+                            X: =2
+                            Y: =2
+                            ZIndex: =1
+
+                        btn_Overlay_8 As button:
+                            BorderStyle: =BorderStyle.None
+                            Color: =Color.Transparent
+                            DisabledColor: =Color.Transparent
+                            DisabledFill: =Color.Transparent
+                            Fill: =Color.Transparent
+                            Height: =btn_MakeReservation_8.Height
+                            HoverColor: =Color.Transparent
+                            HoverFill: =RGBA(0, 0, 0, 0.05)
+                            OnSelect: |-
+                                =Set(ShowLoading, true);
+                                UpdateContext({varRoomSelection: true});
+                                Set(DateSelected, Today());
+                                Set(DateTimeRoomChange, true);
+                                If( Mod(Minute(Now()), 30) <= 14,
+                                    Set(StartDateTime, DateAdd(Now(), -Mod(Minute(Now()), 30), TimeUnit.Minutes));
+                                    Set(EndDateTime, DateAdd(StartDateTime, 30, TimeUnit.Minutes)),
+                                    Mod(Minute(Now()), 30) > 15,
+                                    Set(StartDateTime, DateAdd(Now(), -Mod(Minute(Now()), 30), TimeUnit.Minutes));
+                                    Set(EndDateTime, DateAdd(StartDateTime, 30, TimeUnit.Minutes)),
+                                    Set(StartDateTime, Now());
+                                    Set(EndDateTime, DateAdd(Now(), -Mod(Minute(Now()), 30) + 60, TimeUnit.Minutes))
+                                );
+                                Concurrent(
+                                    ClearCollect(ScheduleRoom102, 'Serwer Studia'.Getclassesfromroom("1030-ETI-102", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom103, 'Serwer Studia'.Getclassesfromroom("1030-ETI-103", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom104, 'Serwer Studia'.Getclassesfromroom("1030-ETI-104", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom105, 'Serwer Studia'.Getclassesfromroom("1030-ETI-105-AR", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
+                                );
+                                
+                                Concurrent(
+                                    ClearCollect(ScheduleRoom106, 'Serwer Studia'.Getclassesfromroom("1030-ETI-106", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom107, 'Serwer Studia'.Getclassesfromroom("1030-ETI-107", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom161, 'Serwer Studia'.Getclassesfromroom("1030-ETI-161", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom108, 'Serwer Studia'.Getclassesfromroom("1030-ETI-108", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
+                                );
+                                
+                                Concurrent(
+                                    ClearCollect(ScheduleRoom116, 'Serwer Studia'.Getclassesfromroom("1030-ETI-116", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom117, 'Serwer Studia'.Getclassesfromroom("1030-ETI-117", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom116AR, 'Serwer Studia'.Getclassesfromroom("1030-ETI-116-AR", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom133, 'Serwer Studia'.Getclassesfromroom("1030-ETI-108", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
+                                );
+                                
+                                Concurrent(
+                                    ClearCollect(ScheduleRoom120, 'Serwer Studia'.Getclassesfromroom("1030-ETI-120", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom121, 'Serwer Studia'.Getclassesfromroom("1030-ETI-121", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom122, 'Serwer Studia'.Getclassesfromroom("1030-ETI-122", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
+                                );
+                                Set(ShowLoading, false);
+                            PressedColor: =Color.Transparent
+                            PressedFill: =Color.Transparent
+                            Text: ="Button"
+                            Width: =btn_MakeReservation_8.Width
+                            X: =btn_MakeReservation_8.X
+                            Y: =2
+                            ZIndex: =3
+
+                    Container3_9 As groupContainer.manualLayoutContainer:
+                        DropShadow: =DropShadow.None
+                        Height: =297
+                        LayoutMinHeight: =50
+                        LayoutMinWidth: =50
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Width: =391
+                        X: =30
+                        Y: =88
+                        ZIndex: =3
+
+                        btn_MakeReservation_9 As button:
+                            Color: |-
+                                =If(
+                                    btn_Overlay_9.Pressed,
+                                    WEITI_Szafirowy,
+                                    Color.White
+                                )
+                            Fill: |-
+                                =If(
+                                    btn_Overlay_9.Pressed,
+                                    Color.White,
+                                    WEITI_Szafirowy
+                                )
+                            Height: =Parent.Height - Self.BorderThickness
+                            Text: ="Check schedule"
+                            Width: =Parent.Width - Self.BorderThickness
+                            X: =2
+                            Y: =2
+                            ZIndex: =1
+
+                        btn_Overlay_9 As button:
+                            BorderStyle: =BorderStyle.None
+                            Color: =Color.Transparent
+                            DisabledColor: =Color.Transparent
+                            DisabledFill: =Color.Transparent
+                            Fill: =Color.Transparent
+                            Height: =btn_MakeReservation_9.Height
+                            HoverColor: =Color.Transparent
+                            HoverFill: =RGBA(0, 0, 0, 0.05)
+                            OnSelect: |-
+                                =Set(ShowLoading, true);
+                                UpdateContext({varRoomSelection: true});
+                                Set(DateSelected, Today());
+                                Set(DateTimeRoomChange, true);
+                                If( Mod(Minute(Now()), 30) <= 14,
+                                    Set(StartDateTime, DateAdd(Now(), -Mod(Minute(Now()), 30), TimeUnit.Minutes));
+                                    Set(EndDateTime, DateAdd(StartDateTime, 30, TimeUnit.Minutes)),
+                                    Mod(Minute(Now()), 30) > 15,
+                                    Set(StartDateTime, DateAdd(Now(), -Mod(Minute(Now()), 30), TimeUnit.Minutes));
+                                    Set(EndDateTime, DateAdd(StartDateTime, 30, TimeUnit.Minutes)),
+                                    Set(StartDateTime, Now());
+                                    Set(EndDateTime, DateAdd(Now(), -Mod(Minute(Now()), 30) + 60, TimeUnit.Minutes))
+                                );
+                                Concurrent(
+                                    ClearCollect(ScheduleRoom102, 'Serwer Studia'.Getclassesfromroom("1030-ETI-102", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom103, 'Serwer Studia'.Getclassesfromroom("1030-ETI-103", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom104, 'Serwer Studia'.Getclassesfromroom("1030-ETI-104", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom105, 'Serwer Studia'.Getclassesfromroom("1030-ETI-105-AR", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
+                                );
+                                
+                                Concurrent(
+                                    ClearCollect(ScheduleRoom106, 'Serwer Studia'.Getclassesfromroom("1030-ETI-106", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom107, 'Serwer Studia'.Getclassesfromroom("1030-ETI-107", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom161, 'Serwer Studia'.Getclassesfromroom("1030-ETI-161", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom108, 'Serwer Studia'.Getclassesfromroom("1030-ETI-108", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
+                                );
+                                
+                                Concurrent(
+                                    ClearCollect(ScheduleRoom116, 'Serwer Studia'.Getclassesfromroom("1030-ETI-116", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom117, 'Serwer Studia'.Getclassesfromroom("1030-ETI-117", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom116AR, 'Serwer Studia'.Getclassesfromroom("1030-ETI-116-AR", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom133, 'Serwer Studia'.Getclassesfromroom("1030-ETI-108", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
+                                );
+                                
+                                Concurrent(
+                                    ClearCollect(ScheduleRoom120, 'Serwer Studia'.Getclassesfromroom("1030-ETI-120", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom121, 'Serwer Studia'.Getclassesfromroom("1030-ETI-121", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom122, 'Serwer Studia'.Getclassesfromroom("1030-ETI-122", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
+                                );
+                                Set(ShowLoading, false);
+                            PressedColor: =Color.Transparent
+                            PressedFill: =Color.Transparent
+                            Text: ="Button"
+                            Width: =btn_MakeReservation_9.Width
+                            X: =btn_MakeReservation_9.X
+                            Y: =2
+                            ZIndex: =3
+
+            Container7_3 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                Height: =584
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =10
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =50
+                LayoutMinWidth: =100
+                LayoutMode: =LayoutMode.Auto
+                LayoutOverflowY: =LayoutOverflow.Scroll
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                Width: =625
+                X: =Parent.Width / 2 + 10
+                Y: =70
+                ZIndex: =3
+
+                Container11 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =10
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    LayoutOverflowY: =LayoutOverflow.Scroll
+                    LayoutWrap: =true
+                    Width: =400
+                    ZIndex: =1
+
+                    Container12_1 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =Parent.Width
+                        LayoutMode: =LayoutMode.Auto
+                        LayoutOverflowY: =LayoutOverflow.Scroll
+                        ZIndex: =1
+
+                        Label3_4 As label:
+                            Align: =Align.Center
+                            AutoHeight: =true
+                            Size: =15
+                            Text: |-
+                                ="Source
+                                "
+                            Width: =Parent.Width
+                            ZIndex: =1
+
+                        DropdownCalendarType_2 As dropdown:
+                            AllowEmptySelection: =true
+                            Default: =""
+                            Items: =["Serwer Studia", "Outlook"]
+                            OnChange: |-
+                                =If (
+                                    Self.Selected.Value = "Serwer Studia",
+                                    UpdateContext({serwerStudia: true}),
+                                    UpdateContext({serwerStudia: false})
+                                )
+                            Tooltip: ="Select calendar..."
+                            Width: =200
+                            X: =713
+                            Y: =20
+                            ZIndex: =3
+
+                    Container12 As groupContainer.verticalAutoLayoutContainer:
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =50
+                        LayoutMinWidth: =Parent.Width
+                        LayoutMode: =LayoutMode.Auto
+                        Visible: =DropdownCalendarType_2.Selected.Value = "Outlook"
+                        ZIndex: =4
+
+                        Label3_3 As label:
+                            Align: =Align.Center
+                            AutoHeight: =true
+                            Size: =15
+                            Text: |-
+                                ="Calendar
+                                "
+                            Width: =Parent.Width
+                            ZIndex: =1
+
+                        Dropdown1_2 As dropdown:
+                            Items: =Office365Outlook.CalendarGetTablesV2().value
+                            Visible: =DropdownCalendarType.SelectedText.Value = "Outlook"
+                            X: =440
+                            Y: =205
+                            ZIndex: =2
+
+                Container1_5 As groupContainer:
+                    AlignInContainer: =AlignInContainer.Center
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =40
+                    LayoutMinHeight: =20
+                    LayoutMinWidth: =250
+                    Width: =255
+                    X: =872
+                    Y: =78
+                    ZIndex: =2
+
+                    Icon1_5 As icon.ArrowRight:
+                        Height: =40
+                        Icon: =Icon.ArrowRight
+                        OnSelect: |-
+                            =(DatePicker1_6.SelectedDate);
+                            Set(varShowDate, DateAdd(varShowDate, 1, TimeUnit.Days))
+                        Width: =31
+                        X: =215
+                        ZIndex: =1
+
+                    Icon2_5 As icon.ArrowLeft:
+                        Height: =40
+                        Icon: =Icon.ArrowLeft
+                        OnSelect: =Set(varShowDate, DateAdd(varShowDate, -1, TimeUnit.Days))
+                        Width: =31
+                        ZIndex: =2
+
+                    DatePicker1_6 As datepicker:
+                        BorderThickness: =0
+                        Color: =Background_1.DisabledFill
+                        DefaultDate: =
+                        DisabledFill: =Parent.Fill
+                        Fill: =Background_1.DisabledFill
+                        Height: |
+                            =40
+                        InputTextPlaceholder: =
+                        OnChange: =Set(varShowDate, DateValue(DatePicker1_6.SelectedDate))
+                        OnSelect: |-
+                            =UpdateContext({plan:Filter('Serwer Studia'.Getuserschedule("json", Text(Self.SelectedDate, "yyyy-mm-dd")).plan, date = Text(Self.SelectedDate,"yyyymmdd"))})
+                        Width: =166
+                        X: =44
+                        ZIndex: =3
+
+                    Label2_5 As label:
+                        Align: =Align.Center
+                        AutoHeight: =true
+                        Size: =17
+                        Text: =Text(varShowDate, "dd/mm/yyyy")
+                        Width: =132
+                        X: =39
+                        ZIndex: =4
+
+                "Gallery2_11 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                    '#CopilotOverlayLabel': ="Filtered"
+                    DelayItemLoading: =true
+                    DisplayMode: =DisplayMode.View
+                    Height: =562
+                    Items: =Sort(Filter(Office365Outlook.V4CalendarGetItems(Dropdown1_1.Selected.id).value, DateValue(startWithTimeZone)=DateValue(varShowDate)),TimeValue(startWithTimeZone))
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =320
+                    LoadingSpinner: =LoadingSpinner.Data
+                    Selectable: =false
+                    ShowScrollbar: =false
+                    TemplatePadding: =0
+                    TemplateSize: =105
+                    Transition: =Transition.Push
+                    Visible: =!serwerStudia
+                    Width: =(Parent.Width - 20)/2 - 20
+                    X: =683
+                    Y: =116
+                    ZIndex: =3
+
+                    Button1_11 As button:
+                        DisabledFill: =RGBA(244, 244, 244, 0.2)
+                        DisplayMode: =DisplayMode.Disabled
+                        Height: =Parent.TemplateHeight - 16
+                        OnSelect: =Select(Parent)
+                        RadiusBottomLeft: =60
+                        RadiusBottomRight: =60
+                        RadiusTopLeft: =60
+                        RadiusTopRight: =60
+                        Text: =""
+                        Width: =Parent.TemplateWidth - 16
+                        X: =1
+                        Y: =8
+                        ZIndex: =1
+
+                    Title2_5 As label:
+                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                        Height: =36
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =20
+                        Text: =ThisItem.subject
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =1
+                        Y: =34
+                        ZIndex: =2
+
+                    Subtitle2_33 As label:
+                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                        Height: =23
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Text: =
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =1
+                        Y: =40
+                        ZIndex: =3
+
+                    NextArrow2_5 As icon.ChevronRight:
+                        AccessibleLabel: =Self.Tooltip
+                        Color: =RGBA(166, 166, 166, 1)
+                        Height: =50
+                        Icon: =Icon.ChevronRight
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =16
+                        PaddingLeft: =16
+                        PaddingRight: =16
+                        PaddingTop: =16
+                        Tooltip: ="View item details"
+                        Width: =1
+                        Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                        ZIndex: =4
+
+                    Subtitle2_32 As label:
+                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                        Height: =36
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =24
+                        Text: |-
+                            =Text(ThisItem.startWithTimeZone, "hh:mm")&" - "&Text(ThisItem.endWithTimeZone, "hh:mm")
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =1
+                        Y: =34
+                        ZIndex: =6
+
+                "Gallery2_10 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                    '#CopilotOverlayLabel': ="Filtered"
+                    DelayItemLoading: =true
+                    DisplayMode: =DisplayMode.View
+                    Height: =557
+                    Items: =Sort(Filter('Serwer Studia'.Getuserschedule("json", Text(DatePicker1_6.SelectedDate, "yyyy-mm-dd")).plan, DateValue(date) = DatePicker1_6.SelectedDate),hour)
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =320
+                    LoadingSpinner: =LoadingSpinner.Data
+                    Selectable: =false
+                    TemplatePadding: =0
+                    TemplateSize: =105
+                    Transition: =Transition.Push
+                    Visible: =serwerStudia
+                    Width: =(Parent.Width - 20)/2 - 20
+                    X: =Parent.Width / 2
+                    Y: =121
+                    ZIndex: =4
+
+                    Button1_10 As button:
+                        DisabledFill: =RGBA(244, 244, 244, 0.2)
+                        DisplayMode: =DisplayMode.Disabled
+                        Height: =Parent.TemplateHeight - 16
+                        OnSelect: =Select(Parent)
+                        RadiusBottomLeft: =60
+                        RadiusBottomRight: =60
+                        RadiusTopLeft: =60
+                        RadiusTopRight: =60
+                        Text: =""
+                        Width: =Parent.TemplateWidth - 16
+                        X: =8
+                        Y: =8
+                        ZIndex: =1
+
+                    ClassNameGalleryServerStudia_5 As label:
+                        AutoHeight: =true
+                        FontWeight: =FontWeight.Semibold
+                        Height: =37
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =30
+                        Text: =Last(Split(ThisItem.skr, "-")).Value
+                        Width: =128
+                        X: =Parent.X + Parent.TemplateWidth / 2 - Self.Width
+                        Y: =11
+                        ZIndex: =2
+
+                    ClassTypeGalleryServerStudia_5 As label:
+                        Align: =Align.Center
+                        AutoHeight: =true
+                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =20
+                        Text: =ThisItem.type
+                        Width: =77
+                        X: =ClassNameGalleryServerStudia_5.X + ClassNameGalleryServerStudia_5.Width + 5
+                        Y: =19
+                        ZIndex: =6
+
+                    Group1_5 As group:
+                        Height: =5
+                        Width: =5
+                        X: =60
+                        Y: =60
+                        ZIndex: =9
+
+                        Subtitle2_29 As label:
+                            Align: =Align.Center
+                            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                            Height: =34
+                            OnSelect: =Select(Parent)
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =20
+                            Text: |-
+                                =DateAdd(TimeValue(ThisItem.hour&":00"),15,TimeUnit.Minutes)&" - "&DateAdd(TimeValue(ThisItem.hour&":00"),ThisItem.length,TimeUnit.Hours)
+                            Width: =165
+                            X: =Parent.X + Parent.TemplateWidth / 2 - Self.Width
+                            Y: =55
+                            ZIndex: =7
+
+                        Subtitle2_31 As label:
+                            Align: =Align.Center
+                            AutoHeight: =true
+                            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                            Height: =34
+                            OnSelect: =Select(Parent)
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =20
+                            Text: |-
+                                ="sala: "
+                                &
+                                If (
+                                    EndsWith(Last(Split(ThisItem.room,"-")).Value, "AR"),
+                                    Last(FirstN(Split(ThisItem.room,"-"), CountRows(Split(ThisItem.room,"-")) - 1)).Value & "-" & Last(Split(ThisItem.room,"-")).Value,
+                                    Last(Split(ThisItem.room,"-")).Value
+                                )
+                            Width: =172
+                            X: =Subtitle2_29.X + Subtitle2_29.Width
+                            Y: =55
+                            ZIndex: =8
+
+        newContainerFooter As groupContainer.manualLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            DropShadow: =DropShadow.Regular
+            FillPortions: =0
+            Height: =TextInput1_2.Height
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Width: =Parent.Width - (20 * 2)
+            X: =20
+            Y: =42+19+ContainerMainBody_1.Height+10
+            ZIndex: =4
+
+            TextInput1_2 As text:
+                Align: =Align.Center
+                Default: ="Jan Halemba (305979)"
+                DisabledFill: |-
+                    =ColorValue("#FFFFFF")
+                DisplayMode: =DisplayMode.Disabled
+                Height: =20
+                Size: =9
+                Width: =Parent.Width
+                ZIndex: =2
 

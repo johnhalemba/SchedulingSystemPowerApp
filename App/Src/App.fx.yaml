@@ -227,9 +227,7 @@ App As appinfo:
                     Text: "11:30 pm",
                     Minutes: 1410
                 }
-            )
-        );
-        Concurrent(
+            ),
             Set(
                 varTodayDate,
                 Today()
@@ -244,8 +242,36 @@ App As appinfo:
                     )
                 )
             ),
-            Set(varUserCalendars,
-            Office365Outlook.CalendarGetTablesV2().value
+            Set(
+                varUserCalendars,
+                Office365Outlook.CalendarGetTablesV2().value
+            ),
+            Set(
+                WEITI_Szafirowy,
+                RGBA(
+                    120,
+                    150,
+                    207,
+                    1
+                )
+            ),
+            Set(
+                WEITI_Grafitowy,
+                RGBA(
+                    60,
+                    60,
+                    76,
+                    1
+                )
+            ),
+            Set(
+                WEITI_Wrzosowy,
+                RGBA(
+                    180,
+                    160,
+                    170,
+                    1
+                )
             )
         )
     StartScreen: =
