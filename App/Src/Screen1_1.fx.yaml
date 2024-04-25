@@ -1036,6 +1036,7 @@ Screen1_1 As screen:
         RadiusBottomRight: =10
         RadiusTopLeft: =10
         RadiusTopRight: =10
+        Visible: =false
         Width: =Parent.Width - (20 * 2)
         X: =20
         ZIndex: =12
@@ -3748,12 +3749,14 @@ Screen1_1 As screen:
         LayoutDirection: =LayoutDirection.Vertical
         LayoutGap: =10
         LayoutMode: =LayoutMode.Auto
+        LayoutOverflowY: =LayoutOverflow.Scroll
         Width: =Parent.Width
         ZIndex: =20
 
         ContainerHeader_2 As groupContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Regular
+            Fill: =RGBA(244,244,244,1)
             FillPortions: =0
             Height: =50
             LayoutMinHeight: =100
@@ -3770,6 +3773,7 @@ Screen1_1 As screen:
                 DisplayMode: =DisplayMode.Disabled
                 Height: =Parent.Height
                 Text: =""
+                Visible: =false
                 Width: =Parent.Width
                 ZIndex: =1
 
@@ -3798,6 +3802,7 @@ Screen1_1 As screen:
                 Fill: |-
                     =ColorValue("#FFFFFF")
                 Height: =50
+                Visible: =false
                 Width: =1326
                 Y: =50
                 ZIndex: =3
@@ -3818,7 +3823,7 @@ Screen1_1 As screen:
                 DisplayMode: =DisplayMode.View
                 Text: =User().FullName
                 Width: =383
-                X: =928
+                X: =933
                 Y: =5
                 ZIndex: =5
 
@@ -4109,15 +4114,93 @@ Screen1_1 As screen:
                 LayoutGap: =10
                 LayoutJustifyContent: =LayoutJustifyContent.Center
                 LayoutMinHeight: =100
-                LayoutMinWidth: =250
+                LayoutMinWidth: =100
                 LayoutMode: =LayoutMode.Auto
+                LayoutOverflowY: =LayoutOverflow.Scroll
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
                 Width: =625
                 X: =Parent.Width / 2 + 10
                 Y: =70
                 ZIndex: =3
 
-                Container1_5 As groupContainer:
+                Container11 As groupContainer.verticalAutoLayoutContainer:
                     AlignInContainer: =AlignInContainer.SetByContainer
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =10
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    LayoutOverflowY: =LayoutOverflow.Scroll
+                    LayoutWrap: =true
+                    Width: =400
+                    ZIndex: =1
+
+                    Container12_1 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =Parent.Width
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =1
+
+                        Label3_4 As label:
+                            Align: =Align.Center
+                            AutoHeight: =true
+                            Size: =15
+                            Text: |-
+                                ="Source
+                                "
+                            Width: =Parent.Width
+                            ZIndex: =1
+
+                        DropdownCalendarType_2 As dropdown:
+                            AllowEmptySelection: =true
+                            Default: =""
+                            Items: =["Serwer Studia", "Outlook"]
+                            OnChange: |-
+                                =If (
+                                    Self.Selected.Value = "Serwer Studia",
+                                    UpdateContext({serwerStudia: true}),
+                                    UpdateContext({serwerStudia: false})
+                                )
+                            Tooltip: ="Select calendar..."
+                            Width: =200
+                            X: =713
+                            Y: =20
+                            ZIndex: =3
+
+                    Container12 As groupContainer.verticalAutoLayoutContainer:
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =Parent.Width
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =4
+
+                        Label3_3 As label:
+                            Align: =Align.Center
+                            AutoHeight: =true
+                            Size: =15
+                            Text: |-
+                                ="Calendar
+                                "
+                            Width: =Parent.Width
+                            ZIndex: =1
+
+                        Dropdown1_2 As dropdown:
+                            Items: =Office365Outlook.CalendarGetTablesV2().value
+                            Visible: =DropdownCalendarType.SelectedText.Value = "Outlook"
+                            X: =440
+                            Y: =205
+                            ZIndex: =2
+
+                Container1_5 As groupContainer:
+                    AlignInContainer: =AlignInContainer.Center
                     DropShadow: =DropShadow.None
                     FillPortions: =0
                     Height: =40
@@ -4126,7 +4209,7 @@ Screen1_1 As screen:
                     Width: =255
                     X: =872
                     Y: =78
-                    ZIndex: =1
+                    ZIndex: =2
 
                     Icon1_5 As icon.ArrowRight:
                         Height: =40
@@ -4172,7 +4255,6 @@ Screen1_1 As screen:
 
                 "Gallery2_11 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                     '#CopilotOverlayLabel': ="Filtered"
-                    AlignInContainer: =AlignInContainer.SetByContainer
                     DelayItemLoading: =true
                     DisplayMode: =DisplayMode.View
                     Height: =562
@@ -4190,7 +4272,7 @@ Screen1_1 As screen:
                     Width: =(Parent.Width - 20)/2 - 20
                     X: =683
                     Y: =116
-                    ZIndex: =2
+                    ZIndex: =3
 
                     Button1_11 As button:
                         DisabledFill: =RGBA(244, 244, 244, 0.2)
@@ -4285,7 +4367,7 @@ Screen1_1 As screen:
                     Width: =(Parent.Width - 20)/2 - 20
                     X: =Parent.Width / 2
                     Y: =121
-                    ZIndex: =3
+                    ZIndex: =4
 
                     Button1_10 As button:
                         DisabledFill: =RGBA(244, 244, 244, 0.2)
