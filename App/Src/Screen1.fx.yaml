@@ -131,7 +131,7 @@ Screen1 As screen:
             Y: =78
             ZIndex: =6
 
-        Button2_2 As button:
+        MakeReservationButton As button:
             BorderThickness: =0
             Height: =236
             OnSelect: |
@@ -455,6 +455,12 @@ Screen1 As screen:
                 Width: =132
                 X: =39
                 ZIndex: =4
+
+        Image1 As image:
+            Image: ='Reservation icon'
+            X: =147
+            Y: =133
+            ZIndex: =14
 
         LoadingScreen As group:
             Height: =5
