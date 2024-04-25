@@ -499,6 +499,12 @@ Screen1 As screen:
             ZIndex: =15
 
             btn_MakeReservation As button:
+                Color: |-
+                    =If(
+                        btn_MakeReservation.Pressed,
+                        WEITI_Szafirowy,
+                        ColorFade(WEITI_Szafirowy, 20%),
+                    )
                 Fill: |-
                     =If(
                         btn_MakeReservation.Pressed,
