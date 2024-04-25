@@ -125,7 +125,7 @@
     "ShowStatusBar": false
   },
   "PublishInfo": {
-    "AppName": "51069710-57c0-48e1-832c-b1ecc4e65e60",
+    "AppName": "FEiTSchedule",
     "BackgroundColor": "RGBA(0,176,240,1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "Edit",
@@ -133,9 +133,10 @@
     "PublishDataLocally": false,
     "PublishResourcesLocally": false,
     "PublishTarget": "player",
-    "UserLocale": "en-US"
+    "UserLocale": "pl-PL"
   },
   "ScreenOrder": [
-    "Screen1"
+    "Screen1",
+    "Screen1_1"
   ]
 }
