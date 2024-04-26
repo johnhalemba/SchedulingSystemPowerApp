@@ -1420,6 +1420,7 @@ Screen1_1 As screen:
             PaddingRight: =10
             PaddingTop: =10
             Visible: =!varRoomSelection
+            Width: =App.Width
             ZIndex: =2
 
             Container9 As groupContainer.verticalAutoLayoutContainer:
