@@ -1122,7 +1122,7 @@ Screen1_1 As screen:
         RadiusBottomRight: =10
         RadiusTopLeft: =10
         RadiusTopRight: =10
-        Visible: =varRoomSelection
+        Visible: =false
         Width: |-
             =If (ShowDatePicker || ShowTimePicker,
                 Parent.Width * 2 / 3 - 45,
@@ -4485,14 +4485,17 @@ Screen1_1 As screen:
                             ZIndex: =8
 
         ContainerRoomSelection As groupContainer.horizontalAutoLayoutContainer:
+            LayoutAlignItems: =LayoutAlignItems.Stretch
             LayoutGap: =10
-            LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
+            LayoutOverflowY: =LayoutOverflow.Scroll
+            LayoutWrap: =true
             ZIndex: =3
 
             Container2_6 As groupContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
                 FillPortions: =3
                 Height: =Parent.Height - 20
                 LayoutMinHeight: =100
@@ -5727,17 +5730,15 @@ Screen1_1 As screen:
                     Y: =332
                     ZIndex: =22
 
-            Container11 As groupContainer.manualLayoutContainer:
+            Container8 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                Height: =Parent.Height
+                LayoutDirection: =LayoutDirection.Vertical
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
-                ZIndex: =2
-
-                Container8 As groupContainer.verticalAutoLayoutContainer:
-                    Height: =Parent.Height
-                    LayoutDirection: =LayoutDirection.Vertical
-                    LayoutMode: =LayoutMode.Auto
-                    Width: =Parent.Width
-                    ZIndex: =1
+                LayoutMode: =LayoutMode.Auto
+                Width: =Parent.Width
+                ZIndex: =3
 
         TextInput1_2 As text:
             Align: =Align.Center
