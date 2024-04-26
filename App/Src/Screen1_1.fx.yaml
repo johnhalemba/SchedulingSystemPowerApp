@@ -3749,7 +3749,6 @@ Screen1_1 As screen:
         LayoutDirection: =LayoutDirection.Vertical
         LayoutGap: =10
         LayoutMode: =LayoutMode.Auto
-        LayoutOverflowY: =LayoutOverflow.Scroll
         Width: =Parent.Width
         ZIndex: =20
 
@@ -3823,7 +3822,7 @@ Screen1_1 As screen:
                 DisplayMode: =DisplayMode.View
                 Text: =User().FullName
                 Width: =383
-                X: =933
+                X: =Parent.Width - Self.Width - BadgeCanvas1_2.Width - 20
                 Y: =5
                 ZIndex: =5
 
@@ -3855,7 +3854,6 @@ Screen1_1 As screen:
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
-            LayoutOverflowX: =LayoutOverflow.Scroll
             LayoutOverflowY: =LayoutOverflow.Scroll
             LayoutWrap: =true
             PaddingBottom: =10
@@ -3878,7 +3876,7 @@ Screen1_1 As screen:
                     Height: =Label3.Height
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
-                    ZIndex: =1
+                    ZIndex: =2
 
                     Label3 As label:
                         AutoHeight: =true
@@ -3905,7 +3903,7 @@ Screen1_1 As screen:
                     Width: =Parent.Width
                     X: =30
                     Y: =88
-                    ZIndex: =2
+                    ZIndex: =3
 
                     Container10_1 As groupContainer.manualLayoutContainer:
                         DropShadow: =DropShadow.None
@@ -4137,8 +4135,9 @@ Screen1_1 As screen:
 
                     Container12_1 As groupContainer.verticalAutoLayoutContainer:
                         AlignInContainer: =AlignInContainer.Center
-                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutAlignItems: =LayoutAlignItems.Center
                         LayoutDirection: =LayoutDirection.Vertical
+                        LayoutGap: =5
                         LayoutMode: =LayoutMode.Auto
                         LayoutOverflowY: =LayoutOverflow.Scroll
                         ZIndex: =1
@@ -4171,10 +4170,13 @@ Screen1_1 As screen:
 
                     Container12 As groupContainer.verticalAutoLayoutContainer:
                         AlignInContainer: =AlignInContainer.Center
-                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        Height: =50
+                        LayoutAlignItems: =LayoutAlignItems.Center
                         LayoutDirection: =LayoutDirection.Vertical
+                        LayoutGap: =5
                         LayoutMode: =LayoutMode.Auto
                         Visible: =DropdownCalendarType_2.Selected.Value = "Outlook"
+                        Width: =Parent.Width
                         ZIndex: =4
 
                         Label3_3 As label:
@@ -4188,6 +4190,7 @@ Screen1_1 As screen:
                             ZIndex: =1
 
                         Dropdown1_2 As dropdown:
+                            Default: ="2"
                             Items: =Office365Outlook.CalendarGetTablesV2().value
                             X: =440
                             Y: =205
@@ -4243,6 +4246,7 @@ Screen1_1 As screen:
                         AutoHeight: =true
                         Size: =17
                         Text: =Text(varShowDate, "dd/mm/yyyy")
+                        Visible: =false
                         Width: =132
                         X: =39
                         ZIndex: =4
@@ -4458,6 +4462,59 @@ Screen1_1 As screen:
                             Y: =55
                             ZIndex: =8
 
+                Container4 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.Center
+                    FillPortions: =0
+                    Height: =DatePicker2.Height
+                    LayoutGap: =15
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =5
+
+                    Icon2_6 As icon.ArrowLeft:
+                        AlignInContainer: =AlignInContainer.Center
+                        Height: =40
+                        Icon: =Icon.ArrowLeft
+                        OnSelect: =Set(varShowDate, DateAdd(varShowDate, -1, TimeUnit.Days))
+                        Width: =31
+                        ZIndex: =1
+
+                    DatePicker1_7 As datepicker:
+                        AlignInContainer: =AlignInContainer.Center
+                        BorderThickness: =0
+                        Color: =Background_1.DisabledFill
+                        DefaultDate: =
+                        DisabledFill: =Parent.Fill
+                        Fill: =Background_1.DisabledFill
+                        Height: |
+                            =40
+                        InputTextPlaceholder: =
+                        OnChange: =Set(varShowDate, DateValue(DatePicker1_7.SelectedDate))
+                        OnSelect: |-
+                            =UpdateContext({plan:Filter('Serwer Studia'.Getuserschedule("json", Text(Self.SelectedDate, "yyyy-mm-dd")).plan, date = Text(Self.SelectedDate,"yyyymmdd"))})
+                        Visible: =false
+                        Width: =166
+                        X: =44
+                        ZIndex: =2
+
+                    DatePicker2 As datepicker:
+                        AlignInContainer: =AlignInContainer.Center
+                        Width: =160
+                        ZIndex: =3
+
+                    Icon1_6 As icon.ArrowRight:
+                        AlignInContainer: =AlignInContainer.Center
+                        Height: =40
+                        Icon: =Icon.ArrowRight
+                        OnSelect: |-
+                            =(DatePicker1_6.SelectedDate);
+                            Set(varShowDate, DateAdd(varShowDate, 1, TimeUnit.Days))
+                        Width: =31
+                        X: =215
+                        ZIndex: =4
+
         newContainerFooter As groupContainer.manualLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Regular
@@ -4469,19 +4526,24 @@ Screen1_1 As screen:
             RadiusBottomRight: =10
             RadiusTopLeft: =10
             RadiusTopRight: =10
+            Visible: =false
             Width: =Parent.Width - (20 * 2)
             X: =20
             Y: =42+19+ContainerMainBody_1.Height+10
             ZIndex: =4
 
-            TextInput1_2 As text:
-                Align: =Align.Center
-                Default: ="Jan Halemba (305979)"
-                DisabledFill: |-
-                    =ColorValue("#FFFFFF")
-                DisplayMode: =DisplayMode.Disabled
-                Height: =20
-                Size: =9
-                Width: =Parent.Width
-                ZIndex: =2
+        TextInput1_2 As text:
+            Align: =Align.Center
+            Default: ="Jan Halemba (305979)"
+            DisabledFill: |-
+                =ColorValue("#FFFFFF")
+            DisplayMode: =DisplayMode.Disabled
+            Height: =20
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Size: =9
+            Width: =Parent.Width
+            ZIndex: =5
 
