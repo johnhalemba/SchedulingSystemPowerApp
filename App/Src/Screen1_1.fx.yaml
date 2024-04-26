@@ -4132,6 +4132,7 @@ Screen1_1 As screen:
                     AlignInContainer: =AlignInContainer.End
                     Height: =32
                     Icon: =Icon.Cancel
+                    OnSelect: =Set(showSettings, false);
                     Width: =32
                     ZIndex: =1
 
