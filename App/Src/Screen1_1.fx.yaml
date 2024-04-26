@@ -4,6 +4,7 @@ Screen1_1 As screen:
         =Set(DurationSelection, Blank());
         UpdateContext({ResetTrue: false});
         UpdateContext({ResetTrue: true});
+        Set(varRoomSelection, false);
 
     ContainerFooter_1 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Regular
@@ -4492,6 +4493,7 @@ Screen1_1 As screen:
             LayoutMode: =LayoutMode.Auto
             LayoutOverflowY: =LayoutOverflow.Scroll
             LayoutWrap: =true
+            Visible: =varRoomSelection
             ZIndex: =3
 
             Container2_6 As groupContainer:
