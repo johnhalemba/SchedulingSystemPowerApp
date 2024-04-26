@@ -4252,6 +4252,8 @@ Screen1_1 As screen:
 
                     DatePicker2 As datepicker:
                         AlignInContainer: =AlignInContainer.Center
+                        DefaultDate: =varSelectedDate
+                        OnChange: =Set(varSelectedDate, Self.SelectedDate)
                         Width: =160
                         ZIndex: =3
 
