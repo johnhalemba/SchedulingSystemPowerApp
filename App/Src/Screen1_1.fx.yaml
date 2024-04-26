@@ -3310,6 +3310,7 @@ Screen1_1 As screen:
                     Height: =32
                     Icon: =Icon.Cancel
                     LayoutMinWidth: =32
+                    OnSelect: =Set(varRoomSelection, false)
                     PaddingLeft: =20
                     ZIndex: =1
 
