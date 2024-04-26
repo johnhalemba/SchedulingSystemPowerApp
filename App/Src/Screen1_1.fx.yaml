@@ -3825,6 +3825,7 @@ Screen1_1 As screen:
                 Align: =Align.Right
                 DisplayMode: =DisplayMode.View
                 Text: =User().FullName
+                Visible: =App.Width > 800
                 Width: =383
                 X: =Parent.Width - Self.Width - BadgeCanvas1_2.Width - 20
                 Y: =5
@@ -3912,22 +3913,14 @@ Screen1_1 As screen:
                     Y: =88
                     ZIndex: =3
 
-                    Container10_1 As groupContainer.manualLayoutContainer:
-                        AlignInContainer: =AlignInContainer.SetByContainer
-                        DropShadow: =DropShadow.None
-                        FillPortions: =0
-                        Height: =Label3_1.Height
-                        LayoutMinHeight: =100
-                        LayoutMinWidth: =250
+                    Label3_1 As label:
+                        Align: =Align.Center
+                        AutoHeight: =true
+                        FontWeight: =FontWeight.Semibold
+                        Size: =15
+                        Text: ="What would you like to do?"
+                        Width: =623
                         ZIndex: =1
-
-                        Label3_1 As label:
-                            AutoHeight: =true
-                            FontWeight: =FontWeight.Semibold
-                            Size: =15
-                            Text: ="What would you like to do?"
-                            Width: =623
-                            ZIndex: =1
 
                     Container3_8 As groupContainer.manualLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
@@ -4123,7 +4116,7 @@ Screen1_1 As screen:
                 LayoutGap: =10
                 LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
                 LayoutMinHeight: =0
-                LayoutMinWidth: =100
+                LayoutMinWidth: =300
                 LayoutMode: =LayoutMode.Auto
                 LayoutOverflowY: =LayoutOverflow.Scroll
                 PaddingBottom: =10
@@ -4135,6 +4128,19 @@ Screen1_1 As screen:
                 Y: =70
                 ZIndex: =3
 
+                Icon6 As icon.Cancel:
+                    AlignInContainer: =AlignInContainer.End
+                    Height: =32
+                    Icon: =Icon.Cancel
+                    Width: =32
+                    ZIndex: =1
+
+                Button2 As button:
+                    AlignInContainer: =AlignInContainer.End
+                    OnSelect: =Set(showSettings, true)
+                    Text: ="Settings"
+                    ZIndex: =2
+
                 Label11 As label:
                     AlignInContainer: =AlignInContainer.Stretch
                     AutoHeight: =true
@@ -4143,7 +4149,7 @@ Screen1_1 As screen:
                     LayoutMinWidth: =50
                     Size: =15
                     Text: ="Your view settings"
-                    ZIndex: =1
+                    ZIndex: =3
 
                 Container12_1 As groupContainer.verticalAutoLayoutContainer:
                     AlignInContainer: =AlignInContainer.Center
@@ -4160,7 +4166,7 @@ Screen1_1 As screen:
                     LayoutOverflowY: =LayoutOverflow.Scroll
                     LayoutWrap: =true
                     Width: =Parent.Width
-                    ZIndex: =2
+                    ZIndex: =4
 
                     Label3_4 As label:
                         Align: =Align.Center
@@ -4201,7 +4207,7 @@ Screen1_1 As screen:
                     LayoutWrap: =true
                     Visible: =DropdownCalendarType_2.Selected.Value = "Outlook"
                     Width: =Parent.Width
-                    ZIndex: =3
+                    ZIndex: =5
 
                     Label3_3 As label:
                         Align: =Align.Center
@@ -4228,7 +4234,7 @@ Screen1_1 As screen:
                     Overflow: =Overflow.Scroll
                     Size: =15
                     Text: =If(DropdownCalendarType_2.Selected.Value = "Serwer Studia", "Here is your schedule from Server Studia", "Here is your calendar view")
-                    ZIndex: =4
+                    ZIndex: =6
 
                 Container4 As groupContainer.horizontalAutoLayoutContainer:
                     AlignInContainer: =AlignInContainer.Center
@@ -4242,7 +4248,7 @@ Screen1_1 As screen:
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowY: =LayoutOverflow.Scroll
                     Width: =300
-                    ZIndex: =5
+                    ZIndex: =7
 
                     Icon2_6 As icon.ArrowLeft:
                         AlignInContainer: =AlignInContainer.Center
@@ -4290,7 +4296,7 @@ Screen1_1 As screen:
                     Width: =(Parent.Width - 20)/2 - 20
                     X: =683
                     Y: =116
-                    ZIndex: =6
+                    ZIndex: =8
 
                     Button1_11 As button:
                         DisabledFill: =RGBA(244, 244, 244, 0.2)
@@ -4385,7 +4391,7 @@ Screen1_1 As screen:
                     Width: =(Parent.Width - 20)/2 - 20
                     X: =Parent.Width / 2
                     Y: =121
-                    ZIndex: =7
+                    ZIndex: =9
 
                     Button1_10 As button:
                         DisabledFill: =RGBA(244, 244, 244, 0.2)

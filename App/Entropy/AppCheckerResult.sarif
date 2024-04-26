@@ -3732,6 +3732,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.showSettings"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.showSettings",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "showSettings",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.R"
                 }
               ],
