@@ -4121,7 +4121,7 @@ Screen1_1 As screen:
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutGap: =10
                 LayoutJustifyContent: =LayoutJustifyContent.Center
-                LayoutMinHeight: =50
+                LayoutMinHeight: =0
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
                 LayoutOverflowY: =LayoutOverflow.Scroll
@@ -4134,83 +4134,80 @@ Screen1_1 As screen:
                 Y: =70
                 ZIndex: =3
 
-                Container11 As groupContainer.verticalAutoLayoutContainer:
-                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                Container12_1 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =Label3_4.Height + DropdownCalendarType_2.Height + 2*Self.LayoutGap
+                    LayoutAlignItems: =LayoutAlignItems.Center
                     LayoutDirection: =LayoutDirection.Vertical
-                    LayoutGap: =10
+                    LayoutGap: =5
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =Label3_4.Height + Self.LayoutGap + DropdownCalendarType_2.Height
+                    LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
-                    LayoutOverflowX: =LayoutOverflow.Scroll
                     LayoutOverflowY: =LayoutOverflow.Scroll
-                    Width: =400
+                    Width: =Parent.Width
                     ZIndex: =1
 
-                    Container12_1 As groupContainer.verticalAutoLayoutContainer:
-                        AlignInContainer: =AlignInContainer.SetByContainer
-                        DropShadow: =DropShadow.None
-                        FillPortions: =0
-                        LayoutAlignItems: =LayoutAlignItems.Center
-                        LayoutDirection: =LayoutDirection.Vertical
-                        LayoutGap: =5
-                        LayoutMinHeight: =Label3_4.Height + Self.LayoutGap + DropdownCalendarType_2.Height
-                        LayoutMode: =LayoutMode.Auto
-                        LayoutOverflowY: =LayoutOverflow.Scroll
+                    Label3_4 As label:
+                        Align: =Align.Center
+                        AutoHeight: =true
+                        Size: =15
+                        Text: |-
+                            ="Source
+                            "
+                        Width: =100
                         ZIndex: =1
 
-                        Label3_4 As label:
-                            Align: =Align.Center
-                            AutoHeight: =true
-                            Size: =15
-                            Text: |-
-                                ="Source
-                                "
-                            Width: =100
-                            ZIndex: =1
+                    DropdownCalendarType_2 As dropdown:
+                        AllowEmptySelection: =true
+                        Default: =""
+                        Items: =["Serwer Studia", "Outlook"]
+                        OnChange: |-
+                            =If (
+                                Self.Selected.Value = "Serwer Studia",
+                                UpdateContext({serwerStudia: true}),
+                                UpdateContext({serwerStudia: false})
+                            )
+                        Tooltip: ="Select calendar..."
+                        Width: =200
+                        X: =713
+                        Y: =20
+                        ZIndex: =3
 
-                        DropdownCalendarType_2 As dropdown:
-                            AllowEmptySelection: =true
-                            Default: =""
-                            Items: =["Serwer Studia", "Outlook"]
-                            OnChange: |-
-                                =If (
-                                    Self.Selected.Value = "Serwer Studia",
-                                    UpdateContext({serwerStudia: true}),
-                                    UpdateContext({serwerStudia: false})
-                                )
-                            Tooltip: ="Select calendar..."
-                            Width: =200
-                            X: =713
-                            Y: =20
-                            ZIndex: =3
+                Container12 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =Label3_3.Height + Dropdown1_2.Height + 2 * Self.LayoutGap
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =5
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Visible: =DropdownCalendarType_2.Selected.Value = "Outlook"
+                    Width: =Parent.Width
+                    ZIndex: =2
 
-                    Container12 As groupContainer.verticalAutoLayoutContainer:
-                        AlignInContainer: =AlignInContainer.Center
-                        FillPortions: =0
-                        Height: =50
-                        LayoutAlignItems: =LayoutAlignItems.Center
-                        LayoutDirection: =LayoutDirection.Vertical
-                        LayoutGap: =5
-                        LayoutMode: =LayoutMode.Auto
-                        Visible: =DropdownCalendarType_2.Selected.Value = "Outlook"
-                        Width: =Parent.Width
-                        ZIndex: =4
+                    Label3_3 As label:
+                        Align: =Align.Center
+                        AutoHeight: =true
+                        Size: =15
+                        Text: |-
+                            ="Calendar
+                            "
+                        ZIndex: =1
 
-                        Label3_3 As label:
-                            Align: =Align.Center
-                            AutoHeight: =true
-                            Size: =15
-                            Text: |-
-                                ="Calendar
-                                "
-                            ZIndex: =1
-
-                        Dropdown1_2 As dropdown:
-                            Default: ="2"
-                            Items: =Office365Outlook.CalendarGetTablesV2().value
-                            Width: |
-                                =200
-                            X: =440
-                            Y: =205
-                            ZIndex: =2
+                    Dropdown1_2 As dropdown:
+                        Default: ="2"
+                        Items: =Office365Outlook.CalendarGetTablesV2().value
+                        Width: |
+                            =200
+                        X: =440
+                        Y: =205
+                        ZIndex: =2
 
                 Container4 As groupContainer.horizontalAutoLayoutContainer:
                     AlignInContainer: =AlignInContainer.Center
@@ -4275,7 +4272,7 @@ Screen1_1 As screen:
                     Height: =562
                     Items: =Sort(Filter(Office365Outlook.V4CalendarGetItems(Dropdown1_1.Selected.id).value, DateValue(startWithTimeZone)=DateValue(varShowDate)),TimeValue(startWithTimeZone))
                     Layout: =Layout.Vertical
-                    LayoutMinHeight: =287
+                    LayoutMinHeight: =105
                     LayoutMinWidth: =320
                     LoadingSpinner: =LoadingSpinner.Data
                     Selectable: =false
@@ -4369,7 +4366,7 @@ Screen1_1 As screen:
                     DelayItemLoading: =true
                     DisplayMode: =DisplayMode.View
                     Height: =557
-                    Items: =Sort(Filter('Serwer Studia'.Getuserschedule("json", Text(DatePicker1_6.SelectedDate, "yyyy-mm-dd")).plan, DateValue(date) = DatePicker1_6.SelectedDate),hour)
+                    Items: =Sort(Filter('Serwer Studia'.Getuserschedule("json", Text(varSelectedDate, "yyyy-mm-dd")).plan, DateValue(date) = varSelectedDate),hour)
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
@@ -4408,7 +4405,7 @@ Screen1_1 As screen:
                         PaddingLeft: =0
                         PaddingRight: =0
                         PaddingTop: =0
-                        Size: =30
+                        Size: =If (App.Width < 640, 12, App.Width < 1000, 20, 30)
                         Text: =Last(Split(ThisItem.skr, "-")).Value
                         Width: =128
                         X: =Parent.X + Parent.TemplateWidth / 2 - Self.Width
