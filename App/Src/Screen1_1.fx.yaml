@@ -5169,9 +5169,9 @@ Screen1_1 As screen:
                             "105",
                             "X"
                         )
-                    Width: =74
-                    X: =407
-                    Y: =438
+                    Width: =Parent.Width * 74 / 1010
+                    X: =Parent.Width * 177 / 1010
+                    Y: =Parent.Height * 427 / 668
                     ZIndex: =15
 
                 room116_6 As button:

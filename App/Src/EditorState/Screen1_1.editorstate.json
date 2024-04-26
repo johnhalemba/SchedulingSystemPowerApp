@@ -17623,7 +17623,7 @@
       "MetaDataIDKey": "",
       "Name": "ContainerFooter_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 9,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -30150,7 +30150,7 @@
       "MetaDataIDKey": "",
       "Name": "Label10_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -37910,7 +37910,7 @@
       "MetaDataIDKey": "",
       "Name": "Label9_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -41627,7 +41627,7 @@
       "MetaDataIDKey": "",
       "Name": "room102_6",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -42782,7 +42782,7 @@
       "MetaDataIDKey": "",
       "Name": "room103_6",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -43937,7 +43937,7 @@
       "MetaDataIDKey": "",
       "Name": "room104_6",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -45158,7 +45158,7 @@
         {
           "Category": "Design",
           "PropertyName": "Y",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -45168,7 +45168,7 @@
         {
           "Category": "Design",
           "PropertyName": "X",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -45258,7 +45258,7 @@
         {
           "Category": "Design",
           "PropertyName": "Width",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -49712,7 +49712,7 @@
       "MetaDataIDKey": "",
       "Name": "room116_6",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 7,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -52022,7 +52022,7 @@
       "MetaDataIDKey": "",
       "Name": "room117_6",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 8,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -53177,7 +53177,7 @@
       "MetaDataIDKey": "",
       "Name": "room120_6",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 9,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -54332,7 +54332,7 @@
       "MetaDataIDKey": "",
       "Name": "room121_6",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 10,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -55487,7 +55487,7 @@
       "MetaDataIDKey": "",
       "Name": "room122_6",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 6,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -56642,7 +56642,7 @@
       "MetaDataIDKey": "",
       "Name": "room133_6",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -60249,7 +60249,7 @@
       "MetaDataIDKey": "",
       "Name": "Subtitle2_17",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -63086,7 +63086,7 @@
       "MetaDataIDKey": "",
       "Name": "TextCanvas1_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 10,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -64623,7 +64623,7 @@
       "MetaDataIDKey": "%TemplateBrowseGalleryTitle.ID%",
       "Name": "Title2_3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
