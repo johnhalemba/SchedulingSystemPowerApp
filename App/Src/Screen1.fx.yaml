@@ -426,7 +426,7 @@ Screen1 As screen:
                 Width: =1326
                 ZIndex: =11
 
-            "Spinner1_1 As 'Okrągły wskaźnik przetwarzania'":
+            Spinner1_1 As Spinner:
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 FontColor: =
@@ -1049,7 +1049,7 @@ Screen1 As screen:
             Width: =Parent.Width
             ZIndex: =1
 
-        Header1 As Nagłówek:
+        Header1 As Header:
             BasePaletteColor: =RGBA(224, 224, 224, 1)
             DisplayMode: =DisplayMode.Edit
             Font: =Font.Lato
@@ -1078,7 +1078,7 @@ Screen1 As screen:
             Y: =50
             ZIndex: =3
 
-        BadgeCanvas1 As Wskaźnik:
+        BadgeCanvas1 As Badge:
             BasePaletteColor: =
             Content: =Left(User().FullName, 1) & Mid(User().FullName, Find(" ", User().FullName) + 1, 1)
             DisplayMode: =DisplayMode.Edit
@@ -2432,7 +2432,7 @@ Screen1 As screen:
                 Width: =1326
                 ZIndex: =8
 
-            "Spinner1_2 As 'Okrągły wskaźnik przetwarzania'":
+            Spinner1_2 As Spinner:
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 FontColor: =
@@ -2734,7 +2734,7 @@ Screen1 As screen:
                 Width: =442
                 ZIndex: =18
 
-            "Spinner1 As 'Okrągły wskaźnik przetwarzania'":
+            Spinner1 As Spinner:
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 FontColor: =
@@ -3706,7 +3706,7 @@ Screen1 As screen:
                 Width: =1326
                 ZIndex: =8
 
-            "Spinner1_3 As 'Okrągły wskaźnik przetwarzania'":
+            Spinner1_3 As Spinner:
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 FontColor: =
@@ -3726,7 +3726,7 @@ Screen1 As screen:
                 Y: =404
                 ZIndex: =10
 
-    TextCanvas1 As Tekst:
+    TextCanvas1 As Text:
         DisplayMode: =DisplayMode.Edit
         FontColor: =
         Height: =32

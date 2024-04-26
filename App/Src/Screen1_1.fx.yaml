@@ -429,7 +429,7 @@ Screen1_1 As screen:
                 Width: =1326
                 ZIndex: =11
 
-            "Spinner1_4 As 'Okrągły wskaźnik przetwarzania'":
+            Spinner1_4 As Spinner:
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 FontColor: =
@@ -1048,7 +1048,7 @@ Screen1_1 As screen:
             Width: =Parent.Width
             ZIndex: =1
 
-        Header1_1 As Nagłówek:
+        Header1_1 As Header:
             BasePaletteColor: =RGBA(224, 224, 224, 1)
             DisplayMode: =DisplayMode.Edit
             Font: =Font.Lato
@@ -1077,7 +1077,7 @@ Screen1_1 As screen:
             Y: =50
             ZIndex: =3
 
-        BadgeCanvas1_1 As Wskaźnik:
+        BadgeCanvas1_1 As Badge:
             BasePaletteColor: =
             Content: =Left(User().FullName, 1) & Mid(User().FullName, Find(" ", User().FullName) + 1, 1)
             DisplayMode: =DisplayMode.Edit
@@ -2431,7 +2431,7 @@ Screen1_1 As screen:
                 Width: =1326
                 ZIndex: =8
 
-            "Spinner1_5 As 'Okrągły wskaźnik przetwarzania'":
+            Spinner1_5 As Spinner:
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 FontColor: =
@@ -2733,7 +2733,7 @@ Screen1_1 As screen:
                 Width: =442
                 ZIndex: =18
 
-            "Spinner1_7 As 'Okrągły wskaźnik przetwarzania'":
+            Spinner1_7 As Spinner:
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 FontColor: =
@@ -3705,7 +3705,7 @@ Screen1_1 As screen:
                 Width: =1326
                 ZIndex: =8
 
-            "Spinner1_6 As 'Okrągły wskaźnik przetwarzania'":
+            Spinner1_6 As Spinner:
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 FontColor: =
@@ -3725,7 +3725,7 @@ Screen1_1 As screen:
                 Y: =404
                 ZIndex: =10
 
-    TextCanvas1_1 As Tekst:
+    TextCanvas1_1 As Text:
         DisplayMode: =DisplayMode.Edit
         FontColor: =
         Height: =32
@@ -3777,7 +3777,7 @@ Screen1_1 As screen:
                 Width: =Parent.Width
                 ZIndex: =1
 
-            Header1_2 As Nagłówek:
+            Header1_2 As Header:
                 BasePaletteColor: =RGBA(224, 224, 224, 1)
                 DisplayMode: =DisplayMode.Edit
                 Font: =Font.Lato
@@ -3807,7 +3807,7 @@ Screen1_1 As screen:
                 Y: =50
                 ZIndex: =3
 
-            BadgeCanvas1_2 As Wskaźnik:
+            BadgeCanvas1_2 As Badge:
                 BasePaletteColor: =
                 Content: =Left(User().FullName, 1) & Mid(User().FullName, Find(" ", User().FullName) + 1, 1)
                 DisplayMode: =DisplayMode.Edit
@@ -4127,24 +4127,18 @@ Screen1_1 As screen:
                 ZIndex: =3
 
                 Container11 As groupContainer.verticalAutoLayoutContainer:
-                    AlignInContainer: =AlignInContainer.SetByContainer
                     LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutGap: =10
-                    LayoutMinHeight: =100
-                    LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowY: =LayoutOverflow.Scroll
-                    LayoutWrap: =true
                     Width: =400
                     ZIndex: =1
 
                     Container12_1 As groupContainer.verticalAutoLayoutContainer:
-                        AlignInContainer: =AlignInContainer.SetByContainer
-                        LayoutAlignItems: =LayoutAlignItems.Center
+                        AlignInContainer: =AlignInContainer.Center
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
                         LayoutDirection: =LayoutDirection.Vertical
-                        LayoutMinHeight: =100
-                        LayoutMinWidth: =Parent.Width
                         LayoutMode: =LayoutMode.Auto
                         LayoutOverflowY: =LayoutOverflow.Scroll
                         ZIndex: =1
@@ -4176,10 +4170,9 @@ Screen1_1 As screen:
                             ZIndex: =3
 
                     Container12 As groupContainer.verticalAutoLayoutContainer:
-                        LayoutAlignItems: =LayoutAlignItems.Center
+                        AlignInContainer: =AlignInContainer.Center
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
                         LayoutDirection: =LayoutDirection.Vertical
-                        LayoutMinHeight: =50
-                        LayoutMinWidth: =Parent.Width
                         LayoutMode: =LayoutMode.Auto
                         Visible: =DropdownCalendarType_2.Selected.Value = "Outlook"
                         ZIndex: =4
@@ -4196,7 +4189,6 @@ Screen1_1 As screen:
 
                         Dropdown1_2 As dropdown:
                             Items: =Office365Outlook.CalendarGetTablesV2().value
-                            Visible: =DropdownCalendarType.SelectedText.Value = "Outlook"
                             X: =440
                             Y: =205
                             ZIndex: =2
