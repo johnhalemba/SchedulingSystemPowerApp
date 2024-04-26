@@ -4228,7 +4228,7 @@ Screen1_1 As screen:
                         AlignInContainer: =AlignInContainer.Center
                         Height: =40
                         Icon: =Icon.ArrowLeft
-                        OnSelect: =Set(varShowDate, DateAdd(varShowDate, -1, TimeUnit.Days))
+                        OnSelect: =Set(varSelectedDate, DateAdd(varSelectedDate, -1, TimeUnit.Days))
                         Width: =31
                         ZIndex: =1
 
@@ -4260,8 +4260,8 @@ Screen1_1 As screen:
                         Height: =40
                         Icon: =Icon.ArrowRight
                         OnSelect: |-
-                            =(DatePicker1_6.SelectedDate);
-                            Set(varShowDate, DateAdd(varShowDate, 1, TimeUnit.Days))
+                            =//(DatePicker1_6.SelectedDate);
+                            Set(varSelectedDate, DateAdd(varSelectedDate, 1, TimeUnit.Days))
                         Width: =31
                         X: =215
                         ZIndex: =4
