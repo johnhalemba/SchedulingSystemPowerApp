@@ -424,7 +424,7 @@
   "DoesTestStepsMetadataExist": false,
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "04/26/2024 18:56:56",
+  "HeaderLastSavedDateTimeUTC": "04/26/2024 18:56:58",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "05bca85e-d27b-4b0c-b940-b6620bd3edfd": "\"/providers/microsoft.powerapps/apis/shared_test-2dconnection-5f6308104fc18e9839-5f85fa411be1896273/connections/d5d0350df7cb4a8089c3bc9215ba2a3e\"",
