@@ -41740,7 +41740,7 @@
       "MetaDataIDKey": "",
       "Name": "room102_6",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -41801,22 +41801,22 @@
         {
           "Category": "Design",
           "PropertyName": "Height",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
           "PropertyName": "Width",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
           "PropertyName": "Y",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
           "PropertyName": "X",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -42895,7 +42895,7 @@
       "MetaDataIDKey": "",
       "Name": "room103_6",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -44050,7 +44050,7 @@
       "MetaDataIDKey": "",
       "Name": "room104_6",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 6,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -45205,7 +45205,7 @@
       "MetaDataIDKey": "",
       "Name": "room105_6",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 14,
+      "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -46360,7 +46360,7 @@
       "MetaDataIDKey": "",
       "Name": "room106_6",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 7,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -47515,7 +47515,7 @@
       "MetaDataIDKey": "",
       "Name": "room107_6",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 8,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -48670,7 +48670,7 @@
       "MetaDataIDKey": "",
       "Name": "room108_6",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 9,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -49825,7 +49825,7 @@
       "MetaDataIDKey": "",
       "Name": "room116_6",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 10,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -50980,7 +50980,7 @@
       "MetaDataIDKey": "",
       "Name": "room116-AR_6",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 15,
+      "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -52135,7 +52135,7 @@
       "MetaDataIDKey": "",
       "Name": "room117_6",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 11,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -53290,7 +53290,7 @@
       "MetaDataIDKey": "",
       "Name": "room120_6",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 12,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -54445,7 +54445,7 @@
       "MetaDataIDKey": "",
       "Name": "room121_6",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 13,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -58011,7 +58011,7 @@
         {
           "Category": "Design",
           "PropertyName": "X",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -58021,7 +58021,7 @@
         {
           "Category": "Design",
           "PropertyName": "Y",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -58061,7 +58061,7 @@
         {
           "Category": "Design",
           "PropertyName": "Height",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -58076,7 +58076,7 @@
         {
           "Category": "Design",
           "PropertyName": "Width",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
