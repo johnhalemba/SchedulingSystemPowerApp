@@ -119,13 +119,13 @@
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "",
     "ManualOfflineProfileId": "",
-    "Name": "FEiTSchedule.msapp",
+    "Name": "FEiTSchedule",
     "OriginatingVersion": "1.336",
     "ParserErrorCount": 3,
     "ShowStatusBar": false
   },
   "PublishInfo": {
-    "AppName": "51069710-57c0-48e1-832c-b1ecc4e65e60",
+    "AppName": "FEiTSchedule",
     "BackgroundColor": "RGBA(0,176,240,1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "Edit",
