@@ -4913,7 +4913,7 @@ Screen1_1 As screen:
                             Color.Red
                         )
                     FocusedBorderThickness: =1
-                    Height: =39
+                    Height: =Parent.Height * 39 / 668
                     HoverColor: =ColorFade(Self.Color, 15%)
                     HoverFill: =ColorFade(Self.Fill, 18%)
                     OnSelect: |-
@@ -4929,9 +4929,9 @@ Screen1_1 As screen:
                             "107",
                             "X"
                         )
-                    Width: =37
-                    X: =276
-                    Y: =357
+                    Width: =Parent.Width * 37 / 1010
+                    X: =Parent.Width * 276 / 1010
+                    Y: =Parent.Height * 357/668
                     ZIndex: =12
 
                 room108_6 As button:
@@ -4993,7 +4993,7 @@ Screen1_1 As screen:
                             Color.Red
                         )
                     FocusedBorderThickness: =1
-                    Height: =39
+                    Height: =Parent.Height * 39 / 668
                     HoverColor: =ColorFade(Self.Color, 15%)
                     HoverFill: =ColorFade(Self.Fill, 18%)
                     OnSelect: |-
@@ -5009,9 +5009,9 @@ Screen1_1 As screen:
                             "108",
                             "X"
                         )
-                    Width: =52
-                    X: =313
-                    Y: =357
+                    Width: =Parent.Width * 52 / 1010
+                    X: =Parent.Width * 313 / 1010
+                    Y: =Parent.Height*357/668
                     ZIndex: =13
 
                 room106_6 As button:
@@ -5233,7 +5233,7 @@ Screen1_1 As screen:
                             Color.Red
                         )
                     FocusedBorderThickness: =1
-                    Height: =39
+                    Height: =Parent.Height * 40 / 668
                     HoverColor: =ColorFade(Self.Color, 15%)
                     HoverFill: =ColorFade(Self.Fill, 18%)
                     OnSelect: |-
@@ -5249,9 +5249,9 @@ Screen1_1 As screen:
                             "116",
                             "X"
                         )
-                    Width: =48
-                    X: =560
-                    Y: =352
+                    Width: =Parent.Width * 50 / 1010
+                    X: =Parent.Width * 604/1010
+                    Y: =Parent.Height * 357/668
                     ZIndex: =16
 
                 room117_6 As button:
@@ -5313,7 +5313,7 @@ Screen1_1 As screen:
                             Color.Red
                         )
                     FocusedBorderThickness: =1
-                    Height: =39
+                    Height: =Parent.Height * 40 / 668
                     HoverColor: =ColorFade(Self.Color, 15%)
                     HoverFill: =ColorFade(Self.Fill, 18%)
                     OnSelect: |-
@@ -5329,9 +5329,9 @@ Screen1_1 As screen:
                             "117",
                             "X"
                         )
-                    Width: =34
-                    X: =608
-                    Y: =352
+                    Width: =Parent.Width * 34/1010
+                    X: =Parent.Width * 654/1010
+                    Y: =Parent.Height * 357/668
                     ZIndex: =17
 
                 room133_6 As button:
@@ -5393,7 +5393,7 @@ Screen1_1 As screen:
                             Color.Red
                         )
                     FocusedBorderThickness: =1
-                    Height: =118
+                    Height: =Parent.Height * 118/668
                     HoverColor: =ColorFade(Self.Color, 15%)
                     HoverFill: =ColorFade(Self.Fill, 18%)
                     OnSelect: |-
@@ -5409,9 +5409,9 @@ Screen1_1 As screen:
                             "133",
                             "X"
                         )
-                    Width: =95
-                    X: =622
-                    Y: =176
+                    Width: =Parent.Width*91/1010
+                    X: =Parent.Width * 672/1010
+                    Y: =Parent.Height * 176/668
                     ZIndex: =18
 
                 "'room116-AR_6' As button":
@@ -5473,7 +5473,7 @@ Screen1_1 As screen:
                             Color.Red
                         )
                     FocusedBorderThickness: =1
-                    Height: =83
+                    Height: =Parent.Height * 83/668
                     HoverColor: =ColorFade(Self.Color, 15%)
                     HoverFill: =ColorFade(Self.Fill, 18%)
                     OnSelect: |-
@@ -5489,9 +5489,9 @@ Screen1_1 As screen:
                             "116-AR",
                             "X"
                         )
-                    Width: =74
-                    X: =632
-                    Y: =415
+                    Width: =Parent.Width * 74/1010
+                    X: =Parent.Width * 680/1010
+                    Y: =Parent.Height*427/668
                     ZIndex: =19
 
                 room120_6 As button:
@@ -5553,7 +5553,7 @@ Screen1_1 As screen:
                             Color.Red
                         )
                     FocusedBorderThickness: =1
-                    Height: =39
+                    Height: =Parent.Height*42/668
                     HoverColor: =ColorFade(Self.Color, 15%)
                     HoverFill: =ColorFade(Self.Fill, 18%)
                     OnSelect: |-
@@ -5569,9 +5569,9 @@ Screen1_1 As screen:
                             "120",
                             "X"
                         )
-                    Width: =34
-                    X: =725
-                    Y: =352
+                    Width: =Parent.Width*37/1010
+                    X: =Parent.Width * 781/1010
+                    Y: =Parent.Height*356/668
                     ZIndex: =20
 
                 room121_6 As button:
@@ -5633,7 +5633,7 @@ Screen1_1 As screen:
                             Color.Red
                         )
                     FocusedBorderThickness: =1
-                    Height: =39
+                    Height: =42
                     HoverColor: =ColorFade(Self.Color, 15%)
                     HoverFill: =ColorFade(Self.Fill, 18%)
                     OnSelect: |-
@@ -5650,8 +5650,8 @@ Screen1_1 As screen:
                             "X"
                         )
                     Width: =34
-                    X: =759
-                    Y: =352
+                    X: =818
+                    Y: =356
                     ZIndex: =21
 
                 room122_6 As button:
@@ -5713,7 +5713,7 @@ Screen1_1 As screen:
                             Color.Red
                         )
                     FocusedBorderThickness: =1
-                    Height: =59
+                    Height: =61
                     HoverColor: =ColorFade(Self.Color, 15%)
                     HoverFill: =ColorFade(Self.Fill, 18%)
                     OnSelect: |-
@@ -5729,9 +5729,9 @@ Screen1_1 As screen:
                             "122",
                             "X"
                         )
-                    Width: =33
-                    X: =793
-                    Y: =332
+                    Width: =36
+                    X: =852
+                    Y: =337
                     ZIndex: =22
 
             Container8 As groupContainer.verticalAutoLayoutContainer:
