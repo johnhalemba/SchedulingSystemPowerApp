@@ -3744,7 +3744,7 @@ Screen1_1 As screen:
 
     mainContainer As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Regular
-        Height: =Parent.Height
+        Height: =App.Height
         LayoutAlignItems: =LayoutAlignItems.Stretch
         LayoutDirection: =LayoutDirection.Vertical
         LayoutGap: =10
@@ -3753,7 +3753,7 @@ Screen1_1 As screen:
         PaddingLeft: =5
         PaddingRight: =5
         PaddingTop: =5
-        Width: =Parent.Width
+        Width: =App.Width
         ZIndex: =20
 
         ContainerHeader_2 As groupContainer:
@@ -3851,12 +3851,11 @@ Screen1_1 As screen:
         Container6_1 As groupContainer.horizontalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
             Fill: =RGBA(244,244,244,1)
-            FillPortions: =0
             Height: =Parent.Height - 100
             LayoutAlignItems: =LayoutAlignItems.Stretch
             LayoutGap: =10
             LayoutMinHeight: =100
-            LayoutMinWidth: =100
+            LayoutMinWidth: =10
             LayoutMode: =LayoutMode.Auto
             LayoutOverflowY: =LayoutOverflow.Scroll
             LayoutWrap: =true
@@ -3869,7 +3868,8 @@ Screen1_1 As screen:
             Container9 As groupContainer.verticalAutoLayoutContainer:
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutGap: =5
-                LayoutMinHeight: =300
+                LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                LayoutMinHeight: =0
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
                 ZIndex: =1
@@ -3923,6 +3923,7 @@ Screen1_1 As screen:
 
                         Label3_1 As label:
                             AutoHeight: =true
+                            FontWeight: =FontWeight.Semibold
                             Size: =15
                             Text: ="What would you like to do?"
                             Width: =623
@@ -4120,11 +4121,9 @@ Screen1_1 As screen:
                 LayoutAlignItems: =LayoutAlignItems.Center
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutGap: =10
-                LayoutJustifyContent: =LayoutJustifyContent.Center
-                LayoutMinHeight: |-
-                    =200
-                    //Parent.Height - 2 * 10
-                LayoutMinWidth: =250
+                LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                LayoutMinHeight: =0
+                LayoutMinWidth: =100
                 LayoutMode: =LayoutMode.Auto
                 LayoutOverflowY: =LayoutOverflow.Scroll
                 PaddingBottom: =10
@@ -4136,21 +4135,32 @@ Screen1_1 As screen:
                 Y: =70
                 ZIndex: =3
 
+                Label11 As label:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    AutoHeight: =true
+                    FontWeight: =FontWeight.Semibold
+                    LayoutMinHeight: =35
+                    LayoutMinWidth: =50
+                    Size: =15
+                    Text: ="Your view settings"
+                    ZIndex: =1
+
                 Container12_1 As groupContainer.verticalAutoLayoutContainer:
-                    AlignInContainer: =AlignInContainer.SetByContainer
+                    AlignInContainer: =AlignInContainer.Center
                     DropShadow: =DropShadow.None
                     FillPortions: =0
                     Height: =Label3_4.Height + DropdownCalendarType_2.Height + 2*Self.LayoutGap
                     LayoutAlignItems: =LayoutAlignItems.Center
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutGap: =5
-                    LayoutJustifyContent: =LayoutJustifyContent.Center
                     LayoutMinHeight: =Label3_4.Height + Self.LayoutGap + DropdownCalendarType_2.Height
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
+                    LayoutOverflowX: =LayoutOverflow.Scroll
                     LayoutOverflowY: =LayoutOverflow.Scroll
+                    LayoutWrap: =true
                     Width: =Parent.Width
-                    ZIndex: =1
+                    ZIndex: =2
 
                     Label3_4 As label:
                         Align: =Align.Center
@@ -4179,7 +4189,6 @@ Screen1_1 As screen:
                         ZIndex: =3
 
                 Container12 As groupContainer.verticalAutoLayoutContainer:
-                    AlignInContainer: =AlignInContainer.SetByContainer
                     DropShadow: =DropShadow.None
                     FillPortions: =0
                     Height: =Label3_3.Height + Dropdown1_2.Height + 2 * Self.LayoutGap
@@ -4189,9 +4198,10 @@ Screen1_1 As screen:
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
+                    LayoutWrap: =true
                     Visible: =DropdownCalendarType_2.Selected.Value = "Outlook"
                     Width: =Parent.Width
-                    ZIndex: =2
+                    ZIndex: =3
 
                     Label3_3 As label:
                         Align: =Align.Center
@@ -4211,6 +4221,15 @@ Screen1_1 As screen:
                         Y: =205
                         ZIndex: =2
 
+                Label11_1 As label:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    AutoHeight: =true
+                    FontWeight: =FontWeight.Semibold
+                    Overflow: =Overflow.Scroll
+                    Size: =15
+                    Text: =If(DropdownCalendarType_2.Selected.Value = "Serwer Studia", "Here is your schedule from Server Studia", "Here is your calendar view")
+                    ZIndex: =4
+
                 Container4 As groupContainer.horizontalAutoLayoutContainer:
                     AlignInContainer: =AlignInContainer.Center
                     DropShadow: =DropShadow.None
@@ -4222,7 +4241,8 @@ Screen1_1 As screen:
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowY: =LayoutOverflow.Scroll
-                    ZIndex: =3
+                    Width: =300
+                    ZIndex: =5
 
                     Icon2_6 As icon.ArrowLeft:
                         AlignInContainer: =AlignInContainer.Center
@@ -4231,24 +4251,6 @@ Screen1_1 As screen:
                         OnSelect: =Set(varSelectedDate, DateAdd(varSelectedDate, -1, TimeUnit.Days))
                         Width: =31
                         ZIndex: =1
-
-                    DatePicker1_7 As datepicker:
-                        AlignInContainer: =AlignInContainer.Center
-                        BorderThickness: =0
-                        Color: =Background_1.DisabledFill
-                        DefaultDate: =
-                        DisabledFill: =Parent.Fill
-                        Fill: =Background_1.DisabledFill
-                        Height: |
-                            =40
-                        InputTextPlaceholder: =
-                        OnChange: =Set(varShowDate, DateValue(DatePicker1_7.SelectedDate))
-                        OnSelect: |-
-                            =UpdateContext({plan:Filter('Serwer Studia'.Getuserschedule("json", Text(Self.SelectedDate, "yyyy-mm-dd")).plan, date = Text(Self.SelectedDate,"yyyymmdd"))})
-                        Visible: =false
-                        Width: =166
-                        X: =44
-                        ZIndex: =2
 
                     DatePicker2 As datepicker:
                         AlignInContainer: =AlignInContainer.Center
@@ -4272,22 +4274,23 @@ Screen1_1 As screen:
                     '#CopilotOverlayLabel': ="Filtered"
                     DelayItemLoading: =true
                     DisplayMode: =DisplayMode.View
+                    FillPortions: =4
                     Height: =562
                     Items: =Sort(Filter(Office365Outlook.V4CalendarGetItems(Dropdown1_1.Selected.id).value, DateValue(startWithTimeZone)=DateValue(varShowDate)),TimeValue(startWithTimeZone))
                     Layout: =Layout.Vertical
-                    LayoutMinHeight: =105
-                    LayoutMinWidth: =320
+                    LayoutMinHeight: =90
+                    LayoutMinWidth: =100
                     LoadingSpinner: =LoadingSpinner.Data
                     Selectable: =false
                     ShowScrollbar: =false
                     TemplatePadding: =0
-                    TemplateSize: =105
+                    TemplateSize: =90
                     Transition: =Transition.Push
                     Visible: =!serwerStudia
                     Width: =(Parent.Width - 20)/2 - 20
                     X: =683
                     Y: =116
-                    ZIndex: =4
+                    ZIndex: =6
 
                     Button1_11 As button:
                         DisabledFill: =RGBA(244, 244, 244, 0.2)
@@ -4371,18 +4374,18 @@ Screen1_1 As screen:
                     Height: =557
                     Items: =Sort(Filter('Serwer Studia'.Getuserschedule("json", Text(varSelectedDate, "yyyy-mm-dd")).plan, DateValue(date) = varSelectedDate),hour)
                     Layout: =Layout.Vertical
-                    LayoutMinHeight: =400
+                    LayoutMinHeight: =300
                     LayoutMinWidth: =100
                     LoadingSpinner: =LoadingSpinner.Data
                     Selectable: =false
                     TemplatePadding: =0
-                    TemplateSize: =105
+                    TemplateSize: =90
                     Transition: =Transition.Push
                     Visible: =serwerStudia
                     Width: =(Parent.Width - 20)/2 - 20
                     X: =Parent.Width / 2
                     Y: =121
-                    ZIndex: =5
+                    ZIndex: =7
 
                     Button1_10 As button:
                         DisabledFill: =RGBA(244, 244, 244, 0.2)
@@ -4400,15 +4403,14 @@ Screen1_1 As screen:
                         ZIndex: =1
 
                     ClassNameGalleryServerStudia_5 As label:
-                        AutoHeight: =true
                         FontWeight: =FontWeight.Semibold
-                        Height: =37
+                        Height: =18
                         OnSelect: =Select(Parent)
                         PaddingBottom: =0
                         PaddingLeft: =0
                         PaddingRight: =0
                         PaddingTop: =0
-                        Size: =Switch(, )
+                        Size: =If(App.Width < 640, 12, App.Width < 100, 16, 30)
                         Text: =Last(Split(ThisItem.skr, "-")).Value
                         Width: =128
                         X: =Parent.X + Parent.TemplateWidth / 2 - Self.Width
