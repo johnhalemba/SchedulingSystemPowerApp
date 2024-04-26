@@ -275,7 +275,7 @@ App As appinfo:
             ),
             Set(varSelectedDate, Today())
         )
-    StartScreen: =
+    StartScreen: =Screen1_1
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:
