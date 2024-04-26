@@ -4118,7 +4118,7 @@ Screen1_1 As screen:
                 LayoutGap: =10
                 LayoutJustifyContent: =LayoutJustifyContent.Center
                 LayoutMinHeight: =50
-                LayoutMinWidth: =0
+                LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
                 LayoutOverflowY: =LayoutOverflow.Scroll
                 PaddingBottom: =10
