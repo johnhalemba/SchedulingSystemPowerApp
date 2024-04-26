@@ -115,11 +115,11 @@
     "DocumentType": "App",
     "EnableInstrumentation": false,
     "FileID": "abf4f297-22cd-439f-a3e4-73656c87fc29",
-    "Id": "abf4f297-22cd-439f-a3e4-73656c87fc29",
+    "Id": "86e5e9e1-3d24-4a8f-8f88-24ef3fe8fa58",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "",
     "ManualOfflineProfileId": "",
-    "Name": "FEiTSchedule",
+    "Name": "FEiTSchedule.msapp",
     "OriginatingVersion": "1.336",
     "ParserErrorCount": 3,
     "ShowStatusBar": false
