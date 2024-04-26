@@ -1123,7 +1123,6 @@ Screen1 As screen:
         RadiusBottomRight: =10
         RadiusTopLeft: =10
         RadiusTopRight: =10
-        Visible: =varRoomSelection
         Width: |-
             =If (ShowDatePicker || ShowTimePicker,
                 Parent.Width * 2 / 3 - 45,
