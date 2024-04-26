@@ -4577,6 +4577,7 @@ Screen1_1 As screen:
                             Color.Red
                         )
                     FocusedBorderThickness: =1
+                    Height: =Parent.Height * 41 / 668
                     HoverColor: =ColorFade(Self.Color, 15%)
                     HoverFill: =ColorFade(Self.Fill, 18%)
                     OnSelect: |-
@@ -4592,9 +4593,9 @@ Screen1_1 As screen:
                             "103",
                             "X"
                         )
-                    Width: =36
-                    X: =114
-                    Y: =358
+                    Width: =Parent.Width * 36 / 1010
+                    X: =Parent.Width * 114 / 1010
+                    Y: =Parent.Height*357/668
                     ZIndex: =2
 
                 room104_6 As button:
@@ -4656,6 +4657,7 @@ Screen1_1 As screen:
                             Color.Red
                         )
                     FocusedBorderThickness: =1
+                    Height: =Parent.Height * 41 / 668
                     HoverColor: =ColorFade(Self.Color, 15%)
                     HoverFill: =ColorFade(Self.Fill, 18%)
                     OnSelect: |-
@@ -4671,9 +4673,9 @@ Screen1_1 As screen:
                             "104",
                             "X"
                         )
-                    Width: =35
-                    X: =150
-                    Y: =358
+                    Width: =Parent.Width * 35 / 1010
+                    X: =Parent.Width * 150 / 1010
+                    Y: =Parent.Height * 357 / 668
                     ZIndex: =3
 
                 room102_6 As button:
@@ -4737,7 +4739,7 @@ Screen1_1 As screen:
                     FocusedBorderThickness: =1
                     Height: |-
                         =//40
-                        (Parent.Height * 40)/668
+                        (Parent.Height * 41)/668
                     HoverColor: =ColorFade(Self.Color, 15%)
                     HoverFill: =ColorFade(Self.Fill, 18%)
                     OnSelect: |-
@@ -4761,7 +4763,7 @@ Screen1_1 As screen:
                         (Parent.Width * 80)/1010
                     Y: |-
                         =//358
-                        (Parent.Height * 358)/668
+                        (Parent.Height * 357)/668
                     ZIndex: =4
 
                 room161_6 As button:
