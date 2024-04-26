@@ -4929,9 +4929,9 @@ Screen1_1 As screen:
                             "107",
                             "X"
                         )
-                    Width: =33
-                    X: =506
-                    Y: =375
+                    Width: =37
+                    X: =276
+                    Y: =357
                     ZIndex: =12
 
                 room108_6 As button:
@@ -5009,9 +5009,9 @@ Screen1_1 As screen:
                             "108",
                             "X"
                         )
-                    Width: =48
-                    X: =539
-                    Y: =375
+                    Width: =52
+                    X: =313
+                    Y: =357
                     ZIndex: =13
 
                 room106_6 As button:
@@ -5073,7 +5073,7 @@ Screen1_1 As screen:
                             Color.Red
                         )
                     FocusedBorderThickness: =1
-                    Height: =39
+                    Height: =Parent.Height * 39 / 668
                     HoverColor: =ColorFade(Self.Color, 15%)
                     HoverFill: =ColorFade(Self.Fill, 18%)
                     OnSelect: |-
@@ -5089,9 +5089,9 @@ Screen1_1 As screen:
                             "106",
                             "X"
                         )
-                    Width: =34
-                    X: =472
-                    Y: =375
+                    Width: =Parent.Width * 34 / 1010
+                    X: =Parent.Width * 242 / 1010
+                    Y: =Parent.Height * 357 / 668
                     ZIndex: =14
 
                 room105_6 As button:
@@ -5153,7 +5153,7 @@ Screen1_1 As screen:
                             Color.Red
                         )
                     FocusedBorderThickness: =1
-                    Height: =83
+                    Height: =Parent.Height * 83 / 668
                     HoverColor: =ColorFade(Self.Color, 15%)
                     HoverFill: =ColorFade(Self.Fill, 18%)
                     OnSelect: |-
@@ -5746,6 +5746,7 @@ Screen1_1 As screen:
 
         TextInput1_2 As text:
             Align: =Align.Center
+            BorderThickness: =0
             Default: ="Jan Halemba (305979)"
             DisabledFill: |-
                 =ColorValue("#FFFFFF")
