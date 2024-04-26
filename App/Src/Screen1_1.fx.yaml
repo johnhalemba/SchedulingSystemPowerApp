@@ -1804,6 +1804,7 @@ Screen1_1 As screen:
                 Container4 As groupContainer.horizontalAutoLayoutContainer:
                     AlignInContainer: =AlignInContainer.SetByContainer
                     DropShadow: =DropShadow.None
+                    FillPortions: =0
                     Height: =DatePicker2.Height + DatePicker2.BorderThickness
                     LayoutGap: =15
                     LayoutJustifyContent: =LayoutJustifyContent.Center
