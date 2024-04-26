@@ -2803,8 +2803,8 @@ Screen1_1 As screen:
                             "116",
                             "X"
                         )
-                    Width: =Parent.Width * 50 / 1010
-                    X: =Parent.Width * 604/1010
+                    Width: =Parent.Width * 52 / 1010
+                    X: =Parent.Width * 602/1010
                     Y: =Parent.Height * 357/668
                     ZIndex: =16
 
@@ -3187,7 +3187,7 @@ Screen1_1 As screen:
                             Color.Red
                         )
                     FocusedBorderThickness: =1
-                    Height: =42
+                    Height: =Parent.Height*42/668
                     HoverColor: =ColorFade(Self.Color, 15%)
                     HoverFill: =ColorFade(Self.Fill, 18%)
                     OnSelect: |-
@@ -3203,9 +3203,9 @@ Screen1_1 As screen:
                             "121",
                             "X"
                         )
-                    Width: =34
-                    X: =818
-                    Y: =356
+                    Width: =Parent.Width * 34/1010
+                    X: =Parent.Width*818/1010
+                    Y: =Parent.Height*356/668
                     ZIndex: =21
 
                 room122_6 As button:
@@ -3267,7 +3267,7 @@ Screen1_1 As screen:
                             Color.Red
                         )
                     FocusedBorderThickness: =1
-                    Height: =61
+                    Height: =Parent.Height*61/668
                     HoverColor: =ColorFade(Self.Color, 15%)
                     HoverFill: =ColorFade(Self.Fill, 18%)
                     OnSelect: |-
@@ -3283,20 +3283,113 @@ Screen1_1 As screen:
                             "122",
                             "X"
                         )
-                    Width: =36
-                    X: =852
-                    Y: =337
+                    Width: =Parent.Width*36/1010
+                    X: =Parent.Width * 852/1010
+                    Y: =Parent.Height*337/668
                     ZIndex: =22
 
             Container8 As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 Height: =Parent.Height
+                LayoutAlignItems: =LayoutAlignItems.Stretch
                 LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =10
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
+                LayoutOverflowY: =LayoutOverflow.Scroll
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =5
                 Width: =Parent.Width
                 ZIndex: =3
+
+                Icon7 As icon.Cancel:
+                    AlignInContainer: =AlignInContainer.End
+                    Height: =32
+                    Icon: =Icon.Cancel
+                    LayoutMinWidth: =32
+                    ZIndex: =1
+
+                Container10 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =100
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =4
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =5
+                    PaddingLeft: =5
+                    PaddingRight: =5
+                    PaddingTop: =5
+                    ZIndex: =2
+
+                    Label12 As label:
+                        Size: =15
+                        Text: |-
+                            ="Selected room:"
+                        ZIndex: =1
+
+                    Button4 As button:
+                        DisplayMode: =DisplayMode.View
+                        Text: =SelectedRoom.Text
+                        ZIndex: =2
+
+                Container10_2 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =100
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =4
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =5
+                    PaddingLeft: =5
+                    PaddingRight: =5
+                    PaddingTop: =5
+                    ZIndex: =3
+
+                    Label12_1 As label:
+                        Text: |-
+                            ="Selected date:"
+                        ZIndex: =1
+
+                    Button4_1 As button:
+                        DisplayMode: =DisplayMode.View
+                        Text: ="Selected"
+                        ZIndex: =2
+
+                Container10_3 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =100
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =4
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =5
+                    PaddingLeft: =5
+                    PaddingRight: =5
+                    PaddingTop: =5
+                    ZIndex: =4
+
+                    Label12_2 As label:
+                        Text: |-
+                            ="Selected date:"
+                        ZIndex: =1
+
+                    Button4_2 As button:
+                        DisplayMode: =DisplayMode.View
+                        Text: ="Selected"
+                        ZIndex: =2
 
         TextInput1_2 As text:
             Align: =Align.Center
