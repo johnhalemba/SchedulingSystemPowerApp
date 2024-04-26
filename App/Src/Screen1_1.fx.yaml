@@ -1533,17 +1533,23 @@ Screen1_1 As screen:
                                 );
                                 Concurrent(
                                     ClearCollect(ScheduleRoom102, 'Serwer Studia'.Getclassesfromroom("1030-ETI-102", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                                    ClearCollect(ScheduleRoom103, 'Serwer Studia'.Getclassesfromroom("1030-ETI-103", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom103, 'Serwer Studia'.Getclassesfromroom("1030-ETI-103", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
+                                );
+                                
+                                Concurrent(
                                     ClearCollect(ScheduleRoom104, 'Serwer Studia'.Getclassesfromroom("1030-ETI-104", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
                                     ClearCollect(ScheduleRoom105, 'Serwer Studia'.Getclassesfromroom("1030-ETI-105-AR", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
                                 );
                                 
                                 Concurrent(
                                     ClearCollect(ScheduleRoom106, 'Serwer Studia'.Getclassesfromroom("1030-ETI-106", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                                    ClearCollect(ScheduleRoom107, 'Serwer Studia'.Getclassesfromroom("1030-ETI-107", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom107, 'Serwer Studia'.Getclassesfromroom("1030-ETI-107", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
+                                );
+                                
+                                Concurrent(
                                     ClearCollect(ScheduleRoom161, 'Serwer Studia'.Getclassesfromroom("1030-ETI-161", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
                                     ClearCollect(ScheduleRoom108, 'Serwer Studia'.Getclassesfromroom("1030-ETI-108", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
-                                );
+                                )
                                 
                                 Concurrent(
                                     ClearCollect(ScheduleRoom116, 'Serwer Studia'.Getclassesfromroom("1030-ETI-116", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
@@ -3310,7 +3316,8 @@ Screen1_1 As screen:
                     Height: =32
                     Icon: =Icon.Cancel
                     LayoutMinWidth: =32
-                    OnSelect: =Set(varRoomSelection, false)
+                    OnSelect: |-
+                        =UpdateContext({varRoomSelection: false})
                     PaddingLeft: =20
                     ZIndex: =1
 
