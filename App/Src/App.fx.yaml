@@ -272,7 +272,8 @@ App As appinfo:
                     170,
                     1
                 )
-            )
+            ),
+            Set(varSelectedDate, Today())
         )
     StartScreen: =
     Theme: =PowerAppsTheme
