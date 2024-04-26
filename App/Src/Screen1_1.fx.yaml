@@ -4121,7 +4121,7 @@ Screen1_1 As screen:
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutGap: =10
                 LayoutJustifyContent: =LayoutJustifyContent.Center
-                LayoutMinHeight: =0
+                LayoutMinHeight: =Parent.Height - 2 * 10
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
                 LayoutOverflowY: =LayoutOverflow.Scroll
@@ -4219,6 +4219,7 @@ Screen1_1 As screen:
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
+                    LayoutOverflowY: =LayoutOverflow.Scroll
                     ZIndex: =3
 
                     Icon2_6 As icon.ArrowLeft:
@@ -4368,8 +4369,8 @@ Screen1_1 As screen:
                     Height: =557
                     Items: =Sort(Filter('Serwer Studia'.Getuserschedule("json", Text(varSelectedDate, "yyyy-mm-dd")).plan, DateValue(date) = varSelectedDate),hour)
                     Layout: =Layout.Vertical
-                    LayoutMinHeight: =287
-                    LayoutMinWidth: =320
+                    LayoutMinHeight: =400
+                    LayoutMinWidth: =100
                     LoadingSpinner: =LoadingSpinner.Data
                     Selectable: =false
                     TemplatePadding: =0
@@ -4405,7 +4406,7 @@ Screen1_1 As screen:
                         PaddingLeft: =0
                         PaddingRight: =0
                         PaddingTop: =0
-                        Size: =If (App.Width < 640, 12, App.Width < 1000, 20, 30)
+                        Size: =Switch(, )
                         Text: =Last(Split(ThisItem.skr, "-")).Value
                         Width: =128
                         X: =Parent.X + Parent.TemplateWidth / 2 - Self.Width
