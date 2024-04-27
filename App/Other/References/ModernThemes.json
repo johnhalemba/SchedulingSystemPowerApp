@@ -3,6 +3,12 @@
     {
       "EntityName": "PowerAppsTheme",
       "ThemeName": "PowerAppsTheme"
+    },
+    {
+      "BasePaletteColor": "#ff6200",
+      "EntityName": "ING",
+      "Font": "Segoe UI",
+      "ThemeName": "ING"
     }
   ]
 }
