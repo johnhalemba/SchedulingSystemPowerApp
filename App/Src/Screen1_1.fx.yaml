@@ -3112,6 +3112,7 @@ Screen1_1 As screen:
                     Height: =Parent.LayoutGap + Container16.Height
                     LayoutAlignItems: =LayoutAlignItems.Center
                     LayoutGap: =1
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
                     LayoutMinHeight: =100
                     LayoutMinWidth: =100
                     LayoutMode: =LayoutMode.Auto
@@ -3125,19 +3126,18 @@ Screen1_1 As screen:
                     Container16 As groupContainer.verticalAutoLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
                         DropShadow: =DropShadow.None
-                        FillPortions: =0
                         Height: =Label6_6.Height+DropdownStartTime_3.Height+2*DropdownStartTime_3.BorderThickness
                         LayoutAlignItems: =LayoutAlignItems.Center
                         LayoutDirection: =LayoutDirection.Vertical
                         LayoutGap: =3
                         LayoutMinHeight: =100
-                        LayoutMinWidth: =250
+                        LayoutMinWidth: =0
                         LayoutMode: =LayoutMode.Auto
                         RadiusBottomLeft: =0
                         RadiusBottomRight: =0
                         RadiusTopLeft: =0
                         RadiusTopRight: =0
-                        Width: =DropdownStartTime_3.Width + 2*DropdownStartTime_3.BorderThickness
+                        Width: =30
                         ZIndex: =1
 
                         Label6_6 As label:
@@ -3164,15 +3164,15 @@ Screen1_1 As screen:
                     Container16_1 As groupContainer.verticalAutoLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
                         DropShadow: =DropShadow.None
-                        FillPortions: =0
                         Height: =Label6_7.Height+DropdownEndTime_3.Height + 2*DropdownEndTime_3.BorderThickness
-                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutAlignItems: =LayoutAlignItems.Center
                         LayoutDirection: =LayoutDirection.Vertical
                         LayoutGap: =3
+                        LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
                         LayoutMinHeight: =100
-                        LayoutMinWidth: =250
+                        LayoutMinWidth: =0
                         LayoutMode: =LayoutMode.Auto
-                        Width: =DropdownEndTime_3.Width
+                        Width: =30
                         ZIndex: =2
 
                         Label6_7 As label:
@@ -3195,7 +3195,7 @@ Screen1_1 As screen:
                             ChevronFill: =RGBA(18, 107, 240, 1)
                             Default: =If(IsBlank(DurationGallery_1.Selected) && IsBlank(DurationSelection) || ResetTrue, LookUp(Times, Text = Lower(Text(EndDateTime, DateTimeFormat.ShortTime))).Text, !IsBlank(DurationSelection), LookUp(Times, Minutes = Mod(DropdownStartTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' + DurationGallery_1.Selected.Minutes, 1440)).Text)
                             Items: =Times
-                            Width: =
+                            Width: =Parent.Width
                             X: =232
                             Y: =40
                             ZIndex: =2
