@@ -1642,7 +1642,7 @@ Screen1_1 As screen:
             Visible: =varRoomSelection
             ZIndex: =3
 
-            Container2_6 As groupContainer:
+            ContainerFacultyMap As groupContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 FillPortions: =3
                 Height: =Parent.Height - 20
@@ -3058,7 +3058,7 @@ Screen1_1 As screen:
                 Fill: =RGBA(244, 244, 244, 1)
                 LayoutAlignItems: =LayoutAlignItems.Stretch
                 LayoutDirection: =LayoutDirection.Vertical
-                LayoutGap: =10
+                LayoutGap: =5
                 LayoutMinHeight: =100
                 LayoutMinWidth: =300
                 LayoutMode: =LayoutMode.Auto
@@ -3111,8 +3111,8 @@ Screen1_1 As screen:
                     Height: =Parent.LayoutGap + Container16.Height
                     LayoutAlignItems: =LayoutAlignItems.Center
                     LayoutGap: =10
-                    LayoutJustifyContent: =LayoutJustifyContent.Center
-                    LayoutMinHeight: =100
+                    LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                    LayoutMinHeight: =0
                     LayoutMinWidth: =100
                     LayoutMode: =LayoutMode.Auto
                     LayoutWrap: =true
@@ -3123,7 +3123,7 @@ Screen1_1 As screen:
                     ZIndex: =2
 
                     Container16 As groupContainer.verticalAutoLayoutContainer:
-                        AlignInContainer: =AlignInContainer.SetByContainer
+                        AlignInContainer: =AlignInContainer.Center
                         DropShadow: =DropShadow.None
                         Height: =Label6_6.Height+DropdownStartTime_3.Height+2*DropdownStartTime_3.BorderThickness
                         LayoutAlignItems: =LayoutAlignItems.Center
@@ -3132,6 +3132,7 @@ Screen1_1 As screen:
                         LayoutMinHeight: =100
                         LayoutMinWidth: =0
                         LayoutMode: =LayoutMode.Auto
+                        PaddingBottom: =4
                         RadiusBottomLeft: =0
                         RadiusBottomRight: =0
                         RadiusTopLeft: =0
@@ -3170,6 +3171,7 @@ Screen1_1 As screen:
                         LayoutMinHeight: =100
                         LayoutMinWidth: =0
                         LayoutMode: =LayoutMode.Auto
+                        PaddingBottom: =4
                         Width: =30
                         ZIndex: =2
 
@@ -3201,14 +3203,14 @@ Screen1_1 As screen:
                     Height: =355
                     Items: =Durations
                     Layout: =Layout.Vertical
-                    LayoutMinHeight: =287
+                    LayoutMinHeight: =350
                     LayoutMinWidth: =320
                     LoadingSpinner: =LoadingSpinner.Data
                     ShowScrollbar: =false
                     TemplatePadding: =15
                     TemplateSize: =90
                     Width: =361
-                    WrapCount: =3
+                    WrapCount: =2
                     X: =40
                     Y: =190
                     ZIndex: =3
@@ -3227,6 +3229,7 @@ Screen1_1 As screen:
                         ZIndex: =3
 
                 Container17 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.None
                     FillPortions: =0
                     Height: =60
                     LayoutMinHeight: =100
@@ -3247,6 +3250,7 @@ Screen1_1 As screen:
                             Set(EndDateTimeUTC, Text(DateAdd(EndDateTime, TimeZoneOffset(), TimeUnit.Minutes), "[$-en-US]yyyy-mm-ddThh:mm") & ":00.000Z");
                             
                             Set(ShowTimePicker, false)
+                        PaddingBottom: =10
                         Text: ="SAVE"
                         Width: =Parent.Width
                         ZIndex: =1
@@ -3610,6 +3614,7 @@ Screen1_1 As screen:
         RadiusBottomRight: =10
         RadiusTopLeft: =10
         RadiusTopRight: =10
+        Visible: =false
         Width: =(Parent.Width - (20 * 2)) / 3
         X: =RoomSelectionPopup_1.Width + 40
         Y: =60

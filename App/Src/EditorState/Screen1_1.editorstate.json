@@ -6851,6 +6851,14 @@
           "InvariantPropertyName": "PaddingTop",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "5",
+          "InvariantPropertyName": "PaddingBottom",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
         }
       ],
       "HasDynamicProperties": false,
@@ -7046,6 +7054,11 @@
           "Category": "Design",
           "PropertyName": "PaddingTop",
           "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "PaddingBottom",
+          "RuleProviderType": "User"
         },
         {
           "Category": "Behavior",
@@ -10095,7 +10108,14 @@
           "PropertyName": "LayoutMinWidth"
         },
         {
-          "ControlPropertyState": "LayoutMinHeight",
+          "ControlPropertyState": {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "",
+            "InvariantPropertyName": "LayoutMinHeight",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "Property": {
             "Category": "Design",
             "PropertyName": "LayoutMinHeight",
@@ -10352,6 +10372,14 @@
           "InvariantPropertyName": "RadiusBottomRight",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "PaddingBottom",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
         }
       ],
       "DynamicProperties": [
@@ -10541,6 +10569,11 @@
           "Category": "Design",
           "PropertyName": "RadiusBottomRight",
           "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "PaddingBottom",
+          "RuleProviderType": "Unknown"
         }
       ],
       "StyleName": "defaultGroupContainerStyle",
@@ -10613,7 +10646,15 @@
         "RadiusTopLeft",
         "RadiusTopRight",
         "RadiusBottomLeft",
-        "RadiusBottomRight"
+        "RadiusBottomRight",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "PaddingBottom",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        }
       ],
       "DynamicProperties": [
         {
@@ -10802,6 +10843,11 @@
           "Category": "Design",
           "PropertyName": "RadiusBottomRight",
           "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "PaddingBottom",
+          "RuleProviderType": "Unknown"
         }
       ],
       "StyleName": "defaultGroupContainerStyle",
@@ -10833,7 +10879,14 @@
         "LayoutOverflowX",
         "LayoutOverflowY",
         "LayoutWrap",
-        "DropShadow",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "DropShadow",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "ZIndex",
         "RadiusTopLeft",
         "RadiusTopRight",
@@ -11193,242 +11246,6 @@
           "Category": "Design",
           "PropertyName": "Height",
           "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "DisplayMode",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "LayoutMode",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "LayoutDirection",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "LayoutAlignItems",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "LayoutJustifyContent",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "LayoutOverflowX",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "LayoutOverflowY",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "DropShadow",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "ZIndex",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "RadiusTopLeft",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "RadiusTopRight",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "RadiusBottomLeft",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "RadiusBottomRight",
-          "RuleProviderType": "Unknown"
-        }
-      ],
-      "StyleName": "defaultGroupContainerStyle",
-      "Type": "ControlInfo"
-    },
-    "Container2_6": {
-      "AllowAccessToGlobals": true,
-      "ControlPropertyState": [
-        "BorderColor",
-        "BorderStyle",
-        "Fill",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "X",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Y",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
-        "Width",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "678",
-          "InvariantPropertyName": "Height",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
-        "DisplayMode",
-        "LayoutMode",
-        "LayoutDirection",
-        "LayoutAlignItems",
-        "LayoutJustifyContent",
-        "LayoutOverflowX",
-        "LayoutOverflowY",
-        "DropShadow",
-        "ZIndex",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "RadiusTopLeft",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "RadiusTopRight",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "RadiusBottomLeft",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "RadiusBottomRight",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        }
-      ],
-      "DynamicProperties": [
-        {
-          "ControlPropertyState": {
-            "AFDDataSourceName": "",
-            "AutoRuleBindingEnabled": false,
-            "AutoRuleBindingString": "",
-            "InvariantPropertyName": "FillPortions",
-            "IsLockable": false,
-            "NameMapSourceSchema": "?"
-          },
-          "Property": {
-            "Category": "Design",
-            "PropertyName": "FillPortions",
-            "RuleProviderType": "Unknown"
-          },
-          "PropertyName": "FillPortions"
-        },
-        {
-          "ControlPropertyState": "AlignInContainer",
-          "Property": {
-            "Category": "Design",
-            "PropertyName": "AlignInContainer",
-            "RuleProviderType": "Unknown"
-          },
-          "PropertyName": "AlignInContainer"
-        },
-        {
-          "ControlPropertyState": "LayoutMinWidth",
-          "Property": {
-            "Category": "Design",
-            "PropertyName": "LayoutMinWidth",
-            "RuleProviderType": "Unknown"
-          },
-          "PropertyName": "LayoutMinWidth"
-        },
-        {
-          "ControlPropertyState": "LayoutMinHeight",
-          "Property": {
-            "Category": "Design",
-            "PropertyName": "LayoutMinHeight",
-            "RuleProviderType": "Unknown"
-          },
-          "PropertyName": "LayoutMinHeight"
-        }
-      ],
-      "HasDynamicProperties": true,
-      "IsAutoGenerated": false,
-      "IsComponentDefinition": false,
-      "IsDataControl": false,
-      "IsFromScreenLayout": false,
-      "IsGroupControl": false,
-      "IsLocked": false,
-      "LayoutName": "",
-      "MetaDataIDKey": "",
-      "Name": "Container2_6",
-      "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
-      "PersistMetaDataIDKey": false,
-      "Properties": [
-        {
-          "Category": "Design",
-          "PropertyName": "BorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "BorderStyle",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "Fill",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "X",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "Y",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "Width",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "Height",
-          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -13582,6 +13399,255 @@
         {
           "Category": "Design",
           "PropertyName": "RadiusBottomRight",
+          "RuleProviderType": "Unknown"
+        }
+      ],
+      "StyleName": "defaultGroupContainerStyle",
+      "Type": "ControlInfo"
+    },
+    "ContainerFacultyMap": {
+      "AllowAccessToGlobals": true,
+      "ControlPropertyState": [
+        "BorderColor",
+        "BorderStyle",
+        "Fill",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "X",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Y",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        "Width",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "678",
+          "InvariantPropertyName": "Height",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        "DisplayMode",
+        "LayoutMode",
+        "LayoutDirection",
+        "LayoutAlignItems",
+        "LayoutJustifyContent",
+        "LayoutOverflowX",
+        "LayoutOverflowY",
+        "DropShadow",
+        "ZIndex",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "RadiusTopLeft",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "RadiusTopRight",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "RadiusBottomLeft",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "RadiusBottomRight",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Visible",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        }
+      ],
+      "DynamicProperties": [
+        {
+          "ControlPropertyState": {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "",
+            "InvariantPropertyName": "FillPortions",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
+          "Property": {
+            "Category": "Design",
+            "PropertyName": "FillPortions",
+            "RuleProviderType": "Unknown"
+          },
+          "PropertyName": "FillPortions"
+        },
+        {
+          "ControlPropertyState": "AlignInContainer",
+          "Property": {
+            "Category": "Design",
+            "PropertyName": "AlignInContainer",
+            "RuleProviderType": "Unknown"
+          },
+          "PropertyName": "AlignInContainer"
+        },
+        {
+          "ControlPropertyState": "LayoutMinWidth",
+          "Property": {
+            "Category": "Design",
+            "PropertyName": "LayoutMinWidth",
+            "RuleProviderType": "Unknown"
+          },
+          "PropertyName": "LayoutMinWidth"
+        },
+        {
+          "ControlPropertyState": "LayoutMinHeight",
+          "Property": {
+            "Category": "Design",
+            "PropertyName": "LayoutMinHeight",
+            "RuleProviderType": "Unknown"
+          },
+          "PropertyName": "LayoutMinHeight"
+        }
+      ],
+      "HasDynamicProperties": true,
+      "IsAutoGenerated": false,
+      "IsComponentDefinition": false,
+      "IsDataControl": false,
+      "IsFromScreenLayout": false,
+      "IsGroupControl": false,
+      "IsLocked": false,
+      "LayoutName": "",
+      "MetaDataIDKey": "",
+      "Name": "ContainerFacultyMap",
+      "OptimizeForDevices": "Off",
+      "ParentIndex": 0,
+      "PersistMetaDataIDKey": false,
+      "Properties": [
+        {
+          "Category": "Design",
+          "PropertyName": "RadiusBottomLeft",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "RadiusTopRight",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "RadiusTopLeft",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "ZIndex",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "DropShadow",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "LayoutOverflowY",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "LayoutOverflowX",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "LayoutJustifyContent",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "LayoutAlignItems",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Visible",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "RadiusBottomRight",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "LayoutDirection",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "LayoutMode",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "DisplayMode",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Y",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "X",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Fill",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "BorderStyle",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "BorderColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Height",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Width",
           "RuleProviderType": "Unknown"
         }
       ],
@@ -17326,7 +17392,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "Height",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Height",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "DisplayMode",
         "ZIndex",
         "BorderThickness",
@@ -17979,7 +18052,14 @@
           "PropertyName": "LayoutMinWidth"
         },
         {
-          "ControlPropertyState": "LayoutMinHeight",
+          "ControlPropertyState": {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "",
+            "InvariantPropertyName": "LayoutMinHeight",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "Property": {
             "Category": "Design",
             "PropertyName": "LayoutMinHeight",
@@ -22051,7 +22131,15 @@
         "PaddingTop",
         "PaddingRight",
         "PaddingBottom",
-        "PaddingLeft"
+        "PaddingLeft",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Visible",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        }
       ],
       "HasDynamicProperties": false,
       "IsAutoGenerated": false,
@@ -22094,13 +22182,13 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Width",
-          "RuleProviderType": "User"
+          "PropertyName": "Height",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
-          "PropertyName": "Height",
-          "RuleProviderType": "User"
+          "PropertyName": "Width",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -22210,6 +22298,11 @@
         {
           "Category": "Design",
           "PropertyName": "PaddingLeft",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Visible",
           "RuleProviderType": "Unknown"
         }
       ],
@@ -33131,23 +33224,23 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Height",
-          "RuleProviderType": "User"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "Width",
-          "RuleProviderType": "User"
+          "PropertyName": "X",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
           "PropertyName": "Y",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
-          "PropertyName": "X",
-          "RuleProviderType": "User"
+          "PropertyName": "Width",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Height",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -33946,8 +34039,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "X",
-          "RuleProviderType": "User"
+          "PropertyName": "Height",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -33956,8 +34049,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Y",
-          "RuleProviderType": "User"
+          "PropertyName": "Width",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -33986,13 +34079,13 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Width",
-          "RuleProviderType": "User"
+          "PropertyName": "Y",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
-          "PropertyName": "Height",
-          "RuleProviderType": "User"
+          "PropertyName": "X",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -34676,8 +34769,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Y",
-          "RuleProviderType": "User"
+          "PropertyName": "Width",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -34686,8 +34779,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "X",
-          "RuleProviderType": "User"
+          "PropertyName": "Height",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -34706,8 +34799,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Height",
-          "RuleProviderType": "User"
+          "PropertyName": "X",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -34776,8 +34869,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Width",
-          "RuleProviderType": "User"
+          "PropertyName": "Y",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -35446,8 +35539,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Y",
-          "RuleProviderType": "User"
+          "PropertyName": "Width",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -35456,8 +35549,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "X",
-          "RuleProviderType": "User"
+          "PropertyName": "Height",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -35506,8 +35599,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Height",
-          "RuleProviderType": "User"
+          "PropertyName": "X",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -35546,8 +35639,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Width",
-          "RuleProviderType": "User"
+          "PropertyName": "Y",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -36161,8 +36254,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "X",
-          "RuleProviderType": "User"
+          "PropertyName": "Height",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -36251,13 +36344,13 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Y",
-          "RuleProviderType": "User"
+          "PropertyName": "Width",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
-          "PropertyName": "Width",
-          "RuleProviderType": "User"
+          "PropertyName": "Y",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -36266,8 +36359,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Height",
-          "RuleProviderType": "User"
+          "PropertyName": "X",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -36986,8 +37079,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Y",
-          "RuleProviderType": "User"
+          "PropertyName": "Width",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -36996,8 +37089,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "X",
-          "RuleProviderType": "User"
+          "PropertyName": "Height",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -37016,8 +37109,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Height",
-          "RuleProviderType": "User"
+          "PropertyName": "X",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -37086,8 +37179,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Width",
-          "RuleProviderType": "User"
+          "PropertyName": "Y",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -37791,8 +37884,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "X",
-          "RuleProviderType": "User"
+          "PropertyName": "Height",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -37801,8 +37894,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Y",
-          "RuleProviderType": "User"
+          "PropertyName": "Width",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -37841,8 +37934,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Height",
-          "RuleProviderType": "User"
+          "PropertyName": "X",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -37856,8 +37949,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Width",
-          "RuleProviderType": "User"
+          "PropertyName": "Y",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -38531,8 +38624,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Y",
-          "RuleProviderType": "User"
+          "PropertyName": "Width",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -38541,8 +38634,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "X",
-          "RuleProviderType": "User"
+          "PropertyName": "Height",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -38586,8 +38679,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Height",
-          "RuleProviderType": "User"
+          "PropertyName": "X",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -38626,8 +38719,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Width",
-          "RuleProviderType": "User"
+          "PropertyName": "Y",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -39241,8 +39334,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Height",
-          "RuleProviderType": "User"
+          "PropertyName": "X",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -39341,8 +39434,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "X",
-          "RuleProviderType": "User"
+          "PropertyName": "Height",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -39351,8 +39444,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Y",
-          "RuleProviderType": "User"
+          "PropertyName": "Width",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -39396,8 +39489,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Width",
-          "RuleProviderType": "User"
+          "PropertyName": "Y",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -40046,8 +40139,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Width",
-          "RuleProviderType": "User"
+          "PropertyName": "Y",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -40076,13 +40169,13 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Height",
-          "RuleProviderType": "User"
+          "PropertyName": "X",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
-          "PropertyName": "X",
-          "RuleProviderType": "User"
+          "PropertyName": "Height",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -40176,8 +40269,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Y",
-          "RuleProviderType": "User"
+          "PropertyName": "Width",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Behavior",
@@ -40876,18 +40969,18 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Width",
-          "RuleProviderType": "User"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "X",
-          "RuleProviderType": "User"
+          "PropertyName": "Y",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
           "PropertyName": "Height",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "X",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -40931,8 +41024,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Y",
-          "RuleProviderType": "User"
+          "PropertyName": "Width",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -41646,18 +41739,18 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Width",
-          "RuleProviderType": "User"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "X",
-          "RuleProviderType": "User"
+          "PropertyName": "Y",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
           "PropertyName": "Height",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "X",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -41701,8 +41794,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Y",
-          "RuleProviderType": "User"
+          "PropertyName": "Width",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -42416,18 +42509,18 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Width",
-          "RuleProviderType": "User"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "X",
-          "RuleProviderType": "User"
+          "PropertyName": "Y",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
           "PropertyName": "Height",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "X",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -42471,8 +42564,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Y",
-          "RuleProviderType": "User"
+          "PropertyName": "Width",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -43151,8 +43244,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Y",
-          "RuleProviderType": "User"
+          "PropertyName": "Width",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -43161,8 +43254,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "X",
-          "RuleProviderType": "User"
+          "PropertyName": "Height",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -43206,8 +43299,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Height",
-          "RuleProviderType": "User"
+          "PropertyName": "X",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -43246,8 +43339,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Width",
-          "RuleProviderType": "User"
+          "PropertyName": "Y",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -43951,8 +44044,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "X",
-          "RuleProviderType": "User"
+          "PropertyName": "Height",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -43961,8 +44054,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Y",
-          "RuleProviderType": "User"
+          "PropertyName": "Width",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -44001,8 +44094,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Height",
-          "RuleProviderType": "User"
+          "PropertyName": "X",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -44016,8 +44109,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Width",
-          "RuleProviderType": "User"
+          "PropertyName": "Y",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -46655,7 +46748,7 @@
         {
           "Category": "Design",
           "PropertyName": "Visible",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
