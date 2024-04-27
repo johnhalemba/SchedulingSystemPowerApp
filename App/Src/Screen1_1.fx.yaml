@@ -3051,7 +3051,7 @@ Screen1_1 As screen:
                     Button4_2 As button:
                         OnSelect: |-
                             =If (
-                                App.Width < 300,
+                                App.Width < 600,
                             
                                 UpdateContext({varShowFacultyMap:false});
                                 UpdateContext({varShowTimeSelection:true});
