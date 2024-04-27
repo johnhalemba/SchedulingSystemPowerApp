@@ -3101,7 +3101,8 @@ Screen1_1 As screen:
                         AlignInContainer: =AlignInContainer.Stretch
                         LayoutMinWidth: =160
                         OnChange: |
-                            =If (
+                            =Set(DateSelected, Self.SelectedDate);
+                            If (
                                 Self.SelectedDate < Today(),
                                 Reset(Self);
                                 Notify("Error. Please select future Date.", NotificationType.Error),
