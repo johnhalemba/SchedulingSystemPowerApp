@@ -3114,7 +3114,8 @@ Screen1_1 As screen:
                         Icon: =Icon.Cancel
                         OnSelect: |-
                             =UpdateContext({varShowProperties:true});
-                            UpdateContext({varShowFacultyMap:true})
+                            UpdateContext({varShowFacultyMap:true});
+                            UpdateContext({varShowTimeSelection:false})
                         PaddingBottom: =5
                         PaddingLeft: =5
                         PaddingRight: =5
