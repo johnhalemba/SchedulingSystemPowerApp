@@ -3058,7 +3058,7 @@ Screen1_1 As screen:
                 Fill: =RGBA(244, 244, 244, 1)
                 LayoutAlignItems: =LayoutAlignItems.Stretch
                 LayoutDirection: =LayoutDirection.Vertical
-                LayoutGap: =15
+                LayoutGap: =10
                 LayoutMinHeight: =100
                 LayoutMinWidth: =300
                 LayoutMode: =LayoutMode.Auto
@@ -3108,18 +3108,17 @@ Screen1_1 As screen:
 
                 Container15 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.None
-                    FillPortions: =0
                     Height: =Parent.LayoutGap + Container16.Height
                     LayoutAlignItems: =LayoutAlignItems.Center
-                    LayoutGap: =1
+                    LayoutGap: =10
                     LayoutJustifyContent: =LayoutJustifyContent.Center
                     LayoutMinHeight: =100
                     LayoutMinWidth: =100
                     LayoutMode: =LayoutMode.Auto
                     LayoutWrap: =true
                     PaddingBottom: =5
-                    PaddingLeft: =5
-                    PaddingRight: =5
+                    PaddingLeft: =10
+                    PaddingRight: =10
                     PaddingTop: =5
                     ZIndex: =2
 
@@ -3129,7 +3128,7 @@ Screen1_1 As screen:
                         Height: =Label6_6.Height+DropdownStartTime_3.Height+2*DropdownStartTime_3.BorderThickness
                         LayoutAlignItems: =LayoutAlignItems.Center
                         LayoutDirection: =LayoutDirection.Vertical
-                        LayoutGap: =3
+                        LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
                         LayoutMinHeight: =100
                         LayoutMinWidth: =0
                         LayoutMode: =LayoutMode.Auto
@@ -3156,7 +3155,7 @@ Screen1_1 As screen:
                             ChevronFill: =RGBA(18, 107, 240, 1)
                             Default: =If(ResetTrue, LookUp(Times, Text = Lower(Text(StartDateTime, DateTimeFormat.ShortTime))).Text)
                             Items: =Times
-                            Width: =ButtonSaveTime_1.Width / 2 - 10
+                            Width: =Parent.Width - Self.BorderThickness*2
                             X: =ButtonSaveTime_1.X
                             Y: =40
                             ZIndex: =2
@@ -3167,7 +3166,6 @@ Screen1_1 As screen:
                         Height: =Label6_7.Height+DropdownEndTime_3.Height + 2*DropdownEndTime_3.BorderThickness
                         LayoutAlignItems: =LayoutAlignItems.Center
                         LayoutDirection: =LayoutDirection.Vertical
-                        LayoutGap: =3
                         LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
                         LayoutMinHeight: =100
                         LayoutMinWidth: =0
@@ -3177,10 +3175,6 @@ Screen1_1 As screen:
 
                         Label6_7 As label:
                             FontWeight: =FontWeight.Semibold
-                            PaddingBottom: =0
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
                             Text: ="End"
                             Width: =158
                             X: =232
@@ -3195,7 +3189,7 @@ Screen1_1 As screen:
                             ChevronFill: =RGBA(18, 107, 240, 1)
                             Default: =If(IsBlank(DurationGallery_1.Selected) && IsBlank(DurationSelection) || ResetTrue, LookUp(Times, Text = Lower(Text(EndDateTime, DateTimeFormat.ShortTime))).Text, !IsBlank(DurationSelection), LookUp(Times, Minutes = Mod(DropdownStartTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' + DurationGallery_1.Selected.Minutes, 1440)).Text)
                             Items: =Times
-                            Width: =Parent.Width
+                            Width: =Parent.Width - Self.BorderThickness * 2
                             X: =232
                             Y: =40
                             ZIndex: =2
@@ -3203,6 +3197,7 @@ Screen1_1 As screen:
                 "DurationGallery_3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                     '#CopilotOverlayLabel': ="Filtered"
                     DelayItemLoading: =true
+                    FillPortions: =4
                     Height: =355
                     Items: =Durations
                     Layout: =Layout.Vertical
@@ -3230,6 +3225,31 @@ Screen1_1 As screen:
                         Text: ="+ " & ThisItem.Time
                         Width: =Parent.TemplateWidth
                         ZIndex: =3
+
+                Container17 As groupContainer.manualLayoutContainer:
+                    FillPortions: =0
+                    Height: =60
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    PaddingBottom: =30
+                    PaddingLeft: =30
+                    PaddingRight: =30
+                    PaddingTop: =30
+                    ZIndex: =5
+
+                    ButtonSaveTime_3 As button:
+                        Height: =Parent.Height
+                        OnSelect: |
+                            =Set(StartDateTime, DateAdd(DateSelected, DropdownStartTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes', TimeUnit.Minutes));
+                            Set(EndDateTime, DateAdd(StartDateTime, If(DropdownStartTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' >= DropdownEndTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes', DropdownEndTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' + 1440 - DropdownStartTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes', DropdownEndTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' - DropdownStartTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes'), TimeUnit.Minutes));
+                            
+                            Set(StartDateTimeUTC, Text(DateAdd(StartDateTime, TimeZoneOffset(), TimeUnit.Minutes), "[$-en-US]yyyy-mm-ddThh:mm") & ":00.000Z");
+                            Set(EndDateTimeUTC, Text(DateAdd(EndDateTime, TimeZoneOffset(), TimeUnit.Minutes), "[$-en-US]yyyy-mm-ddThh:mm") & ":00.000Z");
+                            
+                            Set(ShowTimePicker, false)
+                        Text: ="SAVE"
+                        Width: =Parent.Width
+                        ZIndex: =1
 
         TextInput1_2 As text:
             Align: =Align.Center
