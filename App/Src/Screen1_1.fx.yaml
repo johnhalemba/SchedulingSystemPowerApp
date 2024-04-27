@@ -1658,7 +1658,7 @@ Screen1_1 As screen:
                 Width: =942
                 X: =10
                 Y: =10
-                ZIndex: =1
+                ZIndex: =2
 
                 Image2_6 As image:
                     Height: =Parent.Height
@@ -3049,6 +3049,8 @@ Screen1_1 As screen:
                         ZIndex: =1
 
                     Button4_2 As button:
+                        BorderThickness: =0
+                        Fill: =WEITI_Szafirowy
                         OnSelect: |-
                             =If (
                                 App.Width < 600,
@@ -3060,6 +3062,8 @@ Screen1_1 As screen:
                                 UpdateContext({varShowTimeSelection:true});
                                 UpdateContext({varShowProperties:false})
                             )
+                        PressedColor: =Self.Color
+                        PressedFill: =ColorFade(Self.Fill, 18%)
                         RadiusBottomLeft: =0
                         RadiusBottomRight: =0
                         RadiusTopLeft: =0

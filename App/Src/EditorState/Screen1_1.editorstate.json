@@ -5616,7 +5616,14 @@
         "FocusedBorderColor",
         "Color",
         "DisabledColor",
-        "PressedColor",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "Self.Fill",
+          "InvariantPropertyName": "PressedColor",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "HoverColor",
         {
           "AFDDataSourceName": "",
@@ -5626,9 +5633,23 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "Fill",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "RGBA(56, 96, 178, 1)",
+          "InvariantPropertyName": "Fill",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "DisabledFill",
-        "PressedFill",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "Self.Color",
+          "InvariantPropertyName": "PressedFill",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "HoverFill",
         "Font",
         "FontWeight",
@@ -5671,7 +5692,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "BorderThickness",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "BorderThickness",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "FocusedBorderThickness",
         "Size",
         "Italic",
@@ -5793,7 +5821,7 @@
         {
           "Category": "Design",
           "PropertyName": "PressedColor",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -5808,7 +5836,7 @@
         {
           "Category": "Design",
           "PropertyName": "Fill",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -5818,7 +5846,7 @@
         {
           "Category": "Design",
           "PropertyName": "PressedFill",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
