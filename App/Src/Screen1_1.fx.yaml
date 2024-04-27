@@ -7,307 +7,6 @@ Screen1_1 As screen:
         UpdateContext({varRoomSelection:false});
         UpdateContext({varShowMainScreen:true})
 
-    DateSelectionPopup_1 As groupContainer.manualLayoutContainer:
-        DropShadow: =DropShadow.Regular
-        Height: =Parent.Height - 90
-        RadiusBottomLeft: =10
-        RadiusBottomRight: =10
-        RadiusTopLeft: =10
-        RadiusTopRight: =10
-        Visible: =ShowDatePicker
-        Width: =(Parent.Width - (20 * 2)) / 3
-        X: =RoomSelectionPopup_1.Width + 40
-        Y: =60
-        ZIndex: =16
-
-        Button3_9 As button:
-            DisplayMode: =DisplayMode.Disabled
-            Height: =Parent.Height
-            Text: =""
-            Width: =Parent.Width
-            X: =
-            ZIndex: =1
-
-        Rectangle1_5 As rectangle:
-            Fill: =RGBA(71, 158, 245, 1)
-            Height: =26
-            Width: =442
-            Y: =65
-            ZIndex: =2
-
-        Rectangle1_4 As rectangle:
-            Height: =65
-            Width: =442
-            ZIndex: =3
-
-        Icon3_6 As icon.Cancel:
-            Color: =RGBA(255, 255, 255, 1)
-            Height: =44
-            Icon: =Icon.Cancel
-            OnSelect: =Set(ShowDatePicker, false)
-            Width: =44
-            X: =10
-            Y: =10
-            ZIndex: =4
-
-        Button2_20 As button:
-            OnSelect: =
-            Text: =Text(StartDateTime, DateTimeFormat.ShortTime) & " - " & Text(EndDateTime, DateTimeFormat.ShortTime)
-            Width: =319
-            X: =123
-            Y: =196
-            ZIndex: =5
-
-        Rectangle1_6 As rectangle:
-            Height: =105
-            Width: =442
-            Y: =91
-            ZIndex: =6
-
-        "WeekdayGallery_1 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver5.0'":
-            '#CopilotOverlayLabel': ="Filtered"
-            DelayItemLoading: =true
-            Height: =40
-            Items: =["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"]
-            LoadingSpinner: =LoadingSpinner.Data
-            TemplatePadding: =0
-            TemplateSize: =MonthDayGallery_1.TemplateWidth
-            Width: =361
-            X: =40
-            Y: =251
-            ZIndex: =7
-
-            Title1_1 As label:
-                Align: =Align.Center
-                Height: =27
-                OnSelect: =Select(Parent)
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =ThisItem.Value
-                VerticalAlign: =VerticalAlign.Top
-                Width: =30
-                X: =Parent.TemplateWidth / 2 - Self.Width / 2
-                Y: =Parent.TemplateHeight / 2 - Self.Height / 2
-                ZIndex: =2
-
-        Label4_7 As label:
-            Align: =Align.Center
-            Height: =26
-            Text: =Text(DateSelected, "[$-en-US]dddd")
-            Width: =442
-            Y: =65
-            ZIndex: =8
-
-        "MonthDayGallery_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
-            '#CopilotOverlayLabel': ="Filtered"
-            DelayItemLoading: =true
-            Height: =297
-            Items: =[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41]
-            Layout: =Layout.Vertical
-            LoadingSpinner: =LoadingSpinner.Data
-            ShowScrollbar: =false
-            TemplatePadding: =0
-            TemplateSize: =50
-            Width: =361
-            WrapCount: =7
-            X: =40
-            Y: =276
-            ZIndex: =9
-
-            Circle3_2 As circle:
-                Fill: =If(DateAdd(firstDayInView, ThisItem.Value) = DateSelected && DateAdd(firstDayInView, ThisItem.Value) >= Today() && DateAdd(firstDayInView, ThisItem.Value) >= firstDayOfMonth, RGBA(121, 121, 121, 1), RGBA(0,0,0,0))
-                Height: =33
-                Visible: =DateAdd(firstDayInView, ThisItem.Value, TimeUnit.Days) = DateSelected && Title3_1.Visible
-                Width: =33
-                X: =Title3_1.X
-                Y: =Title3_1.Y
-                ZIndex: =1
-
-            Title3_1 As label:
-                Align: =Align.Center
-                Color: =If(DateAdd(firstDayInView,ThisItem.Value) < Today(), ColorFade(RGBA(47,41,43,1), 80%), RGBA(47,41,43,1))
-                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                Height: =33
-                OnSelect: |-
-                    =If (
-                        DateAdd(
-                            firstDayInView,
-                            ThisItem.Value
-                        ) >= Today(),
-                        Select(Parent);
-                        Set(
-                            DateSelected,
-                            DateAdd(
-                                firstDayInView,
-                                ThisItem.Value,
-                                TimeUnit.Days
-                            )
-                        )
-                    )
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Day(DateAdd(firstDayInView,ThisItem.Value,TimeUnit.Days))
-                Visible: =If(DateAdd(firstDayInView,ThisItem.Value,TimeUnit.Days) < firstDayOfMonth || DateAdd(firstDayInView,ThisItem.Value,TimeUnit.Days) > LastDayOfMonth,false,true)
-                Width: =33
-                X: =Parent.TemplateWidth / 2 - Self.Width / 2
-                Y: =Parent.TemplateHeight / 2 - Self.Height / 2
-                ZIndex: =2
-
-        Label4_8 As label:
-            Align: =Align.Center
-            Height: =32
-            Text: =Text(DateSelected, "[$-en-US]mmmm")
-            Width: =442
-            Y: =91
-            ZIndex: =10
-
-        Label4_9 As label:
-            Align: =Align.Center
-            Height: =49
-            Size: =40
-            Text: =Text(DateSelected, "[$-en-US]dd")
-            Width: =442
-            Y: =119
-            ZIndex: =11
-
-        Label4_10 As label:
-            Align: =Align.Center
-            Height: =28
-            Text: =Text(DateSelected, "[$-en-US]yyyy")
-            Width: =442
-            Y: =168
-            ZIndex: =12
-
-        Button2_21 As button:
-            Height: =55
-            OnSelect: |
-                =Set(DateSpinner, true);
-                Set(StartTimeMinutes, Hour(StartDateTime)*60 + Minute(StartDateTime));
-                Set(EndTimeMinutes, Hour(EndDateTime)*60 + Minute(EndDateTime));
-                
-                Set(StartDateTime, DateAdd(DateSelected, StartTimeMinutes, TimeUnit.Minutes));
-                Set(EndDateTime, DateAdd(DateSelected, EndTimeMinutes, TimeUnit.Minutes));
-                
-                Set(StartDateTimeUTC, Text(DateAdd(StartDateTime, TimeZoneOffset(), TimeUnit.Minutes), "[$-en-US]yyyy-mm-ddThh:mm") & ":00.000Z");
-                Set(EndDateTimeUTC, Text(DateAdd(EndDateTime, TimeZoneOffset(), TimeUnit.Minutes), "[$-en-US]yyyy-mm-ddThh:mm") & ":00.000Z");
-                
-                Concurrent(
-                    ClearCollect(ScheduleRoom102, 'Serwer Studia'.Getclassesfromroom("1030-ETI-102", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                    ClearCollect(ScheduleRoom103, 'Serwer Studia'.Getclassesfromroom("1030-ETI-103", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                    ClearCollect(ScheduleRoom104, 'Serwer Studia'.Getclassesfromroom("1030-ETI-104", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                    ClearCollect(ScheduleRoom105, 'Serwer Studia'.Getclassesfromroom("1030-ETI-105-AR", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
-                );
-                
-                Concurrent(
-                    ClearCollect(ScheduleRoom106, 'Serwer Studia'.Getclassesfromroom("1030-ETI-106", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                    ClearCollect(ScheduleRoom107, 'Serwer Studia'.Getclassesfromroom("1030-ETI-107", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                    ClearCollect(ScheduleRoom161, 'Serwer Studia'.Getclassesfromroom("1030-ETI-161", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                    ClearCollect(ScheduleRoom108, 'Serwer Studia'.Getclassesfromroom("1030-ETI-108", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
-                );
-                
-                Concurrent(
-                    ClearCollect(ScheduleRoom116, 'Serwer Studia'.Getclassesfromroom("1030-ETI-116", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                    ClearCollect(ScheduleRoom117, 'Serwer Studia'.Getclassesfromroom("1030-ETI-117", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                    ClearCollect(ScheduleRoom116AR, 'Serwer Studia'.Getclassesfromroom("1030-ETI-116-AR", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                    ClearCollect(ScheduleRoom133, 'Serwer Studia'.Getclassesfromroom("1030-ETI-108", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
-                );
-                
-                Concurrent(
-                    ClearCollect(ScheduleRoom120, 'Serwer Studia'.Getclassesfromroom("1030-ETI-120", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                    ClearCollect(ScheduleRoom121, 'Serwer Studia'.Getclassesfromroom("1030-ETI-121", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                    ClearCollect(ScheduleRoom122, 'Serwer Studia'.Getclassesfromroom("1030-ETI-122", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
-                );
-                
-                Set(DateSpinner, false);
-                UpdateContext({SelectedRoom: Blank()});
-                Set(ShowDatePicker, false)
-            Text: ="SAVE"
-            Width: =336
-            X: =49
-            Y: =598
-            ZIndex: =13
-
-        Label4_6 As label:
-            Align: =Align.Center
-            Height: =44
-            Size: =20
-            Text: ="SELECT DATE"
-            Width: =281
-            X: =80
-            Y: =10
-            ZIndex: =14
-
-        Icon4_1 As icon.ArrowLeft:
-            Height: =35
-            Icon: =Icon.ArrowLeft
-            OnSelect: |-
-                =If(DateAdd(firstDayOfMonth, -1, TimeUnit.Days) >= Today(),
-                    Set(firstDayOfMonth, DateAdd(firstDayOfMonth, -1, TimeUnit.Months));
-                    Set(firstDayInView, DateAdd(firstDayOfMonth, -(Mod(Weekday(firstDayOfMonth)-2,7)+1), TimeUnit.Days));
-                    Set(LastDayOfMonth, DateAdd(DateAdd(firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days));
-                )
-            Width: =35
-            X: =54
-            Y: =204
-            ZIndex: =15
-
-        Icon5_1 As icon.ArrowRight:
-            Height: =35
-            Icon: =Icon.ArrowRight
-            OnSelect: |-
-                =Set(firstDayOfMonth, DateAdd(firstDayOfMonth, 1, TimeUnit.Months));
-                Set(firstDayInView, DateAdd(firstDayOfMonth, -(Mod(Weekday(firstDayOfMonth)-2, 7)+1),TimeUnit.Days));
-                Set(LastDayOfMonth, DateAdd(DateAdd(firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days));
-            Width: =35
-            X: =355
-            Y: =204
-            ZIndex: =16
-
-        Label5_1 As label:
-            Align: =Align.Center
-            Text: =Text(firstDayOfMonth, "[$-en-US]mmmm yyyy")
-            X: =147
-            Y: =201
-            ZIndex: =17
-
-        Spinner_1 As group:
-            Height: =5
-            Width: =5
-            X: =60
-            Y: =60
-            ZIndex: =21
-
-            Rectangle2_7 As rectangle:
-                BorderColor: =RGBA(255, 255, 255, 1)
-                Fill: =RGBA(255, 255, 255, 1)
-                Height: =678
-                Visible: =DateSpinner
-                Width: =442
-                ZIndex: =18
-
-            Spinner1_7 As Spinner:
-                BasePaletteColor: =
-                DisplayMode: =DisplayMode.Edit
-                FontColor: =
-                Height: =200
-                Visible: =DateSpinner
-                Width: =200
-                X: =122
-                Y: =226
-                ZIndex: =19
-
-            Label8_7 As label:
-                Align: =Align.Center
-                Text: ="Syncing with Server Studia..."
-                Visible: =DateSpinner
-                Width: =442
-                Y: =377
-                ZIndex: =20
-
     TimeSelectionPopup_1 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Regular
         Height: =Parent.Height - 90
@@ -319,7 +18,7 @@ Screen1_1 As screen:
         Width: =(Parent.Width - (20 * 2)) / 3
         X: =RoomSelectionPopup_1.Width + 40
         Y: =60
-        ZIndex: =17
+        ZIndex: =1
 
         Button3_10 As button:
             DisplayMode: =DisplayMode.Disabled
@@ -456,7 +155,7 @@ Screen1_1 As screen:
             )
         X: =20
         Y: =60
-        ZIndex: =18
+        ZIndex: =2
 
         Button3_8 As button:
             DisplayMode: =DisplayMode.Disabled
@@ -1296,7 +995,7 @@ Screen1_1 As screen:
         Width: =306
         X: =31
         Y: =706
-        ZIndex: =19
+        ZIndex: =3
 
     mainContainer As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Regular
@@ -1310,7 +1009,7 @@ Screen1_1 As screen:
         PaddingRight: =5
         PaddingTop: =5
         Width: =App.Width
-        ZIndex: =20
+        ZIndex: =4
 
         ContainerHeader_2 As groupContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
@@ -3324,7 +3023,7 @@ Screen1_1 As screen:
                     LayoutMinWidth: =32
                     OnSelect: |-
                         =UpdateContext({varRoomSelection: false});
-                        UpdateContext({varShowMainScreen: true})s
+                        UpdateContext({varShowMainScreen: true})
                     PaddingLeft: =20
                     ZIndex: =1
 
@@ -3352,6 +3051,10 @@ Screen1_1 As screen:
 
                     Button4 As button:
                         DisplayMode: =DisplayMode.View
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
                         Text: =SelectedRoom.Text
                         ZIndex: =2
 
@@ -3379,7 +3082,16 @@ Screen1_1 As screen:
                     Button4_1 As button:
                         DisplayMode: =DisplayMode.View
                         Text: ="Selected"
+                        Visible: =false
                         ZIndex: =2
+
+                    DatePicker1 As datepicker:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        LayoutMinWidth: =160
+                        PaddingLeft: =Self.Width - Len("23/24/2321") * 23 + 20
+                        PaddingTop: =5
+                        Size: =15
+                        ZIndex: =3
 
                 Container10_3 As groupContainer.verticalAutoLayoutContainer:
                     AlignInContainer: =AlignInContainer.SetByContainer
@@ -3404,8 +3116,146 @@ Screen1_1 As screen:
 
                     Button4_2 As button:
                         DisplayMode: =DisplayMode.View
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
                         Text: ="Selected"
                         ZIndex: =2
+
+            Container11 As groupContainer.verticalAutoLayoutContainer:
+                Fill: =RGBA(244, 244, 244, 1)
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Visible: =false
+                ZIndex: =4
+
+                Container13 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =Label4_18.Height
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    ZIndex: =1
+
+                    Rectangle1_12 As rectangle:
+                        Height: =50
+                        Visible: =false
+                        Width: =Parent.Width
+                        ZIndex: =1
+
+                    Label4_18 As label:
+                        Align: =Align.Center
+                        Fill: =WEITI_Szafirowy
+                        Height: =44
+                        Size: =20
+                        Text: ="SELECT DATE"
+                        Width: =Parent.Width
+                        ZIndex: =2
+
+                    Icon3_4 As icon.Cancel:
+                        Color: =RGBA(255, 255, 255, 1)
+                        Height: =Label4_18.Height
+                        Icon: =Icon.Cancel
+                        OnSelect: =Set(ShowDatePicker, false)
+                        PaddingBottom: =5
+                        PaddingLeft: =5
+                        PaddingRight: =5
+                        PaddingTop: =5
+                        Width: =44
+                        ZIndex: =3
+
+                Label4_19 As label:
+                    Align: =Align.Center
+                    AlignInContainer: =AlignInContainer.Stretch
+                    Fill: =WEITI_Wrzosowy
+                    Height: =26
+                    Text: =Text(DateSelected, "[$-en-US]dddd")
+                    Width: =442
+                    Y: =65
+                    ZIndex: =2
+
+                Label4_20 As label:
+                    Align: =Align.Center
+                    AlignInContainer: =AlignInContainer.Stretch
+                    Fill: =WEITI_Szafirowy
+                    Height: =32
+                    Text: =Text(DateSelected, "[$-en-US]mmmm")
+                    Width: =442
+                    Y: =91
+                    ZIndex: =3
+
+                Label4_21 As label:
+                    Align: =Align.Center
+                    AlignInContainer: =AlignInContainer.Stretch
+                    Fill: =WEITI_Szafirowy
+                    Height: =49
+                    Size: =40
+                    Text: =Text(DateSelected, "[$-en-US]dd")
+                    Width: =442
+                    Y: =28
+                    ZIndex: =4
+
+                Label4_22 As label:
+                    Align: =Align.Center
+                    AlignInContainer: =AlignInContainer.Stretch
+                    Fill: =WEITI_Szafirowy
+                    Height: =28
+                    Text: =Text(DateSelected, "[$-en-US]yyyy")
+                    Width: =442
+                    Y: =77
+                    ZIndex: =5
+
+                Container14 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.Center
+                    FillPortions: =0
+                    Height: =Label5_3.Height
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutGap: =30
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =6
+
+                    Icon4_3 As icon.ArrowLeft:
+                        Height: =35
+                        Icon: =Icon.ArrowLeft
+                        OnSelect: |-
+                            =If(DateAdd(firstDayOfMonth, -1, TimeUnit.Days) >= Today(),
+                                Set(firstDayOfMonth, DateAdd(firstDayOfMonth, -1, TimeUnit.Months));
+                                Set(firstDayInView, DateAdd(firstDayOfMonth, -(Mod(Weekday(firstDayOfMonth)-2,7)+1), TimeUnit.Days));
+                                Set(LastDayOfMonth, DateAdd(DateAdd(firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days));
+                            )
+                        Width: =35
+                        X: =54
+                        Y: =3
+                        ZIndex: =1
+
+                    Label5_3 As label:
+                        Align: =Align.Center
+                        Text: =Text(firstDayOfMonth, "[$-en-US]mmmm yyyy")
+                        X: =93
+                        Y: =201
+                        ZIndex: =2
+
+                    Icon5_3 As icon.ArrowRight:
+                        Height: =35
+                        Icon: =Icon.ArrowRight
+                        OnSelect: |-
+                            =Set(firstDayOfMonth, DateAdd(firstDayOfMonth, 1, TimeUnit.Months));
+                            Set(firstDayInView, DateAdd(firstDayOfMonth, -(Mod(Weekday(firstDayOfMonth)-2, 7)+1),TimeUnit.Days));
+                            Set(LastDayOfMonth, DateAdd(DateAdd(firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days));
+                        Width: =35
+                        X: =301
+                        Y: =3
+                        ZIndex: =3
 
         TextInput1_2 As text:
             Align: =Align.Center
@@ -3427,7 +3277,7 @@ Screen1_1 As screen:
         Height: =App.Height
         Visible: =ShowLoading
         Width: =App.Width
-        ZIndex: =24
+        ZIndex: =5
 
         Rectangle2_12 As rectangle:
             BorderColor: =RGBA(255, 255, 255, 1)
@@ -3457,4 +3307,305 @@ Screen1_1 As screen:
             X: =Spinner1_12.X
             Y: =Spinner1_12.Y + Spinner1_12.Height
             ZIndex: =3
+
+    DateSelectionPopup_1 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Regular
+        Height: =Parent.Height - 90
+        RadiusBottomLeft: =10
+        RadiusBottomRight: =10
+        RadiusTopLeft: =10
+        RadiusTopRight: =10
+        Visible: =ShowDatePicker
+        Width: =(Parent.Width - (20 * 2)) / 3
+        X: =RoomSelectionPopup_1.Width + 40
+        Y: =60
+        ZIndex: =6
+
+        Button3_9 As button:
+            DisplayMode: =DisplayMode.Disabled
+            Height: =Parent.Height
+            Text: =""
+            Width: =Parent.Width
+            X: =
+            ZIndex: =1
+
+        Rectangle1_5 As rectangle:
+            Fill: =RGBA(71, 158, 245, 1)
+            Height: =26
+            Width: =442
+            Y: =65
+            ZIndex: =2
+
+        Rectangle1_4 As rectangle:
+            Height: =65
+            Width: =442
+            ZIndex: =3
+
+        Icon3_6 As icon.Cancel:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =44
+            Icon: =Icon.Cancel
+            OnSelect: =Set(ShowDatePicker, false)
+            Width: =44
+            X: =10
+            Y: =10
+            ZIndex: =4
+
+        Button2_20 As button:
+            OnSelect: =
+            Text: =Text(StartDateTime, DateTimeFormat.ShortTime) & " - " & Text(EndDateTime, DateTimeFormat.ShortTime)
+            Width: =319
+            X: =123
+            Y: =196
+            ZIndex: =5
+
+        Rectangle1_6 As rectangle:
+            Height: =105
+            Width: =442
+            Y: =91
+            ZIndex: =6
+
+        "WeekdayGallery_1 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver5.0'":
+            '#CopilotOverlayLabel': ="Filtered"
+            DelayItemLoading: =true
+            Height: =40
+            Items: =["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"]
+            LoadingSpinner: =LoadingSpinner.Data
+            TemplatePadding: =0
+            TemplateSize: =MonthDayGallery_1.TemplateWidth
+            Width: =361
+            X: =40
+            Y: =251
+            ZIndex: =7
+
+            Title1_1 As label:
+                Align: =Align.Center
+                Height: =27
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =ThisItem.Value
+                VerticalAlign: =VerticalAlign.Top
+                Width: =30
+                X: =Parent.TemplateWidth / 2 - Self.Width / 2
+                Y: =Parent.TemplateHeight / 2 - Self.Height / 2
+                ZIndex: =2
+
+        Label4_7 As label:
+            Align: =Align.Center
+            Height: =26
+            Text: =Text(DateSelected, "[$-en-US]dddd")
+            Width: =442
+            Y: =65
+            ZIndex: =8
+
+        "MonthDayGallery_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+            '#CopilotOverlayLabel': ="Filtered"
+            DelayItemLoading: =true
+            Height: =297
+            Items: =[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41]
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            ShowScrollbar: =false
+            TemplatePadding: =0
+            TemplateSize: =50
+            Width: =361
+            WrapCount: =7
+            X: =40
+            Y: =276
+            ZIndex: =9
+
+            Circle3_2 As circle:
+                Fill: =If(DateAdd(firstDayInView, ThisItem.Value) = DateSelected && DateAdd(firstDayInView, ThisItem.Value) >= Today() && DateAdd(firstDayInView, ThisItem.Value) >= firstDayOfMonth, RGBA(121, 121, 121, 1), RGBA(0,0,0,0))
+                Height: =33
+                Visible: =DateAdd(firstDayInView, ThisItem.Value, TimeUnit.Days) = DateSelected && Title3_1.Visible
+                Width: =33
+                X: =Title3_1.X
+                Y: =Title3_1.Y
+                ZIndex: =1
+
+            Title3_1 As label:
+                Align: =Align.Center
+                Color: =If(DateAdd(firstDayInView,ThisItem.Value) < Today(), ColorFade(RGBA(47,41,43,1), 80%), RGBA(47,41,43,1))
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                Height: =33
+                OnSelect: |-
+                    =If (
+                        DateAdd(
+                            firstDayInView,
+                            ThisItem.Value
+                        ) >= Today(),
+                        Select(Parent);
+                        Set(
+                            DateSelected,
+                            DateAdd(
+                                firstDayInView,
+                                ThisItem.Value,
+                                TimeUnit.Days
+                            )
+                        )
+                    )
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Day(DateAdd(firstDayInView,ThisItem.Value,TimeUnit.Days))
+                Visible: =If(DateAdd(firstDayInView,ThisItem.Value,TimeUnit.Days) < firstDayOfMonth || DateAdd(firstDayInView,ThisItem.Value,TimeUnit.Days) > LastDayOfMonth,false,true)
+                Width: =33
+                X: =Parent.TemplateWidth / 2 - Self.Width / 2
+                Y: =Parent.TemplateHeight / 2 - Self.Height / 2
+                ZIndex: =2
+
+        Label4_8 As label:
+            Align: =Align.Center
+            Height: =32
+            Text: =Text(DateSelected, "[$-en-US]mmmm")
+            Width: =442
+            Y: =91
+            ZIndex: =10
+
+        Label4_9 As label:
+            Align: =Align.Center
+            Height: =49
+            Size: =40
+            Text: =Text(DateSelected, "[$-en-US]dd")
+            Width: =442
+            Y: =119
+            ZIndex: =11
+
+        Label4_10 As label:
+            Align: =Align.Center
+            Height: =28
+            Text: =Text(DateSelected, "[$-en-US]yyyy")
+            Width: =442
+            Y: =168
+            ZIndex: =12
+
+        Button2_21 As button:
+            Height: =55
+            OnSelect: |
+                =Set(DateSpinner, true);
+                Set(StartTimeMinutes, Hour(StartDateTime)*60 + Minute(StartDateTime));
+                Set(EndTimeMinutes, Hour(EndDateTime)*60 + Minute(EndDateTime));
+                
+                Set(StartDateTime, DateAdd(DateSelected, StartTimeMinutes, TimeUnit.Minutes));
+                Set(EndDateTime, DateAdd(DateSelected, EndTimeMinutes, TimeUnit.Minutes));
+                
+                Set(StartDateTimeUTC, Text(DateAdd(StartDateTime, TimeZoneOffset(), TimeUnit.Minutes), "[$-en-US]yyyy-mm-ddThh:mm") & ":00.000Z");
+                Set(EndDateTimeUTC, Text(DateAdd(EndDateTime, TimeZoneOffset(), TimeUnit.Minutes), "[$-en-US]yyyy-mm-ddThh:mm") & ":00.000Z");
+                
+                Concurrent(
+                    ClearCollect(ScheduleRoom102, 'Serwer Studia'.Getclassesfromroom("1030-ETI-102", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                    ClearCollect(ScheduleRoom103, 'Serwer Studia'.Getclassesfromroom("1030-ETI-103", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                    ClearCollect(ScheduleRoom104, 'Serwer Studia'.Getclassesfromroom("1030-ETI-104", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                    ClearCollect(ScheduleRoom105, 'Serwer Studia'.Getclassesfromroom("1030-ETI-105-AR", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
+                );
+                
+                Concurrent(
+                    ClearCollect(ScheduleRoom106, 'Serwer Studia'.Getclassesfromroom("1030-ETI-106", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                    ClearCollect(ScheduleRoom107, 'Serwer Studia'.Getclassesfromroom("1030-ETI-107", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                    ClearCollect(ScheduleRoom161, 'Serwer Studia'.Getclassesfromroom("1030-ETI-161", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                    ClearCollect(ScheduleRoom108, 'Serwer Studia'.Getclassesfromroom("1030-ETI-108", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
+                );
+                
+                Concurrent(
+                    ClearCollect(ScheduleRoom116, 'Serwer Studia'.Getclassesfromroom("1030-ETI-116", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                    ClearCollect(ScheduleRoom117, 'Serwer Studia'.Getclassesfromroom("1030-ETI-117", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                    ClearCollect(ScheduleRoom116AR, 'Serwer Studia'.Getclassesfromroom("1030-ETI-116-AR", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                    ClearCollect(ScheduleRoom133, 'Serwer Studia'.Getclassesfromroom("1030-ETI-108", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
+                );
+                
+                Concurrent(
+                    ClearCollect(ScheduleRoom120, 'Serwer Studia'.Getclassesfromroom("1030-ETI-120", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                    ClearCollect(ScheduleRoom121, 'Serwer Studia'.Getclassesfromroom("1030-ETI-121", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                    ClearCollect(ScheduleRoom122, 'Serwer Studia'.Getclassesfromroom("1030-ETI-122", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
+                );
+                
+                Set(DateSpinner, false);
+                UpdateContext({SelectedRoom: Blank()});
+                Set(ShowDatePicker, false)
+            Text: ="SAVE"
+            Width: =336
+            X: =49
+            Y: =598
+            ZIndex: =13
+
+        Label4_6 As label:
+            Align: =Align.Center
+            Height: =44
+            Size: =20
+            Text: ="SELECT DATE"
+            Width: =281
+            X: =80
+            Y: =10
+            ZIndex: =14
+
+        Icon4_1 As icon.ArrowLeft:
+            Height: =35
+            Icon: =Icon.ArrowLeft
+            OnSelect: |-
+                =If(DateAdd(firstDayOfMonth, -1, TimeUnit.Days) >= Today(),
+                    Set(firstDayOfMonth, DateAdd(firstDayOfMonth, -1, TimeUnit.Months));
+                    Set(firstDayInView, DateAdd(firstDayOfMonth, -(Mod(Weekday(firstDayOfMonth)-2,7)+1), TimeUnit.Days));
+                    Set(LastDayOfMonth, DateAdd(DateAdd(firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days));
+                )
+            Width: =35
+            X: =54
+            Y: =204
+            ZIndex: =15
+
+        Icon5_1 As icon.ArrowRight:
+            Height: =35
+            Icon: =Icon.ArrowRight
+            OnSelect: |-
+                =Set(firstDayOfMonth, DateAdd(firstDayOfMonth, 1, TimeUnit.Months));
+                Set(firstDayInView, DateAdd(firstDayOfMonth, -(Mod(Weekday(firstDayOfMonth)-2, 7)+1),TimeUnit.Days));
+                Set(LastDayOfMonth, DateAdd(DateAdd(firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days));
+            Width: =35
+            X: =355
+            Y: =204
+            ZIndex: =16
+
+        Label5_1 As label:
+            Align: =Align.Center
+            Text: =Text(firstDayOfMonth, "[$-en-US]mmmm yyyy")
+            X: =147
+            Y: =201
+            ZIndex: =17
+
+        Spinner_1 As group:
+            Height: =5
+            Width: =5
+            X: =60
+            Y: =60
+            ZIndex: =21
+
+            Rectangle2_7 As rectangle:
+                BorderColor: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =678
+                Visible: =DateSpinner
+                Width: =442
+                ZIndex: =18
+
+            Spinner1_7 As Spinner:
+                BasePaletteColor: =
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =200
+                Visible: =DateSpinner
+                Width: =200
+                X: =122
+                Y: =226
+                ZIndex: =19
+
+            Label8_7 As label:
+                Align: =Align.Center
+                Text: ="Syncing with Server Studia..."
+                Visible: =DateSpinner
+                Width: =442
+                Y: =377
+                ZIndex: =20
 
