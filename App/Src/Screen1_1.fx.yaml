@@ -4,7 +4,8 @@ Screen1_1 As screen:
         =Set(DurationSelection, Blank());
         UpdateContext({ResetTrue: false});
         UpdateContext({ResetTrue: true});
-        Set(varRoomSelection, false);
+        UpdateContext({varRoomSelection:false});
+        UpdateContext({varShowMainScreen:true})
 
     DateSelectionPopup_1 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Regular
@@ -1419,7 +1420,7 @@ Screen1_1 As screen:
             PaddingLeft: =10
             PaddingRight: =10
             PaddingTop: =10
-            Visible: =!varRoomSelection
+            Visible: =varShowMainScreen
             ZIndex: =2
 
             Container9 As groupContainer.verticalAutoLayoutContainer:
@@ -1520,6 +1521,7 @@ Screen1_1 As screen:
                             OnSelect: |-
                                 =Set(ShowLoading, true);
                                 UpdateContext({varRoomSelection: true});
+                                UpdateContext({varShowMainScreen: false});
                                 Set(DateSelected, Today());
                                 Set(DateTimeRoomChange, true);
                                 If( Mod(Minute(Now()), 30) <= 14,
@@ -3321,7 +3323,8 @@ Screen1_1 As screen:
                     Icon: =Icon.Cancel
                     LayoutMinWidth: =32
                     OnSelect: |-
-                        =UpdateContext({varRoomSelection: false})
+                        =UpdateContext({varRoomSelection: false});
+                        UpdateContext({varShowMainScreen: true})s
                     PaddingLeft: =20
                     ZIndex: =1
 
