@@ -1147,6 +1147,8 @@ Screen1_1 As screen:
                                 );
                                 UpdateContext({LoadingDone: LoadingDone + 1});
                                 UpdateContext({SelectedRoom: Blank()});
+                                UpdateContext({varShowFacultyMap: true});
+                                UpdateContext({varShowProperties: true});
                                 Set(ShowLoading, false);
                             PressedColor: =Color.Transparent
                             PressedFill: =Color.Transparent
@@ -1652,6 +1654,7 @@ Screen1_1 As screen:
                 RadiusBottomRight: =10
                 RadiusTopLeft: =10
                 RadiusTopRight: =10
+                Visible: =varShowFacultyMap
                 Width: =942
                 X: =10
                 Y: =10
@@ -2880,7 +2883,7 @@ Screen1_1 As screen:
                     Y: =Parent.Height*337/668
                     ZIndex: =22
 
-            Container8 As groupContainer.verticalAutoLayoutContainer:
+            ContainerProperties As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 Height: =Parent.Height
                 LayoutAlignItems: =LayoutAlignItems.Stretch
@@ -2894,7 +2897,7 @@ Screen1_1 As screen:
                 PaddingLeft: =5
                 PaddingRight: =5
                 PaddingTop: =5
-                Visible: =false
+                Visible: =varShowProperties
                 Width: =Parent.Width
                 ZIndex: =3
 
@@ -3047,6 +3050,13 @@ Screen1_1 As screen:
 
                     Button4_2 As button:
                         DisplayMode: =DisplayMode.View
+                        OnSelect: |-
+                            =If (
+                                App.Width < 300,
+                                UpdateContext({varShowFacultyMap:false});
+                                UpdateContext({varShowTimeSelection:true}),
+                                UpdateContext({varShowTimeSelection:true})
+                            )
                         RadiusBottomLeft: =0
                         RadiusBottomRight: =0
                         RadiusTopLeft: =0
@@ -3054,7 +3064,7 @@ Screen1_1 As screen:
                         Text: =Text(StartDateTime, DateTimeFormat.ShortTime) & " - " & Text(EndDateTime, DateTimeFormat.ShortTime)
                         ZIndex: =2
 
-            Container11 As groupContainer.verticalAutoLayoutContainer:
+            ContainerTimeSelection As groupContainer.verticalAutoLayoutContainer:
                 Fill: =RGBA(244, 244, 244, 1)
                 LayoutAlignItems: =LayoutAlignItems.Stretch
                 LayoutDirection: =LayoutDirection.Vertical
@@ -3063,6 +3073,7 @@ Screen1_1 As screen:
                 LayoutMinWidth: =300
                 LayoutMode: =LayoutMode.Auto
                 LayoutOverflowY: =LayoutOverflow.Scroll
+                Visible: =false
                 ZIndex: =4
 
                 Container13 As groupContainer.manualLayoutContainer:
@@ -3107,12 +3118,13 @@ Screen1_1 As screen:
                         ZIndex: =3
 
                 Container15 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
                     DropShadow: =DropShadow.None
                     Height: =Parent.LayoutGap + Container16.Height
                     LayoutAlignItems: =LayoutAlignItems.Center
                     LayoutGap: =10
                     LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
-                    LayoutMinHeight: =0
+                    LayoutMinHeight: =80
                     LayoutMinWidth: =100
                     LayoutMode: =LayoutMode.Auto
                     LayoutWrap: =true
@@ -3198,6 +3210,7 @@ Screen1_1 As screen:
 
                 "DurationGallery_3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                     '#CopilotOverlayLabel': ="Filtered"
+                    AlignInContainer: =AlignInContainer.SetByContainer
                     DelayItemLoading: =true
                     FillPortions: =4
                     Height: =355
@@ -3229,6 +3242,7 @@ Screen1_1 As screen:
                         ZIndex: =3
 
                 Container17 As groupContainer.manualLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
                     DropShadow: =DropShadow.None
                     FillPortions: =0
                     Height: =60
