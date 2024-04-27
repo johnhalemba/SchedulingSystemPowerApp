@@ -12916,7 +12916,14 @@
         "InputTextPlaceholder",
         "StartYear",
         "EndYear",
-        "StartOfWeek",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "StartOfWeek.Sunday",
+          "InvariantPropertyName": "StartOfWeek",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "IconFill",
         "IconBackground",
         "SelectedDateFill",
@@ -13090,7 +13097,7 @@
         {
           "Category": "Data",
           "PropertyName": "StartOfWeek",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -13861,7 +13868,7 @@
         {
           "Category": "Design",
           "PropertyName": "Visible",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         }
       ],
       "StyleName": "defaultGroupContainerStyle",
