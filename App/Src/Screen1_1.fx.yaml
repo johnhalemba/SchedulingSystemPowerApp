@@ -1279,7 +1279,6 @@ Screen1_1 As screen:
                                     ClearCollect(ScheduleRoom122, 'Serwer Studia'.Getclassesfromroom("1030-ETI-122", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
                                 );
                                 UpdateContext({LoadingDone: LoadingDone + 1});
-                                
                                 Set(ShowLoading, false);
                             PressedColor: =Color.Transparent
                             PressedFill: =Color.Transparent
@@ -3351,7 +3350,7 @@ Screen1_1 As screen:
             Align: =Align.Center
             Height: =65
             Size: =30
-            Text: ="Loading..."
+            Text: ="Loading... "&Text(LoadingDone)
             Width: =341
             X: =Spinner1_12.X
             Y: =Spinner1_12.Y + Spinner1_12.Height
