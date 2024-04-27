@@ -1279,6 +1279,7 @@ Screen1_1 As screen:
                                     ClearCollect(ScheduleRoom122, 'Serwer Studia'.Getclassesfromroom("1030-ETI-122", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
                                 );
                                 UpdateContext({LoadingDone: LoadingDone + 1});
+                                Set(varRoomSelection, Blank());
                                 Set(ShowLoading, false);
                             PressedColor: =Color.Transparent
                             PressedFill: =Color.Transparent
@@ -3063,6 +3064,7 @@ Screen1_1 As screen:
 
                     Button4 As button:
                         DisplayMode: =DisplayMode.View
+                        Fill: =WEITI_Szafirowy
                         RadiusBottomLeft: =0
                         RadiusBottomRight: =0
                         RadiusTopLeft: =0
@@ -3099,6 +3101,10 @@ Screen1_1 As screen:
 
                     DatePicker1 As datepicker:
                         AlignInContainer: =AlignInContainer.Stretch
+                        BorderThickness: =0
+                        Color: =RGBA(255, 255, 255, 1)
+                        Fill: =WEITI_Szafirowy
+                        IconBackground: =WEITI_Grafitowy
                         LayoutMinWidth: =160
                         OnChange: |
                             =Set(DateSelected, Self.SelectedDate);
@@ -3176,7 +3182,7 @@ Screen1_1 As screen:
                         RadiusBottomRight: =0
                         RadiusTopLeft: =0
                         RadiusTopRight: =0
-                        Text: ="Selected"
+                        Text: =Text(StartDateTime, DateTimeFormat.ShortTime) & " - " & Text(EndDateTime, DateTimeFormat.ShortTime)
                         ZIndex: =2
 
             Container11 As groupContainer.verticalAutoLayoutContainer:
@@ -3371,6 +3377,7 @@ Screen1_1 As screen:
         RadiusBottomRight: =10
         RadiusTopLeft: =10
         RadiusTopRight: =10
+        Visible: =false
         Width: =(Parent.Width - (20 * 2)) / 3
         X: =RoomSelectionPopup_1.Width + 40
         Y: =60
