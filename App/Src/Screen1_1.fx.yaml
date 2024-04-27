@@ -1279,7 +1279,7 @@ Screen1_1 As screen:
                                     ClearCollect(ScheduleRoom122, 'Serwer Studia'.Getclassesfromroom("1030-ETI-122", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
                                 );
                                 UpdateContext({LoadingDone: LoadingDone + 1});
-                                Set(varRoomSelection, Blank());
+                                UpdateContext({SelectedRoom: Blank()});
                                 Set(ShowLoading, false);
                             PressedColor: =Color.Transparent
                             PressedFill: =Color.Transparent

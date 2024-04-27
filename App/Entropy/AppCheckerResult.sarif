@@ -5539,36 +5539,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.varRoomSelection"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.varRoomSelection",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "varRoomSelection",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "App.R"
                 }
               ],
