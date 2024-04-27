@@ -3112,7 +3112,9 @@ Screen1_1 As screen:
                         Color: =RGBA(255, 255, 255, 1)
                         Height: =Label4_18.Height
                         Icon: =Icon.Cancel
-                        OnSelect: =Set(ShowDatePicker, false)
+                        OnSelect: |-
+                            =UpdateContext({varShowProperties:true});
+                            UpdateContext({varShowFacultyMap:true})
                         PaddingBottom: =5
                         PaddingLeft: =5
                         PaddingRight: =5
