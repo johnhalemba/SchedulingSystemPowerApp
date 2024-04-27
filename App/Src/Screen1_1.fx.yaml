@@ -3049,13 +3049,16 @@ Screen1_1 As screen:
                         ZIndex: =1
 
                     Button4_2 As button:
-                        DisplayMode: =DisplayMode.View
                         OnSelect: |-
                             =If (
                                 App.Width < 300,
+                            
                                 UpdateContext({varShowFacultyMap:false});
-                                UpdateContext({varShowTimeSelection:true}),
-                                UpdateContext({varShowTimeSelection:true})
+                                UpdateContext({varShowTimeSelection:true});
+                                UpdateContext({varShowProperties:false}),
+                            
+                                UpdateContext({varShowTimeSelection:true});
+                                UpdateContext({varShowProperties:false})
                             )
                         RadiusBottomLeft: =0
                         RadiusBottomRight: =0
@@ -3073,7 +3076,7 @@ Screen1_1 As screen:
                 LayoutMinWidth: =300
                 LayoutMode: =LayoutMode.Auto
                 LayoutOverflowY: =LayoutOverflow.Scroll
-                Visible: =false
+                Visible: =varShowTimeSelection
                 ZIndex: =4
 
                 Container13 As groupContainer.manualLayoutContainer:
