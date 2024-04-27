@@ -7,139 +7,6 @@ Screen1_1 As screen:
         UpdateContext({varRoomSelection:false});
         UpdateContext({varShowMainScreen:true})
 
-    TimeSelectionPopup_1 As groupContainer.manualLayoutContainer:
-        DropShadow: =DropShadow.Regular
-        Height: =Parent.Height - 90
-        RadiusBottomLeft: =10
-        RadiusBottomRight: =10
-        RadiusTopLeft: =10
-        RadiusTopRight: =10
-        Visible: =ShowTimePicker
-        Width: =(Parent.Width - (20 * 2)) / 3
-        X: =RoomSelectionPopup_1.Width + 40
-        Y: =60
-        ZIndex: =1
-
-        Button3_10 As button:
-            DisplayMode: =DisplayMode.Disabled
-            Height: =Parent.Height
-            Text: =""
-            Width: =Parent.Width
-            X: =
-            ZIndex: =1
-
-        Rectangle1_7 As rectangle:
-            Height: =65
-            Width: =442
-            ZIndex: =3
-
-        Icon3_7 As icon.Cancel:
-            Color: =RGBA(255, 255, 255, 1)
-            Height: =44
-            Icon: =Icon.Cancel
-            OnSelect: =Set(ShowTimePicker, false)
-            Width: =44
-            X: =10
-            Y: =10
-            ZIndex: =4
-
-        ButtonSaveTime_1 As button:
-            Height: =55
-            OnSelect: |
-                =Set(StartDateTime, DateAdd(DateSelected, DropdownStartTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes', TimeUnit.Minutes));
-                Set(EndDateTime, DateAdd(StartDateTime, If(DropdownStartTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' >= DropdownEndTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes', DropdownEndTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' + 1440 - DropdownStartTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes', DropdownEndTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' - DropdownStartTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes'), TimeUnit.Minutes));
-                
-                Set(StartDateTimeUTC, Text(DateAdd(StartDateTime, TimeZoneOffset(), TimeUnit.Minutes), "[$-en-US]yyyy-mm-ddThh:mm") & ":00.000Z");
-                Set(EndDateTimeUTC, Text(DateAdd(EndDateTime, TimeZoneOffset(), TimeUnit.Minutes), "[$-en-US]yyyy-mm-ddThh:mm") & ":00.000Z");
-                
-                Set(ShowTimePicker, false)
-            Text: ="SAVE"
-            Width: =336
-            X: =54
-            Y: =593
-            ZIndex: =13
-
-        Label4_11 As label:
-            Align: =Align.Center
-            Height: =44
-            Size: =20
-            Text: ="SELECT DATE"
-            Width: =281
-            X: =80
-            Y: =10
-            ZIndex: =14
-
-        DropdownStartTime_1 As dropdown:
-            BorderColor: =If(ButtonSaveTime_1.DisplayMode = DisplayMode.Edit, RGBA(120, 120, 120, 1), Color.Red)
-            ChevronBackground: =RGBA(62, 96, 170, 0)
-            ChevronDisabledBackground: =RGBA(159, 167, 165, 1)
-            ChevronDisabledFill: =ColorFade(RGBA(47, 41, 43, 1), 70%)
-            ChevronFill: =RGBA(18, 107, 240, 1)
-            Default: =If(ResetTrue, LookUp(Times, Text = Lower(Text(StartDateTime, DateTimeFormat.ShortTime))).Text)
-            Items: =Times
-            Width: =ButtonSaveTime_1.Width / 2 - 10
-            X: =ButtonSaveTime_1.X
-            Y: =116
-            ZIndex: =15
-
-        Label6_2 As label:
-            FontWeight: =FontWeight.Semibold
-            Text: ="Start"
-            Width: =158
-            X: =54
-            Y: =76
-            ZIndex: =17
-
-        Label6_3 As label:
-            FontWeight: =FontWeight.Semibold
-            Text: ="End"
-            Width: =158
-            X: =232
-            Y: =76
-            ZIndex: =18
-
-        DropdownEndTime_1 As dropdown:
-            BorderColor: =If(ButtonSaveTime_1.DisplayMode = DisplayMode.Edit, RGBA(120, 120, 120, 1), Color.Red)
-            ChevronBackground: =RGBA(62, 96, 170, 0)
-            ChevronDisabledBackground: =RGBA(159, 167, 165, 1)
-            ChevronDisabledFill: =ColorFade(RGBA(47, 41, 43, 1), 70%)
-            ChevronFill: =RGBA(18, 107, 240, 1)
-            Default: =If(IsBlank(DurationGallery_1.Selected) && IsBlank(DurationSelection) || ResetTrue, LookUp(Times, Text = Lower(Text(EndDateTime, DateTimeFormat.ShortTime))).Text, !IsBlank(DurationSelection), LookUp(Times, Minutes = Mod(DropdownStartTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' + DurationGallery_1.Selected.Minutes, 1440)).Text)
-            Items: =Times
-            Width: =ButtonSaveTime_1.Width / 2 - 10
-            X: =232
-            Y: =116
-            ZIndex: =19
-
-        "DurationGallery_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
-            '#CopilotOverlayLabel': ="Filtered"
-            DelayItemLoading: =true
-            Height: =355
-            Items: =Durations
-            Layout: =Layout.Vertical
-            LoadingSpinner: =LoadingSpinner.Data
-            ShowScrollbar: =false
-            TemplatePadding: =15
-            TemplateSize: =90
-            Width: =361
-            WrapCount: =2
-            X: =40
-            Y: =190
-            ZIndex: =20
-
-            Button5_2 As button:
-                BorderColor: =RGBA(18, 107, 240, 1)
-                Color: =Self.BorderColor
-                Fill: =If(ThisItem.Minutes = DurationSelection.Minutes, RGBA(18, 107, 240, .2), RGBA(0, 0, 0, 0))
-                Height: =Parent.TemplateHeight
-                OnSelect: |-
-                    =Select(Parent);
-                    If(IsBlank(DurationSelection) || ThisItem.Time <> DurationSelection.Time, Set(DurationSelection, ThisItem), Set(DurationSelection, Blank()));
-                    UpdateContext({ResetTrue: false})
-                Text: ="+ " & ThisItem.Time
-                Width: =Parent.TemplateWidth
-                ZIndex: =3
-
     CheckSchedulePopUp_1 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Regular
         Height: =Parent.Height - 90
@@ -155,7 +22,7 @@ Screen1_1 As screen:
             )
         X: =20
         Y: =60
-        ZIndex: =2
+        ZIndex: =1
 
         Button3_8 As button:
             DisplayMode: =DisplayMode.Disabled
@@ -995,7 +862,7 @@ Screen1_1 As screen:
         Width: =306
         X: =31
         Y: =706
-        ZIndex: =3
+        ZIndex: =2
 
     mainContainer As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Regular
@@ -1009,7 +876,7 @@ Screen1_1 As screen:
         PaddingRight: =5
         PaddingTop: =5
         Width: =App.Width
-        ZIndex: =4
+        ZIndex: =3
 
         ContainerHeader_2 As groupContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
@@ -1766,6 +1633,7 @@ Screen1_1 As screen:
         ContainerRoomSelection As groupContainer.horizontalAutoLayoutContainer:
             LayoutAlignItems: =LayoutAlignItems.Stretch
             LayoutGap: =10
+            LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
@@ -3026,6 +2894,7 @@ Screen1_1 As screen:
                 PaddingLeft: =5
                 PaddingRight: =5
                 PaddingTop: =5
+                Visible: =false
                 Width: =Parent.Width
                 ZIndex: =3
 
@@ -3187,19 +3056,23 @@ Screen1_1 As screen:
 
             Container11 As groupContainer.verticalAutoLayoutContainer:
                 Fill: =RGBA(244, 244, 244, 1)
+                LayoutAlignItems: =LayoutAlignItems.Stretch
                 LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =15
                 LayoutMinHeight: =100
-                LayoutMinWidth: =250
+                LayoutMinWidth: =300
                 LayoutMode: =LayoutMode.Auto
-                Visible: =false
+                LayoutOverflowY: =LayoutOverflow.Scroll
                 ZIndex: =4
 
                 Container13 As groupContainer.manualLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
                     DropShadow: =DropShadow.None
                     FillPortions: =0
                     Height: =Label4_18.Height
                     LayoutMinHeight: =100
-                    LayoutMinWidth: =250
+                    LayoutMinWidth: |
+                        =300
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
                     RadiusTopLeft: =0
@@ -3217,7 +3090,7 @@ Screen1_1 As screen:
                         Fill: =WEITI_Szafirowy
                         Height: =44
                         Size: =20
-                        Text: ="SELECT DATE"
+                        Text: ="SELECT TIME"
                         Width: =Parent.Width
                         ZIndex: =2
 
@@ -3233,90 +3106,129 @@ Screen1_1 As screen:
                         Width: =44
                         ZIndex: =3
 
-                Label4_19 As label:
-                    Align: =Align.Center
-                    AlignInContainer: =AlignInContainer.Stretch
-                    Fill: =WEITI_Wrzosowy
-                    Height: =26
-                    Text: =Text(DateSelected, "[$-en-US]dddd")
-                    Width: =442
-                    Y: =65
+                Container15 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =Parent.LayoutGap + Container16.Height
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutGap: =1
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =100
+                    LayoutMode: =LayoutMode.Auto
+                    LayoutWrap: =true
+                    PaddingBottom: =5
+                    PaddingLeft: =5
+                    PaddingRight: =5
+                    PaddingTop: =5
                     ZIndex: =2
 
-                Label4_20 As label:
-                    Align: =Align.Center
-                    AlignInContainer: =AlignInContainer.Stretch
-                    Fill: =WEITI_Szafirowy
-                    Height: =32
-                    Text: =Text(DateSelected, "[$-en-US]mmmm")
-                    Width: =442
-                    Y: =91
-                    ZIndex: =3
-
-                Label4_21 As label:
-                    Align: =Align.Center
-                    AlignInContainer: =AlignInContainer.Stretch
-                    Fill: =WEITI_Szafirowy
-                    Height: =49
-                    Size: =40
-                    Text: =Text(DateSelected, "[$-en-US]dd")
-                    Width: =442
-                    Y: =28
-                    ZIndex: =4
-
-                Label4_22 As label:
-                    Align: =Align.Center
-                    AlignInContainer: =AlignInContainer.Stretch
-                    Fill: =WEITI_Szafirowy
-                    Height: =28
-                    Text: =Text(DateSelected, "[$-en-US]yyyy")
-                    Width: =442
-                    Y: =77
-                    ZIndex: =5
-
-                Container14 As groupContainer.horizontalAutoLayoutContainer:
-                    AlignInContainer: =AlignInContainer.Center
-                    FillPortions: =0
-                    Height: =Label5_3.Height
-                    LayoutAlignItems: =LayoutAlignItems.Center
-                    LayoutGap: =30
-                    LayoutJustifyContent: =LayoutJustifyContent.Center
-                    LayoutMinHeight: =100
-                    LayoutMinWidth: =250
-                    LayoutMode: =LayoutMode.Auto
-                    ZIndex: =6
-
-                    Icon4_3 As icon.ArrowLeft:
-                        Height: =35
-                        Icon: =Icon.ArrowLeft
-                        OnSelect: |-
-                            =If(DateAdd(firstDayOfMonth, -1, TimeUnit.Days) >= Today(),
-                                Set(firstDayOfMonth, DateAdd(firstDayOfMonth, -1, TimeUnit.Months));
-                                Set(firstDayInView, DateAdd(firstDayOfMonth, -(Mod(Weekday(firstDayOfMonth)-2,7)+1), TimeUnit.Days));
-                                Set(LastDayOfMonth, DateAdd(DateAdd(firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days));
-                            )
-                        Width: =35
-                        X: =54
-                        Y: =3
+                    Container16 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
+                        FillPortions: =0
+                        Height: =Label6_6.Height+DropdownStartTime_3.Height+2*DropdownStartTime_3.BorderThickness
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutGap: =3
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Width: =DropdownStartTime_3.Width + 2*DropdownStartTime_3.BorderThickness
                         ZIndex: =1
 
-                    Label5_3 As label:
-                        Align: =Align.Center
-                        Text: =Text(firstDayOfMonth, "[$-en-US]mmmm yyyy")
-                        X: =93
-                        Y: =201
+                        Label6_6 As label:
+                            FontWeight: =FontWeight.Semibold
+                            Text: ="Start"
+                            Width: =158
+                            X: =54
+                            Y: =76
+                            ZIndex: =1
+
+                        DropdownStartTime_3 As dropdown:
+                            BorderColor: =If(ButtonSaveTime_1.DisplayMode = DisplayMode.Edit, RGBA(120, 120, 120, 1), Color.Red)
+                            ChevronBackground: =RGBA(62, 96, 170, 0)
+                            ChevronDisabledBackground: =RGBA(159, 167, 165, 1)
+                            ChevronDisabledFill: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                            ChevronFill: =RGBA(18, 107, 240, 1)
+                            Default: =If(ResetTrue, LookUp(Times, Text = Lower(Text(StartDateTime, DateTimeFormat.ShortTime))).Text)
+                            Items: =Times
+                            Width: =ButtonSaveTime_1.Width / 2 - 10
+                            X: =ButtonSaveTime_1.X
+                            Y: =40
+                            ZIndex: =2
+
+                    Container16_1 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
+                        FillPortions: =0
+                        Height: =Label6_7.Height+DropdownEndTime_3.Height + 2*DropdownEndTime_3.BorderThickness
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutGap: =3
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =DropdownEndTime_3.Width
                         ZIndex: =2
 
-                    Icon5_3 As icon.ArrowRight:
-                        Height: =35
-                        Icon: =Icon.ArrowRight
+                        Label6_7 As label:
+                            FontWeight: =FontWeight.Semibold
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: ="End"
+                            Width: =158
+                            X: =232
+                            Y: =76
+                            ZIndex: =1
+
+                        DropdownEndTime_3 As dropdown:
+                            BorderColor: =If(ButtonSaveTime_1.DisplayMode = DisplayMode.Edit, RGBA(120, 120, 120, 1), Color.Red)
+                            ChevronBackground: =RGBA(62, 96, 170, 0)
+                            ChevronDisabledBackground: =RGBA(159, 167, 165, 1)
+                            ChevronDisabledFill: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                            ChevronFill: =RGBA(18, 107, 240, 1)
+                            Default: =If(IsBlank(DurationGallery_1.Selected) && IsBlank(DurationSelection) || ResetTrue, LookUp(Times, Text = Lower(Text(EndDateTime, DateTimeFormat.ShortTime))).Text, !IsBlank(DurationSelection), LookUp(Times, Minutes = Mod(DropdownStartTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' + DurationGallery_1.Selected.Minutes, 1440)).Text)
+                            Items: =Times
+                            Width: =
+                            X: =232
+                            Y: =40
+                            ZIndex: =2
+
+                "DurationGallery_3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                    '#CopilotOverlayLabel': ="Filtered"
+                    DelayItemLoading: =true
+                    Height: =355
+                    Items: =Durations
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =320
+                    LoadingSpinner: =LoadingSpinner.Data
+                    ShowScrollbar: =false
+                    TemplatePadding: =15
+                    TemplateSize: =90
+                    Width: =361
+                    WrapCount: =3
+                    X: =40
+                    Y: =190
+                    ZIndex: =3
+
+                    Button5_4 As button:
+                        BorderColor: =RGBA(18, 107, 240, 1)
+                        Color: =Self.BorderColor
+                        Fill: =If(ThisItem.Minutes = DurationSelection.Minutes, RGBA(18, 107, 240, .2), RGBA(0, 0, 0, 0))
+                        Height: =Parent.TemplateHeight
                         OnSelect: |-
-                            =Set(firstDayOfMonth, DateAdd(firstDayOfMonth, 1, TimeUnit.Months));
-                            Set(firstDayInView, DateAdd(firstDayOfMonth, -(Mod(Weekday(firstDayOfMonth)-2, 7)+1),TimeUnit.Days));
-                            Set(LastDayOfMonth, DateAdd(DateAdd(firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days));
-                        Width: =35
-                        X: =301
-                        Y: =3
+                            =Select(Parent);
+                            If(IsBlank(DurationSelection) || ThisItem.Time <> DurationSelection.Time, Set(DurationSelection, ThisItem), Set(DurationSelection, Blank()));
+                            UpdateContext({ResetTrue: false})
+                        Text: ="+ " & ThisItem.Time
+                        Width: =Parent.TemplateWidth
                         ZIndex: =3
 
         TextInput1_2 As text:
@@ -3339,7 +3251,7 @@ Screen1_1 As screen:
         Height: =App.Height
         Visible: =ShowLoading
         Width: =App.Width
-        ZIndex: =5
+        ZIndex: =4
 
         Rectangle2_12 As rectangle:
             BorderColor: =RGBA(255, 255, 255, 1)
@@ -3381,7 +3293,7 @@ Screen1_1 As screen:
         Width: =(Parent.Width - (20 * 2)) / 3
         X: =RoomSelectionPopup_1.Width + 40
         Y: =60
-        ZIndex: =6
+        ZIndex: =5
 
         Button3_9 As button:
             DisplayMode: =DisplayMode.Disabled
@@ -3670,4 +3582,136 @@ Screen1_1 As screen:
                 Width: =442
                 Y: =377
                 ZIndex: =20
+
+    TimeSelectionPopup_1 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Regular
+        Height: =Parent.Height - 90
+        RadiusBottomLeft: =10
+        RadiusBottomRight: =10
+        RadiusTopLeft: =10
+        RadiusTopRight: =10
+        Width: =(Parent.Width - (20 * 2)) / 3
+        X: =RoomSelectionPopup_1.Width + 40
+        Y: =60
+        ZIndex: =6
+
+        Button3_10 As button:
+            DisplayMode: =DisplayMode.Disabled
+            Height: =Parent.Height
+            Text: =""
+            Width: =Parent.Width
+            X: =
+            ZIndex: =1
+
+        Rectangle1_7 As rectangle:
+            Height: =65
+            Width: =442
+            ZIndex: =3
+
+        Icon3_7 As icon.Cancel:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =44
+            Icon: =Icon.Cancel
+            OnSelect: =Set(ShowTimePicker, false)
+            Width: =44
+            X: =10
+            Y: =10
+            ZIndex: =4
+
+        ButtonSaveTime_1 As button:
+            Height: =55
+            OnSelect: |
+                =Set(StartDateTime, DateAdd(DateSelected, DropdownStartTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes', TimeUnit.Minutes));
+                Set(EndDateTime, DateAdd(StartDateTime, If(DropdownStartTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' >= DropdownEndTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes', DropdownEndTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' + 1440 - DropdownStartTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes', DropdownEndTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' - DropdownStartTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes'), TimeUnit.Minutes));
+                
+                Set(StartDateTimeUTC, Text(DateAdd(StartDateTime, TimeZoneOffset(), TimeUnit.Minutes), "[$-en-US]yyyy-mm-ddThh:mm") & ":00.000Z");
+                Set(EndDateTimeUTC, Text(DateAdd(EndDateTime, TimeZoneOffset(), TimeUnit.Minutes), "[$-en-US]yyyy-mm-ddThh:mm") & ":00.000Z");
+                
+                Set(ShowTimePicker, false)
+            Text: ="SAVE"
+            Width: =336
+            X: =54
+            Y: =593
+            ZIndex: =13
+
+        Label4_11 As label:
+            Align: =Align.Center
+            Height: =44
+            Size: =20
+            Text: ="SELECT DATE"
+            Width: =281
+            X: =80
+            Y: =10
+            ZIndex: =14
+
+        DropdownStartTime_1 As dropdown:
+            BorderColor: =If(ButtonSaveTime_1.DisplayMode = DisplayMode.Edit, RGBA(120, 120, 120, 1), Color.Red)
+            ChevronBackground: =RGBA(62, 96, 170, 0)
+            ChevronDisabledBackground: =RGBA(159, 167, 165, 1)
+            ChevronDisabledFill: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+            ChevronFill: =RGBA(18, 107, 240, 1)
+            Default: =If(ResetTrue, LookUp(Times, Text = Lower(Text(StartDateTime, DateTimeFormat.ShortTime))).Text)
+            Items: =Times
+            Width: =ButtonSaveTime_1.Width / 2 - 10
+            X: =ButtonSaveTime_1.X
+            Y: =116
+            ZIndex: =15
+
+        Label6_2 As label:
+            FontWeight: =FontWeight.Semibold
+            Text: ="Start"
+            Width: =158
+            X: =54
+            Y: =76
+            ZIndex: =17
+
+        Label6_3 As label:
+            FontWeight: =FontWeight.Semibold
+            Text: ="End"
+            Width: =158
+            X: =232
+            Y: =76
+            ZIndex: =18
+
+        DropdownEndTime_1 As dropdown:
+            BorderColor: =If(ButtonSaveTime_1.DisplayMode = DisplayMode.Edit, RGBA(120, 120, 120, 1), Color.Red)
+            ChevronBackground: =RGBA(62, 96, 170, 0)
+            ChevronDisabledBackground: =RGBA(159, 167, 165, 1)
+            ChevronDisabledFill: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+            ChevronFill: =RGBA(18, 107, 240, 1)
+            Default: =If(IsBlank(DurationGallery_1.Selected) && IsBlank(DurationSelection) || ResetTrue, LookUp(Times, Text = Lower(Text(EndDateTime, DateTimeFormat.ShortTime))).Text, !IsBlank(DurationSelection), LookUp(Times, Minutes = Mod(DropdownStartTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' + DurationGallery_1.Selected.Minutes, 1440)).Text)
+            Items: =Times
+            Width: =ButtonSaveTime_1.Width / 2 - 10
+            X: =232
+            Y: =116
+            ZIndex: =19
+
+        "DurationGallery_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+            '#CopilotOverlayLabel': ="Filtered"
+            DelayItemLoading: =true
+            Height: =355
+            Items: =Durations
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            ShowScrollbar: =false
+            TemplatePadding: =15
+            TemplateSize: =90
+            Width: =361
+            WrapCount: =2
+            X: =40
+            Y: =190
+            ZIndex: =20
+
+            Button5_2 As button:
+                BorderColor: =RGBA(18, 107, 240, 1)
+                Color: =Self.BorderColor
+                Fill: =If(ThisItem.Minutes = DurationSelection.Minutes, RGBA(18, 107, 240, .2), RGBA(0, 0, 0, 0))
+                Height: =Parent.TemplateHeight
+                OnSelect: |-
+                    =Select(Parent);
+                    If(IsBlank(DurationSelection) || ThisItem.Time <> DurationSelection.Time, Set(DurationSelection, ThisItem), Set(DurationSelection, Blank()));
+                    UpdateContext({ResetTrue: false})
+                Text: ="+ " & ThisItem.Time
+                Width: =Parent.TemplateWidth
+                ZIndex: =3
 
