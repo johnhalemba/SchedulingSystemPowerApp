@@ -2,8 +2,8 @@ Screen1_1 As screen:
     Fill: =RGBA(224, 224, 224, 1)
     OnVisible: |
         =Set(DurationSelection, Blank());
-        UpdateContext({ResetTrue: false});
-        UpdateContext({ResetTrue: true});
+        //UpdateContext({ResetTrue: false});
+        //UpdateContext({ResetTrue: true});
         UpdateContext({varRoomSelection:false});
         UpdateContext({varShowMainScreen:true})
 
