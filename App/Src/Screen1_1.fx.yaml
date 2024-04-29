@@ -4909,7 +4909,7 @@ Screen1_1 As screen:
                             ZIndex: =1
 
                         DropdownStartTime_4 As dropdown:
-                            BorderColor: =If(ButtonSaveTime_1.DisplayMode = DisplayMode.Edit, RGBA(120, 120, 120, 1), Color.Red)
+                            BorderColor: =If(ButtonSaveTime_4.DisplayMode = DisplayMode.Edit, RGBA(120, 120, 120, 1), Color.Red)
                             ChevronBackground: =RGBA(62, 96, 170, 0)
                             ChevronDisabledBackground: =RGBA(159, 167, 165, 1)
                             ChevronDisabledFill: =ColorFade(RGBA(47, 41, 43, 1), 70%)
@@ -4944,7 +4944,7 @@ Screen1_1 As screen:
                             ZIndex: =1
 
                         DropdownEndTime_4 As dropdown:
-                            BorderColor: =If(ButtonSaveTime_1.DisplayMode = DisplayMode.Edit, RGBA(120, 120, 120, 1), Color.Red)
+                            BorderColor: =If(ButtonSaveTime_4.DisplayMode = DisplayMode.Edit, RGBA(120, 120, 120, 1), Color.Red)
                             ChevronBackground: =RGBA(62, 96, 170, 0)
                             ChevronDisabledBackground: =RGBA(159, 167, 165, 1)
                             ChevronDisabledFill: =ColorFade(RGBA(47, 41, 43, 1), 70%)
