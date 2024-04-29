@@ -3245,7 +3245,7 @@ Screen1_1 As screen:
                             ChevronDisabledBackground: =RGBA(159, 167, 165, 1)
                             ChevronDisabledFill: =ColorFade(RGBA(47, 41, 43, 1), 70%)
                             ChevronFill: =RGBA(18, 107, 240, 1)
-                            Default: =If(IsBlank(DurationGallery_1.Selected) && IsBlank(DurationSelection) || ResetTrue, LookUp(Times, Text = Lower(Text(EndDateTime, DateTimeFormat.ShortTime))).Text, !IsBlank(DurationSelection), LookUp(Times, Minutes = Mod(DropdownStartTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' + DurationGallery_1.Selected.Minutes, 1440)).Text)
+                            Default: =If(IsBlank(DurationGallery_3.Selected) && IsBlank(DurationSelection) || ResetTrue, LookUp(Times, Text = Lower(Text(EndDateTime, DateTimeFormat.ShortTime))).Text, !IsBlank(DurationSelection), LookUp(Times, Minutes = Mod(DropdownStartTime_3.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' + DurationGallery_3.Selected.Minutes, 1440)).Text)
                             Items: =Times
                             Width: =Parent.Width - Self.BorderThickness * 2
                             X: =232
@@ -3258,7 +3258,7 @@ Screen1_1 As screen:
                     Height: =20
                     Size: =9
                     Text: ="🚫 Please select correct start and end times"
-                    Visible: =StartDateTime > EndDateTime
+                    Visible: =TimeValue(DropdownStartTime_3.Selected.Text,"en-US") > TimeValue(DropdownEndTime_3.Selected.Text,"en-US")
                     ZIndex: =3
 
                 "DurationGallery_3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
@@ -3308,6 +3308,12 @@ Screen1_1 As screen:
                     ZIndex: =5
 
                     ButtonSaveTime_3 As button:
+                        DisplayMode: |-
+                            =If (
+                                Label13.Visible,
+                                DisplayMode.Disabled,
+                                DisplayMode.Edit
+                            )
                         Height: =Parent.Height - Self.PaddingBottom - Self.PaddingTop
                         OnSelect: |
                             =Set(StartDateTime, DateAdd(DateSelected, DropdownStartTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes', TimeUnit.Minutes));
