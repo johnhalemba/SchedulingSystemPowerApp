@@ -2961,15 +2961,10 @@ Screen1_1 As screen:
                     ZIndex: =3
 
                     Label12_1 As label:
+                        Size: =15
                         Text: |-
                             ="Selected date:"
                         ZIndex: =1
-
-                    Button4_1 As button:
-                        DisplayMode: =DisplayMode.View
-                        Text: ="Selected"
-                        Visible: =false
-                        ZIndex: =2
 
                     DatePicker1 As datepicker:
                         AlignInContainer: =AlignInContainer.Stretch
@@ -3021,7 +3016,7 @@ Screen1_1 As screen:
                                     ClearCollect(ScheduleRoom122, 'Serwer Studia'.Getclassesfromroom("1030-ETI-122", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
                                 );
                             )
-                        PaddingLeft: =Self.Width - Len("23/24/2321") * 23 + 20
+                        PaddingLeft: =Self.Width - Len("23/24/2321")*25 + 20
                         PaddingTop: =5
                         Size: =15
                         StartOfWeek: =StartOfWeek.Monday
@@ -3044,8 +3039,9 @@ Screen1_1 As screen:
                     ZIndex: =4
 
                     Label12_2 As label:
+                        Size: =15
                         Text: |-
-                            ="Selected date:"
+                            ="Selected time:"
                         ZIndex: =1
 
                     Button4_2 As button:
