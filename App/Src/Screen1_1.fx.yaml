@@ -1,5 +1,6 @@
 Screen1_1 As screen:
     Fill: =RGBA(244, 244, 244, 1)
+    LoadingSpinner: =LoadingSpinner.Data
     OnVisible: |
         =Set(DurationSelection, Blank());
         //UpdateContext({ResetTrue: false});
