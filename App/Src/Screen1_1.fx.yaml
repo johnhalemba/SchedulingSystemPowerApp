@@ -3316,13 +3316,13 @@ Screen1_1 As screen:
                             )
                         Height: =Parent.Height - Self.PaddingBottom - Self.PaddingTop
                         OnSelect: |
-                            =Set(StartDateTime, DateAdd(DateSelected, DropdownStartTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes', TimeUnit.Minutes));
+                            =Set(StartDateTime, DateAdd(DateSelected, DropdownStartTime_3.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes', TimeUnit.Minutes));
                             Set(EndDateTime, DateAdd(StartDateTime, If(DropdownStartTime_3.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' >= DropdownEndTime_3.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes', DropdownEndTime_3.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' + 1440 - DropdownStartTime_3.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes', DropdownEndTime_3.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' - DropdownStartTime_3.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes'), TimeUnit.Minutes));
                             
                             Set(StartDateTimeUTC, Text(DateAdd(StartDateTime, TimeZoneOffset(), TimeUnit.Minutes), "[$-en-US]yyyy-mm-ddThh:mm") & ":00.000Z");
                             Set(EndDateTimeUTC, Text(DateAdd(EndDateTime, TimeZoneOffset(), TimeUnit.Minutes), "[$-en-US]yyyy-mm-ddThh:mm") & ":00.000Z");
                             
-                            Set(ShowTimePicker, false)
+                            UpdateContext({varShowTimeSelection: false})
                         Text: ="SAVE"
                         Width: =Parent.Width - Self.PaddingLeft - Self.PaddingRight
                         X: =Self.PaddingLeft
