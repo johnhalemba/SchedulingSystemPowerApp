@@ -1,7 +1,8 @@
 App As appinfo:
     BackEnabled: =true
     OnStart: |-
-        =Concurrent(
+        =Set(ShowLoading, true);
+        Concurrent(
             Set(
                 varToogleRoomSelection,
                 false
@@ -273,9 +274,9 @@ App As appinfo:
                     1
                 )
             ),
-            Set(varSelectedDateDatePicker, Today()),
-            Set(ShowLoading, false)
-        )
+            Set(varSelectedDateDatePicker, Today())
+        );
+        Set(ShowLoading, false);
     StartScreen: =Screen1_1
     Theme: =PowerAppsTheme
 
