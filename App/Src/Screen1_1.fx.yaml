@@ -3275,21 +3275,28 @@ Screen1_1 As screen:
                         Width: =Parent.Width
                         ZIndex: =1
 
-        TextInput1_2 As text:
-            Align: =Align.Center
-            BorderThickness: =0
-            Default: ="Jan Halemba (305979)"
-            DisabledFill: |-
-                =ColorValue("#FFFFFF")
-            DisplayMode: =DisplayMode.Disabled
-            Height: =20
-            RadiusBottomLeft: =10
-            RadiusBottomRight: =10
-            RadiusTopLeft: =10
-            RadiusTopRight: =10
-            Size: =9
-            Width: =Parent.Width
-            ZIndex: =4
+        Container8 As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =TextInput1_2.Height
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            ZIndex: =5
+
+            TextInput1_2 As text:
+                Align: =Align.Center
+                BorderThickness: =0
+                Default: ="Jan Halemba (305979)"
+                DisabledFill: |-
+                    =ColorValue("#FFFFFF")
+                DisplayMode: =DisplayMode.Disabled
+                Height: =20
+                RadiusBottomLeft: =10
+                RadiusBottomRight: =10
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Size: =9
+                Width: =Parent.Width
+                ZIndex: =1
 
     Container6 As groupContainer:
         Height: =App.Height
