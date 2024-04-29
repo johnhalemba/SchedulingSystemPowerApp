@@ -273,7 +273,8 @@ App As appinfo:
                     1
                 )
             ),
-            Set(varSelectedDateDatePicker, Today())
+            Set(varSelectedDateDatePicker, Today()),
+            Set(ShowLoading, false)
         )
     StartScreen: =Screen1_1
     Theme: =PowerAppsTheme
