@@ -5,7 +5,7 @@ Screen1 As screen:
         UpdateContext({ResetTrue: false});
         UpdateContext({ResetTrue: true});
 
-    ContainerFooter As groupContainer.manualLayoutContainer:
+    ContainerFooter_old As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Regular
         Height: =100
         RadiusBottomLeft: =10
