@@ -1,5 +1,5 @@
 Screen1_1 As screen:
-    Fill: =RGBA(224, 224, 224, 1)
+    Fill: =RGBA(244, 244, 244, 1)
     OnVisible: |
         =Set(DurationSelection, Blank());
         //UpdateContext({ResetTrue: false});
@@ -2912,6 +2912,39 @@ Screen1_1 As screen:
                     PaddingLeft: =20
                     ZIndex: =1
 
+                Container10_4 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =100
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =4
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =5
+                    PaddingLeft: =5
+                    PaddingRight: =5
+                    PaddingTop: =5
+                    Visible: =!Label9_2.Visible
+                    ZIndex: =2
+
+                    Label12_3 As label:
+                        Size: =15
+                        Text: |-
+                            ="Caller:"
+                        ZIndex: =1
+
+                    Button4_1 As button:
+                        DisplayMode: =DisplayMode.View
+                        Fill: =WEITI_Szafirowy
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Text: =User().FullName
+                        ZIndex: =2
+
                 Container10 As groupContainer.verticalAutoLayoutContainer:
                     AlignInContainer: =AlignInContainer.SetByContainer
                     FillPortions: =0
@@ -2926,7 +2959,7 @@ Screen1_1 As screen:
                     PaddingLeft: =5
                     PaddingRight: =5
                     PaddingTop: =5
-                    ZIndex: =2
+                    ZIndex: =3
 
                     Label12 As label:
                         Size: =15
@@ -2958,7 +2991,7 @@ Screen1_1 As screen:
                     PaddingLeft: =5
                     PaddingRight: =5
                     PaddingTop: =5
-                    ZIndex: =3
+                    ZIndex: =4
 
                     Label12_1 As label:
                         Size: =15
@@ -3036,7 +3069,7 @@ Screen1_1 As screen:
                     PaddingLeft: =5
                     PaddingRight: =5
                     PaddingTop: =5
-                    ZIndex: =4
+                    ZIndex: =5
 
                     Label12_2 As label:
                         Size: =15
@@ -3047,6 +3080,7 @@ Screen1_1 As screen:
                     Button4_2 As button:
                         BorderThickness: =0
                         Fill: =WEITI_Szafirowy
+                        FontWeight: =FontWeight.Normal
                         OnSelect: |-
                             =If (
                                 App.Width < 600,
@@ -3066,6 +3100,12 @@ Screen1_1 As screen:
                         RadiusTopRight: =0
                         Text: =Text(StartDateTime, DateTimeFormat.ShortTime) & " - " & Text(EndDateTime, DateTimeFormat.ShortTime)
                         ZIndex: =2
+
+                Rectangle4 As rectangle:
+                    Fill: =RGBA(0,0,0,0)
+                    FillPortions: =1
+                    LayoutMinHeight: =0
+                    ZIndex: =6
 
             ContainerTimeSelection As groupContainer.verticalAutoLayoutContainer:
                 Fill: =RGBA(244, 244, 244, 1)
@@ -3270,12 +3310,13 @@ Screen1_1 As screen:
                             Set(EndDateTimeUTC, Text(DateAdd(EndDateTime, TimeZoneOffset(), TimeUnit.Minutes), "[$-en-US]yyyy-mm-ddThh:mm") & ":00.000Z");
                             
                             Set(ShowTimePicker, false)
-                        PaddingBottom: =10
                         Text: ="SAVE"
-                        Width: =Parent.Width
+                        Width: =Parent.Width - Self.PaddingLeft - Self.PaddingRight
+                        X: =Self.PaddingLeft
                         ZIndex: =1
 
         Container8 As groupContainer.manualLayoutContainer:
+            Fill: =RGBA(244, 244, 244, 1)
             FillPortions: =0
             Height: =TextInput1_2.Height
             LayoutMinHeight: =100
@@ -3286,8 +3327,7 @@ Screen1_1 As screen:
                 Align: =Align.Center
                 BorderThickness: =0
                 Default: ="Jan Halemba (305979)"
-                DisabledFill: |-
-                    =ColorValue("#FFFFFF")
+                DisabledFill: =Color.Transparent
                 DisplayMode: =DisplayMode.Disabled
                 Height: =20
                 RadiusBottomLeft: =10
