@@ -3055,19 +3055,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1_1.Container6.Progress1.AccessibleLabel"
+                  "fullyQualifiedName": "Screen1_1.Container6.Container8.Progress1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1_1.Container6.Progress1.AccessibleLabel",
+                  "fullyQualifiedName": "Screen1_1.Container6.Container8.Progress1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen1_1",
-                "type": "Screen1_1.Container6.Progress1"
+                "type": "Screen1_1.Container6.Container8.Progress1"
               }
             }
           ],
