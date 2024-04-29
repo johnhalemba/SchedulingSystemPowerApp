@@ -1648,10 +1648,6 @@ Screen1_1 As screen:
                 Height: =Parent.Height - 20
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
-                RadiusBottomLeft: =10
-                RadiusBottomRight: =10
-                RadiusTopLeft: =10
-                RadiusTopRight: =10
                 Visible: =varShowFacultyMap
                 Width: =942
                 X: =10
@@ -3696,6 +3692,7 @@ Screen1_1 As screen:
         RadiusBottomRight: =10
         RadiusTopLeft: =10
         RadiusTopRight: =10
+        Visible: =false
         Width: =(Parent.Width - (20 * 2)) / 3
         X: =RoomSelectionPopup_1.Width + 40
         Y: =60
