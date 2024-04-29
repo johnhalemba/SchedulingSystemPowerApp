@@ -169,7 +169,6 @@
     "Container5_2": 100,
     "Container5_3": 247,
     "Container5_4": 26,
-    "Container6": 337,
     "Container6_2": 22,
     "Container7": 430,
     "Container7_2": 70,
@@ -393,8 +392,9 @@
     "Label9_2": 240,
     "Label9_3": 17,
     "Label9_4": 10,
-    "LoadingScreen": 486,
+    "LoadingScreen": 337,
     "LoadingScreen_2": 126,
+    "LoadingScreen_old": 486,
     "mainContainer": 235,
     "mainContainer_1": 13,
     "MonthDayGallery": 569,
@@ -620,7 +620,7 @@
   "DoesTestStepsMetadataExist": false,
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "04/29/2024 18:23:52",
+  "HeaderLastSavedDateTimeUTC": "04/29/2024 18:27:31",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "05bca85e-d27b-4b0c-b940-b6620bd3edfd": "\"/providers/microsoft.powerapps/apis/shared_test-2dconnection-5f6308104fc18e9839-5f85fa411be1896273/connections/d5d0350df7cb4a8089c3bc9215ba2a3e\"",
@@ -690,15 +690,15 @@
       "Subtitle2_39": 0,
       "Subtitle2_40": 1
     },
-    "LoadingScreen": {
-      "Label8_1": 0,
-      "Rectangle2_1": 2,
-      "Spinner1_1": 1
-    },
     "LoadingScreen_2": {
       "Label8_8": 0,
       "Rectangle2_8": 2,
       "Spinner1_8": 1
+    },
+    "LoadingScreen_old": {
+      "Label8_1": 0,
+      "Rectangle2_1": 2,
+      "Spinner1_1": 1
     },
     "Spinner": {
       "Label8": 0,
@@ -922,7 +922,6 @@
     "Container5_2": {},
     "Container5_3": {},
     "Container5_4": {},
-    "Container6": {},
     "Container6_2": {},
     "Container7": {},
     "Container7_2": {},
@@ -1148,6 +1147,7 @@
     "Label9_4": {},
     "LoadingScreen": {},
     "LoadingScreen_2": {},
+    "LoadingScreen_old": {},
     "mainContainer": {},
     "mainContainer_1": {},
     "MonthDayGallery": {},
@@ -1818,7 +1818,6 @@
     "Container5_2": 467,
     "Container5_3": 189,
     "Container5_4": 392,
-    "Container6": 331,
     "Container6_2": 388,
     "Container7": 14,
     "Container7_2": 437,
@@ -2042,8 +2041,9 @@
     "Label9_2": 182,
     "Label9_3": 383,
     "Label9_4": 376,
-    "LoadingScreen": 11,
+    "LoadingScreen": 331,
     "LoadingScreen_2": 434,
+    "LoadingScreen_old": 11,
     "mainContainer": 177,
     "mainContainer_1": 379,
     "MonthDayGallery": 153,

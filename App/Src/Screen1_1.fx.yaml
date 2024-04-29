@@ -5034,7 +5034,7 @@ Screen1_1 As screen:
                         Y: =Self.PaddingTop
                         ZIndex: =1
 
-    Container6 As groupContainer:
+    LoadingScreen As groupContainer:
         Height: =App.Height
         Visible: =ShowLoading
         Width: =App.Width
