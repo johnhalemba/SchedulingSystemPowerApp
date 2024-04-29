@@ -3194,7 +3194,7 @@ Screen1_1 As screen:
                             Default: =If(ResetTrue, LookUp(Times, Text = Lower(Text(StartDateTime, DateTimeFormat.ShortTime))).Text)
                             Items: =Times
                             Width: =Parent.Width - Self.BorderThickness*2
-                            X: =ButtonSaveTime_1.X
+                            X: =ButtonSaveTime_3.X
                             Y: =40
                             ZIndex: =2
 
@@ -5046,25 +5046,31 @@ Screen1_1 As screen:
             Width: =Parent.Width
             ZIndex: =1
 
-        Spinner1_12 As Spinner:
-            BasePaletteColor: =
-            DisplayMode: =DisplayMode.Edit
-            FontColor: =
-            Height: =341
-            SpinnerSize: ='Spinner.SpinnerSize'.Huge
-            Visible: =true
-            Width: =341
-            X: =Parent.Width / 2 - Self.Width / 2
-            Y: =Parent.Height / 2 - Self.Height / 2
-            ZIndex: =2
-
         Label8_12 As label:
             Align: =Align.Center
             Height: =65
             Size: =30
-            Text: ="Loading... "&Text(LoadingDone)
-            Width: =341
-            X: =Spinner1_12.X
-            Y: =Spinner1_12.Y + Spinner1_12.Height
+            Text: ="Loading... "
+            Width: =450
+            X: =457
+            Y: =490
             ZIndex: =3
+
+        Image1 As image:
+            Height: =175
+            Image: ='Screenshot 2024-03-02 184341'
+            Width: =175
+            X: =595
+            Y: =216
+            ZIndex: =4
+
+        "Progress1 As 'Progress Bar'":
+            DisplayMode: =DisplayMode.Edit
+            Height: =45
+            Max: =11
+            Value: =LoadingDone
+            Width: =450
+            X: =457
+            Y: =445
+            ZIndex: =5
 

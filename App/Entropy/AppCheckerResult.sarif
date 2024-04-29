@@ -14,83 +14,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1_1.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16.DropdownStartTime_3.X"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Screen1_1.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16.DropdownStartTime_3.X",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 16,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "ButtonSaveTime_1"
-                  }
-                }
-              },
-              "properties": {
-                "member": "X",
-                "module": "Screen1_1",
-                "type": "Screen1_1.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16.DropdownStartTime_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "ButtonSaveTime_1"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Screen1_1.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16.DropdownStartTime_3.X"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Screen1_1.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16.DropdownStartTime_3.X",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 16,
-                  "snippet": {
-                    "text": ".X"
-                  }
-                }
-              },
-              "properties": {
-                "member": "X",
-                "module": "Screen1_1",
-                "type": "Screen1_1.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16.DropdownStartTime_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Screen1_1.mainContainer.ContainerCheckSchedule.ContainerTimeSelection_1.Container15_1.Container16_2.DropdownStartTime_4.X"
                 }
               ],
@@ -3132,19 +3055,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1_1.Container6.Spinner1_12.AccessibleLabel"
+                  "fullyQualifiedName": "Screen1_1.Container6.Progress1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1_1.Container6.Spinner1_12.AccessibleLabel",
+                  "fullyQualifiedName": "Screen1_1.Container6.Progress1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen1_1",
-                "type": "Screen1_1.Container6.Spinner1_12"
+                "type": "Screen1_1.Container6.Progress1"
               }
             }
           ],
