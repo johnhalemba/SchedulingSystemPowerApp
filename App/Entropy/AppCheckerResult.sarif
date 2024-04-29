@@ -14,6 +14,46 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Screen1_1.mainContainer.ContainerCheckSchedule.Visible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen1_1.mainContainer.ContainerCheckSchedule.Visible",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 16,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "varCheckSchedule"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Visible",
+                "module": "Screen1_1",
+                "type": "Screen1_1.mainContainer.ContainerCheckSchedule"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "varCheckSchedule"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Screen1_1.mainContainer.ContainerCheckSchedule.ContainerTimeSelection_1.Container15_1.Container16_2.DropdownStartTime_4.X"
                 }
               ],

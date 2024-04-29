@@ -1265,9 +1265,17 @@ Screen1_1 As screen:
                     Width: =32
                     ZIndex: =1
 
-                Button2 As button:
+                btn_Settings_Home As button:
                     AlignInContainer: =AlignInContainer.End
+                    Fill: =WEITI_Szafirowy
+                    HoverFill: =ColorFade(Self.Fill, 18%)
                     OnSelect: =Set(showSettings, true)
+                    PressedColor: =WEITI_Szafirowy
+                    PressedFill: =Color.White
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
                     Text: ="Settings"
                     Visible: =!showSettings
                     ZIndex: =2
@@ -3346,7 +3354,7 @@ Screen1_1 As screen:
             LayoutMode: =LayoutMode.Auto
             LayoutOverflowY: =LayoutOverflow.Scroll
             LayoutWrap: =true
-            Visible: =varRoomSelection
+            Visible: =varCheckSchedule
             ZIndex: =6
 
             ContainerFacultyMap_1 As groupContainer:
