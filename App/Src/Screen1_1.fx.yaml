@@ -1134,6 +1134,7 @@ Screen1_1 As screen:
                                 UpdateContext({SelectedRoom: Blank()});
                                 UpdateContext({varShowFacultyMap: true});
                                 UpdateContext({varShowProperties: true});
+                                UpdateContext({varCheckSchedule: false})
                                 Set(ShowLoading, false);
                             PressedColor: =Color.Transparent
                             PressedFill: =Color.Transparent
