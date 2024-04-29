@@ -3322,7 +3322,8 @@ Screen1_1 As screen:
                             Set(StartDateTimeUTC, Text(DateAdd(StartDateTime, TimeZoneOffset(), TimeUnit.Minutes), "[$-en-US]yyyy-mm-ddThh:mm") & ":00.000Z");
                             Set(EndDateTimeUTC, Text(DateAdd(EndDateTime, TimeZoneOffset(), TimeUnit.Minutes), "[$-en-US]yyyy-mm-ddThh:mm") & ":00.000Z");
                             
-                            UpdateContext({varShowTimeSelection: false})
+                            UpdateContext({varShowTimeSelection: false});
+                            UpdateContext({varShowProperties: true})
                         Text: ="SAVE"
                         Width: =Parent.Width - Self.PaddingLeft - Self.PaddingRight
                         X: =Self.PaddingLeft
