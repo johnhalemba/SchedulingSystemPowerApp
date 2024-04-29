@@ -96,7 +96,7 @@
       "useexperimentalcdsconnector": true,
       "useexperimentalsqlconnector": true,
       "useguiddatatypes": true,
-      "usenonblockingonstartrule": true,
+      "usenonblockingonstartrule": false,
       "userdefinedfunctions": false,
       "webbarcodescanner": false,
       "zeroalltabindexes": false
