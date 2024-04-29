@@ -1025,7 +1025,7 @@ Screen1_1 As screen:
                         Width: =623
                         ZIndex: =1
 
-                    Container3_8 As groupContainer.manualLayoutContainer:
+                    containter_btn_makeReservation As groupContainer.manualLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
                         DropShadow: =DropShadow.None
                         Height: =297
@@ -1145,7 +1145,7 @@ Screen1_1 As screen:
                             Y: =2
                             ZIndex: =3
 
-                    Container3_9 As groupContainer.manualLayoutContainer:
+                    container_btn_checkSchedule As groupContainer.manualLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
                         DropShadow: =DropShadow.None
                         Height: =297
@@ -2967,6 +2967,11 @@ Screen1_1 As screen:
                         Text: =SelectedRoom.Text
                         ZIndex: =2
 
+                    ComboBox1 As combobox:
+                        Items: =ComboBoxSample
+                        SearchItems: =Search(ComboBoxSample,ComboBox1.SearchText,Value1)
+                        ZIndex: =3
+
                 Container10_2 As groupContainer.verticalAutoLayoutContainer:
                     AlignInContainer: =AlignInContainer.SetByContainer
                     FillPortions: =0
@@ -3096,6 +3101,10 @@ Screen1_1 As screen:
                     FillPortions: =1
                     LayoutMinHeight: =0
                     ZIndex: =6
+
+                Button2 As button:
+                    Text: ="Book!"
+                    ZIndex: =7
 
             ContainerTimeSelection As groupContainer.verticalAutoLayoutContainer:
                 Fill: =RGBA(244, 244, 244, 1)
@@ -3261,7 +3270,7 @@ Screen1_1 As screen:
                     Height: =355
                     Items: =Durations
                     Layout: =Layout.Vertical
-                    LayoutMinHeight: =350
+                    LayoutMinHeight: =300
                     LayoutMinWidth: =320
                     LoadingSpinner: =LoadingSpinner.Data
                     ShowScrollbar: =false
@@ -4927,7 +4936,7 @@ Screen1_1 As screen:
                             Default: =If(ResetTrue, LookUp(Times, Text = Lower(Text(StartDateTime, DateTimeFormat.ShortTime))).Text)
                             Items: =Times
                             Width: =Parent.Width - Self.BorderThickness*2
-                            X: =ButtonSaveTime_1.X
+                            X: =ButtonSaveTime_4.X
                             Y: =40
                             ZIndex: =2
 
