@@ -3252,6 +3252,15 @@ Screen1_1 As screen:
                             Y: =40
                             ZIndex: =2
 
+                Label13 As label:
+                    Align: =Align.Center
+                    Fill: =RGBA(255, 184, 174, 1)
+                    Height: =20
+                    Size: =9
+                    Text: ="🚫 Please select correct start and end times"
+                    Visible: =StartDateTime > EndDateTime
+                    ZIndex: =3
+
                 "DurationGallery_3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                     '#CopilotOverlayLabel': ="Filtered"
                     AlignInContainer: =AlignInContainer.SetByContainer
@@ -3270,7 +3279,7 @@ Screen1_1 As screen:
                     WrapCount: =2
                     X: =40
                     Y: =190
-                    ZIndex: =3
+                    ZIndex: =4
 
                     Button5_4 As button:
                         BorderColor: =RGBA(18, 107, 240, 1)
@@ -3299,10 +3308,10 @@ Screen1_1 As screen:
                     ZIndex: =5
 
                     ButtonSaveTime_3 As button:
-                        Height: =Parent.Height
+                        Height: =Parent.Height - Self.PaddingBottom - Self.PaddingTop
                         OnSelect: |
                             =Set(StartDateTime, DateAdd(DateSelected, DropdownStartTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes', TimeUnit.Minutes));
-                            Set(EndDateTime, DateAdd(StartDateTime, If(DropdownStartTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' >= DropdownEndTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes', DropdownEndTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' + 1440 - DropdownStartTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes', DropdownEndTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' - DropdownStartTime_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes'), TimeUnit.Minutes));
+                            Set(EndDateTime, DateAdd(StartDateTime, If(DropdownStartTime_3.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' >= DropdownEndTime_3.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes', DropdownEndTime_3.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' + 1440 - DropdownStartTime_3.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes', DropdownEndTime_3.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' - DropdownStartTime_3.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes'), TimeUnit.Minutes));
                             
                             Set(StartDateTimeUTC, Text(DateAdd(StartDateTime, TimeZoneOffset(), TimeUnit.Minutes), "[$-en-US]yyyy-mm-ddThh:mm") & ":00.000Z");
                             Set(EndDateTimeUTC, Text(DateAdd(EndDateTime, TimeZoneOffset(), TimeUnit.Minutes), "[$-en-US]yyyy-mm-ddThh:mm") & ":00.000Z");
@@ -3311,6 +3320,7 @@ Screen1_1 As screen:
                         Text: ="SAVE"
                         Width: =Parent.Width - Self.PaddingLeft - Self.PaddingRight
                         X: =Self.PaddingLeft
+                        Y: =Self.PaddingTop
                         ZIndex: =1
 
         Container8 As groupContainer.manualLayoutContainer:
@@ -3679,7 +3689,6 @@ Screen1_1 As screen:
         RadiusBottomRight: =10
         RadiusTopLeft: =10
         RadiusTopRight: =10
-        Visible: =false
         Width: =(Parent.Width - (20 * 2)) / 3
         X: =RoomSelectionPopup_1.Width + 40
         Y: =60
