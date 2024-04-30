@@ -1429,7 +1429,7 @@ MainScreen As screen:
                     DelayItemLoading: =true
                     DisplayMode: =DisplayMode.View
                     Height: =562
-                    Items: =Sort(Filter(Office365Outlook.V4CalendarGetItems(Dropdown1_2.Selected.id).value, DateValue(startWithTimeZone)=DateValue(varShowDate)),TimeValue(startWithTimeZone))
+                    Items: =Sort(Filter(Office365Outlook.V4CalendarGetItems(Dropdown1_2.Selected.id).value, DateValue(startWithTimeZone)=DateValue(DatePicker2.SelectedDate)),TimeValue(startWithTimeZone))
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =300
                     LayoutMinWidth: =320
