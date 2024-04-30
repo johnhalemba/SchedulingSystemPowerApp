@@ -3003,8 +3003,8 @@ MainScreen As screen:
                         Fill: =WEITI_Szafirowy
                         IconBackground: =WEITI_Grafitowy
                         LayoutMinWidth: =160
-                        OnChange: |
-                            =UpdateContext({varShowSyncing: true})
+                        OnChange: |-
+                            =UpdateContext({varShowSyncing: true});
                             Set(DateSelected, Self.SelectedDate);
                             If (
                                 Self.SelectedDate < Today(),
@@ -3047,6 +3047,7 @@ MainScreen As screen:
                                     ClearCollect(ScheduleRoom122, 'Serwer Studia'.Getclassesfromroom("1030-ETI-122", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
                                 );
                             )
+                            UpdateContext({varShowSyncing: false});
                         PaddingLeft: =Self.Width - Len("23/24/2321")*25 + 20
                         PaddingTop: =5
                         Size: =15

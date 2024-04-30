@@ -15912,7 +15912,7 @@
       "MetaDataIDKey": "",
       "Name": "Container8_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -18012,7 +18012,7 @@
       "MetaDataIDKey": "",
       "Name": "ContainerProperties",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -18872,7 +18872,7 @@
       "MetaDataIDKey": "",
       "Name": "ContainerTimeSelection",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -37537,7 +37537,7 @@
       "MetaDataIDKey": "",
       "Name": "LoadingScreen_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -38886,7 +38886,7 @@
       "MetaDataIDKey": "",
       "Name": "Rectangle2_13",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
