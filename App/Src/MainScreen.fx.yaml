@@ -1,12 +1,17 @@
 MainScreen As screen:
     Fill: =RGBA(244, 244, 244, 1)
     LoadingSpinner: =LoadingSpinner.Data
-    OnVisible: |
+    OnVisible: |+
         =Set(DurationSelection, Blank());
         //UpdateContext({ResetTrue: false});
         //UpdateContext({ResetTrue: true});
-        UpdateContext({varRoomSelection:false});
-        UpdateContext({varShowMainScreen:true})
+        UpdateContext(
+            {
+                varRoomSelection:false,
+                varShowMainScreen:true
+            }
+        );
+        
 
     CheckSchedulePopUp_1 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Regular
