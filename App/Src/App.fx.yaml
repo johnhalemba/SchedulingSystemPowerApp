@@ -281,7 +281,7 @@ App As appinfo:
             )
         );
         Set(ShowLoading, false);
-    StartScreen: =Screen1_1
+    StartScreen: =MainScreen
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:

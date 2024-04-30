@@ -1,4 +1,4 @@
-Screen1_1 As screen:
+MainScreen As screen:
     Fill: =RGBA(244, 244, 244, 1)
     LoadingSpinner: =LoadingSpinner.Data
     OnVisible: |
@@ -895,7 +895,7 @@ Screen1_1 As screen:
                 IsProfilePictureVisible: =true
                 IsTitleVisible: =true
                 Logo: ='Screenshot 2024-03-02 184341'
-                OnSelectLogo: =Navigate(Screen1_1, Transition.Pop)
+                OnSelectLogo: =Navigate(MainScreen, Transition.Pop)
                 Style: ='Header.Style'.Neutral
                 Title: ="FeiT Reservation System"
                 UserEmail: =User().Email
@@ -3004,7 +3004,8 @@ Screen1_1 As screen:
                         IconBackground: =WEITI_Grafitowy
                         LayoutMinWidth: =160
                         OnChange: |
-                            =Set(DateSelected, Self.SelectedDate);
+                            =UpdateContext({varShowSyncing: true})
+                            Set(DateSelected, Self.SelectedDate);
                             If (
                                 Self.SelectedDate < Today(),
                                 Reset(Self);
@@ -3332,6 +3333,57 @@ Screen1_1 As screen:
                         X: =Self.PaddingLeft
                         Y: =Self.PaddingTop
                         ZIndex: =1
+
+            LoadingScreen_1 As groupContainer:
+                Height: =App.Height
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                Visible: =varShowSyncing
+                Width: =App.Width
+                ZIndex: =5
+
+                Rectangle2_13 As rectangle:
+                    BorderColor: =RGBA(255, 255, 255, 1)
+                    Fill: =RGBA(255, 255, 255, 1)
+                    Height: =Parent.Height
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                Container8_1 As groupContainer:
+                    DropShadow: =DropShadow.None
+                    Height: =419
+                    Width: =530
+                    X: =Parent.Width / 2 - Self.Width / 2
+                    Y: =Parent.Height / 2 - Self.Height / 2
+                    ZIndex: =6
+
+                    Label8_13 As label:
+                        Align: =Align.Center
+                        Height: =65
+                        Size: =30
+                        Text: ="Loading... "
+                        Width: =Parent.Width
+                        Y: =291
+                        ZIndex: =1
+
+                    Image1_1 As image:
+                        Height: =175
+                        Image: ='Screenshot 2024-03-02 184341'
+                        Width: =175
+                        X: =Parent.Width / 2 - Self.Width / 2
+                        Y: =34
+                        ZIndex: =2
+
+                    "Progress1_1 As 'Progress Bar'":
+                        BasePaletteColor: =
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =45
+                        Max: =11
+                        Value: =LoadingDone
+                        Width: =Parent.Width
+                        X: =0
+                        Y: =229
+                        ZIndex: =3
 
         ContainerFooter As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Regular

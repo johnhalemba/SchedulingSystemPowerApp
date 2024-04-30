@@ -102,7 +102,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 0,
+    "BindingErrorCount": 2,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "DesktopOrTablet",
@@ -121,7 +121,7 @@
     "ManualOfflineProfileId": "",
     "Name": "FEiTSchedule",
     "OriginatingVersion": "1.336",
-    "ParserErrorCount": 0,
+    "ParserErrorCount": 3,
     "ShowStatusBar": false
   },
   "PublishInfo": {
@@ -137,7 +137,7 @@
   },
   "ScreenOrder": [
     "Screen1",
-    "Screen1_1",
+    "MainScreen",
     "Screen1_2"
   ]
 }
