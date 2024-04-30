@@ -1134,6 +1134,7 @@ MainScreen As screen:
                                 UpdateContext({varShowFacultyMap: true});
                                 UpdateContext({varShowProperties: true});
                                 UpdateContext({varCheckSchedule: false});
+                                UpdateContext({varShowSyncing: false})
                                 UpdateContext({LoadingDone: LoadingDone + 1});
                                 
                                 Set(ShowLoading, false);
@@ -3049,7 +3050,7 @@ MainScreen As screen:
                                 );
                             );
                             UpdateContext({varShowSyncing: false});
-                            UpdateContext({varShowProperties: true})
+                            UpdateContext({varShowProperties: true});
                         PaddingLeft: =Self.Width - Len("23/24/2321")*25 + 20
                         PaddingTop: =5
                         Size: =15
