@@ -314,19 +314,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_10.AccessibleLabel"
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_10.AccessibleLabel",
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "MainScreen",
-                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_10"
+                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia"
               }
             }
           ],
@@ -344,19 +344,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_10.TabIndex"
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_10.TabIndex",
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "MainScreen",
-                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_10"
+                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia"
               }
             }
           ],
@@ -4746,6 +4746,246 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.Subtitle2_29.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.Subtitle2_29.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.Subtitle2_29"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.Subtitle2_29.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.Subtitle2_29.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.Subtitle2_29"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.ClassTypeGalleryServerStudia_5.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.ClassTypeGalleryServerStudia_5.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.ClassTypeGalleryServerStudia_5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.ClassTypeGalleryServerStudia_5.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.ClassTypeGalleryServerStudia_5.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.ClassTypeGalleryServerStudia_5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.ClassNameGalleryServerStudia_5.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.ClassNameGalleryServerStudia_5.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.ClassNameGalleryServerStudia_5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.ClassNameGalleryServerStudia_5.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.ClassNameGalleryServerStudia_5.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.ClassNameGalleryServerStudia_5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.Subtitle2_31.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.Subtitle2_31.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.Subtitle2_31"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.Subtitle2_31.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.Subtitle2_31.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.Subtitle2_31"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
         },
         {
           "locations": [

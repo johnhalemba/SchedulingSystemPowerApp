@@ -1519,7 +1519,7 @@ MainScreen As screen:
                         Y: =34
                         ZIndex: =6
 
-                "Gallery2_10 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                "GalleryScheduleServerStudia As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                     '#CopilotOverlayLabel': ="Filtered"
                     DelayItemLoading: =true
                     DisplayMode: =DisplayMode.View
@@ -1554,73 +1554,89 @@ MainScreen As screen:
                         Y: =8
                         ZIndex: =1
 
-                    ClassNameGalleryServerStudia_5 As label:
-                        FontWeight: =FontWeight.Semibold
+                    Container6 As groupContainer.verticalAutoLayoutContainer:
+                        DropShadow: =DropShadow.None
                         Height: =Button1_10.Height
-                        OnSelect: =Select(Parent)
-                        PaddingBottom: =0
-                        PaddingLeft: =15
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Size: =If(App.Width < 640, 12, App.Width < 100, 16, 30)
-                        Text: =Last(Split(ThisItem.skr, "-")).Value
-                        Width: =Button1_10.Width / 4
-                        X: =8
-                        Y: =8
-                        ZIndex: =2
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =Button1_10.Width
+                        X: =Button1_10.X
+                        Y: =Button1_10.Y
+                        ZIndex: =9
 
-                    ClassTypeGalleryServerStudia_5 As label:
-                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                        Height: =Button1_10.Height
-                        OnSelect: =Select(Parent)
-                        PaddingBottom: =0
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Size: =16
-                        Text: =ThisItem.type
-                        Width: =Button1_10.Width / 4
-                        X: =166
-                        Y: =8
-                        ZIndex: =6
+                        ClassNameGalleryServerStudia_5 As label:
+                            Align: =Align.Center
+                            FillPortions: =2
+                            FontWeight: =FontWeight.Semibold
+                            Height: =Button1_10.Height
+                            LayoutMinWidth: =70
+                            PaddingBottom: =0
+                            PaddingLeft: =15
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =If(App.Width < 640, 12, App.Width < 100, 16, 30)
+                            Text: =Last(Split(ThisItem.skr, "-")).Value
+                            Width: =Button1_10.Width / 4
+                            X: =8
+                            Y: =8
+                            ZIndex: =1
 
-                    Subtitle2_29 As label:
-                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                        Height: =Button1_10.Height
-                        OnSelect: =Select(Parent)
-                        PaddingBottom: =0
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Size: =16
-                        Text: |-
-                            =DateAdd(TimeValue(ThisItem.hour&":00"),15,TimeUnit.Minutes)&" - "&DateAdd(TimeValue(ThisItem.hour&":00"),ThisItem.length,TimeUnit.Hours)
-                        Width: =Button1_10.Width/4
-                        X: =252
-                        Y: =8
-                        ZIndex: =7
+                        ClassTypeGalleryServerStudia_5 As label:
+                            Align: =Align.Center
+                            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                            Height: =Button1_10.Height
+                            LayoutMinWidth: =50
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =If(App.Width < 640, 12, App.Width < 100, 14, 16)
+                            Text: =ThisItem.type
+                            Width: =50
+                            X: =158
+                            Y: =8
+                            ZIndex: =2
 
-                    Subtitle2_31 As label:
-                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                        Height: =Button1_10.Height
-                        OnSelect: =Select(Parent)
-                        PaddingBottom: =0
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Size: =16
-                        Text: |-
-                            ="sala: "
-                            &
-                            If (
-                                EndsWith(Last(Split(ThisItem.room,"-")).Value, "AR"),
-                                Last(FirstN(Split(ThisItem.room,"-"), CountRows(Split(ThisItem.room,"-")) - 1)).Value & "-" & Last(Split(ThisItem.room,"-")).Value,
-                                Last(Split(ThisItem.room,"-")).Value
-                            )
-                        Width: =Button1_10.Width / 4
-                        X: =478
-                        Y: =8
-                        ZIndex: =8
+                        Subtitle2_29 As label:
+                            Align: =Align.Center
+                            FillPortions: =3
+                            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                            Height: =Button1_10.Height
+                            LayoutMinWidth: =80
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =If(App.Width < 640, 12, App.Width < 100, 14, 16)
+                            Text: |-
+                                =DateAdd(TimeValue(ThisItem.hour&":00"),15,TimeUnit.Minutes)&" - "&DateAdd(TimeValue(ThisItem.hour&":00"),ThisItem.length,TimeUnit.Hours)
+                            Width: =192
+                            X: =208
+                            Y: =8
+                            ZIndex: =3
+
+                        Subtitle2_31 As label:
+                            Align: =Align.Center
+                            FillPortions: =2
+                            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                            Height: =Button1_10.Height
+                            LayoutMinWidth: =50
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =If(App.Width < 640, 12, App.Width < 100, 14, 16)
+                            Text: |-
+                                ="sala: "
+                                &
+                                If (
+                                    EndsWith(Last(Split(ThisItem.room,"-")).Value, "AR"),
+                                    Last(FirstN(Split(ThisItem.room,"-"), CountRows(Split(ThisItem.room,"-")) - 1)).Value & "-" & Last(Split(ThisItem.room,"-")).Value,
+                                    Last(Split(ThisItem.room,"-")).Value
+                                )
+                            Width: =Button1_10.Width / 4
+                            X: =470
+                            Y: =8
+                            ZIndex: =4
 
         ContainerRoomSelection As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.Regular
