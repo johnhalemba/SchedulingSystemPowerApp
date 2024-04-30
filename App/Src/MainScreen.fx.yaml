@@ -3004,7 +3004,8 @@ MainScreen As screen:
                         IconBackground: =WEITI_Grafitowy
                         LayoutMinWidth: =160
                         OnChange: |-
-                            =UpdateContext({varShowSyncing: true});
+                            =UpdateContext({varShowProperties, false})
+                            UpdateContext({varShowSyncing: true});
                             Set(DateSelected, Self.SelectedDate);
                             If (
                                 Self.SelectedDate < Today(),
@@ -3047,7 +3048,7 @@ MainScreen As screen:
                                     ClearCollect(ScheduleRoom122, 'Serwer Studia'.Getclassesfromroom("1030-ETI-122", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
                                 );
                             );
-                            UpdateContext({varShowSyncing: false});
+                            //UpdateContext({varShowSyncing: false});
                         PaddingLeft: =Self.Width - Len("23/24/2321")*25 + 20
                         PaddingTop: =5
                         Size: =15
@@ -3335,10 +3336,8 @@ MainScreen As screen:
                         Y: =Self.PaddingTop
                         ZIndex: =1
 
-            LoadingScreen_1 As groupContainer:
+            SyncScreen As groupContainer:
                 Height: =App.Height
-                LayoutMinHeight: =100
-                LayoutMinWidth: =250
                 Visible: =varShowSyncing
                 Width: =App.Width
                 ZIndex: =5
