@@ -952,7 +952,7 @@ MainScreen As screen:
             Label10_2 As label:
                 Font: ="Adagio Slab"
                 FontWeight: =FontWeight.Semibold
-                Size: =15
+                Size: =If(App.Width < 400, 13, 15)
                 Text: ="FEIT Reservation System"
                 Width: =459
                 X: =70
@@ -1254,13 +1254,13 @@ MainScreen As screen:
                 LayoutGap: =10
                 LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
                 LayoutMinHeight: =0
-                LayoutMinWidth: =300
+                LayoutMinWidth: =200
                 LayoutMode: =LayoutMode.Auto
                 LayoutOverflowY: =LayoutOverflow.Scroll
-                PaddingBottom: =10
-                PaddingLeft: =10
-                PaddingRight: =10
-                PaddingTop: =10
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =5
                 Width: =625
                 X: =Parent.Width / 2 + 10
                 Y: =70
@@ -1530,7 +1530,7 @@ MainScreen As screen:
                     LayoutMinWidth: =320
                     LoadingSpinner: =LoadingSpinner.Data
                     Selectable: =false
-                    TemplatePadding: =0
+                    TemplatePadding: =6
                     TemplateSize: =90
                     Transition: =Transition.Push
                     Visible: =serwerStudia
@@ -1542,25 +1542,30 @@ MainScreen As screen:
                     Button1_10 As button:
                         DisabledFill: =RGBA(244, 244, 244, 0.2)
                         DisplayMode: =DisplayMode.Disabled
-                        Height: =Parent.TemplateHeight - 16
+                        Height: =Parent.TemplateHeight
                         OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
                         RadiusBottomLeft: =60
                         RadiusBottomRight: =60
                         RadiusTopLeft: =60
                         RadiusTopRight: =60
                         Text: =""
-                        Width: =Parent.TemplateWidth - 16
-                        X: =8
-                        Y: =8
+                        Width: =Parent.TemplateWidth
+                        X: =0       
+                        Y: |
+                            =0
                         ZIndex: =1
 
                     Container6 As groupContainer.verticalAutoLayoutContainer:
                         DropShadow: =DropShadow.None
                         Height: =Button1_10.Height
                         LayoutAlignItems: =LayoutAlignItems.Stretch
-                        LayoutGap: =5
                         LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
                         LayoutMode: =LayoutMode.Auto
+                        LayoutWrap: =true
                         Width: |
                             =Button1_10.Width - 30
                         X: |
@@ -1573,28 +1578,30 @@ MainScreen As screen:
                             FillPortions: =1
                             FontWeight: =FontWeight.Semibold
                             Height: =Button1_10.Height
-                            LayoutMinWidth: =75
+                            LayoutMinHeight: =Button1_10.Height
+                            LayoutMinWidth: =0
                             PaddingBottom: =0
                             PaddingLeft: =0
                             PaddingRight: =0
                             PaddingTop: =0
-                            Size: =If(App.Width > 450, 18, 13)
+                            Size: =If(App.Width > 450, 18, 12)
                             Text: =Last(Split(ThisItem.skr, "-")).Value
-                            Width: =100
+                            Width: =80
                             X: =8
                             Y: =8
                             ZIndex: =1
 
                         ClassTypeGalleryServerStudia_5 As label:
                             Align: =Align.Center
+                            FillPortions: =1
                             Height: =Button1_10.Height
                             LayoutMinHeight: =0
-                            LayoutMinWidth: =50
+                            LayoutMinWidth: =55
                             PaddingBottom: =0
                             PaddingLeft: =0
                             PaddingRight: =0
                             PaddingTop: =0
-                            Size: =If(App.Width > 450, 18, 13)
+                            Size: =If(App.Width > 450, 18, 12)
                             Text: =ThisItem.type
                             Width: =55
                             X: =158
@@ -1605,12 +1612,12 @@ MainScreen As screen:
                             Align: =Align.Center
                             FillPortions: =2
                             Height: =Button1_10.Height
-                            LayoutMinWidth: =50
+                            LayoutMinWidth: =0
                             PaddingBottom: =0
                             PaddingLeft: =0
                             PaddingRight: =0
                             PaddingTop: =0
-                            Size: =If(App.Width > 450, 18, 13)
+                            Size: =If(App.Width > 450, 18, 12)
                             Text: |-
                                 =DateAdd(TimeValue(ThisItem.hour&":00"),15,TimeUnit.Minutes)&" - "&DateAdd(TimeValue(ThisItem.hour&":00"),ThisItem.length,TimeUnit.Hours)
                             Width: =192
@@ -1622,12 +1629,12 @@ MainScreen As screen:
                             Align: =Align.Center
                             FillPortions: =1
                             Height: =Button1_10.Height
-                            LayoutMinWidth: =60
+                            LayoutMinWidth: =0
                             PaddingBottom: =0
                             PaddingLeft: =0
                             PaddingRight: =0
                             PaddingTop: =0
-                            Size: =If(App.Width > 450, 18, 13)
+                            Size: =If(App.Width > 450, 18, 12)
                             Text: |-
                                 ="sala: "
                                 &
