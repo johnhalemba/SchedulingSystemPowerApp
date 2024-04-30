@@ -1557,56 +1557,60 @@ MainScreen As screen:
                     Container6 As groupContainer.verticalAutoLayoutContainer:
                         DropShadow: =DropShadow.None
                         Height: =Button1_10.Height
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutGap: =5
+                        LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
                         LayoutMode: =LayoutMode.Auto
-                        Width: =Button1_10.Width
-                        X: =Button1_10.X
+                        Width: |
+                            =Button1_10.Width - 30
+                        X: |
+                            =Button1_10.X + 15
                         Y: =Button1_10.Y
                         ZIndex: =9
 
                         ClassNameGalleryServerStudia_5 As label:
                             Align: =Align.Center
-                            FillPortions: =2
+                            FillPortions: =1
                             FontWeight: =FontWeight.Semibold
                             Height: =Button1_10.Height
-                            LayoutMinWidth: =0
+                            LayoutMinWidth: =75
                             PaddingBottom: =0
-                            PaddingLeft: =15
+                            PaddingLeft: =0
                             PaddingRight: =0
                             PaddingTop: =0
-                            Size: =If(App.Width < 640, 12, App.Width < 100, 16, 30)
+                            Size: =If(App.Width > 450, 18, 13)
                             Text: =Last(Split(ThisItem.skr, "-")).Value
-                            Width: =Button1_10.Width / 4
+                            Width: =100
                             X: =8
                             Y: =8
                             ZIndex: =1
 
                         ClassTypeGalleryServerStudia_5 As label:
                             Align: =Align.Center
-                            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                             Height: =Button1_10.Height
-                            LayoutMinWidth: =0
+                            LayoutMinHeight: =0
+                            LayoutMinWidth: =50
                             PaddingBottom: =0
                             PaddingLeft: =0
                             PaddingRight: =0
                             PaddingTop: =0
-                            Size: =If(App.Width < 640, 12, App.Width < 100, 14, 16)
+                            Size: =If(App.Width > 450, 18, 13)
                             Text: =ThisItem.type
-                            Width: =50
+                            Width: =55
                             X: =158
                             Y: =8
                             ZIndex: =2
 
                         Subtitle2_29 As label:
                             Align: =Align.Center
-                            FillPortions: =3
-                            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                            FillPortions: =2
                             Height: =Button1_10.Height
-                            LayoutMinWidth: =0
+                            LayoutMinWidth: =50
                             PaddingBottom: =0
                             PaddingLeft: =0
                             PaddingRight: =0
                             PaddingTop: =0
-                            Size: =If(App.Width < 640, 12, App.Width < 100, 14, 16)
+                            Size: =If(App.Width > 450, 18, 13)
                             Text: |-
                                 =DateAdd(TimeValue(ThisItem.hour&":00"),15,TimeUnit.Minutes)&" - "&DateAdd(TimeValue(ThisItem.hour&":00"),ThisItem.length,TimeUnit.Hours)
                             Width: =192
@@ -1616,15 +1620,14 @@ MainScreen As screen:
 
                         Subtitle2_31 As label:
                             Align: =Align.Center
-                            FillPortions: =2
-                            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                            FillPortions: =1
                             Height: =Button1_10.Height
-                            LayoutMinWidth: =0
+                            LayoutMinWidth: =60
                             PaddingBottom: =0
                             PaddingLeft: =0
                             PaddingRight: =0
                             PaddingTop: =0
-                            Size: =If(App.Width < 640, 12, App.Width < 100, 14, 16)
+                            Size: =If(App.Width > 450, 18, 13)
                             Text: |-
                                 ="sala: "
                                 &
@@ -1633,7 +1636,7 @@ MainScreen As screen:
                                     Last(FirstN(Split(ThisItem.room,"-"), CountRows(Split(ThisItem.room,"-")) - 1)).Value & "-" & Last(Split(ThisItem.room,"-")).Value,
                                     Last(Split(ThisItem.room,"-")).Value
                                 )
-                            Width: =Button1_10.Width / 4
+                            Width: =130
                             X: =470
                             Y: =8
                             ZIndex: =4
@@ -3351,7 +3354,10 @@ MainScreen As screen:
                         ZIndex: =1
 
             SyncScreen As groupContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
                 Height: =Parent.Height
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
                 Visible: =varShowSyncing
                 Width: =App.Width
                 ZIndex: =5
@@ -3392,6 +3398,7 @@ MainScreen As screen:
                         Appearance: ='Spinner.Appearance'.Primary
                         BasePaletteColor: =
                         DisplayMode: =DisplayMode.Edit
+                        FontColor: =
                         Height: =71
                         Width: =75
                         X: =134
