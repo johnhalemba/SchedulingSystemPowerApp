@@ -314,36 +314,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Container12.Dropdown1_2.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Container12.Dropdown1_2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "MainScreen",
-                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Container12.Dropdown1_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Icon6.AccessibleLabel"
                 }
               ],
@@ -417,6 +387,36 @@
                 "member": "AccessibleLabel",
                 "module": "MainScreen",
                 "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Container12_1.DropdownCalendarType_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Container12.Dropdown1_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Container12.Dropdown1_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Container12.Dropdown1_2"
               }
             }
           ],
@@ -567,66 +567,6 @@
                 "member": "TabIndex",
                 "module": "MainScreen",
                 "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Container4.Icon1_6"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_11.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_11.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "MainScreen",
-                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_11"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_11.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_11.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "MainScreen",
-                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_11"
               }
             }
           ],
@@ -944,19 +884,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.Icon7.AccessibleLabel"
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_11.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.Icon7.AccessibleLabel",
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_11.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "MainScreen",
-                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.Icon7"
+                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_11"
               }
             }
           ],
@@ -974,19 +914,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.Icon7.TabIndex"
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_11.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.Icon7.TabIndex",
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_11.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "MainScreen",
-                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.Icon7"
+                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_11"
               }
             }
           ],
@@ -998,66 +938,6 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.Container10.ComboBox1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.Container10.ComboBox1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "MainScreen",
-                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.Container10.ComboBox1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.Container10_2.DatePicker1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.Container10_2.DatePicker1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "MainScreen",
-                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.Container10_2.DatePicker1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
         },
         {
           "locations": [
@@ -1257,6 +1137,126 @@
                 "member": "AccessibleLabel",
                 "module": "MainScreen",
                 "type": "MainScreen.mainContainer.ContainerRoomSelection.SyncScreen.Container8_1.Spinner3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.Icon7.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.Icon7.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.Icon7"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.Icon7.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.Icon7.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.Icon7"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.Container10.ComboBox1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.Container10.ComboBox1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.Container10.ComboBox1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.Container10_2.DatePicker1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.Container10_2.DatePicker1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.Container10_2.DatePicker1"
               }
             }
           ],
@@ -1484,77 +1484,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.varToogleRoomSelection"
+                  "fullyQualifiedName": "App.WEITI_Wrzosowy"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.varToogleRoomSelection",
+                  "fullyQualifiedName": "App.WEITI_Wrzosowy",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "varToogleRoomSelection",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.varTodayDate"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.varTodayDate",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "varTodayDate",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.varUserPlan"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.varUserPlan",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "varUserPlan",
+                "member": "WEITI_Wrzosowy",
                 "module": "App",
                 "type": "App"
               }
@@ -1604,17 +1544,137 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.WEITI_Wrzosowy"
+                  "fullyQualifiedName": "App.varUserPlan"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.WEITI_Wrzosowy",
+                  "fullyQualifiedName": "App.varUserPlan",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "WEITI_Wrzosowy",
+                "member": "varUserPlan",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.varTodayDate"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.varTodayDate",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varTodayDate",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.varToogleRoomSelection"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.varToogleRoomSelection",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varToogleRoomSelection",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.StartDateTimeUTC"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.StartDateTimeUTC",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "StartDateTimeUTC",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.EndDateTimeUTC"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.EndDateTimeUTC",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "EndDateTimeUTC",
                 "module": "App",
                 "type": "App"
               }
@@ -1705,66 +1765,6 @@
               },
               "properties": {
                 "member": "LastDayOfMonth",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.StartDateTimeUTC"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.StartDateTimeUTC",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "StartDateTimeUTC",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.EndDateTimeUTC"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.EndDateTimeUTC",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "EndDateTimeUTC",
                 "module": "App",
                 "type": "App"
               }
