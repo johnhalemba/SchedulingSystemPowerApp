@@ -1389,7 +1389,8 @@ MainScreen As screen:
                     AlignInContainer: =AlignInContainer.SetByContainer
                     DropShadow: =DropShadow.None
                     FillPortions: =0
-                    Height: =DatePicker2.Height + DatePicker2.BorderThickness
+                    Height: =DatePicker2.Height + 2 * DatePicker2.BorderThickness
+                    LayoutAlignItems: =LayoutAlignItems.Center
                     LayoutGap: =15
                     LayoutJustifyContent: =LayoutJustifyContent.Center
                     LayoutMinHeight: =100
@@ -1470,8 +1471,7 @@ MainScreen As screen:
                         LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
                         LayoutMode: =LayoutMode.Auto
                         LayoutWrap: =true
-                        Width: |
-                            =Button1_10.Width - 30
+                        Width: =Button1_10.Width - 30
                         X: |
                             =Button1_10.X + 15
                         Y: =Button1_10.Y
@@ -1564,7 +1564,7 @@ MainScreen As screen:
                     LayoutMinWidth: =320
                     LoadingSpinner: =LoadingSpinner.Data
                     Selectable: =false
-                    TemplatePadding: =0
+                    TemplatePadding: =6
                     TemplateSize: =90
                     Transition: =Transition.Push
                     Visible: =!serwerStudia && Self.AllItemsCount > 0
@@ -1576,77 +1576,79 @@ MainScreen As screen:
                     Button1_11 As button:
                         DisabledFill: =RGBA(244, 244, 244, 0.2)
                         DisplayMode: =DisplayMode.Disabled
-                        Height: =Parent.TemplateHeight - 16
+                        Height: =Parent.TemplateHeight
                         OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
                         RadiusBottomLeft: =60
                         RadiusBottomRight: =60
                         RadiusTopLeft: =60
                         RadiusTopRight: =60
                         Text: =""
-                        Width: =Parent.TemplateWidth - 16
-                        X: =1
-                        Y: =8
+                        Width: =Parent.TemplateWidth
                         ZIndex: =1
 
-                    Title2_5 As label:
-                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                        Height: =36
-                        OnSelect: =Select(Parent)
-                        PaddingBottom: =0
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Size: =20
-                        Text: =ThisItem.subject
-                        VerticalAlign: =VerticalAlign.Top
-                        Width: =1
-                        Y: =34
-                        ZIndex: =2
+                    Container3 As groupContainer.horizontalAutoLayoutContainer:
+                        DropShadow: =DropShadow.None
+                        Height: =Button1_11.Height
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                        LayoutMode: =LayoutMode.Auto
+                        LayoutWrap: =true
+                        Width: =Button1_11.Width - 30
+                        X: =Button1_11.X + 15
+                        Y: =Button1_11.Y
+                        ZIndex: =7
 
-                    Subtitle2_33 As label:
-                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                        Height: =23
-                        OnSelect: =Select(Parent)
-                        PaddingBottom: =0
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Text: =
-                        VerticalAlign: =VerticalAlign.Top
-                        Width: =1
-                        Y: =40
-                        ZIndex: =3
+                        Title2_5 As label:
+                            Align: =Align.Center
+                            AlignInContainer: =AlignInContainer.Center
+                            FillPortions: =1
+                            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                            Height: =36
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =20
+                            Text: =ThisItem.subject
+                            Width: =0
+                            Y: =34
+                            ZIndex: =1
 
-                    NextArrow2_5 As icon.ChevronRight:
-                        AccessibleLabel: =Self.Tooltip
-                        Color: =RGBA(166, 166, 166, 1)
-                        Height: =50
-                        Icon: =Icon.ChevronRight
-                        OnSelect: =Select(Parent)
-                        PaddingBottom: =16
-                        PaddingLeft: =16
-                        PaddingRight: =16
-                        PaddingTop: =16
-                        Tooltip: ="View item details"
-                        Width: =1
-                        Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-                        ZIndex: =4
+                        Subtitle2_33 As label:
+                            FillPortions: =1
+                            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                            Height: =23
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =
+                            VerticalAlign: =VerticalAlign.Top
+                            Visible: =false
+                            Width: =1
+                            Y: =6
+                            ZIndex: =2
 
-                    Subtitle2_32 As label:
-                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                        Height: =36
-                        OnSelect: =Select(Parent)
-                        PaddingBottom: =0
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Size: =24
-                        Text: |-
-                            =Text(ThisItem.startWithTimeZone, "hh:mm")&" - "&Text(ThisItem.endWithTimeZone, "hh:mm")
-                        VerticalAlign: =VerticalAlign.Top
-                        Width: =1
-                        Y: =34
-                        ZIndex: =6
+                        Subtitle2_32 As label:
+                            Align: =Align.Center
+                            AlignInContainer: =AlignInContainer.Center
+                            FillPortions: =1
+                            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                            Height: =36
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =20
+                            Text: |-
+                                =If(ThisItem.isAllDay, "All day", Text(ThisItem.startWithTimeZone, "hh:mm")&" - "&Text(ThisItem.endWithTimeZone, "hh:mm"))
+                            Width: =1
+                            Y: =34
+                            ZIndex: =3
 
                 ContainerNoClassesInfo As groupContainer.verticalAutoLayoutContainer:
                     DropShadow: =DropShadow.None
