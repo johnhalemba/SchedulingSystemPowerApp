@@ -1145,7 +1145,9 @@ MainScreen As screen:
                                     {
                                         Name: "121",
                                         Button:room121_6
-                                    }, room120_6, 'room116-AR_6', room133_6, room117_6, room116_6, room105_6, room106_6, room107_6, room161_6, room102_6, room104_6, room103_6, room108_6]);
+                                    }
+                                );
+                                //, room120_6, 'room116-AR_6', room133_6, room117_6, room116_6, room105_6, room106_6, room107_6, room161_6, room102_6, room104_6, room103_6, room108_6]);
                                 UpdateContext(
                                     {
                                         SelectedRoom: Blank(),
@@ -3038,11 +3040,12 @@ MainScreen As screen:
 
                     ComboBox1 As combobox:
                         AccessibleLabel: ="Test"
-                        DisplayFields: =["Value.Text"]
+                        DisplayFields: =["Name"]
                         IsSearchable: =false
+                        Items: =RoomButtons
                         OnSelect: |-
-                            =UpdateContext({_selectedRoomComboBox: Self.Selected.Value})
-                        SearchFields: =["Value"]
+                            =UpdateContext({_selectedRoomComboBox: Self.Selected.Button})
+                        SearchFields: =["Name"]
                         SearchItems: =[]
                         SelectMultiple: =false
                         ZIndex: =3
