@@ -3031,7 +3031,7 @@ MainScreen As screen:
                         AccessibleLabel: =
                         DisplayFields: =["Value.Text"]
                         IsSearchable: =false
-                        Items: =RoomButtons
+                        Items: =RoomButtons.Value
                         OnSelect: |-
                             =UpdateContext({_selectedRoomComboBox: Self.Selected.Value})
                         SearchFields: =["Value"]
