@@ -1985,7 +1985,7 @@ MainScreen As screen:
                             Self.Fill = Color.Red,
                             Color.Red
                         )
-                    DisplayMode: =If(SelectedRoom = Self || Self.Fill = Color.Green || _selectedRoomComboBox = Self, DisplayMode.Edit, DisplayMode.Disabled)
+                    DisplayMode: =If(SelectedRoom = Self || Self.Fill = Color.Green, DisplayMode.Edit, DisplayMode.Disabled)
                     Fill: |-
                         =If(
                             CountRows(
