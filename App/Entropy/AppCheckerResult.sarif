@@ -1898,6 +1898,36 @@
           },
           "ruleId": "app-UnusedVariables",
           "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.varViewSchedule"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.varViewSchedule",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varViewSchedule",
+                "module": "MainScreen",
+                "type": "MainScreen"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 3
         }
       ],
       "tool": {
