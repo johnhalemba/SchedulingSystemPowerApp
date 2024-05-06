@@ -1252,7 +1252,6 @@ MainScreen As screen:
                 LayoutAlignItems: =LayoutAlignItems.Center
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutGap: =10
-                LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
                 LayoutMinHeight: =0
                 LayoutMinWidth: =200
                 LayoutMode: =LayoutMode.Auto
@@ -1385,6 +1384,7 @@ MainScreen As screen:
                     Overflow: =Overflow.Scroll
                     Size: =15
                     Text: =If(DropdownCalendarType_2.Selected.Value = "Serwer Studia", "Here is your schedule from Server Studia", "Here is your calendar view")
+                    Visible: =!IsBlank(DropdownCalendarType_2.Selected)
                     ZIndex: =6
 
                 Container4 As groupContainer.horizontalAutoLayoutContainer:
@@ -1398,6 +1398,7 @@ MainScreen As screen:
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
                     LayoutOverflowY: =LayoutOverflow.Scroll
+                    Visible: =true && !IsBlank(DropdownCalendarType_2.Selected)
                     Width: =300
                     ZIndex: =7
 
@@ -1438,7 +1439,7 @@ MainScreen As screen:
                     TemplatePadding: =0
                     TemplateSize: =90
                     Transition: =Transition.Push
-                    Visible: =!serwerStudia
+                    Visible: =!serwerStudia && Self.AllItemsCount > 0
                     Width: =(Parent.Width - 20)/2 - 20
                     X: =683
                     Y: =116
