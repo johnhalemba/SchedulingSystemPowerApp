@@ -1,31 +1,134 @@
 App As appinfo:
     BackEnabled: =true
-    OnStart: |-
-        =Set(ShowLoading, true);
+    OnStart: |
+        =Set(
+            ShowLoading,
+            true
+        );
         Set(
-                varUserPlan,
-                'Serwer Studia'.Getuserschedule(
-                    "json",
-                    Text(
-                        Today(),
-                        "yyyy-mm-dd"
-                    )
+            varUserPlan,
+            'Serwer Studia'.Getuserschedule(
+                "json",
+                Text(
+                    Today(),
+                    "yyyy-mm-dd"
                 )
-            );
-            Set(
-                varUserCalendars,
-                Office365Outlook.CalendarGetTablesV2().value
+            )
+        );
+        Set(
+            varUserCalendars,
+            Office365Outlook.CalendarGetTablesV2().value
         );
         Concurrent(
-            Collect(CalendarLocalizedLabel, {Value:"Calendar"},{Value:"Kalender"},
-        {Value:"Təqvim"},{Value:"Kalendar"},{Value:"Calendari"},{Value:"Kalendář"},{Value:"Calendr"},{Value:"Calendario"},
-        {Value:"Egutegia"},{Value:"Kalendaryo"},{Value:"Calendrier"},{Value:"Féilire"},{Value:"Am mìosachan"},{Value:"Kalanda"},
-        {Value:"Dagbók"},{Value:"Kalenda"},{Value:"Kalendārs"},{Value:"Kalenner"},{Value:"Kalendorius"},{Value:"Naptár"},
-        {Value:"Kalendarju"},{Value:"Agenda"},{Value:"Taqvim"},{Value:"Kalendarz"},{Value:"Calendário"},{Value:"Intiwatana"},
-        {Value:"Kalendari"},{Value:"Kalendár"},{Value:"Koledar"},{Value:"Kalenteri"},{Value:"Maramataka"},{Value:"Lịch"},
-        {Value:"Takvim"},{Value:"Senenama"},{Value:"Ημερολόγιο"},{Value:"კალენდარი"},{Value:"לוח שנה"},{Value:"کیلنڈر"},
-        {Value:"التقويم"},{Value:"कैलेंडर"},{Value:"दिनदर्शिका"},{Value:"ক্যালেন্ডার"},{Value:"કૅલેન્ડર"},{Value:"予定表"},
-        {Value:"行事曆"},{Value:"日历"},{Value:"క్యాలెండర్"}),
+            Collect(
+                CalendarLocalizedLabel,
+                {Value: "Calendar"},
+                {Value: "Kalender"},
+                {Value: "Təqvim"},
+                {Value: "Kalendar"},
+                {Value: "Calendari"},
+                {Value: "Kalendář"},
+                {Value: "Calendr"},
+                {Value: "Calendario"},
+                {Value: "Egutegia"},
+                {Value: "Kalendaryo"},
+                {Value: "Calendrier"},
+                {Value: "Féilire"},
+                {Value: "Am mìosachan"},
+                {Value: "Kalanda"},
+                {Value: "Dagbók"},
+                {Value: "Kalenda"},
+                {Value: "Kalendārs"},
+                {Value: "Kalenner"},
+                {Value: "Kalendorius"},
+                {Value: "Naptár"},
+                {Value: "Kalendarju"},
+                {Value: "Agenda"},
+                {Value: "Taqvim"},
+                {Value: "Kalendarz"},
+                {Value: "Calendário"},
+                {Value: "Intiwatana"},
+                {Value: "Kalendari"},
+                {Value: "Kalendár"},
+                {Value: "Koledar"},
+                {Value: "Kalenteri"},
+                {Value: "Maramataka"},
+                {Value: "Lịch"},
+                {Value: "Takvim"},
+                {Value: "Senenama"},
+                {Value: "Ημερολόγιο"},
+                {Value: "კალენდარი"},
+                {Value: "לוח שנה"},
+                {Value: "کیلنڈر"},
+                {Value: "التقويم"},
+                {Value: "कैलेंडर"},
+                {Value: "दिनदर्शिका"},
+                {Value: "ক্যালেন্ডার"},
+                {Value: "કૅલેન્ડર"},
+                {Value: "予定表"},
+                {Value: "行事曆"},
+                {Value: "日历"},
+                {Value: "క్యాలెండర్"}
+            ),
+            ClearCollect(
+                RoomButtons,
+                {
+                    Name: "122",
+                    Button: room122_6
+                },
+                {
+                    Name: "121",
+                    Button: room121_6
+                },
+                {
+                    Name: "120",
+                    Button: room120_6
+                },
+                {
+                    Name: "116-AR",
+                    Button: 'room116-AR_6'
+                },
+                {
+                    Name: "117",
+                    Button: room117_6
+                },
+                {
+                    Name: "116",
+                    Button: room116_6
+                },
+                {
+                    Name: "105",
+                    Button: room105_6
+                },
+                {
+                    Name: "106",
+                    Button: room106_6
+                },
+                {
+                    Name: "107",
+                    Button: room107_6
+                },
+                {
+                    Name: "161",
+                    Button: room161_6
+                },
+                {
+                    Name: "102",
+                    Button: room102_6
+                },
+                {
+                    Name: "104",
+                    Button: room104_6
+                },
+                {
+                    Name: "103",
+                    Button: room103_6
+                },
+                {
+                    Name: "108",
+                    Button: room108_6
+                }
+            ),
             Set(
                 varToogleRoomSelection,
                 false
@@ -283,14 +386,45 @@ App As appinfo:
                     1
                 )
             ),
-            Set(varSelectedDateDatePicker, Today()),
+            Set(
+                varSelectedDateDatePicker,
+                Today()
+            ),
             ClearCollect(
                 Rooms,
-                ["102", "103", "104", "105", "106", "107", "108", "161", "116", "117", "116-AR", "120", "121", "122", "133"]
+                [
+                    "102",
+                    "103",
+                    "104",
+                    "105",
+                    "106",
+                    "107",
+                    "108",
+                    "161",
+                    "116",
+                    "117",
+                    "116-AR",
+                    "120",
+                    "121",
+                    "122",
+                    "133"
+                ]
             )
         );
-        Set(myCalendar, LookUp(Office365Outlook.CalendarGetTablesV2().value, name = LookUp(CalendarLocalizedLabel, Value = name).Value).name);
-        Set(ShowLoading, false);
+        Set(
+            myCalendar,
+            LookUp(
+                Office365Outlook.CalendarGetTablesV2().value,
+                name = LookUp(
+                    CalendarLocalizedLabel,
+                    Value = name
+                ).Value
+            ).name
+        );
+        Set(
+            ShowLoading,
+            false
+        );
     StartScreen: =MainScreen
     Theme: =PowerAppsTheme
 
