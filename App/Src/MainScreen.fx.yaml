@@ -3028,9 +3028,10 @@ MainScreen As screen:
                         ZIndex: =2
 
                     ComboBox1 As combobox:
-                        DisplayFields: =["Value"]
+                        AccessibleLabel: =
+                        DisplayFields: =["Value.Text"]
                         IsSearchable: =false
-                        Items: =RoomButtons.Value
+                        Items: =RoomButtons
                         OnSelect: |-
                             =UpdateContext({_selectedRoomComboBox: Self.Selected.Value})
                         SearchFields: =["Value"]

@@ -8656,7 +8656,14 @@
           "NameMapSourceSchema": "?"
         },
         "MoreItemsButtonColor",
-        "DisplayFields",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "[\"Value\"]",
+          "InvariantPropertyName": "DisplayFields",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "SearchFields",
         {
           "AFDDataSourceName": "",
@@ -8731,6 +8738,14 @@
           "AutoRuleBindingEnabled": false,
           "AutoRuleBindingString": "false",
           "InvariantPropertyName": "OnSelect",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "\"\"",
+          "InvariantPropertyName": "AccessibleLabel",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         }
@@ -8821,6 +8836,11 @@
           "Category": "Data",
           "PropertyName": "IsSearchable",
           "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "AccessibleLabel",
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
