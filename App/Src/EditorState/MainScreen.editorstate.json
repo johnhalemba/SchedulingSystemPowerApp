@@ -8724,7 +8724,8 @@
           "InvariantPropertyName": "PaddingLeft",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "IsSearchable"
       ],
       "DynamicProperties": [
         {
@@ -8806,6 +8807,11 @@
         {
           "Category": "Data",
           "PropertyName": "SelectMultiple",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "IsSearchable",
           "RuleProviderType": "Unknown"
         },
         {

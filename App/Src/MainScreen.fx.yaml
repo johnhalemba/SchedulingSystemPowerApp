@@ -3029,9 +3029,10 @@ MainScreen As screen:
 
                     ComboBox1 As combobox:
                         DisplayFields: =["Value"]
-                        Items: =Rooms
+                        IsSearchable: =false
+                        Items: =RoomButtons
                         SearchFields: =["Value"]
-                        SearchItems: =Search(Rooms,ComboBox1.SearchText,Value)
+                        SearchItems: =[]
                         SelectMultiple: =false
                         ZIndex: =3
 
