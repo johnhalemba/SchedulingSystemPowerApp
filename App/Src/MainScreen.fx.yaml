@@ -1159,31 +1159,42 @@ MainScreen As screen:
                                         Button:room117_6
                                     },
                                     {
-                                        Name: "121",
-                                        Button:room121_6
+                                        Name: "116",
+                                        Button:room116_6
                                     },
                                     {
-                                        Name: "121",
-                                        Button:room121_6
+                                        Name: "105",
+                                        Button:room105_6
                                     },
                                     {
-                                        Name: "121",
-                                        Button:room121_6
+                                        Name: "106",
+                                        Button:room106_6
                                     },
                                     {
-                                        Name: "121",
-                                        Button:room121_6
+                                        Name: "107",
+                                        Button:room107_6
                                     },
                                     {
-                                        Name: "121",
-                                        Button:room121_6
+                                        Name: "161",
+                                        Button:room161_6
                                     },
                                     {
-                                        Name: "121",
-                                        Button:room121_6
+                                        Name: "102",
+                                        Button:room102_6
+                                    },
+                                    {
+                                        Name: "104",
+                                        Button:room104_6
+                                    },
+                                    {
+                                        Name: "103",
+                                        Button:room103_6
+                                    },
+                                    {
+                                        Name: "108",
+                                        Button:room108_6
                                     }
                                 );
-                                //room117_6, room116_6, room105_6, room106_6, room107_6, room161_6, room102_6, room104_6, room103_6, room108_6]);
                                 UpdateContext(
                                     {
                                         SelectedRoom: Blank(),
