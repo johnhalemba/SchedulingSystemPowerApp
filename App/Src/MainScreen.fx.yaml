@@ -3044,7 +3044,7 @@ MainScreen As screen:
                         IsSearchable: =false
                         Items: =RoomButtons
                         OnSelect: |-
-                            =UpdateContext({_selectedRoomComboBox: Self.Selected.Button})
+                            =UpdateContext({SelectedRoom: Self.Selected.Button})
                         SearchFields: =["Name"]
                         SearchItems: =[]
                         SelectMultiple: =false
