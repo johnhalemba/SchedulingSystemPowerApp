@@ -2084,6 +2084,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "MainScreen._selectedRoomComboBox"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen._selectedRoomComboBox",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "_selectedRoomComboBox",
+                "module": "MainScreen",
+                "type": "MainScreen"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "MainScreen.varViewSchedule"
                 }
               ],
