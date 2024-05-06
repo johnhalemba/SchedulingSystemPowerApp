@@ -1136,7 +1136,7 @@ MainScreen As screen:
                                     ClearCollect(ScheduleRoom121, 'Serwer Studia'.Getclassesfromroom("1030-ETI-121", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
                                     ClearCollect(ScheduleRoom122, 'Serwer Studia'.Getclassesfromroom("1030-ETI-122", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
                                 );
-                                ClearCollect(RoomButtons,[room122_6, room121_6, room120_6, 'room116-AR_6', room133_6, room117_6, room116_6, room105_6, room106_6, room107_6, room161_6, room102_6, room104_6, room103_6]);
+                                ClearCollect(RoomButtons,[room122_6, room121_6, room120_6, 'room116-AR_6', room133_6, room117_6, room116_6, room105_6, room106_6, room107_6, room161_6, room102_6, room104_6, room103_6, room108_6]);
                                 UpdateContext(
                                     {
                                         SelectedRoom: Blank(),
