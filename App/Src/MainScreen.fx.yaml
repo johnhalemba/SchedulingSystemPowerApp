@@ -2032,7 +2032,7 @@ MainScreen As screen:
                             Self.Fill = Color.Red,
                             Color.Red
                         )
-                    DisplayMode: =If(SelectedRoom = Self || Self.Fill = Color.Green, DisplayMode.Edit, DisplayMode.Disabled)
+                    DisplayMode: =If((SelectedRoom = Self || Self.Fill = Color.Green) && App.Width > 400, DisplayMode.Edit, DisplayMode.Disabled)
                     Fill: |-
                         =If(
                             CountRows(
@@ -3091,7 +3091,7 @@ MainScreen As screen:
                         IsSearchable: =false
                         Items: =SortByColumns(RoomButtons, "Name")
                         OnSelect: |-
-                            =UpdateContext({SelectedRoom: Self.Selected.Button})
+                            =If(IsBlank(Self.Selected), UpdateContext({SelectedRoom: Blank()}), UpdateContext({SelectedRoom: Self.Selected.Button}))
                         SearchFields: =["Name"]
                         SearchItems: =[]
                         SelectMultiple: =false
