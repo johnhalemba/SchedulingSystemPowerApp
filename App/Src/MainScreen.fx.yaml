@@ -1974,7 +1974,7 @@ MainScreen As screen:
                             Self.Fill = Color.Red,
                             Color.Red
                         )
-                    DisplayMode: =If(SelectedRoom = Self || Self.Fill = Color.Green, DisplayMode.Edit, DisplayMode.Disabled)
+                    DisplayMode: =If(SelectedRoom = Self || Self.Fill = Color.Green || _selectedRoomComboBox. = Self.Text, DisplayMode.Edit, DisplayMode.Disabled)
                     Fill: |-
                         =If(
                             CountRows(
@@ -3032,7 +3032,7 @@ MainScreen As screen:
                         IsSearchable: =false
                         Items: =RoomButtons
                         OnSelect: |-
-                            =UpdateContext({_selectedRoomComboBox: Self.Selected})
+                            =UpdateContext({_selectedRoomComboBox: Self.Selected.Value})
                         SearchFields: =["Value"]
                         SearchItems: =[]
                         SelectMultiple: =false
