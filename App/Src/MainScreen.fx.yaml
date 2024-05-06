@@ -1367,7 +1367,7 @@ MainScreen As screen:
                         ZIndex: =1
 
                     Dropdown1_2 As dropdown:
-                        Default: ="2"
+                        Default: ="Kalendarz"
                         Items: =Office365Outlook.CalendarGetTablesV2().value
                         Width: |
                             =200
@@ -1428,9 +1428,10 @@ MainScreen As screen:
                     DelayItemLoading: =true
                     DisplayMode: =DisplayMode.View
                     Height: =562
-                    Items: =Sort(Filter(Office365Outlook.V4CalendarGetItems(Dropdown1_2.Selected.id).value, DateValue(startWithTimeZone)=DateValue(DatePicker2.SelectedDate)),TimeValue(startWithTimeZone))
+                    Items: |
+                        =If(IsBlank(Dropdown1_2.Selected), Sort(Filter(Office365Outlook.V4CalendarGetItems(myCalendar).value, DateValue(startWithTimeZone)=DateValue(DatePicker2.SelectedDate)),TimeValue(startWithTimeZone)), Sort(Filter(Office365Outlook.V4CalendarGetItems(Dropdown1_2.Selected.id).value, DateValue(startWithTimeZone)=DateValue(DatePicker2.SelectedDate)),TimeValue(startWithTimeZone)))
                     Layout: =Layout.Vertical
-                    LayoutMinHeight: =300
+                    LayoutMinHeight: =200
                     LayoutMinWidth: =320
                     LoadingSpinner: =LoadingSpinner.Data
                     Selectable: =false
