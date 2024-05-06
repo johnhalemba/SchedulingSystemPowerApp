@@ -3090,6 +3090,8 @@ MainScreen As screen:
                         DisplayFields: =["Name"]
                         IsSearchable: =false
                         Items: =SortByColumns(RoomButtons, "Name")
+                        OnChange: |-
+                            =If(IsBlank(Self.Selected), UpdateContext({SelectedRoom: Blank()}), UpdateContext({SelectedRoom: Self.Selected.Button}))
                         OnSelect: |-
                             =If(IsBlank(Self.Selected), UpdateContext({SelectedRoom: Blank()}), UpdateContext({SelectedRoom: Self.Selected.Button}))
                         SearchFields: =["Name"]
