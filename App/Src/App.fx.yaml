@@ -389,26 +389,6 @@ App As appinfo:
             Set(
                 varSelectedDateDatePicker,
                 Today()
-            ),
-            ClearCollect(
-                Rooms,
-                [
-                    "102",
-                    "103",
-                    "104",
-                    "105",
-                    "106",
-                    "107",
-                    "108",
-                    "161",
-                    "116",
-                    "117",
-                    "116-AR",
-                    "120",
-                    "121",
-                    "122",
-                    "133"
-                ]
             )
         );
         Set(
