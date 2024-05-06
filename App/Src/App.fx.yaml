@@ -2,6 +2,20 @@ App As appinfo:
     BackEnabled: =true
     OnStart: |-
         =Set(ShowLoading, true);
+        Set(
+                varUserPlan,
+                'Serwer Studia'.Getuserschedule(
+                    "json",
+                    Text(
+                        Today(),
+                        "yyyy-mm-dd"
+                    )
+                )
+            );
+            Set(
+                varUserCalendars,
+                Office365Outlook.CalendarGetTablesV2().value
+        );
         Concurrent(
             Collect(CalendarLocalizedLabel, {Value:"Calendar"},{Value:"Kalender"},
         {Value:"Təqvim"},{Value:"Kalendar"},{Value:"Calendari"},{Value:"Kalendář"},{Value:"Calendr"},{Value:"Calendario"},
@@ -241,20 +255,6 @@ App As appinfo:
             Set(
                 varTodayDate,
                 Today()
-            ),
-            Set(
-                varUserPlan,
-                'Serwer Studia'.Getuserschedule(
-                    "json",
-                    Text(
-                        Today(),
-                        "yyyy-mm-dd"
-                    )
-                )
-            ),
-            Set(
-                varUserCalendars,
-                Office365Outlook.CalendarGetTablesV2().value
             ),
             Set(
                 WEITI_Szafirowy,

@@ -1423,102 +1423,6 @@ MainScreen As screen:
                         X: =215
                         ZIndex: =4
 
-                "Gallery2_11 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
-                    '#CopilotOverlayLabel': ="Filtered"
-                    DelayItemLoading: =true
-                    DisplayMode: =DisplayMode.View
-                    Height: =562
-                    Items: |
-                        =If(IsBlank(Dropdown1_2.Selected), Sort(Filter(Office365Outlook.V4CalendarGetItems(myCalendar).value, DateValue(startWithTimeZone)=DateValue(DatePicker2.SelectedDate)),TimeValue(startWithTimeZone)), Sort(Filter(Office365Outlook.V4CalendarGetItems(Dropdown1_2.Selected.id).value, DateValue(startWithTimeZone)=DateValue(DatePicker2.SelectedDate)),TimeValue(startWithTimeZone)))
-                    Layout: =Layout.Vertical
-                    LayoutMinHeight: =200
-                    LayoutMinWidth: =320
-                    LoadingSpinner: =LoadingSpinner.Data
-                    Selectable: =false
-                    TemplatePadding: =0
-                    TemplateSize: =90
-                    Transition: =Transition.Push
-                    Visible: =!serwerStudia && Self.AllItemsCount > 0
-                    Width: =(Parent.Width - 20)/2 - 20
-                    X: =683
-                    Y: =116
-                    ZIndex: =8
-
-                    Button1_11 As button:
-                        DisabledFill: =RGBA(244, 244, 244, 0.2)
-                        DisplayMode: =DisplayMode.Disabled
-                        Height: =Parent.TemplateHeight - 16
-                        OnSelect: =Select(Parent)
-                        RadiusBottomLeft: =60
-                        RadiusBottomRight: =60
-                        RadiusTopLeft: =60
-                        RadiusTopRight: =60
-                        Text: =""
-                        Width: =Parent.TemplateWidth - 16
-                        X: =1
-                        Y: =8
-                        ZIndex: =1
-
-                    Title2_5 As label:
-                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                        Height: =36
-                        OnSelect: =Select(Parent)
-                        PaddingBottom: =0
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Size: =20
-                        Text: =ThisItem.subject
-                        VerticalAlign: =VerticalAlign.Top
-                        Width: =1
-                        Y: =34
-                        ZIndex: =2
-
-                    Subtitle2_33 As label:
-                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                        Height: =23
-                        OnSelect: =Select(Parent)
-                        PaddingBottom: =0
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Text: =
-                        VerticalAlign: =VerticalAlign.Top
-                        Width: =1
-                        Y: =40
-                        ZIndex: =3
-
-                    NextArrow2_5 As icon.ChevronRight:
-                        AccessibleLabel: =Self.Tooltip
-                        Color: =RGBA(166, 166, 166, 1)
-                        Height: =50
-                        Icon: =Icon.ChevronRight
-                        OnSelect: =Select(Parent)
-                        PaddingBottom: =16
-                        PaddingLeft: =16
-                        PaddingRight: =16
-                        PaddingTop: =16
-                        Tooltip: ="View item details"
-                        Width: =1
-                        Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-                        ZIndex: =4
-
-                    Subtitle2_32 As label:
-                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                        Height: =36
-                        OnSelect: =Select(Parent)
-                        PaddingBottom: =0
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Size: =24
-                        Text: |-
-                            =Text(ThisItem.startWithTimeZone, "hh:mm")&" - "&Text(ThisItem.endWithTimeZone, "hh:mm")
-                        VerticalAlign: =VerticalAlign.Top
-                        Width: =1
-                        Y: =34
-                        ZIndex: =6
-
                 "GalleryScheduleServerStudia As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                     '#CopilotOverlayLabel': ="Filtered"
                     DelayItemLoading: =true
@@ -1533,11 +1437,11 @@ MainScreen As screen:
                     TemplatePadding: =6
                     TemplateSize: =90
                     Transition: =Transition.Push
-                    Visible: =serwerStudia
+                    Visible: =serwerStudia && Self.AllItemsCount > 0
                     Width: =(Parent.Width - 20)/2 - 20
                     X: =Parent.Width / 2
                     Y: =121
-                    ZIndex: =9
+                    ZIndex: =8
 
                     Button1_10 As button:
                         DisabledFill: =RGBA(244, 244, 244, 0.2)
@@ -1647,6 +1551,134 @@ MainScreen As screen:
                             X: =470
                             Y: =8
                             ZIndex: =4
+
+                "Gallery2_11 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                    '#CopilotOverlayLabel': ="Filtered"
+                    DelayItemLoading: =true
+                    DisplayMode: =DisplayMode.View
+                    Height: =562
+                    Items: |
+                        =If(IsBlank(Dropdown1_2.Selected), Sort(Filter(Office365Outlook.V4CalendarGetItems(LookUp(Office365Outlook.CalendarGetTablesV2().value, name=myCalendar).id).value, DateValue(startWithTimeZone)=DateValue(DatePicker2.SelectedDate)),TimeValue(startWithTimeZone)), Sort(Filter(Office365Outlook.V4CalendarGetItems(Dropdown1_2.Selected.id).value, DateValue(startWithTimeZone)=DateValue(DatePicker2.SelectedDate)),TimeValue(startWithTimeZone)))
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =200
+                    LayoutMinWidth: =320
+                    LoadingSpinner: =LoadingSpinner.Data
+                    Selectable: =false
+                    TemplatePadding: =0
+                    TemplateSize: =90
+                    Transition: =Transition.Push
+                    Visible: =!serwerStudia && Self.AllItemsCount > 0
+                    Width: =(Parent.Width - 20)/2 - 20
+                    X: =683
+                    Y: =116
+                    ZIndex: =9
+
+                    Button1_11 As button:
+                        DisabledFill: =RGBA(244, 244, 244, 0.2)
+                        DisplayMode: =DisplayMode.Disabled
+                        Height: =Parent.TemplateHeight - 16
+                        OnSelect: =Select(Parent)
+                        RadiusBottomLeft: =60
+                        RadiusBottomRight: =60
+                        RadiusTopLeft: =60
+                        RadiusTopRight: =60
+                        Text: =""
+                        Width: =Parent.TemplateWidth - 16
+                        X: =1
+                        Y: =8
+                        ZIndex: =1
+
+                    Title2_5 As label:
+                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                        Height: =36
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =20
+                        Text: =ThisItem.subject
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =1
+                        Y: =34
+                        ZIndex: =2
+
+                    Subtitle2_33 As label:
+                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                        Height: =23
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Text: =
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =1
+                        Y: =40
+                        ZIndex: =3
+
+                    NextArrow2_5 As icon.ChevronRight:
+                        AccessibleLabel: =Self.Tooltip
+                        Color: =RGBA(166, 166, 166, 1)
+                        Height: =50
+                        Icon: =Icon.ChevronRight
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =16
+                        PaddingLeft: =16
+                        PaddingRight: =16
+                        PaddingTop: =16
+                        Tooltip: ="View item details"
+                        Width: =1
+                        Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                        ZIndex: =4
+
+                    Subtitle2_32 As label:
+                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                        Height: =36
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =24
+                        Text: |-
+                            =Text(ThisItem.startWithTimeZone, "hh:mm")&" - "&Text(ThisItem.endWithTimeZone, "hh:mm")
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =1
+                        Y: =34
+                        ZIndex: =6
+
+                ContainerNoClassesInfo As groupContainer.verticalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Visible: =GalleryScheduleServerStudia.AllItemsCount = 0 && serwerStudia
+                    ZIndex: =10
+
+                    Label1 As label:
+                        Align: =Align.Center
+                        Text: ="No classes found for today...."
+                        Width: =Parent.Width
+                        ZIndex: =1
+
+                ContainerNoEventsInCalendar As groupContainer.verticalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Visible: =Gallery2_11.AllItemsCount = 0 && !serwerStudia
+                    ZIndex: =11
+
+                    Label1_1 As label:
+                        Align: =Align.Center
+                        Text: ="No meetings found for today...."
+                        Width: =Parent.Width
+                        ZIndex: =1
 
         ContainerRoomSelection As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.Regular
