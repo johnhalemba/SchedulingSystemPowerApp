@@ -1145,9 +1145,45 @@ MainScreen As screen:
                                     {
                                         Name: "121",
                                         Button:room121_6
+                                    },
+                                    {
+                                        Name: "120",
+                                        Button:room120_6
+                                    },
+                                    {
+                                        Name: "116-AR",
+                                        Button:'room116-AR_6'
+                                    },
+                                    {
+                                        Name: "117",
+                                        Button:room117_6
+                                    },
+                                    {
+                                        Name: "121",
+                                        Button:room121_6
+                                    },
+                                    {
+                                        Name: "121",
+                                        Button:room121_6
+                                    },
+                                    {
+                                        Name: "121",
+                                        Button:room121_6
+                                    },
+                                    {
+                                        Name: "121",
+                                        Button:room121_6
+                                    },
+                                    {
+                                        Name: "121",
+                                        Button:room121_6
+                                    },
+                                    {
+                                        Name: "121",
+                                        Button:room121_6
                                     }
                                 );
-                                //, room120_6, 'room116-AR_6', room133_6, room117_6, room116_6, room105_6, room106_6, room107_6, room161_6, room102_6, room104_6, room103_6, room108_6]);
+                                //room117_6, room116_6, room105_6, room106_6, room107_6, room161_6, room102_6, room104_6, room103_6, room108_6]);
                                 UpdateContext(
                                     {
                                         SelectedRoom: Blank(),
@@ -3042,7 +3078,7 @@ MainScreen As screen:
                         AccessibleLabel: ="Test"
                         DisplayFields: =["Name"]
                         IsSearchable: =false
-                        Items: =RoomButtons
+                        Items: =SortByColumns(RoomButtons, "Name")
                         OnSelect: |-
                             =UpdateContext({SelectedRoom: Self.Selected.Button})
                         SearchFields: =["Name"]
