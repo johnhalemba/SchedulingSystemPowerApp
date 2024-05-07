@@ -832,7 +832,7 @@ MainScreen As screen:
                 Width: =1326
                 ZIndex: =8
 
-            Spinner1_6 As Spinner:
+            "Spinner1_6 As 'Okrągły wskaźnik przetwarzania'":
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 FontColor: =
@@ -890,7 +890,7 @@ MainScreen As screen:
                 Width: =Parent.Width
                 ZIndex: =1
 
-            Header1_2 As Header:
+            Header1_2 As Nagłówek:
                 BasePaletteColor: =RGBA(224, 224, 224, 1)
                 DisplayMode: =DisplayMode.Edit
                 Font: =Font.Lato
@@ -920,7 +920,7 @@ MainScreen As screen:
                 Y: =50
                 ZIndex: =3
 
-            BadgeCanvas1_2 As Badge:
+            BadgeCanvas1_2 As Wskaźnik:
                 BasePaletteColor: =
                 Content: =Left(User().FullName, 1) & Mid(User().FullName, Find(" ", User().FullName) + 1, 1)
                 DisplayMode: =DisplayMode.Edit
@@ -1567,7 +1567,7 @@ MainScreen As screen:
                     TemplatePadding: =6
                     TemplateSize: =90
                     Transition: =Transition.Push
-                    Visible: =!serwerStudia && Self.AllItemsCount > 0
+                    Visible: =!serwerStudia && Self.AllItemsCount > 0 && !IsBlank(DropdownCalendarType_2.Selected)
                     Width: =(Parent.Width - 20)/2 - 20
                     X: =683
                     Y: =116
@@ -3450,7 +3450,7 @@ MainScreen As screen:
                         Y: =4
                         ZIndex: =2
 
-                    Spinner3 As Spinner:
+                    "Spinner3 As 'Okrągły wskaźnik przetwarzania'":
                         Appearance: ='Spinner.Appearance'.Primary
                         BasePaletteColor: =
                         DisplayMode: =DisplayMode.Edit
@@ -3523,7 +3523,7 @@ MainScreen As screen:
                 Y: =34
                 ZIndex: =2
 
-            "Progress1 As 'Progress Bar'":
+            "Progress1 As 'Pasek postępu'":
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 Height: =45

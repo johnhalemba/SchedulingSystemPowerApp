@@ -1900,34 +1900,34 @@
               "id": "app-UnusedVariables",
               "messageStrings": {
                 "issue": {
-                  "text": "Unused variable"
+                  "text": "Nieużywana zmienna"
                 }
               },
               "properties": {
                 "componentType": "app",
                 "howToFix": [
-                  "Remove the unused variable."
+                  "Usuń nieużywaną zmienną."
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "This variable is declared but is not referenced by any control, so it is not needed."
+                "whyFix": "Ta zmienna jest zadeklarowana, ale nie jest przywoływana przez żadną kontrolkę, więc nie jest potrzebna."
               }
             },
             {
               "id": "app-UnusedMediaResources",
               "messageStrings": {
                 "issue": {
-                  "text": "Unused media files"
+                  "text": "Nieużywane pliki multimedialne"
                 }
               },
               "properties": {
                 "componentType": "app",
                 "howToFix": [
-                  "Remove the unused media file in the Media pane."
+                  "Usuń nieużywany plik multimedialny w okienku multimediów."
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "This media file is not referenced by any control formulas so it is not needed. Removing it will improve performance."
+                "whyFix": "Do tego pliku multimedialnego nie odwołują się żadne formuły kontrolek, więc nie jest on potrzebny. Usunięcie go zwiększy wydajność."
               }
             }
           ],
