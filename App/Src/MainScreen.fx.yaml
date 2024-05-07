@@ -1438,7 +1438,7 @@ MainScreen As screen:
                     TemplatePadding: =6
                     TemplateSize: =90
                     Transition: =Transition.Push
-                    Visible: =serwerStudia && Self.AllItemsCount > 0
+                    Visible: =serwerStudia && Self.AllItemsCount > 0 && !IsBlank(DropdownCalendarType_2.Selected)
                     Width: =(Parent.Width - 20)/2 - 20
                     X: =Parent.Width / 2
                     Y: =121
