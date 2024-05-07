@@ -832,7 +832,7 @@ MainScreen As screen:
                 Width: =1326
                 ZIndex: =8
 
-            "Spinner1_6 As 'Okrągły wskaźnik przetwarzania'":
+            Spinner1_6 As Spinner:
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 FontColor: =
@@ -890,7 +890,7 @@ MainScreen As screen:
                 Width: =Parent.Width
                 ZIndex: =1
 
-            Header1_2 As Nagłówek:
+            Header1_2 As Header:
                 BasePaletteColor: =RGBA(224, 224, 224, 1)
                 DisplayMode: =DisplayMode.Edit
                 Font: =Font.Lato
@@ -920,7 +920,7 @@ MainScreen As screen:
                 Y: =50
                 ZIndex: =3
 
-            BadgeCanvas1_2 As Wskaźnik:
+            BadgeCanvas1_2 As Badge:
                 BasePaletteColor: =
                 Content: =Left(User().FullName, 1) & Mid(User().FullName, Find(" ", User().FullName) + 1, 1)
                 DisplayMode: =DisplayMode.Edit
@@ -3456,7 +3456,7 @@ MainScreen As screen:
                         Y: =4
                         ZIndex: =2
 
-                    "Spinner3 As 'Okrągły wskaźnik przetwarzania'":
+                    Spinner3 As Spinner:
                         Appearance: ='Spinner.Appearance'.Primary
                         BasePaletteColor: =
                         DisplayMode: =DisplayMode.Edit
@@ -3529,7 +3529,7 @@ MainScreen As screen:
                 Y: =34
                 ZIndex: =2
 
-            "Progress1 As 'Pasek postępu'":
+            "Progress1 As 'Progress Bar'":
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 Height: =45
