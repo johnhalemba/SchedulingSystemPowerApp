@@ -44,19 +44,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Icon6.AccessibleLabel"
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.icn_CloseSettings.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Icon6.AccessibleLabel",
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.icn_CloseSettings.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "MainScreen",
-                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Icon6"
+                "type": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.icn_CloseSettings"
               }
             }
           ],
@@ -74,19 +74,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Icon6.TabIndex"
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.icn_CloseSettings.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Icon6.TabIndex",
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.icn_CloseSettings.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "MainScreen",
-                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Icon6"
+                "type": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.icn_CloseSettings"
               }
             }
           ],
@@ -104,19 +104,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Container12_1.DropdownCalendarType_2.AccessibleLabel"
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.con_CalendarType.DropdownCalendarType_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Container12_1.DropdownCalendarType_2.AccessibleLabel",
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.con_CalendarType.DropdownCalendarType_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "MainScreen",
-                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Container12_1.DropdownCalendarType_2"
+                "type": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.con_CalendarType.DropdownCalendarType_2"
               }
             }
           ],
@@ -134,19 +134,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Container4.Icon2_6.AccessibleLabel"
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Container4.Icon2_6.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Container4.Icon2_6.AccessibleLabel",
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Container4.Icon2_6.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "MainScreen",
-                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Container4.Icon2_6"
+                "type": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Container4.Icon2_6"
               }
             }
           ],
@@ -164,19 +164,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Container4.Icon2_6.TabIndex"
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Container4.Icon2_6.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Container4.Icon2_6.TabIndex",
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Container4.Icon2_6.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "MainScreen",
-                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Container4.Icon2_6"
+                "type": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Container4.Icon2_6"
               }
             }
           ],
@@ -194,19 +194,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Container4.DatePicker2.AccessibleLabel"
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Container4.DatePicker2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Container4.DatePicker2.AccessibleLabel",
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Container4.DatePicker2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "MainScreen",
-                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Container4.DatePicker2"
+                "type": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Container4.DatePicker2"
               }
             }
           ],
@@ -224,19 +224,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Container4.Icon1_6.AccessibleLabel"
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Container4.Icon1_6.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Container4.Icon1_6.AccessibleLabel",
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Container4.Icon1_6.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "MainScreen",
-                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Container4.Icon1_6"
+                "type": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Container4.Icon1_6"
               }
             }
           ],
@@ -254,19 +254,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Container4.Icon1_6.TabIndex"
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Container4.Icon1_6.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Container4.Icon1_6.TabIndex",
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Container4.Icon1_6.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "MainScreen",
-                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Container4.Icon1_6"
+                "type": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Container4.Icon1_6"
               }
             }
           ],
@@ -284,19 +284,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_11.AccessibleLabel"
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Gallery2_11.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_11.AccessibleLabel",
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Gallery2_11.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "MainScreen",
-                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_11"
+                "type": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Gallery2_11"
               }
             }
           ],
@@ -314,19 +314,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_11.TabIndex"
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Gallery2_11.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_11.TabIndex",
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Gallery2_11.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "MainScreen",
-                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_11"
+                "type": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Gallery2_11"
               }
             }
           ],
@@ -344,19 +344,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_11.Container3.Subtitle2_33.FocusedBorderThickness"
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Gallery2_11.Container3.Subtitle2_33.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_11.Container3.Subtitle2_33.FocusedBorderThickness",
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Gallery2_11.Container3.Subtitle2_33.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "MainScreen",
-                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_11.Container3.Subtitle2_33"
+                "type": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Gallery2_11.Container3.Subtitle2_33"
               }
             }
           ],
@@ -374,19 +374,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_11.Container3.Subtitle2_33.TabIndex"
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Gallery2_11.Container3.Subtitle2_33.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_11.Container3.Subtitle2_33.TabIndex",
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Gallery2_11.Container3.Subtitle2_33.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "MainScreen",
-                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_11.Container3.Subtitle2_33"
+                "type": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Gallery2_11.Container3.Subtitle2_33"
               }
             }
           ],
@@ -404,19 +404,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_11.Container3.Title2_5.FocusedBorderThickness"
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Gallery2_11.Container3.Title2_5.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_11.Container3.Title2_5.FocusedBorderThickness",
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Gallery2_11.Container3.Title2_5.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "MainScreen",
-                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_11.Container3.Title2_5"
+                "type": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Gallery2_11.Container3.Title2_5"
               }
             }
           ],
@@ -434,19 +434,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_11.Container3.Title2_5.TabIndex"
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Gallery2_11.Container3.Title2_5.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_11.Container3.Title2_5.TabIndex",
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Gallery2_11.Container3.Title2_5.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "MainScreen",
-                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_11.Container3.Title2_5"
+                "type": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Gallery2_11.Container3.Title2_5"
               }
             }
           ],
@@ -464,19 +464,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_11.Container3.Subtitle2_32.FocusedBorderThickness"
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Gallery2_11.Container3.Subtitle2_32.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_11.Container3.Subtitle2_32.FocusedBorderThickness",
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Gallery2_11.Container3.Subtitle2_32.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "MainScreen",
-                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_11.Container3.Subtitle2_32"
+                "type": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Gallery2_11.Container3.Subtitle2_32"
               }
             }
           ],
@@ -494,19 +494,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_11.Container3.Subtitle2_32.TabIndex"
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Gallery2_11.Container3.Subtitle2_32.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_11.Container3.Subtitle2_32.TabIndex",
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Gallery2_11.Container3.Subtitle2_32.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "MainScreen",
-                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Gallery2_11.Container3.Subtitle2_32"
+                "type": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Gallery2_11.Container3.Subtitle2_32"
               }
             }
           ],
@@ -524,19 +524,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Container12.Dropdown1_2.AccessibleLabel"
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.con_Calendar.Dropdown1_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Container12.Dropdown1_2.AccessibleLabel",
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.con_Calendar.Dropdown1_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "MainScreen",
-                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.Container12.Dropdown1_2"
+                "type": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.con_Calendar.Dropdown1_2"
               }
             }
           ],
@@ -554,19 +554,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.AccessibleLabel"
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.GalleryScheduleServerStudia.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.AccessibleLabel",
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.GalleryScheduleServerStudia.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "MainScreen",
-                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia"
+                "type": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.GalleryScheduleServerStudia"
               }
             }
           ],
@@ -584,19 +584,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.TabIndex"
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.GalleryScheduleServerStudia.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.TabIndex",
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.GalleryScheduleServerStudia.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "MainScreen",
-                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia"
+                "type": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.GalleryScheduleServerStudia"
               }
             }
           ],
@@ -614,19 +614,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.ClassNameGalleryServerStudia_5.FocusedBorderThickness"
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.GalleryScheduleServerStudia.Container6.ClassNameGalleryServerStudia_5.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.ClassNameGalleryServerStudia_5.FocusedBorderThickness",
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.GalleryScheduleServerStudia.Container6.ClassNameGalleryServerStudia_5.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "MainScreen",
-                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.ClassNameGalleryServerStudia_5"
+                "type": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.GalleryScheduleServerStudia.Container6.ClassNameGalleryServerStudia_5"
               }
             }
           ],
@@ -644,19 +644,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.ClassNameGalleryServerStudia_5.TabIndex"
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.GalleryScheduleServerStudia.Container6.ClassNameGalleryServerStudia_5.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.ClassNameGalleryServerStudia_5.TabIndex",
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.GalleryScheduleServerStudia.Container6.ClassNameGalleryServerStudia_5.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "MainScreen",
-                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.ClassNameGalleryServerStudia_5"
+                "type": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.GalleryScheduleServerStudia.Container6.ClassNameGalleryServerStudia_5"
               }
             }
           ],
@@ -674,19 +674,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.ClassTypeGalleryServerStudia_5.FocusedBorderThickness"
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.GalleryScheduleServerStudia.Container6.ClassTypeGalleryServerStudia_5.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.ClassTypeGalleryServerStudia_5.FocusedBorderThickness",
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.GalleryScheduleServerStudia.Container6.ClassTypeGalleryServerStudia_5.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "MainScreen",
-                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.ClassTypeGalleryServerStudia_5"
+                "type": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.GalleryScheduleServerStudia.Container6.ClassTypeGalleryServerStudia_5"
               }
             }
           ],
@@ -704,19 +704,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.ClassTypeGalleryServerStudia_5.TabIndex"
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.GalleryScheduleServerStudia.Container6.ClassTypeGalleryServerStudia_5.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.ClassTypeGalleryServerStudia_5.TabIndex",
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.GalleryScheduleServerStudia.Container6.ClassTypeGalleryServerStudia_5.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "MainScreen",
-                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.ClassTypeGalleryServerStudia_5"
+                "type": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.GalleryScheduleServerStudia.Container6.ClassTypeGalleryServerStudia_5"
               }
             }
           ],
@@ -734,19 +734,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.Subtitle2_29.FocusedBorderThickness"
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.GalleryScheduleServerStudia.Container6.Subtitle2_29.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.Subtitle2_29.FocusedBorderThickness",
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.GalleryScheduleServerStudia.Container6.Subtitle2_29.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "MainScreen",
-                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.Subtitle2_29"
+                "type": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.GalleryScheduleServerStudia.Container6.Subtitle2_29"
               }
             }
           ],
@@ -764,19 +764,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.Subtitle2_29.TabIndex"
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.GalleryScheduleServerStudia.Container6.Subtitle2_29.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.Subtitle2_29.TabIndex",
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.GalleryScheduleServerStudia.Container6.Subtitle2_29.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "MainScreen",
-                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.Subtitle2_29"
+                "type": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.GalleryScheduleServerStudia.Container6.Subtitle2_29"
               }
             }
           ],
@@ -794,19 +794,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.Subtitle2_31.FocusedBorderThickness"
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.GalleryScheduleServerStudia.Container6.Subtitle2_31.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.Subtitle2_31.FocusedBorderThickness",
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.GalleryScheduleServerStudia.Container6.Subtitle2_31.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "MainScreen",
-                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.Subtitle2_31"
+                "type": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.GalleryScheduleServerStudia.Container6.Subtitle2_31"
               }
             }
           ],
@@ -824,19 +824,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.Subtitle2_31.TabIndex"
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.GalleryScheduleServerStudia.Container6.Subtitle2_31.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.Subtitle2_31.TabIndex",
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.GalleryScheduleServerStudia.Container6.Subtitle2_31.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "MainScreen",
-                "type": "MainScreen.mainContainer.ContainerMainScreen.Container7_3.GalleryScheduleServerStudia.Container6.Subtitle2_31"
+                "type": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.GalleryScheduleServerStudia.Container6.Subtitle2_31"
               }
             }
           ],

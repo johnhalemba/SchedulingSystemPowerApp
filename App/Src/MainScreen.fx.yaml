@@ -959,7 +959,7 @@ MainScreen As screen:
                 Y: =Parent.Height - Self.Height - (Rectangle3_2.Height / 2) + (Self.Height / 2)
                 ZIndex: =7
 
-        ContainerMainScreen As groupContainer.horizontalAutoLayoutContainer:
+        con_MainScreen As groupContainer.horizontalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Regular
             Fill: =RGBA(244,244,244,1)
@@ -978,7 +978,7 @@ MainScreen As screen:
             Visible: =varShowMainScreen
             ZIndex: =2
 
-            Container9 As groupContainer.verticalAutoLayoutContainer:
+            con_MainLeftHandSide As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutGap: =5
@@ -989,7 +989,6 @@ MainScreen As screen:
                 ZIndex: =1
 
                 Label3 As label:
-                    AlignInContainer: =AlignInContainer.Start
                     AutoHeight: =true
                     FontWeight: =FontWeight.Bold
                     PaddingLeft: =15
@@ -1244,7 +1243,7 @@ MainScreen As screen:
                             X: =btn_MakeReservation_9.X
                             ZIndex: =3
 
-            Container7_3 As groupContainer.verticalAutoLayoutContainer:
+            con_MainRightHandSide As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 Height: =584
                 LayoutAlignItems: =LayoutAlignItems.Center
@@ -1263,7 +1262,7 @@ MainScreen As screen:
                 Y: =70
                 ZIndex: =3
 
-                Icon6 As icon.Cancel:
+                icn_CloseSettings As icon.Cancel:
                     AlignInContainer: =AlignInContainer.End
                     Height: =32
                     Icon: =Icon.Cancel
@@ -1287,7 +1286,7 @@ MainScreen As screen:
                     Visible: =!showSettings
                     ZIndex: =2
 
-                Label11 As label:
+                lbl_ViewSettings As label:
                     AlignInContainer: =AlignInContainer.Stretch
                     AutoHeight: =true
                     FontWeight: =FontWeight.Semibold
@@ -1298,8 +1297,8 @@ MainScreen As screen:
                     Visible: =showSettings
                     ZIndex: =3
 
-                Container12_1 As groupContainer.verticalAutoLayoutContainer:
-                    AlignInContainer: =AlignInContainer.Center
+                con_CalendarType As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
                     DropShadow: =DropShadow.None
                     FillPortions: =0
                     Height: =Label3_4.Height + DropdownCalendarType_2.Height + 2*Self.LayoutGap
@@ -1342,7 +1341,8 @@ MainScreen As screen:
                         Y: =20
                         ZIndex: =3
 
-                Container12 As groupContainer.verticalAutoLayoutContainer:
+                con_Calendar As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
                     DropShadow: =DropShadow.None
                     FillPortions: =0
                     Height: =Label3_3.Height + Dropdown1_2.Height + 2 * Self.LayoutGap
@@ -1652,6 +1652,7 @@ MainScreen As screen:
                             ZIndex: =3
 
                 ContainerNoClassesInfo As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
                     DropShadow: =DropShadow.None
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutJustifyContent: =LayoutJustifyContent.Center
@@ -1668,6 +1669,7 @@ MainScreen As screen:
                         ZIndex: =1
 
                 ContainerNoEventsInCalendar As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
                     DropShadow: =DropShadow.None
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutJustifyContent: =LayoutJustifyContent.Center
@@ -3117,7 +3119,7 @@ MainScreen As screen:
                             );
                             UpdateContext({varShowSyncing: false});
                             UpdateContext({varShowProperties: true});
-                        PaddingLeft: =Len("23/03/2023") * 10
+                        PaddingLeft: =17
                         PaddingTop: =5
                         Size: =15
                         StartOfWeek: =StartOfWeek.Monday
@@ -3401,8 +3403,12 @@ MainScreen As screen:
                             Set(StartDateTimeUTC, Text(DateAdd(StartDateTime, TimeZoneOffset(), TimeUnit.Minutes), "[$-en-US]yyyy-mm-ddThh:mm") & ":00.000Z");
                             Set(EndDateTimeUTC, Text(DateAdd(EndDateTime, TimeZoneOffset(), TimeUnit.Minutes), "[$-en-US]yyyy-mm-ddThh:mm") & ":00.000Z");
                             
-                            UpdateContext({varShowTimeSelection: false});
-                            UpdateContext({varShowProperties: true})
+                            UpdateContext(
+                                {
+                                    varShowTimeSelection: false,
+                                    varShowFacultyMap: true
+                                }
+                            )
                         Text: ="SAVE"
                         Width: =Parent.Width - Self.PaddingLeft - Self.PaddingRight
                         X: =Self.PaddingLeft
