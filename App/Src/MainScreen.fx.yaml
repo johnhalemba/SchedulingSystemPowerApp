@@ -1102,7 +1102,7 @@ MainScreen As screen:
                                     If(
                                         IsNumeric(hour),
                                         DateTimeValue(
-                                            Text(date, "[$-en-US]0000\\-00\\-00") & "T" & Text(Value(hour), "00") & "15:00"
+                                            Text(date, "[$-en-US]0000\\-00\\-00") & "T" & Text(Value(hour), "00") & ":15:00"
                                         ),
                                         Blank()
                                     )
@@ -1110,7 +1110,7 @@ MainScreen As screen:
                                     EndDate,
                                     DateAdd(
                                         DateTimeValue(
-                                            Text(date, "[$-en-US]0000\\-00\\00") && "T" && Text(Value(hour) + Value(length), "00") & ":00:00"
+                                            Text(date, "[$-en-US]0000\\-00\\-00") && "T" && Text(Value(hour) + Value(length), "00") & ":00:00"
                                         ),
                                         -1,
                                         TimeUnit.Minutes
