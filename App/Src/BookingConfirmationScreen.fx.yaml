@@ -214,11 +214,11 @@ BookingConfirmationScreen As screen:
                 Height: =60
                 OnSelect: |-
                     =Navigate(MainScreen,ScreenTransition.Cover,{
-                      varShowMainScreen: true,
                       varShowFacultyMap: false,
                       varShowProperties: false,
                       varRoomSelection:false
                     })
+                    Set(varShowMainScreen, true);
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
                 RadiusTopLeft: =0
