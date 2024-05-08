@@ -217,7 +217,7 @@ BookingConfirmationScreen As screen:
                       varShowFacultyMap: false,
                       varShowProperties: false,
                       varRoomSelection:false
-                    })
+                    });
                     Set(varShowMainScreen, true);
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
