@@ -1304,7 +1304,7 @@ MainScreen As screen:
                     LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutGap: =5
                     LayoutMinHeight: =Label3_4.Height + Self.LayoutGap + DropdownCalendarType_2.Height
-                    LayoutMinWidth: =250
+                    LayoutMinWidth: =0
                     LayoutMode: =LayoutMode.Auto
                     LayoutWrap: =true
                     Visible: =showSettings
@@ -1318,7 +1318,7 @@ MainScreen As screen:
                         LayoutAlignItems: =LayoutAlignItems.Center
                         LayoutDirection: =LayoutDirection.Vertical
                         LayoutGap: =5
-                        LayoutMinHeight: =0
+                        LayoutMinHeight: =Label3_4.Height + DropdownCalendarType_2.Height + Self.LayoutGap
                         LayoutMinWidth: =250
                         LayoutMode: =LayoutMode.Auto
                         ZIndex: =6
@@ -1361,7 +1361,6 @@ MainScreen As screen:
                         LayoutMinHeight: =0
                         LayoutMinWidth: =250
                         LayoutMode: =LayoutMode.Auto
-                        LayoutWrap: =true
                         Visible: =DropdownCalendarType_2.Selected.Value = "Outlook" && showSettings
                         Width: =Parent.Width
                         ZIndex: =7
@@ -3036,7 +3035,7 @@ MainScreen As screen:
                         Visible: =App.Width > 400
                         ZIndex: =2
 
-                    ComboBox1 As combobox:
+                    cbx_PhoneSelectRoom As combobox:
                         AccessibleLabel: ="Test"
                         DisplayFields: =["Name"]
                         IsSearchable: =false
@@ -3046,7 +3045,7 @@ MainScreen As screen:
                         OnSelect: |-
                             =If(IsBlank(Self.Selected), UpdateContext({SelectedRoom: Blank()}), UpdateContext({SelectedRoom: Self.Selected.Button}))
                         SearchFields: =["Name"]
-                        SearchItems: =[]
+                        SearchItems: =Search(Filter(SortByColumns(RoomButtons, "Name"), Button.Fill = Color.Green),cbx_PhoneSelectRoom.SearchText,Name)
                         SelectMultiple: =false
                         Visible: =App.Width < 400
                         ZIndex: =3
