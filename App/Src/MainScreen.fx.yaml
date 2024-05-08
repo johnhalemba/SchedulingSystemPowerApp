@@ -2965,6 +2965,8 @@ MainScreen As screen:
                     OnSelect: |-
                         =UpdateContext({varRoomSelection: false});
                         UpdateContext({varShowMainScreen: true})
+                        Reset(cbx_PhoneSelectRoom);
+                        Reset(DatePicker1)
                     PaddingLeft: =20
                     ZIndex: =1
 
@@ -3001,7 +3003,7 @@ MainScreen As screen:
                         Text: =User().FullName
                         ZIndex: =2
 
-                Container10 As groupContainer.verticalAutoLayoutContainer:
+                con_RoomSelection As groupContainer.verticalAutoLayoutContainer:
                     AlignInContainer: =AlignInContainer.SetByContainer
                     FillPortions: =0
                     Height: =100
