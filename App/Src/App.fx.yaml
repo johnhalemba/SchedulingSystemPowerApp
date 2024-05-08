@@ -343,6 +343,7 @@ App As appinfo:
                 ).Value
             ).name
         );
+        Set(O365User, Office365Users.SearchUserV2({searchTerm: User().Email}).value);
         Set(
             ShowLoading,
             false

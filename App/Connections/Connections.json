@@ -1,4 +1,18 @@
 {
+  "0253e953-0abb-4432-8b50-3649b7e6dbd8": {
+    "connectionRef": {
+      "displayName": "Office 365 Users",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1677/1.0.1677.3637/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users"
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Users"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "0253e953-0abb-4432-8b50-3649b7e6dbd8"
+  },
   "05bca85e-d27b-4b0c-b940-b6620bd3edfd": {
     "appActions": [
       "Get-user-schedule",

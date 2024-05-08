@@ -3324,7 +3324,23 @@ MainScreen As screen:
                                 requiredAttendees:If(SelectedRoom.Text = "107", "eiti.107.teams.rooms@pw.edu.pl"),
                                 showAs: "busy"
                             }
-                        )
+                        );
+                        
+                        Patch(
+                            ReservationDatabase,
+                            Defaults(ReservationDatabase),
+                            {
+                                Title: GUID(),
+                                Caller: {
+                                        Claims: "c:0o.c|federateddirectoryclaimprovider|" &User().Email,
+                                        Department: "",
+                                        DisplayName: "Power Members",
+                                        Email: "PowerApps@xxxxxx.xxmicrosoft.com",
+                                        JobTitle: "",
+                                        Picture: ""
+                                  }
+                            }
+                        );
                         Navigate(BookingConfirmationScreen,ScreenTransition.Cover);
                     PaddingBottom: =0
                     PaddingLeft: =0
