@@ -15,6 +15,7 @@ App As appinfo:
                 )
             )
         );
+        Set(varShowMainScreen, true)
         Set(
             varUserCalendars,
             Office365Outlook.CalendarGetTablesV2().value

@@ -4,11 +4,10 @@ MainScreen As screen:
     OnHidden: |
         =UpdateContext(
             {
-                varRoomSelection:false,
-                varShowMainScreen:true
+                varRoomSelection:false
             }
         );
-    OnVisible: |-
+    OnVisible: |
         =Set(DurationSelection, Blank());
         UpdateContext({ResetTrue: false});
         UpdateContext({ResetTrue: true});
@@ -17,8 +16,6 @@ MainScreen As screen:
                 varRoomSelection:false
             }
         );
-        Set(varShowMainScreen, true)
-        '
 
     CheckSchedulePopUp_1 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Regular
@@ -3508,7 +3505,7 @@ MainScreen As screen:
                             ChevronDisabledBackground: =RGBA(159, 167, 165, 1)
                             ChevronDisabledFill: =ColorFade(RGBA(47, 41, 43, 1), 70%)
                             ChevronFill: =RGBA(18, 107, 240, 1)
-                            Default: =If(IsBlank(DurationGallery_3.Selected) && IsBlank(DurationSelection) || ResetTrue, LookUp(Times, Text = Lower(Text(EndDateTime, DateTimeFormat.ShortTime))).Text, !IsBlank(DurationSelection), LookUp(Times, Minutes = Mod(DropdownStartTime_3.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' + DurationGallery_3.Selected.Minutes, 1440)).Text)
+                            Default: =If(IsBlank(DurationGallery_3.Selected) && IsBlank(DurationSelection) || ResetTrue, LookUp(Times, Text = Lower(Text(EndDateTime, DateTimeFormat.ShortTime))).Text, !IsBlank(DurationSelection), LookUp(Times, Minutes = Mod(DropdownStartTime_3.SelectedText.Minutes + DurationGallery_3.Selected.Minutes, 1440)).Text)
                             Items: =Times
                             Width: =Parent.Width - Self.BorderThickness * 2
                             X: =232
@@ -3579,8 +3576,8 @@ MainScreen As screen:
                             )
                         Height: =Parent.Height - Self.PaddingBottom - Self.PaddingTop
                         OnSelect: |
-                            =Set(StartDateTime, DateAdd(DateSelected, DropdownStartTime_3.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes', TimeUnit.Minutes));
-                            Set(EndDateTime, DateAdd(StartDateTime, If(DropdownStartTime_3.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' >= DropdownEndTime_3.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes', DropdownEndTime_3.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' + 1440 - DropdownStartTime_3.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes', DropdownEndTime_3.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' - DropdownStartTime_3.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes'), TimeUnit.Minutes));
+                            =Set(StartDateTime, DateAdd(DateSelected, DropdownStartTime_3.SelectedText.Minutes, TimeUnit.Minutes));
+                            Set(EndDateTime, DateAdd(StartDateTime, If(DropdownStartTime_3.SelectedText.Minutes >= DropdownEndTime_3.SelectedText.Minutes, DropdownEndTime_3.SelectedText.Minutes + 1440 - DropdownStartTime_3.SelectedText.Minutes, DropdownEndTime_3.SelectedText.Minutes - DropdownStartTime_3.SelectedText.Minutes), TimeUnit.Minutes));
                             
                             Set(StartDateTimeUTC, Text(DateAdd(StartDateTime, TimeZoneOffset(), TimeUnit.Minutes), "[$-en-US]yyyy-mm-ddThh:mm") & ":00.000Z");
                             Set(EndDateTimeUTC, Text(DateAdd(EndDateTime, TimeZoneOffset(), TimeUnit.Minutes), "[$-en-US]yyyy-mm-ddThh:mm") & ":00.000Z");

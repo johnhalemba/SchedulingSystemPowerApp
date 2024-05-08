@@ -14,26 +14,26 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MainScreen.OnVisible"
+                  "fullyQualifiedName": "App.OnStart"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MainScreen.OnVisible",
+                  "fullyQualifiedName": "App.OnStart",
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 1,
-                  "charOffset": 192,
+                  "charLength": 3,
+                  "charOffset": 217,
                   "snippet": {
-                    "text": "'"
+                    "text": "Set"
                   }
                 }
               },
               "properties": {
-                "member": "OnVisible",
-                "module": "MainScreen",
-                "type": "MainScreen"
+                "member": "OnStart",
+                "module": "App",
+                "type": "App"
               }
             }
           ],
@@ -51,35 +51,40 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MainScreen.OnVisible"
+                  "fullyQualifiedName": "App.OnStart"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MainScreen.OnVisible",
+                  "fullyQualifiedName": "App.OnStart",
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charOffset": 193,
+                  "charLength": 1,
+                  "charOffset": 242,
                   "snippet": {
-                    "text": ""
+                    "text": ","
                   }
                 }
               },
               "properties": {
-                "member": "OnVisible",
-                "module": "MainScreen",
-                "type": "MainScreen"
+                "member": "OnStart",
+                "module": "App",
+                "type": "App"
               }
             }
           ],
           "message": {
+            "arguments": [
+              "Comma",
+              "ParenClose"
+            ],
             "id": "issue"
           },
           "properties": {
             "level": "High"
           },
-          "ruleId": "app-ErrOperandExpected",
+          "ruleId": "app-ErrExpectedFound-Ex-Fnd",
           "ruleIndex": 1
         },
         {
@@ -87,6 +92,277 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.OnStart"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.OnStart",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 242,
+                  "snippet": {
+                    "text": ","
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnStart",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrBadToken",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.OnStart"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.OnStart",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 16,
+                  "charOffset": 226,
+                  "snippet": {
+                    "text": "varUserCalendars"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnStart",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "varUserCalendars"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.OnStart"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.OnStart",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 3,
+                  "charOffset": 217,
+                  "snippet": {
+                    "text": "Set"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnStart",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrOperatorExpected",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BookingConfirmationScreen.OnVisible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BookingConfirmationScreen.OnVisible",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 31,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Set(DurationSelection, Blank())"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnVisible",
+                "module": "BookingConfirmationScreen",
+                "type": "BookingConfirmationScreen"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrIncompatibleCtxtVariableTypes",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BookingConfirmationScreen.mainContainer_1.con_MainScreen_1.Container7.Container9.iconCircle1.Fill"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BookingConfirmationScreen.mainContainer_1.con_MainScreen_1.Container7.Container9.iconCircle1.Fill",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 15,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "WEITI_Szafirowy"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Fill",
+                "module": "BookingConfirmationScreen",
+                "type": "BookingConfirmationScreen.mainContainer_1.con_MainScreen_1.Container7.Container9.iconCircle1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "WEITI_Szafirowy"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BookingConfirmationScreen.mainContainer_1.con_MainScreen_1.Button2.Color"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BookingConfirmationScreen.mainContainer_1.con_MainScreen_1.Button2.Color",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 15,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "WEITI_Szafirowy"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Color",
+                "module": "BookingConfirmationScreen",
+                "type": "BookingConfirmationScreen.mainContainer_1.con_MainScreen_1.Button2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "WEITI_Szafirowy"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BookingConfirmationScreen.mainContainer_1.con_MainScreen_1.Button1.Fill"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BookingConfirmationScreen.mainContainer_1.con_MainScreen_1.Button1.Fill",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 15,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "WEITI_Szafirowy"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Fill",
+                "module": "BookingConfirmationScreen",
+                "type": "BookingConfirmationScreen.mainContainer_1.con_MainScreen_1.Button1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "WEITI_Szafirowy"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "MainScreen.OnVisible"
                 }
               ],
@@ -96,10 +372,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 1,
-                  "charOffset": 192,
+                  "charLength": 31,
+                  "charOffset": 0,
                   "snippet": {
-                    "text": "'"
+                    "text": "Set(DurationSelection, Blank())"
                   }
                 }
               },
@@ -116,8 +392,3209 @@
           "properties": {
             "level": "High"
           },
-          "ruleId": "app-ErrOperatorExpected",
-          "ruleIndex": 0
+          "ruleId": "app-ErrIncompatibleCtxtVariableTypes",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.con_RoomSelection.Button4.Fill"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.con_RoomSelection.Button4.Fill",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 15,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "WEITI_Szafirowy"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Fill",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.con_RoomSelection.Button4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "WEITI_Szafirowy"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.Container10_2.DatePicker1.IconBackground"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.Container10_2.DatePicker1.IconBackground",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 15,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "WEITI_Grafitowy"
+                  }
+                }
+              },
+              "properties": {
+                "member": "IconBackground",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.Container10_2.DatePicker1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "WEITI_Grafitowy"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.Container10_2.DatePicker1.Fill"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.Container10_2.DatePicker1.Fill",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 15,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "WEITI_Szafirowy"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Fill",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.Container10_2.DatePicker1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "WEITI_Szafirowy"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.Container10_3.Button4_2.Fill"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.Container10_3.Button4_2.Fill",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 15,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "WEITI_Szafirowy"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Fill",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.Container10_3.Button4_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "WEITI_Szafirowy"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.btn_Book.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.btn_Book.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 348,
+                  "snippet": {
+                    "text": "O365User"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.btn_Book"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "O365User"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.btn_Book.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.btn_Book.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 341,
+                  "snippet": {
+                    "text": "Concat"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.btn_Book"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Concat"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.btn_Book.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.btn_Book.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 11,
+                  "charOffset": 357,
+                  "snippet": {
+                    "text": "DisplayName"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.btn_Book"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "DisplayName"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.btn_Book.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.btn_Book.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 401,
+                  "snippet": {
+                    "text": "O365User"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.btn_Book"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "O365User"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.btn_Book.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.btn_Book.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 394,
+                  "snippet": {
+                    "text": "Concat"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.btn_Book"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Concat"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.btn_Book.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.btn_Book.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 4,
+                  "charOffset": 411,
+                  "snippet": {
+                    "text": "Mail"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.btn_Book"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Mail"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.btn_Book.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.btn_Book.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 10,
+                  "charOffset": 647,
+                  "snippet": {
+                    "text": "myCalendar"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.btn_Book"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "myCalendar"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.btn_Book.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.btn_Book.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 3,
+                  "charOffset": 657,
+                  "snippet": {
+                    "text": ".id"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.btn_Book"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.btn_Book.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.btn_Book.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 18,
+                  "charOffset": 623,
+                  "snippet": {
+                    "text": "V4CalendarPostItem"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.btn_Book"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "V4CalendarPostItem"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.Container10_4.Button4_1.Fill"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.Container10_4.Button4_1.Fill",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 15,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "WEITI_Szafirowy"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Fill",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerProperties.Container10_4.Button4_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "WEITI_Szafirowy"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container13.Label4_18.Fill"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container13.Label4_18.Fill",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 15,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "WEITI_Szafirowy"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Fill",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container13.Label4_18"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "WEITI_Szafirowy"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16.DropdownStartTime_3.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16.DropdownStartTime_3.Default",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 5,
+                  "charOffset": 21,
+                  "snippet": {
+                    "text": "Times"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16.DropdownStartTime_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Times"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16.DropdownStartTime_3.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16.DropdownStartTime_3.Default",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 14,
+                  "snippet": {
+                    "text": "LookUp"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16.DropdownStartTime_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "LookUp"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16.DropdownStartTime_3.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16.DropdownStartTime_3.Default",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 4,
+                  "charOffset": 28,
+                  "snippet": {
+                    "text": "Text"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16.DropdownStartTime_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16.DropdownStartTime_3.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16.DropdownStartTime_3.Default",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 33,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16.DropdownStartTime_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Error",
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16.DropdownStartTime_3.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16.DropdownStartTime_3.Default",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 5,
+                  "charOffset": 88,
+                  "snippet": {
+                    "text": ".Text"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16.DropdownStartTime_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16.DropdownStartTime_3.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16.DropdownStartTime_3.Default",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "If"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16.DropdownStartTime_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "If"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16.DropdownStartTime_3.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16.DropdownStartTime_3.Default",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 94,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "If(ResetTrue, LookUp(Times, Text = Lower(Text(StartDateTime, DateTimeFormat.ShortTime))).Text)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16.DropdownStartTime_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "_Min"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrBadType-Type",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16.DropdownStartTime_3.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16.DropdownStartTime_3.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 5,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Times"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16.DropdownStartTime_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Times"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3.Default",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 7,
+                  "charOffset": 42,
+                  "snippet": {
+                    "text": "IsBlank"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "IsBlank"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3.Default",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 17,
+                  "charOffset": 50,
+                  "snippet": {
+                    "text": "DurationSelection"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrBadType",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3.Default",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 5,
+                  "charOffset": 90,
+                  "snippet": {
+                    "text": "Times"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Times"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3.Default",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 83,
+                  "snippet": {
+                    "text": "LookUp"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "LookUp"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3.Default",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 4,
+                  "charOffset": 97,
+                  "snippet": {
+                    "text": "Text"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3.Default",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 102,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Error",
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3.Default",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 5,
+                  "charOffset": 155,
+                  "snippet": {
+                    "text": ".Text"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3.Default",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 7,
+                  "charOffset": 163,
+                  "snippet": {
+                    "text": "IsBlank"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "IsBlank"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3.Default",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 17,
+                  "charOffset": 171,
+                  "snippet": {
+                    "text": "DurationSelection"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrBadType",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3.Default",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 5,
+                  "charOffset": 198,
+                  "snippet": {
+                    "text": "Times"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Times"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3.Default",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 191,
+                  "snippet": {
+                    "text": "LookUp"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "LookUp"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3.Default",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 7,
+                  "charOffset": 205,
+                  "snippet": {
+                    "text": "Minutes"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Minutes"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3.Default",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 251,
+                  "snippet": {
+                    "text": ".Minutes"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Minutes"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3.Default",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 288,
+                  "snippet": {
+                    "text": ".Minutes"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Minutes"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3.Default",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 213,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Error",
+              "Number"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3.Default",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 5,
+                  "charOffset": 304,
+                  "snippet": {
+                    "text": ".Text"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3.Default",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "If"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "If"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3.Default",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 310,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "If(IsBlank(DurationGallery_3.Selected) && IsBlank(DurationSelection) || ResetTrue, LookUp(Times, Text = Lower(Text(EndDateTime, DateTimeFormat.ShortTime))).Text, !IsBlank(DurationSelection), LookUp(Times, Minutes = Mod(DropdownStartTime_3.SelectedText.Minutes + DurationGallery_3.Selected.Minutes, 1440)).Text)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "_Min"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrBadType-Type",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 5,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Times"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container15.Container16_1.DropdownEndTime_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Times"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Label13.Visible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Label13.Visible",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 5,
+                  "charOffset": 38,
+                  "snippet": {
+                    "text": ".Text"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Visible",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Label13"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Label13.Visible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Label13.Visible",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 5,
+                  "charOffset": 91,
+                  "snippet": {
+                    "text": ".Text"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Visible",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Label13"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 9,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Durations"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Durations"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 7,
+                  "snippet": {
+                    "text": "ThisItem"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "ThisItem"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 5,
+                  "charOffset": 15,
+                  "snippet": {
+                    "text": ".Time"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4.Fill"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4.Fill",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 3,
+                  "snippet": {
+                    "text": "ThisItem"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Fill",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "ThisItem"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4.Fill"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4.Fill",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 11,
+                  "snippet": {
+                    "text": ".Minutes"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Fill",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4.Fill"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4.Fill",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 39,
+                  "snippet": {
+                    "text": ".Minutes"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Fill",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4.Fill"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4.Fill",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 20,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Fill",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Error",
+              "Error"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 7,
+                  "charOffset": 19,
+                  "snippet": {
+                    "text": "IsBlank"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "IsBlank"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 17,
+                  "charOffset": 27,
+                  "snippet": {
+                    "text": "DurationSelection"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrBadType",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 49,
+                  "snippet": {
+                    "text": "ThisItem"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "ThisItem"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 5,
+                  "charOffset": 57,
+                  "snippet": {
+                    "text": ".Time"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 5,
+                  "charOffset": 83,
+                  "snippet": {
+                    "text": ".Time"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 63,
+                  "snippet": {
+                    "text": "<>"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Error",
+              "Error"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 113,
+                  "snippet": {
+                    "text": "ThisItem"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "ThisItem"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 32,
+                  "charOffset": 90,
+                  "snippet": {
+                    "text": "Set(DurationSelection, ThisItem)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrIncompatibleCtxtVariableTypes",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 31,
+                  "charOffset": 124,
+                  "snippet": {
+                    "text": "Set(DurationSelection, Blank())"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.DurationGallery_3.Button5_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrIncompatibleCtxtVariableTypes",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container17.ButtonSaveTime_3.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container17.ButtonSaveTime_3.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 73,
+                  "snippet": {
+                    "text": ".Minutes"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container17.ButtonSaveTime_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Minutes"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container17.ButtonSaveTime_3.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container17.ButtonSaveTime_3.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 7,
+                  "charOffset": 19,
+                  "snippet": {
+                    "text": "DateAdd"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container17.ButtonSaveTime_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "DateAdd"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container17.ButtonSaveTime_3.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container17.ButtonSaveTime_3.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 178,
+                  "snippet": {
+                    "text": ".Minutes"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container17.ButtonSaveTime_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Minutes"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container17.ButtonSaveTime_3.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container17.ButtonSaveTime_3.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 220,
+                  "snippet": {
+                    "text": ".Minutes"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container17.ButtonSaveTime_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Minutes"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container17.ButtonSaveTime_3.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container17.ButtonSaveTime_3.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 260,
+                  "snippet": {
+                    "text": ".Minutes"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container17.ButtonSaveTime_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Minutes"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container17.ButtonSaveTime_3.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container17.ButtonSaveTime_3.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 310,
+                  "snippet": {
+                    "text": ".Minutes"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container17.ButtonSaveTime_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Minutes"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container17.ButtonSaveTime_3.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container17.ButtonSaveTime_3.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 350,
+                  "snippet": {
+                    "text": ".Minutes"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container17.ButtonSaveTime_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Minutes"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container17.ButtonSaveTime_3.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container17.ButtonSaveTime_3.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 393,
+                  "snippet": {
+                    "text": ".Minutes"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.ContainerTimeSelection.Container17.ButtonSaveTime_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Minutes"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainLeftHandSide.Container5_3.containter_btn_makeReservation.btn_MakeReservation_8.Fill"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainLeftHandSide.Container5_3.containter_btn_makeReservation.btn_MakeReservation_8.Fill",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 15,
+                  "charOffset": 52,
+                  "snippet": {
+                    "text": "WEITI_Szafirowy"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Fill",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.con_MainScreen.con_MainLeftHandSide.Container5_3.containter_btn_makeReservation.btn_MakeReservation_8"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "WEITI_Szafirowy"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainLeftHandSide.Container5_3.containter_btn_makeReservation.btn_MakeReservation_8.Fill"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainLeftHandSide.Container5_3.containter_btn_makeReservation.btn_MakeReservation_8.Fill",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "If"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Fill",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.con_MainScreen.con_MainLeftHandSide.Container5_3.containter_btn_makeReservation.btn_MakeReservation_8"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "If"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainLeftHandSide.Container5_3.containter_btn_makeReservation.btn_MakeReservation_8.Color"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainLeftHandSide.Container5_3.containter_btn_makeReservation.btn_MakeReservation_8.Color",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 15,
+                  "charOffset": 35,
+                  "snippet": {
+                    "text": "WEITI_Szafirowy"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Color",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.con_MainScreen.con_MainLeftHandSide.Container5_3.containter_btn_makeReservation.btn_MakeReservation_8"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "WEITI_Szafirowy"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainLeftHandSide.Container5_3.containter_btn_makeReservation.btn_MakeReservation_8.Color"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainLeftHandSide.Container5_3.containter_btn_makeReservation.btn_MakeReservation_8.Color",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "If"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Color",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.con_MainScreen.con_MainLeftHandSide.Container5_3.containter_btn_makeReservation.btn_MakeReservation_8"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "If"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainLeftHandSide.Container5_3.container_btn_checkSchedule.btn_MakeReservation_9.Fill"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainLeftHandSide.Container5_3.container_btn_checkSchedule.btn_MakeReservation_9.Fill",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 15,
+                  "charOffset": 52,
+                  "snippet": {
+                    "text": "WEITI_Szafirowy"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Fill",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.con_MainScreen.con_MainLeftHandSide.Container5_3.container_btn_checkSchedule.btn_MakeReservation_9"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "WEITI_Szafirowy"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainLeftHandSide.Container5_3.container_btn_checkSchedule.btn_MakeReservation_9.Fill"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainLeftHandSide.Container5_3.container_btn_checkSchedule.btn_MakeReservation_9.Fill",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "If"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Fill",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.con_MainScreen.con_MainLeftHandSide.Container5_3.container_btn_checkSchedule.btn_MakeReservation_9"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "If"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainLeftHandSide.Container5_3.container_btn_checkSchedule.btn_MakeReservation_9.Color"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainLeftHandSide.Container5_3.container_btn_checkSchedule.btn_MakeReservation_9.Color",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 15,
+                  "charOffset": 35,
+                  "snippet": {
+                    "text": "WEITI_Szafirowy"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Color",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.con_MainScreen.con_MainLeftHandSide.Container5_3.container_btn_checkSchedule.btn_MakeReservation_9"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "WEITI_Szafirowy"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainLeftHandSide.Container5_3.container_btn_checkSchedule.btn_MakeReservation_9.Color"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainLeftHandSide.Container5_3.container_btn_checkSchedule.btn_MakeReservation_9.Color",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "If"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Color",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.con_MainScreen.con_MainLeftHandSide.Container5_3.container_btn_checkSchedule.btn_MakeReservation_9"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "If"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.btn_Settings_Home.Fill"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.btn_Settings_Home.Fill",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 15,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "WEITI_Szafirowy"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Fill",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.btn_Settings_Home"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "WEITI_Szafirowy"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.btn_Settings_Home.PressedColor"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.btn_Settings_Home.PressedColor",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 15,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "WEITI_Szafirowy"
+                  }
+                }
+              },
+              "properties": {
+                "member": "PressedColor",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.btn_Settings_Home"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "WEITI_Szafirowy"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Gallery2_11.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Gallery2_11.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 10,
+                  "charOffset": 140,
+                  "snippet": {
+                    "text": "myCalendar"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Gallery2_11"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "myCalendar"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Gallery2_11.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Gallery2_11.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 5,
+                  "charOffset": 150,
+                  "snippet": {
+                    "text": ".name"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Gallery2_11"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Gallery2_11.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Gallery2_11.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 139,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "MainScreen",
+                "type": "MainScreen.mainContainer.con_MainScreen.con_MainRightHandSide.Gallery2_11"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Text",
+              "Error"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -147,7 +3624,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -177,7 +3654,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -207,7 +3684,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -237,7 +3714,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -267,7 +3744,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -297,7 +3774,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -327,7 +3804,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -357,7 +3834,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -387,7 +3864,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -417,7 +3894,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -447,7 +3924,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -477,7 +3954,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -507,7 +3984,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -537,7 +4014,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -567,7 +4044,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -597,7 +4074,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -627,7 +4104,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -657,7 +4134,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -687,7 +4164,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -717,7 +4194,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -747,7 +4224,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -777,7 +4254,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -807,7 +4284,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -837,7 +4314,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -867,7 +4344,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 4
+          "ruleIndex": 12
         },
         {
           "locations": [
@@ -897,7 +4374,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -927,7 +4404,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 4
+          "ruleIndex": 12
         },
         {
           "locations": [
@@ -957,7 +4434,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -987,7 +4464,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 4
+          "ruleIndex": 12
         },
         {
           "locations": [
@@ -1017,7 +4494,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -1047,7 +4524,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 4
+          "ruleIndex": 12
         },
         {
           "locations": [
@@ -1077,7 +4554,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -1107,7 +4584,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -1137,7 +4614,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -1167,7 +4644,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 4
+          "ruleIndex": 12
         },
         {
           "locations": [
@@ -1197,7 +4674,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -1227,7 +4704,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 4
+          "ruleIndex": 12
         },
         {
           "locations": [
@@ -1257,7 +4734,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -1287,7 +4764,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 4
+          "ruleIndex": 12
         },
         {
           "locations": [
@@ -1317,7 +4794,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -1347,7 +4824,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -1377,7 +4854,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -1407,7 +4884,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -1437,7 +4914,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -1467,7 +4944,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -1497,7 +4974,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -1527,7 +5004,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -1557,127 +5034,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedVariables",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.varUserCalendars"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.varUserCalendars",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "varUserCalendars",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.varToogleRoomSelection"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.varToogleRoomSelection",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "varToogleRoomSelection",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.varTodayDate"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.varTodayDate",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "varTodayDate",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.WEITI_Wrzosowy"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.WEITI_Wrzosowy",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "WEITI_Wrzosowy",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 5
+          "ruleIndex": 13
         },
         {
           "locations": [
@@ -1707,7 +5064,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedVariables",
-          "ruleIndex": 5
+          "ruleIndex": 13
         },
         {
           "locations": [
@@ -1737,7 +5094,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedVariables",
-          "ruleIndex": 5
+          "ruleIndex": 13
         },
         {
           "locations": [
@@ -1767,37 +5124,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedVariables",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.varShowMainScreen"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.varShowMainScreen",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "varShowMainScreen",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 5
+          "ruleIndex": 13
         },
         {
           "locations": [
@@ -1827,7 +5154,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 6
+          "ruleIndex": 14
         },
         {
           "locations": [
@@ -1857,7 +5184,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 6
+          "ruleIndex": 14
         },
         {
           "locations": [
@@ -1887,7 +5214,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedVariables",
-          "ruleIndex": 5
+          "ruleIndex": 13
         },
         {
           "locations": [
@@ -1917,7 +5244,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedVariables",
-          "ruleIndex": 5
+          "ruleIndex": 13
         },
         {
           "locations": [
@@ -1947,7 +5274,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedVariables",
-          "ruleIndex": 5
+          "ruleIndex": 13
         },
         {
           "locations": [
@@ -1977,7 +5304,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedVariables",
-          "ruleIndex": 5
+          "ruleIndex": 13
         },
         {
           "locations": [
@@ -2007,7 +5334,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedVariables",
-          "ruleIndex": 5
+          "ruleIndex": 13
         }
       ],
       "tool": {
@@ -2033,17 +5360,142 @@
               }
             },
             {
-              "id": "app-ErrOperandExpected",
+              "id": "app-ErrExpectedFound-Ex-Fnd",
               "messageStrings": {
                 "issue": {
-                  "text": "Expected an operand. The formula or expression expects a valid operand. For example, you can add the operand '2' to the expression ' 1 +_' so that the result is '3'. Or, you can add the operand \"there\" to the expression '\"Hi \"& _ ' so that the result is 'Hi there'."
+                  "text": "Unexpected characters. The formula contains '{0}' where '{1}' is expected."
                 }
               },
               "properties": {
                 "componentType": "app",
                 "howToFix": [
-                  "Supply an operand value that will complete the expression. Ensure that the operand's type (text, number, date, or true/false) fits the expression. Match numbers with numbers, text with text, and so on. For example, '1 + \"Hi\"' isn't valid, but '1 + 2' is valid."
+                  "Remove or replace the unexpected characters with an expected character."
                 ],
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrBadToken",
+              "messageStrings": {
+                "issue": {
+                  "text": "Unexpected characters. Characters are used in the formula in an unexpected way."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Remove or replace the unexpected characters."
+                ],
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrInvalidName",
+              "messageStrings": {
+                "issue": {
+                  "text": "Name isn't valid. '{0}' isn't recognized."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Remove or correct the reference to the name that isn't valid."
+                ],
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrIncompatibleCtxtVariableTypes",
+              "messageStrings": {
+                "issue": {
+                  "text": "Incompatible type. We can't evaluate your formula because the context variable types are incompatible with the types of values in other places in your app."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Look at places where you use a context variable and make sure that the type (e.g., text, number, date, record, table) is compatible."
+                ],
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrInvalidArgs-Func",
+              "messageStrings": {
+                "issue": {
+                  "text": "The function '{0}' has some invalid arguments."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrInvalidDot",
+              "messageStrings": {
+                "issue": {
+                  "text": "Invalid use of '.'"
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrIncompatibleTypesForEquality-Left-Right",
+              "messageStrings": {
+                "issue": {
+                  "text": "Incompatible types for comparison. These types can't be compared: {0}, {1}."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "You might need to convert the value to be the same type, such as converting a date string (e.g., \"12/31/2018\") to a date value.",
+                  "If you’re comparing records or tables, the field or column types must match exactly."
+                ],
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrBadType-Type",
+              "messageStrings": {
+                "issue": {
+                  "text": "Invalid argument type. Cannot use {0} values in this context."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrBadType",
+              "messageStrings": {
+                "issue": {
+                  "text": "Invalid argument type."
+                }
+              },
+              "properties": {
+                "componentType": "app",
                 "level": "High",
                 "primaryCategory": "formula",
                 "whyFix": ""
