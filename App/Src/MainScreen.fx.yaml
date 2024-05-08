@@ -3312,21 +3312,7 @@ MainScreen As screen:
                     AlignInContainer: =AlignInContainer.Center
                     DisplayMode: =If(IsBlank(SelectedRoom), DisplayMode.Disabled, DisplayMode.Edit)
                     OnSelect: |-
-                        =Office365Outlook.V4CalendarPostItem(
-                            myCalendar,
-                            User().FullName&"'s reservation",
-                            StartDateTimeUTC,
-                            EndDateTimeUTC,
-                            "(UTC+01:00) Sarajevo, Skopje, Warsaw, Zagreb",
-                            {
-                                Location: "room "&SelectedRoom.Text,
-                                importance: "normal",
-                                requiredAttendees:If(SelectedRoom.Text = "107", "eiti.107.teams.rooms@pw.edu.pl"),
-                                showAs: "busy"
-                            }
-                        );
-                        
-                        Patch(
+                        =Patch(
                             ReservationDatabase,
                             Defaults(ReservationDatabase),
                             {
@@ -3339,6 +3325,19 @@ MainScreen As screen:
                                         JobTitle: "",
                                         Picture: ""
                                   }
+                            }
+                        );
+                        Office365Outlook.V4CalendarPostItem(
+                            myCalendar,
+                            User().FullName&"'s reservation",
+                            StartDateTimeUTC,
+                            EndDateTimeUTC,
+                            "(UTC+01:00) Sarajevo, Skopje, Warsaw, Zagreb",
+                            {
+                                Location: "room "&SelectedRoom.Text,
+                                importance: "normal",
+                                requiredAttendees:If(SelectedRoom.Text = "107", "eiti.107.teams.rooms@pw.edu.pl"),
+                                showAs: "busy"
                             }
                         );
                         Navigate(BookingConfirmationScreen,ScreenTransition.Cover);
