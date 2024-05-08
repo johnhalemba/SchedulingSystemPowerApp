@@ -211,7 +211,13 @@ BookingConfirmationScreen As screen:
                 AlignInContainer: =AlignInContainer.Center
                 Fill: =WEITI_Szafirowy
                 Height: =60
-                OnSelect: =Navigate(MainScreen,ScreenTransition.Cover)
+                OnSelect: |-
+                    =Navigate(MainScreen,ScreenTransition.Cover,{
+                      varShowMainScreen: true,
+                      varShowFacultyMap: false,
+                      varShowProperties: false,
+                      varRoomSelection:false
+                    })
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
                 RadiusTopLeft: =0
