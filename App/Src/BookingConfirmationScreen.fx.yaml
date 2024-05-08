@@ -199,7 +199,7 @@ BookingConfirmationScreen As screen:
                 OnSelect: |-
                     =Navigate(MainScreen,ScreenTransition.UnCover,{
                         varShowFacultyMap: true,
-                        varShowProperties: true,
+                        varShowProperties: true
                     });
                     Set(varShowMainScreen, true)
                 PressedColor: =ColorFade(Self.Color, 18%)
