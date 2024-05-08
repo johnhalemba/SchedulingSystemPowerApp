@@ -3245,7 +3245,7 @@ MainScreen As screen:
                                         Button: room108_6
                                     }
                                 );
-                                Reset(cbx_PhoneSelectRoom);;
+                                Reset(cbx_PhoneSelectRoom);
                             UpdateContext({varShowSyncing: false});
                             UpdateContext({varShowProperties: true});
                         PaddingLeft: =17
