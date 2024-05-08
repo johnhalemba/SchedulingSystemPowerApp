@@ -1,12 +1,7 @@
 MainScreen As screen:
     Fill: =RGBA(244, 244, 244, 1)
     LoadingSpinner: =LoadingSpinner.Data
-    OnHidden: |
-        =UpdateContext(
-            {
-                varRoomSelection:false
-            }
-        );
+    OnHidden: =
     OnVisible: |
         =Set(DurationSelection, Blank());
         UpdateContext({ResetTrue: false});
