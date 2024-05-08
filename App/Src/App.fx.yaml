@@ -341,7 +341,7 @@ App As appinfo:
                     CalendarLocalizedLabel,
                     Value = name
                 ).Value
-            ).name
+            ) //.name
         );
         Set(O365User, Office365Users.SearchUserV2({searchTerm: User().Email}).value);
         Set(

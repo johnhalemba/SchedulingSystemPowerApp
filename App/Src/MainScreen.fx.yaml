@@ -3312,13 +3312,17 @@ MainScreen As screen:
                     AlignInContainer: =AlignInContainer.Center
                     DisplayMode: =If(IsBlank(SelectedRoom), DisplayMode.Disabled, DisplayMode.Edit)
                     OnSelect: |-
-                        =Patch(
+                        =ForAll(
+                            ReservationDatabase,
+                            Notify(ThisRecord.Caller.Claims,NotificationType.Information,5000)
+                        );
+                        Patch(
                             ReservationDatabase,
                             Defaults(ReservationDatabase),
                             {
                                 Title: GUID(),
                                 Caller: {
-                                        Claims: "c:0o.c|federateddirectoryclaimprovider|" &User().Email,
+                                        Claims: "i:0#.f|membership|"&User().Email,
                                         Department: "",
                                         DisplayName: Concat(O365User,DisplayName),
                                         Email: Concat(O365User, Mail),
@@ -3328,7 +3332,7 @@ MainScreen As screen:
                             }
                         );
                         Office365Outlook.V4CalendarPostItem(
-                            myCalendar,
+                            ,
                             User().FullName&"'s reservation",
                             StartDateTimeUTC,
                             EndDateTimeUTC,
