@@ -1683,7 +1683,7 @@ MainScreen As screen:
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
-                    Visible: =!serwerStudia && Gallery2_11.AllItemsCount = 0 && DropdownCalendarType_2.Selected.Value = "Serwer Studia"
+                    Visible: =!serwerStudia && Gallery2_11.AllItemsCount = 0 && DropdownCalendarType_2.Selected.Value = "Outlook"
                     ZIndex: =11
 
                     Label1_1 As label:
