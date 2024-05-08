@@ -3328,7 +3328,10 @@ MainScreen As screen:
                                         Email: Concat(O365User, Mail),
                                         JobTitle: "",
                                         Picture: ""
-                                  }
+                                },
+                                ReservationStart: StartDateTime,
+                                ReservationEnd: EndDateTime,
+                                Room: SelectedRoom.Text
                             }
                         );
                         Office365Outlook.V4CalendarPostItem(
