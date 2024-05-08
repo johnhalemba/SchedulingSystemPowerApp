@@ -1253,7 +1253,6 @@ MainScreen As screen:
                             HoverFill: =RGBA(0, 0, 0, 0.05)
                             OnSelect: |-
                                 =Set(ShowLoading, true);
-                                UpdateContext({varRoomSelection: true});
                                 Set(DateSelected, Today());
                                 Set(DateTimeRoomChange, true);
                                 If( Mod(Minute(Now()), 30) <= 14,
@@ -1291,6 +1290,7 @@ MainScreen As screen:
                                     ClearCollect(ScheduleRoom121, 'Serwer Studia'.Getclassesfromroom("1030-ETI-121", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
                                     ClearCollect(ScheduleRoom122, 'Serwer Studia'.Getclassesfromroom("1030-ETI-122", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
                                 );
+                                UpdateContext({varCheckSchedule: true});
                                 Set(ShowLoading, false);
                             PressedColor: =Color.Transparent
                             PressedFill: =Color.Transparent
@@ -3730,6 +3730,1968 @@ MainScreen As screen:
                 Size: =9
                 Width: =Parent.Width
                 ZIndex: =1
+
+        ContainerCheckSchedule As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.Regular
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutGap: =10
+            LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            LayoutOverflowY: =LayoutOverflow.Scroll
+            LayoutWrap: =true
+            Visible: =varCheckSchedule
+            ZIndex: =6
+
+            ContainerFacultyMap_1 As groupContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                FillPortions: =3
+                Height: =Parent.Height - 20
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                Visible: =varShowFacultyMap
+                Width: =942
+                X: =10
+                Y: =10
+                ZIndex: =2
+
+                Image2_7 As image:
+                    Height: =Parent.Height
+                    Image: ='Screenshot 2024-03-17 at 22.21.45'
+                    ImagePosition: =ImagePosition.Stretch
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                room103_7 As button:
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =1
+                    Color: =If (SelectedRoom = Self, Color.Black, Color.White)
+                    DisabledColor: =Self.Color
+                    DisabledFill: |-
+                        =If(
+                            Self.Fill = Color.Red,
+                            Color.Red
+                        )
+                    DisplayMode: =If((SelectedRoom = Self || Self.Fill = Color.Green) && App.Width > 500, DisplayMode.Edit, DisplayMode.Disabled)
+                    Fill: |-
+                        =If(
+                            CountRows(
+                                Filter(
+                                    ScheduleRoom103,
+                                    With(
+                                        {
+                                            classStart: DateAdd(
+                                                DateValue(
+                                                    date,
+                                                    "en"
+                                                ),
+                                                hour + 0.25,
+                                                TimeUnit.Hours
+                                            ),
+                                            classEnd: DateAdd(
+                                                DateValue(
+                                                    date,
+                                                    "en"
+                                                ),
+                                                hour + Value(length),
+                                                TimeUnit.Hours
+                                            )
+                                        },
+                                        Or(
+                                            And(
+                                                classStart <= EndDateTime,
+                                                classStart >= StartDateTime
+                                            ),
+                                            And(
+                                                classEnd <= EndDateTime,
+                                                classEnd >= StartDateTime
+                                            ),
+                                            And(
+                                                StartDateTime <= classEnd,
+                                                StartDateTime >= classStart
+                                            )
+                                        )
+                                    )
+                                )
+                            ) = 0,
+                            If (SelectedRoom = Self,
+                                Color.Yellow,
+                                Color.Green
+                            ),
+                            Color.Red
+                        )
+                    FocusedBorderThickness: =1
+                    Height: =Parent.Height * 41 / 668
+                    HoverColor: =ColorFade(Self.Color, 15%)
+                    HoverFill: =ColorFade(Self.Fill, 18%)
+                    OnSelect: |-
+                        =UpdateContext({SelectedRoom: Self})
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =If(App.Width > 400, 9, 0)
+                    Text: |-
+                        =If(
+                            Self.Fill = Color.Green || Self.Fill = Color.Yellow,
+                            "103",
+                            "X"
+                        )
+                    Width: =Parent.Width * 36 / 1010
+                    X: =Parent.Width * 114 / 1010
+                    Y: =Parent.Height*357/668
+                    ZIndex: =2
+
+                room104_7 As button:
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =1
+                    Color: =If (SelectedRoom = Self, Color.Black, Color.White)
+                    DisabledColor: =Self.Color
+                    DisabledFill: |-
+                        =If(
+                            Self.Fill = Color.Red,
+                            Color.Red
+                        )
+                    DisplayMode: =If((SelectedRoom = Self || Self.Fill = Color.Green) && App.Width > 500, DisplayMode.Edit, DisplayMode.Disabled)
+                    Fill: |-
+                        =If(
+                            CountRows(
+                                Filter(
+                                    ScheduleRoom104,
+                                    With(
+                                        {
+                                            classStart: DateAdd(
+                                                DateValue(
+                                                    date,
+                                                    "en"
+                                                ),
+                                                hour + 0.25,
+                                                TimeUnit.Hours
+                                            ),
+                                            classEnd: DateAdd(
+                                                DateValue(
+                                                    date,
+                                                    "en"
+                                                ),
+                                                hour + Value(length),
+                                                TimeUnit.Hours
+                                            )
+                                        },
+                                        Or(
+                                            And(
+                                                classStart <= EndDateTime,
+                                                classStart >= StartDateTime
+                                            ),
+                                            And(
+                                                classEnd <= EndDateTime,
+                                                classEnd >= StartDateTime
+                                            ),
+                                            And(
+                                                StartDateTime <= classEnd,
+                                                StartDateTime >= classStart
+                                            )
+                                        )
+                                    )
+                                )
+                            ) = 0,
+                            If (SelectedRoom = Self,
+                                Color.Yellow,
+                                Color.Green
+                            ),
+                            Color.Red
+                        )
+                    FocusedBorderThickness: =1
+                    Height: =Parent.Height * 41 / 668
+                    HoverColor: =ColorFade(Self.Color, 15%)
+                    HoverFill: =ColorFade(Self.Fill, 18%)
+                    OnSelect: |-
+                        =UpdateContext({SelectedRoom: Self})
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =If(App.Width > 400, 9, 0)
+                    Text: |-
+                        =If(
+                            Self.Fill = Color.Green || Self.Fill = Color.Yellow,
+                            "104",
+                            "X"
+                        )
+                    Width: =Parent.Width * 35 / 1010
+                    X: =Parent.Width * 150 / 1010
+                    Y: =Parent.Height * 357 / 668
+                    ZIndex: =3
+
+                room102_7 As button:
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =1
+                    Color: =If (SelectedRoom = Self, Color.Black, Color.White)
+                    DisabledColor: =Self.Color
+                    DisabledFill: |-
+                        =If(
+                            Self.Fill = Color.Red,
+                            Color.Red
+                        )
+                    DisplayMode: =If((SelectedRoom = Self || Self.Fill = Color.Green) && App.Width > 500, DisplayMode.Edit, DisplayMode.Disabled)
+                    Fill: |-
+                        =If(
+                            CountRows(
+                                Filter(
+                                    ScheduleRoom102,
+                                    With(
+                                        {
+                                            classStart: DateAdd(
+                                                DateValue(
+                                                    date,
+                                                    "en"
+                                                ),
+                                                hour + 0.25,
+                                                TimeUnit.Hours
+                                            ),
+                                            classEnd: DateAdd(
+                                                DateValue(
+                                                    date,
+                                                    "en"
+                                                ),
+                                                hour + Value(length),
+                                                TimeUnit.Hours
+                                            )
+                                        },
+                                        Or(
+                                            And(
+                                                classStart <= EndDateTime,
+                                                classStart >= StartDateTime
+                                            ),
+                                            And(
+                                                classEnd <= EndDateTime,
+                                                classEnd >= StartDateTime
+                                            ),
+                                            And(
+                                                StartDateTime <= classEnd,
+                                                StartDateTime >= classStart
+                                            )
+                                        )
+                                    )
+                                )
+                            ) = 0,
+                            If (SelectedRoom = Self,
+                                Color.Yellow,
+                                Color.Green
+                            ),
+                            Color.Red
+                        )
+                    FocusedBorderThickness: =1
+                    Height: |-
+                        =//40
+                        (Parent.Height * 41)/668
+                    HoverColor: =ColorFade(Self.Color, 15%)
+                    HoverFill: =ColorFade(Self.Fill, 18%)
+                    OnSelect: |-
+                        =UpdateContext({SelectedRoom: Self})
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =If(App.Width > 400, 9, 0)
+                    Text: |-
+                        =If(
+                            Self.Fill = Color.Green || Self.Fill = Color.Yellow,
+                            "102",
+                            "X"
+                        )
+                    Width: |-
+                        =//34
+                        Parent.Width * 34 / 1010
+                    X: |-
+                        =//80
+                        (Parent.Width * 80)/1010
+                    Y: |-
+                        =//358
+                        (Parent.Height * 357)/668
+                    ZIndex: =4
+
+                room161_7 As button:
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =1
+                    Color: =If (SelectedRoom = Self, Color.Black, Color.White)
+                    DisabledColor: =Self.Color
+                    DisabledFill: |-
+                        =If(
+                            Self.Fill = Color.Red,
+                            Color.Red
+                        )
+                    DisplayMode: =If((SelectedRoom = Self || Self.Fill = Color.Green) && App.Width > 500, DisplayMode.Edit, DisplayMode.Disabled)
+                    Fill: |-
+                        =If(
+                            CountRows(
+                                Filter(
+                                    ScheduleRoom161,
+                                    With(
+                                        {
+                                            classStart: DateAdd(
+                                                DateValue(
+                                                    date,
+                                                    "en"
+                                                ),
+                                                hour + 0.25,
+                                                TimeUnit.Hours
+                                            ),
+                                            classEnd: DateAdd(
+                                                DateValue(
+                                                    date,
+                                                    "en"
+                                                ),
+                                                hour + Value(length),
+                                                TimeUnit.Hours
+                                            )
+                                        },
+                                        Or(
+                                            And(
+                                                classStart <= EndDateTime,
+                                                classStart >= StartDateTime
+                                            ),
+                                            And(
+                                                classEnd <= EndDateTime,
+                                                classEnd >= StartDateTime
+                                            ),
+                                            And(
+                                                StartDateTime <= classEnd,
+                                                StartDateTime >= classStart
+                                            )
+                                        )
+                                    )
+                                )
+                            ) = 0,
+                            If (SelectedRoom = Self,
+                                Color.Yellow,
+                                Color.Green
+                            ),
+                            Color.Red
+                        )
+                    FocusedBorderThickness: =1
+                    Height: |-
+                        =//118
+                        (Parent.Height * 118)/668
+                    HoverColor: =ColorFade(Self.Color, 15%)
+                    HoverFill: =ColorFade(Self.Fill, 18%)
+                    OnSelect: |-
+                        =UpdateContext({SelectedRoom: Self})
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =If(App.Width > 400, 9, 0)
+                    Text: |-
+                        =If(
+                            Self.Fill = Color.Green || Self.Fill = Color.Yellow,
+                            "161",
+                            "X"
+                        )
+                    Width: |-
+                        =//91
+                        (Parent.Width * 91)/1010 
+                    X: |-
+                        =(Parent.Width * 169)/1010
+                        //169
+                    Y: |-
+                        =//176
+                        (Parent.Height * 176)/668
+                    ZIndex: =11
+
+                room107_7 As button:
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =1
+                    Color: =If (SelectedRoom = Self, Color.Black, Color.White)
+                    DisabledColor: =Self.Color
+                    DisabledFill: |-
+                        =If(
+                            Self.Fill = Color.Red,
+                            Color.Red
+                        )
+                    DisplayMode: =If((SelectedRoom = Self || Self.Fill = Color.Green) && App.Width > 500, DisplayMode.Edit, DisplayMode.Disabled)
+                    Fill: |-
+                        =If(
+                            CountRows(
+                                Filter(
+                                    ScheduleRoom107,
+                                    With(
+                                        {
+                                            classStart: DateAdd(
+                                                DateValue(
+                                                    date,
+                                                    "en"
+                                                ),
+                                                hour + 0.25,
+                                                TimeUnit.Hours
+                                            ),
+                                            classEnd: DateAdd(
+                                                DateValue(
+                                                    date,
+                                                    "en"
+                                                ),
+                                                hour + Value(length),
+                                                TimeUnit.Hours
+                                            )
+                                        },
+                                        Or(
+                                            And(
+                                                classStart <= EndDateTime,
+                                                classStart >= StartDateTime
+                                            ),
+                                            And(
+                                                classEnd <= EndDateTime,
+                                                classEnd >= StartDateTime
+                                            ),
+                                            And(
+                                                StartDateTime <= classEnd,
+                                                StartDateTime >= classStart
+                                            )
+                                        )
+                                    )
+                                )
+                            ) = 0,
+                            If (SelectedRoom = Self,
+                                Color.Yellow,
+                                Color.Green
+                            ),
+                            Color.Red
+                        )
+                    FocusedBorderThickness: =1
+                    Height: =Parent.Height * 39 / 668
+                    HoverColor: =ColorFade(Self.Color, 15%)
+                    HoverFill: =ColorFade(Self.Fill, 18%)
+                    OnSelect: |-
+                        =UpdateContext({SelectedRoom: Self})
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =If(App.Width > 400, 9, 0)
+                    Text: |-
+                        =If(
+                            Self.Fill = Color.Green || Self.Fill = Color.Yellow,
+                            "107",
+                            "X"
+                        )
+                    Width: =Parent.Width * 37 / 1010
+                    X: =Parent.Width * 276 / 1010
+                    Y: =Parent.Height * 357/668
+                    ZIndex: =12
+
+                room108_7 As button:
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =1
+                    Color: =If (SelectedRoom = Self, Color.Black, Color.White)
+                    DisabledColor: =Self.Color
+                    DisabledFill: |-
+                        =If(
+                            Self.Fill = Color.Red,
+                            Color.Red
+                        )
+                    DisplayMode: =If((SelectedRoom = Self || Self.Fill = Color.Green) && App.Width > 500, DisplayMode.Edit, DisplayMode.Disabled)
+                    Fill: |-
+                        =If(
+                            CountRows(
+                                Filter(
+                                    ScheduleRoom108,
+                                    With(
+                                        {
+                                            classStart: DateAdd(
+                                                DateValue(
+                                                    date,
+                                                    "en"
+                                                ),
+                                                hour + 0.25,
+                                                TimeUnit.Hours
+                                            ),
+                                            classEnd: DateAdd(
+                                                DateValue(
+                                                    date,
+                                                    "en"
+                                                ),
+                                                hour + Value(length),
+                                                TimeUnit.Hours
+                                            )
+                                        },
+                                        Or(
+                                            And(
+                                                classStart <= EndDateTime,
+                                                classStart >= StartDateTime
+                                            ),
+                                            And(
+                                                classEnd <= EndDateTime,
+                                                classEnd >= StartDateTime
+                                            ),
+                                            And(
+                                                StartDateTime <= classEnd,
+                                                StartDateTime >= classStart
+                                            )
+                                        )
+                                    )
+                                )
+                            ) = 0,
+                            If (SelectedRoom = Self,
+                                Color.Yellow,
+                                Color.Green
+                            ),
+                            Color.Red
+                        )
+                    FocusedBorderThickness: =1
+                    Height: =Parent.Height * 39 / 668
+                    HoverColor: =ColorFade(Self.Color, 15%)
+                    HoverFill: =ColorFade(Self.Fill, 18%)
+                    OnSelect: |-
+                        =UpdateContext({SelectedRoom: Self})
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =If(App.Width > 400, 9, 0)
+                    Text: |-
+                        =If(
+                            Self.Fill = Color.Green || Self.Fill = Color.Yellow,
+                            "108",
+                            "X"
+                        )
+                    Width: =Parent.Width * 52 / 1010
+                    X: =Parent.Width * 313 / 1010
+                    Y: =Parent.Height*357/668
+                    ZIndex: =13
+
+                room106_7 As button:
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =1
+                    Color: =If (SelectedRoom = Self, Color.Black, Color.White)
+                    DisabledColor: =Self.Color
+                    DisabledFill: |-
+                        =If(
+                            Self.Fill = Color.Red,
+                            Color.Red
+                        )
+                    DisplayMode: =If((SelectedRoom = Self || Self.Fill = Color.Green) && App.Width > 500, DisplayMode.Edit, DisplayMode.Disabled)
+                    Fill: |-
+                        =If(
+                            CountRows(
+                                Filter(
+                                    ScheduleRoom106,
+                                    With(
+                                        {
+                                            classStart: DateAdd(
+                                                DateValue(
+                                                    date,
+                                                    "en"
+                                                ),
+                                                hour + 0.25,
+                                                TimeUnit.Hours
+                                            ),
+                                            classEnd: DateAdd(
+                                                DateValue(
+                                                    date,
+                                                    "en"
+                                                ),
+                                                hour + Value(length),
+                                                TimeUnit.Hours
+                                            )
+                                        },
+                                        Or(
+                                            And(
+                                                classStart <= EndDateTime,
+                                                classStart >= StartDateTime
+                                            ),
+                                            And(
+                                                classEnd <= EndDateTime,
+                                                classEnd >= StartDateTime
+                                            ),
+                                            And(
+                                                StartDateTime <= classEnd,
+                                                StartDateTime >= classStart
+                                            )
+                                        )
+                                    )
+                                )
+                            ) = 0,
+                            If (SelectedRoom = Self,
+                                Color.Yellow,
+                                Color.Green
+                            ),
+                            Color.Red
+                        )
+                    FocusedBorderThickness: =1
+                    Height: =Parent.Height * 39 / 668
+                    HoverColor: =ColorFade(Self.Color, 15%)
+                    HoverFill: =ColorFade(Self.Fill, 18%)
+                    OnSelect: |-
+                        =UpdateContext({SelectedRoom: Self})
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =If(App.Width > 400, 9, 0)
+                    Text: |-
+                        =If(
+                            Self.Fill = Color.Green || Self.Fill = Color.Yellow,
+                            "106",
+                            "X"
+                        )
+                    Width: =Parent.Width * 34 / 1010
+                    X: =Parent.Width * 242 / 1010
+                    Y: =Parent.Height * 357 / 668
+                    ZIndex: =14
+
+                room105_7 As button:
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =1
+                    Color: =If (SelectedRoom = Self, Color.Black, Color.White)
+                    DisabledColor: =Self.Color
+                    DisabledFill: |-
+                        =If(
+                            Self.Fill = Color.Red,
+                            Color.Red
+                        )
+                    DisplayMode: =If((SelectedRoom = Self || Self.Fill = Color.Green) && App.Width > 500, DisplayMode.Edit, DisplayMode.Disabled)
+                    Fill: |-
+                        =If(
+                            CountRows(
+                                Filter(
+                                    ScheduleRoom161,
+                                    With(
+                                        {
+                                            classStart: DateAdd(
+                                                DateValue(
+                                                    date,
+                                                    "en"
+                                                ),
+                                                hour + 0.25,
+                                                TimeUnit.Hours
+                                            ),
+                                            classEnd: DateAdd(
+                                                DateValue(
+                                                    date,
+                                                    "en"
+                                                ),
+                                                hour + Value(length),
+                                                TimeUnit.Hours
+                                            )
+                                        },
+                                        Or(
+                                            And(
+                                                classStart <= EndDateTime,
+                                                classStart >= StartDateTime
+                                            ),
+                                            And(
+                                                classEnd <= EndDateTime,
+                                                classEnd >= StartDateTime
+                                            ),
+                                            And(
+                                                StartDateTime <= classEnd,
+                                                StartDateTime >= classStart
+                                            )
+                                        )
+                                    )
+                                )
+                            ) = 0,
+                            If (SelectedRoom = Self,
+                                Color.Yellow,
+                                Color.Green
+                            ),
+                            Color.Red
+                        )
+                    FocusedBorderThickness: =1
+                    Height: =Parent.Height * 83 / 668
+                    HoverColor: =ColorFade(Self.Color, 15%)
+                    HoverFill: =ColorFade(Self.Fill, 18%)
+                    OnSelect: |-
+                        =UpdateContext({SelectedRoom: Self})
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =If(App.Width > 400, 9, 0)
+                    Text: |-
+                        =If(
+                            Self.Fill = Color.Green || Self.Fill = Color.Yellow,
+                            "105",
+                            "X"
+                        )
+                    Width: =Parent.Width * 74 / 1010
+                    X: =Parent.Width * 177 / 1010
+                    Y: =Parent.Height * 427 / 668
+                    ZIndex: =15
+
+                room116_7 As button:
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =1
+                    Color: =If (SelectedRoom = Self, Color.Black, Color.White)
+                    DisabledColor: =Self.Color
+                    DisabledFill: |-
+                        =If(
+                            Self.Fill = Color.Red,
+                            Color.Red
+                        )
+                    DisplayMode: =If((SelectedRoom = Self || Self.Fill = Color.Green) && App.Width > 500, DisplayMode.Edit, DisplayMode.Disabled)
+                    Fill: |-
+                        =If(
+                            CountRows(
+                                Filter(
+                                    ScheduleRoom116,
+                                    With(
+                                        {
+                                            classStart: DateAdd(
+                                                DateValue(
+                                                    date,
+                                                    "en"
+                                                ),
+                                                hour + 0.25,
+                                                TimeUnit.Hours
+                                            ),
+                                            classEnd: DateAdd(
+                                                DateValue(
+                                                    date,
+                                                    "en"
+                                                ),
+                                                hour + Value(length),
+                                                TimeUnit.Hours
+                                            )
+                                        },
+                                        Or(
+                                            And(
+                                                classStart <= EndDateTime,
+                                                classStart >= StartDateTime
+                                            ),
+                                            And(
+                                                classEnd <= EndDateTime,
+                                                classEnd >= StartDateTime
+                                            ),
+                                            And(
+                                                StartDateTime <= classEnd,
+                                                StartDateTime >= classStart
+                                            )
+                                        )
+                                    )
+                                )
+                            ) = 0,
+                            If (SelectedRoom = Self,
+                                Color.Yellow,
+                                Color.Green
+                            ),
+                            Color.Red
+                        )
+                    FocusedBorderThickness: =1
+                    Height: =Parent.Height * 40 / 668
+                    HoverColor: =ColorFade(Self.Color, 15%)
+                    HoverFill: =ColorFade(Self.Fill, 18%)
+                    OnSelect: |-
+                        =UpdateContext({SelectedRoom: Self})
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =If(App.Width > 400, 9, 0)
+                    Text: |-
+                        =If(
+                            Self.Fill = Color.Green || Self.Fill = Color.Yellow,
+                            "116",
+                            "X"
+                        )
+                    Width: =Parent.Width * 52 / 1010
+                    X: =Parent.Width * 602/1010
+                    Y: =Parent.Height * 357/668
+                    ZIndex: =16
+
+                room117_7 As button:
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =1
+                    Color: =If (SelectedRoom = Self, Color.Black, Color.White)
+                    DisabledColor: =Self.Color
+                    DisabledFill: |-
+                        =If(
+                            Self.Fill = Color.Red,
+                            Color.Red
+                        )
+                    DisplayMode: =If((SelectedRoom = Self || Self.Fill = Color.Green) && App.Width > 500, DisplayMode.Edit, DisplayMode.Disabled)
+                    Fill: |-
+                        =If(
+                            CountRows(
+                                Filter(
+                                    ScheduleRoom117,
+                                    With(
+                                        {
+                                            classStart: DateAdd(
+                                                DateValue(
+                                                    date,
+                                                    "en"
+                                                ),
+                                                hour + 0.25,
+                                                TimeUnit.Hours
+                                            ),
+                                            classEnd: DateAdd(
+                                                DateValue(
+                                                    date,
+                                                    "en"
+                                                ),
+                                                hour + Value(length),
+                                                TimeUnit.Hours
+                                            )
+                                        },
+                                        Or(
+                                            And(
+                                                classStart <= EndDateTime,
+                                                classStart >= StartDateTime
+                                            ),
+                                            And(
+                                                classEnd <= EndDateTime,
+                                                classEnd >= StartDateTime
+                                            ),
+                                            And(
+                                                StartDateTime <= classEnd,
+                                                StartDateTime >= classStart
+                                            )
+                                        )
+                                    )
+                                )
+                            ) = 0,
+                            If (SelectedRoom = Self,
+                                Color.Yellow,
+                                Color.Green
+                            ),
+                            Color.Red
+                        )
+                    FocusedBorderThickness: =1
+                    Height: =Parent.Height * 40 / 668
+                    HoverColor: =ColorFade(Self.Color, 15%)
+                    HoverFill: =ColorFade(Self.Fill, 18%)
+                    OnSelect: |-
+                        =UpdateContext({SelectedRoom: Self})
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =If(App.Width > 400, 9, 0)
+                    Text: |-
+                        =If(
+                            Self.Fill = Color.Green || Self.Fill = Color.Yellow,
+                            "117",
+                            "X"
+                        )
+                    Width: =Parent.Width * 34/1010
+                    X: =Parent.Width * 654/1010
+                    Y: =Parent.Height * 357/668
+                    ZIndex: =17
+
+                room133_7 As button:
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =1
+                    Color: =If (SelectedRoom = Self, Color.Black, Color.White)
+                    DisabledColor: =Self.Color
+                    DisabledFill: |-
+                        =If(
+                            Self.Fill = Color.Red,
+                            Color.Red
+                        )
+                    DisplayMode: =If((SelectedRoom = Self || Self.Fill = Color.Green) && App.Width > 500, DisplayMode.Edit, DisplayMode.Disabled)
+                    Fill: |-
+                        =If(
+                            CountRows(
+                                Filter(
+                                    ScheduleRoom133,
+                                    With(
+                                        {
+                                            classStart: DateAdd(
+                                                DateValue(
+                                                    date,
+                                                    "en"
+                                                ),
+                                                hour + 0.25,
+                                                TimeUnit.Hours
+                                            ),
+                                            classEnd: DateAdd(
+                                                DateValue(
+                                                    date,
+                                                    "en"
+                                                ),
+                                                hour + Value(length),
+                                                TimeUnit.Hours
+                                            )
+                                        },
+                                        Or(
+                                            And(
+                                                classStart <= EndDateTime,
+                                                classStart >= StartDateTime
+                                            ),
+                                            And(
+                                                classEnd <= EndDateTime,
+                                                classEnd >= StartDateTime
+                                            ),
+                                            And(
+                                                StartDateTime <= classEnd,
+                                                StartDateTime >= classStart
+                                            )
+                                        )
+                                    )
+                                )
+                            ) = 0,
+                            If (SelectedRoom = Self,
+                                Color.Yellow,
+                                Color.Green
+                            ),
+                            Color.Red
+                        )
+                    FocusedBorderThickness: =1
+                    Height: =Parent.Height * 118/668
+                    HoverColor: =ColorFade(Self.Color, 15%)
+                    HoverFill: =ColorFade(Self.Fill, 18%)
+                    OnSelect: |-
+                        =UpdateContext({SelectedRoom: Self})
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =If(App.Width > 400, 9, 0)
+                    Text: |-
+                        =If(
+                            Self.Fill = Color.Green || Self.Fill = Color.Yellow,
+                            "133",
+                            "X"
+                        )
+                    Width: =Parent.Width*91/1010
+                    X: =Parent.Width * 672/1010
+                    Y: =Parent.Height * 176/668
+                    ZIndex: =18
+
+                "'room116-AR_7' As button":
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =1
+                    Color: =If (SelectedRoom = Self, Color.Black, Color.White)
+                    DisabledColor: =Self.Color
+                    DisabledFill: |-
+                        =If(
+                            Self.Fill = Color.Red,
+                            Color.Red
+                        )
+                    DisplayMode: =If((SelectedRoom = Self || Self.Fill = Color.Green) && App.Width > 500, DisplayMode.Edit, DisplayMode.Disabled)
+                    Fill: |-
+                        =If(
+                            CountRows(
+                                Filter(
+                                    ScheduleRoom161,
+                                    With(
+                                        {
+                                            classStart: DateAdd(
+                                                DateValue(
+                                                    date,
+                                                    "en"
+                                                ),
+                                                hour + 0.25,
+                                                TimeUnit.Hours
+                                            ),
+                                            classEnd: DateAdd(
+                                                DateValue(
+                                                    date,
+                                                    "en"
+                                                ),
+                                                hour + Value(length),
+                                                TimeUnit.Hours
+                                            )
+                                        },
+                                        Or(
+                                            And(
+                                                classStart <= EndDateTime,
+                                                classStart >= StartDateTime
+                                            ),
+                                            And(
+                                                classEnd <= EndDateTime,
+                                                classEnd >= StartDateTime
+                                            ),
+                                            And(
+                                                StartDateTime <= classEnd,
+                                                StartDateTime >= classStart
+                                            )
+                                        )
+                                    )
+                                )
+                            ) = 0,
+                            If (SelectedRoom = Self,
+                                Color.Yellow,
+                                Color.Green
+                            ),
+                            Color.Red
+                        )
+                    FocusedBorderThickness: =1
+                    Height: =Parent.Height * 83/668
+                    HoverColor: =ColorFade(Self.Color, 15%)
+                    HoverFill: =ColorFade(Self.Fill, 18%)
+                    OnSelect: |-
+                        =UpdateContext({SelectedRoom: Self})
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =If(App.Width > 400, 9, 0)
+                    Text: |-
+                        =If(
+                            Self.Fill = Color.Green || Self.Fill = Color.Yellow,
+                            "116-AR",
+                            "X"
+                        )
+                    Width: =Parent.Width * 74/1010
+                    X: =Parent.Width * 680/1010
+                    Y: =Parent.Height*427/668
+                    ZIndex: =19
+
+                room120_7 As button:
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =1
+                    Color: =If (SelectedRoom = Self, Color.Black, Color.White)
+                    DisabledColor: =Self.Color
+                    DisabledFill: |-
+                        =If(
+                            Self.Fill = Color.Red,
+                            Color.Red
+                        )
+                    DisplayMode: =If((SelectedRoom = Self || Self.Fill = Color.Green) && App.Width > 500, DisplayMode.Edit, DisplayMode.Disabled)
+                    Fill: |-
+                        =If(
+                            CountRows(
+                                Filter(
+                                    ScheduleRoom117,
+                                    With(
+                                        {
+                                            classStart: DateAdd(
+                                                DateValue(
+                                                    date,
+                                                    "en"
+                                                ),
+                                                hour + 0.25,
+                                                TimeUnit.Hours
+                                            ),
+                                            classEnd: DateAdd(
+                                                DateValue(
+                                                    date,
+                                                    "en"
+                                                ),
+                                                hour + Value(length),
+                                                TimeUnit.Hours
+                                            )
+                                        },
+                                        Or(
+                                            And(
+                                                classStart <= EndDateTime,
+                                                classStart >= StartDateTime
+                                            ),
+                                            And(
+                                                classEnd <= EndDateTime,
+                                                classEnd >= StartDateTime
+                                            ),
+                                            And(
+                                                StartDateTime <= classEnd,
+                                                StartDateTime >= classStart
+                                            )
+                                        )
+                                    )
+                                )
+                            ) = 0,
+                            If (SelectedRoom = Self,
+                                Color.Yellow,
+                                Color.Green
+                            ),
+                            Color.Red
+                        )
+                    FocusedBorderThickness: =1
+                    Height: =Parent.Height*42/668
+                    HoverColor: =ColorFade(Self.Color, 15%)
+                    HoverFill: =ColorFade(Self.Fill, 18%)
+                    OnSelect: |-
+                        =UpdateContext({SelectedRoom: Self})
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =If(App.Width > 400, 9, 0)
+                    Text: |-
+                        =If(
+                            Self.Fill = Color.Green || Self.Fill = Color.Yellow,
+                            "120",
+                            "X"
+                        )
+                    Width: =Parent.Width*37/1010
+                    X: =Parent.Width * 781/1010
+                    Y: =Parent.Height*356/668
+                    ZIndex: =20
+
+                room121_7 As button:
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =1
+                    Color: =If (SelectedRoom = Self, Color.Black, Color.White)
+                    DisabledColor: =Self.Color
+                    DisabledFill: |-
+                        =If(
+                            Self.Fill = Color.Red,
+                            Color.Red
+                        )
+                    DisplayMode: =If((SelectedRoom = Self || Self.Fill = Color.Green) && App.Width > 500, DisplayMode.Edit, DisplayMode.Disabled)
+                    Fill: |-
+                        =If(
+                            CountRows(
+                                Filter(
+                                    ScheduleRoom117,
+                                    With(
+                                        {
+                                            classStart: DateAdd(
+                                                DateValue(
+                                                    date,
+                                                    "en"
+                                                ),
+                                                hour + 0.25,
+                                                TimeUnit.Hours
+                                            ),
+                                            classEnd: DateAdd(
+                                                DateValue(
+                                                    date,
+                                                    "en"
+                                                ),
+                                                hour + Value(length),
+                                                TimeUnit.Hours
+                                            )
+                                        },
+                                        Or(
+                                            And(
+                                                classStart <= EndDateTime,
+                                                classStart >= StartDateTime
+                                            ),
+                                            And(
+                                                classEnd <= EndDateTime,
+                                                classEnd >= StartDateTime
+                                            ),
+                                            And(
+                                                StartDateTime <= classEnd,
+                                                StartDateTime >= classStart
+                                            )
+                                        )
+                                    )
+                                )
+                            ) = 0,
+                            If (SelectedRoom = Self,
+                                Color.Yellow,
+                                Color.Green
+                            ),
+                            Color.Red
+                        )
+                    FocusedBorderThickness: =1
+                    Height: =Parent.Height*42/668
+                    HoverColor: =ColorFade(Self.Color, 15%)
+                    HoverFill: =ColorFade(Self.Fill, 18%)
+                    OnSelect: |-
+                        =UpdateContext({SelectedRoom: Self})
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =If(App.Width > 400, 9, 0)
+                    Text: |-
+                        =If(
+                            Self.Fill = Color.Green || Self.Fill = Color.Yellow,
+                            "121",
+                            "X"
+                        )
+                    Width: =Parent.Width * 34/1010
+                    X: =Parent.Width*818/1010
+                    Y: =Parent.Height*356/668
+                    ZIndex: =21
+
+                room122_7 As button:
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =1
+                    Color: =If (SelectedRoom = Self, Color.Black, Color.White)
+                    DisabledColor: =Self.Color
+                    DisabledFill: |-
+                        =If(
+                            Self.Fill = Color.Red,
+                            Color.Red
+                        )
+                    DisplayMode: =If((SelectedRoom = Self || Self.Fill = Color.Green) && App.Width > 500, DisplayMode.Edit, DisplayMode.Disabled)
+                    Fill: |-
+                        =If(
+                            CountRows(
+                                Filter(
+                                    ScheduleRoom117,
+                                    With(
+                                        {
+                                            classStart: DateAdd(
+                                                DateValue(
+                                                    date,
+                                                    "en"
+                                                ),
+                                                hour + 0.25,
+                                                TimeUnit.Hours
+                                            ),
+                                            classEnd: DateAdd(
+                                                DateValue(
+                                                    date,
+                                                    "en"
+                                                ),
+                                                hour + Value(length),
+                                                TimeUnit.Hours
+                                            )
+                                        },
+                                        Or(
+                                            And(
+                                                classStart <= EndDateTime,
+                                                classStart >= StartDateTime
+                                            ),
+                                            And(
+                                                classEnd <= EndDateTime,
+                                                classEnd >= StartDateTime
+                                            ),
+                                            And(
+                                                StartDateTime <= classEnd,
+                                                StartDateTime >= classStart
+                                            )
+                                        )
+                                    )
+                                )
+                            ) = 0,
+                            If (SelectedRoom = Self,
+                                Color.Yellow,
+                                Color.Green
+                            ),
+                            Color.Red
+                        )
+                    FocusedBorderThickness: =1
+                    Height: =Parent.Height*61/668
+                    HoverColor: =ColorFade(Self.Color, 15%)
+                    HoverFill: =ColorFade(Self.Fill, 18%)
+                    OnSelect: |-
+                        =UpdateContext({SelectedRoom: Self})
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =If(App.Width > 400, 9, 0)
+                    Text: |-
+                        =If(
+                            Self.Fill = Color.Green || Self.Fill = Color.Yellow,
+                            "122",
+                            "X"
+                        )
+                    Width: =Parent.Width*36/1010
+                    X: =Parent.Width * 852/1010
+                    Y: =Parent.Height*337/668
+                    ZIndex: =22
+
+            ContainerProperties_1 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                Height: =Parent.Height
+                LayoutAlignItems: =LayoutAlignItems.Stretch
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =15
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                LayoutOverflowY: =LayoutOverflow.Scroll
+                PaddingBottom: =15
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =5
+                Visible: =varShowProperties
+                Width: =Parent.Width
+                ZIndex: =3
+
+                Icon7_1 As icon.Cancel:
+                    AlignInContainer: =AlignInContainer.End
+                    Height: =32
+                    Icon: =Icon.Cancel
+                    LayoutMinWidth: =32
+                    OnSelect: |-
+                        =UpdateContext({varRoomSelection: false});
+                        Set(varShowMainScreen, true);
+                        Reset(cbx_PhoneSelectRoom_1);
+                        Reset(DatePicker1_1);
+                    PaddingLeft: =20
+                    ZIndex: =1
+
+                Container10_7 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =100
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =4
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =5
+                    PaddingLeft: =5
+                    PaddingRight: =5
+                    PaddingTop: =5
+                    Visible: =!Label9_2.Visible
+                    ZIndex: =2
+
+                    Label12_7 As label:
+                        Align: =Align.Center
+                        Size: =15
+                        Text: ="Caller"
+                        ZIndex: =1
+
+                    Button4_5 As button:
+                        DisplayMode: =DisplayMode.View
+                        Fill: =WEITI_Szafirowy
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Text: =User().FullName
+                        Width: =Parent.Width
+                        ZIndex: =2
+
+                con_RoomSelection_1 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    Height: =100
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =4
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =5
+                    PaddingLeft: =5
+                    PaddingRight: =5
+                    PaddingTop: =5
+                    ZIndex: =3
+
+                    Label12_4 As label:
+                        Size: =15
+                        Text: ="Selected room"
+                        ZIndex: =1
+
+                    Button4_3 As button:
+                        DisplayMode: =DisplayMode.View
+                        Fill: =WEITI_Szafirowy
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Text: =SelectedRoom.Text
+                        Visible: =App.Width > 400
+                        Width: =Parent.Width - 10
+                        ZIndex: =2
+
+                    cbx_PhoneSelectRoom_1 As combobox:
+                        AccessibleLabel: ="Test"
+                        DisplayFields: =["Name"]
+                        IsSearchable: =false
+                        Items: =Filter(SortByColumns(RoomButtons, "Name"), Button.Fill = Color.Green)
+                        OnChange: |-
+                            =If(IsBlank(Self.Selected), UpdateContext({SelectedRoom: Blank()}), UpdateContext({SelectedRoom: Self.Selected.Button}))
+                        OnSelect: |-
+                            =If(IsBlank(Self.Selected), UpdateContext({SelectedRoom: Blank()}), UpdateContext({SelectedRoom: Self.Selected.Button}))
+                        SearchFields: =["Name"]
+                        SearchItems: =Search(Filter(SortByColumns(RoomButtons, "Name"), Button.Fill = Color.Green),cbx_PhoneSelectRoom_1.SearchText,Name)
+                        SelectMultiple: =false
+                        Visible: =App.Width < 400
+                        ZIndex: =3
+
+                Container10_5 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    Height: =100
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =4
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =5
+                    PaddingLeft: =5
+                    PaddingRight: =5
+                    PaddingTop: =5
+                    ZIndex: =4
+
+                    Label12_5 As label:
+                        Size: =15
+                        Text: ="Selected date"
+                        ZIndex: =1
+
+                    DatePicker1_1 As datepicker:
+                        BorderThickness: =0
+                        Color: =RGBA(255, 255, 255, 1)
+                        Fill: =WEITI_Szafirowy
+                        IconBackground: =WEITI_Grafitowy
+                        LayoutMinWidth: =160
+                        OnChange: |-
+                            =UpdateContext({varShowProperties: false});
+                            UpdateContext({varShowSyncing: true});
+                            Set(DateSelected, Self.SelectedDate);
+                            If (
+                                Self.SelectedDate < Today(),
+                                Reset(Self);
+                                Notify("Error. Please select future Date.", NotificationType.Error),
+                            
+                                Set(StartTimeMinutes, Hour(StartDateTime)*60 + Minute(StartDateTime));
+                                Set(EndTimeMinutes, Hour(EndDateTime)*60 + Minute(EndDateTime));
+                            
+                                Set(StartDateTime, DateAdd(DateSelected, StartTimeMinutes, TimeUnit.Minutes));
+                                Set(EndDateTime, DateAdd(DateSelected, EndTimeMinutes, TimeUnit.Minutes));
+                            
+                                Set(StartDateTimeUTC, Text(DateAdd(StartDateTime, TimeZoneOffset(), TimeUnit.Minutes), "[$-en-US]yyyy-mm-ddThh:mm") & ":00.000Z");
+                                Set(EndDateTimeUTC, Text(DateAdd(EndDateTime, TimeZoneOffset(), TimeUnit.Minutes), "[$-en-US]yyyy-mm-ddThh:mm") & ":00.000Z");
+                            
+                                Concurrent(
+                                    ClearCollect(ScheduleRoom102, 'Serwer Studia'.Getclassesfromroom("1030-ETI-102", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom103, 'Serwer Studia'.Getclassesfromroom("1030-ETI-103", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom104, 'Serwer Studia'.Getclassesfromroom("1030-ETI-104", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom105, 'Serwer Studia'.Getclassesfromroom("1030-ETI-105-AR", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
+                                );
+                            
+                                Concurrent(
+                                    ClearCollect(ScheduleRoom106, 'Serwer Studia'.Getclassesfromroom("1030-ETI-106", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom107, 'Serwer Studia'.Getclassesfromroom("1030-ETI-107", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom161, 'Serwer Studia'.Getclassesfromroom("1030-ETI-161", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom108, 'Serwer Studia'.Getclassesfromroom("1030-ETI-108", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
+                                );
+                            
+                                Concurrent(
+                                    ClearCollect(ScheduleRoom116, 'Serwer Studia'.Getclassesfromroom("1030-ETI-116", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom117, 'Serwer Studia'.Getclassesfromroom("1030-ETI-117", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom116AR, 'Serwer Studia'.Getclassesfromroom("1030-ETI-116-AR", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom133, 'Serwer Studia'.Getclassesfromroom("1030-ETI-108", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
+                                );
+                            
+                                Concurrent(
+                                    ClearCollect(ScheduleRoom120, 'Serwer Studia'.Getclassesfromroom("1030-ETI-120", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom121, 'Serwer Studia'.Getclassesfromroom("1030-ETI-121", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom122, 'Serwer Studia'.Getclassesfromroom("1030-ETI-122", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
+                                );
+                            );
+                            ClearCollect(
+                                    RoomButtons,
+                                    {
+                                        Name: "122",
+                                        Button: room122_7
+                                    },
+                                    {
+                                        Name: "121",
+                                        Button: room121_7
+                                    },
+                                    {
+                                        Name: "120",
+                                        Button: room120_7
+                                    },
+                                    {
+                                        Name: "116-AR",
+                                        Button: 'room116-AR_7'
+                                    },
+                                    {
+                                        Name: "117",
+                                        Button: room117_7
+                                    },
+                                    {
+                                        Name: "116",
+                                        Button: room116_7
+                                    },
+                                    {
+                                        Name: "105",
+                                        Button: room105_7
+                                    },
+                                    {
+                                        Name: "106",
+                                        Button: room106_7
+                                    },
+                                    {
+                                        Name: "107",
+                                        Button: room107_7
+                                    },
+                                    {
+                                        Name: "161",
+                                        Button: room161_7
+                                    },
+                                    {
+                                        Name: "102",
+                                        Button: room102_7
+                                    },
+                                    {
+                                        Name: "104",
+                                        Button: room104_7
+                                    },
+                                    {
+                                        Name: "103",
+                                        Button: room103_7
+                                    },
+                                    {
+                                        Name: "108",
+                                        Button: room108_7
+                                    }
+                                );
+                                Reset(cbx_PhoneSelectRoom_1);
+                            UpdateContext({varShowSyncing: false});
+                            UpdateContext({varShowProperties: true});
+                        PaddingLeft: =17
+                        PaddingTop: =5
+                        Size: =15
+                        StartOfWeek: =StartOfWeek.Monday
+                        Width: =Parent.Width - 10
+                        ZIndex: =3
+
+                Container10_6 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    Height: =100
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =4
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =5
+                    PaddingLeft: =5
+                    PaddingRight: =5
+                    PaddingTop: =5
+                    ZIndex: =5
+
+                    Label12_6 As label:
+                        Size: =15
+                        Text: ="Selected time"
+                        ZIndex: =1
+
+                    Button4_4 As button:
+                        BorderThickness: =0
+                        Fill: =WEITI_Szafirowy
+                        FontWeight: =FontWeight.Normal
+                        OnSelect: |-
+                            =If (
+                                App.Width < 600,
+                            
+                                UpdateContext({varShowFacultyMap:false});
+                                UpdateContext({varShowTimeSelection:true});
+                                UpdateContext({varShowProperties:false}),
+                            
+                                UpdateContext({varShowTimeSelection:true});
+                                UpdateContext({varShowProperties:false})
+                            )
+                        PressedColor: =Self.Color
+                        PressedFill: =ColorFade(Self.Fill, 18%)
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Text: =Text(StartDateTime, DateTimeFormat.ShortTime) & " - " & Text(EndDateTime, DateTimeFormat.ShortTime)
+                        Width: =Parent.Width - 10
+                        ZIndex: =2
+
+                Rectangle4_1 As rectangle:
+                    Fill: =RGBA(0,0,0,0)
+                    FillPortions: =1
+                    LayoutMinHeight: =0
+                    LayoutMinWidth: =0
+                    ZIndex: =6
+
+                btn_Book_1 As button:
+                    AlignInContainer: =AlignInContainer.Center
+                    DisplayMode: =If(IsBlank(SelectedRoom), DisplayMode.Disabled, DisplayMode.Edit)
+                    OnSelect: |-
+                        =ForAll(
+                            ReservationDatabase,
+                            Notify(ThisRecord.Caller.Claims,NotificationType.Information,5000)
+                        );
+                        Patch(
+                            ReservationDatabase,
+                            Defaults(ReservationDatabase),
+                            {
+                                Title: GUID(),
+                                Caller: {
+                                        Claims: "i:0#.f|membership|"&User().Email,
+                                        Department: "",
+                                        DisplayName: Concat(O365User,DisplayName),
+                                        Email: Concat(O365User, Mail),
+                                        JobTitle: "",
+                                        Picture: ""
+                                },
+                                ReservationStart: StartDateTime,
+                                ReservationEnd: EndDateTime,
+                                Room: SelectedRoom.Text
+                            }
+                        );
+                        Office365Outlook.V4CalendarPostItem(
+                            myCalendar.id,
+                            User().FullName&"'s reservation",
+                            StartDateTimeUTC,
+                            EndDateTimeUTC,
+                            "(UTC+01:00) Sarajevo, Skopje, Warsaw, Zagreb",
+                            {
+                                Location: "room "&SelectedRoom.Text,
+                                importance: "normal",
+                                requiredAttendees:If(SelectedRoom.Text = "107", "eiti.107.teams.rooms@pw.edu.pl"),
+                                showAs: "busy"
+                            }
+                        );
+                        Navigate(BookingConfirmationScreen,ScreenTransition.Cover);
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: ="Book!"
+                    Width: =Parent.Width - 10
+                    ZIndex: =7
+
+            ContainerTimeSelection_1 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                Fill: =RGBA(244, 244, 244, 1)
+                LayoutAlignItems: =LayoutAlignItems.Stretch
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =5
+                LayoutMinHeight: =100
+                LayoutMinWidth: =300
+                LayoutMode: =LayoutMode.Auto
+                LayoutOverflowY: =LayoutOverflow.Scroll
+                Visible: =varShowTimeSelection
+                ZIndex: =4
+
+                Container13_1 As groupContainer.manualLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =Label4_19.Height
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: |
+                        =300
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    ZIndex: =1
+
+                    Rectangle1_13 As rectangle:
+                        Height: =50
+                        Visible: =false
+                        Width: =Parent.Width
+                        ZIndex: =1
+
+                    Label4_19 As label:
+                        Align: =Align.Center
+                        Fill: =WEITI_Szafirowy
+                        Height: =44
+                        Size: =20
+                        Text: ="SELECT TIME"
+                        Width: =Parent.Width
+                        ZIndex: =2
+
+                    Icon3_6 As icon.Cancel:
+                        Color: =RGBA(255, 255, 255, 1)
+                        Height: =Label4_19.Height
+                        Icon: =Icon.Cancel
+                        OnSelect: |-
+                            =UpdateContext (
+                                {
+                                    varShowProperties:true,
+                                    varShowFacultyMap:true,
+                                    varShowTimeSelection:false
+                                }
+                            );
+                        PaddingBottom: =5
+                        PaddingLeft: =5
+                        PaddingRight: =5
+                        PaddingTop: =5
+                        Width: =44
+                        ZIndex: =3
+
+                Container15_1 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    DropShadow: =DropShadow.None
+                    Height: =Parent.LayoutGap + Container16_2.Height
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutGap: =10
+                    LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                    LayoutMinHeight: =80
+                    LayoutMinWidth: =100
+                    LayoutMode: =LayoutMode.Auto
+                    LayoutWrap: =true
+                    PaddingBottom: =5
+                    PaddingLeft: =10
+                    PaddingRight: =10
+                    PaddingTop: =5
+                    ZIndex: =2
+
+                    Container16_2 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.Center
+                        DropShadow: =DropShadow.None
+                        Height: =Label6_8.Height+DropdownStartTime_4.Height+2*DropdownStartTime_4.BorderThickness
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =0
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingBottom: =4
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Width: =30
+                        ZIndex: =1
+
+                        Label6_8 As label:
+                            FontWeight: =FontWeight.Semibold
+                            Text: ="Start"
+                            Width: =Parent.Width
+                            X: =54
+                            Y: =76
+                            ZIndex: =1
+
+                        DropdownStartTime_4 As dropdown:
+                            BorderColor: =If(ButtonSaveTime_4.DisplayMode = DisplayMode.Edit, RGBA(120, 120, 120, 1), Color.Red)
+                            ChevronBackground: =RGBA(62, 96, 170, 0)
+                            ChevronDisabledBackground: =RGBA(159, 167, 165, 1)
+                            ChevronDisabledFill: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                            ChevronFill: =RGBA(18, 107, 240, 1)
+                            Default: =If(ResetTrue, LookUp(Times, Text = Lower(Text(StartDateTime, DateTimeFormat.ShortTime))).Text)
+                            Items: =Times
+                            Width: =Parent.Width - Self.BorderThickness*2
+                            X: =ButtonSaveTime_4.X
+                            Y: =40
+                            ZIndex: =2
+
+                    Container16_3 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
+                        Height: =Label6_9.Height+DropdownEndTime_4.Height + 2*DropdownEndTime_4.BorderThickness
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =0
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingBottom: =4
+                        Width: =30
+                        ZIndex: =2
+
+                        Label6_9 As label:
+                            FontWeight: =FontWeight.Semibold
+                            Text: ="End"
+                            Width: =Parent.Width
+                            X: =232
+                            Y: =76
+                            ZIndex: =1
+
+                        DropdownEndTime_4 As dropdown:
+                            BorderColor: =If(ButtonSaveTime_4.DisplayMode = DisplayMode.Edit, RGBA(120, 120, 120, 1), Color.Red)
+                            ChevronBackground: =RGBA(62, 96, 170, 0)
+                            ChevronDisabledBackground: =RGBA(159, 167, 165, 1)
+                            ChevronDisabledFill: =ColorFade(RGBA(47, 41, 43, 1), 70%)
+                            ChevronFill: =RGBA(18, 107, 240, 1)
+                            Default: =If(IsBlank(DurationGallery_4.Selected) && IsBlank(DurationSelection) || ResetTrue, LookUp(Times, Text = Lower(Text(EndDateTime, DateTimeFormat.ShortTime))).Text, !IsBlank(DurationSelection), LookUp(Times, Minutes = Mod(DropdownStartTime_4.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' + DurationGallery_4.Selected.Minutes, 1440)).Text)
+                            Items: =Times
+                            Width: =Parent.Width - Self.BorderThickness * 2
+                            X: =232
+                            Y: =40
+                            ZIndex: =2
+
+                Label13_1 As label:
+                    Align: =Align.Center
+                    Fill: =RGBA(255, 184, 174, 1)
+                    Height: =20
+                    Size: =9
+                    Text: ="🚫 Please select correct start and end times"
+                    Visible: =TimeValue(DropdownStartTime_4.Selected.Text,"en-US") > TimeValue(DropdownEndTime_4.Selected.Text,"en-US")
+                    ZIndex: =3
+
+                "DurationGallery_4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                    '#CopilotOverlayLabel': ="Filtered"
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    DelayItemLoading: =true
+                    FillPortions: =4
+                    Height: =355
+                    Items: =Durations
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =300
+                    LayoutMinWidth: =200
+                    LoadingSpinner: =LoadingSpinner.Data
+                    ShowScrollbar: =false
+                    TemplatePadding: =15
+                    TemplateSize: =90
+                    Width: =361
+                    WrapCount: =2
+                    X: =40
+                    Y: =190
+                    ZIndex: =4
+
+                    Button5_5 As button:
+                        BorderColor: =RGBA(18, 107, 240, 1)
+                        Color: =Self.BorderColor
+                        Fill: =If(ThisItem.Minutes = DurationSelection.Minutes, RGBA(18, 107, 240, .2), RGBA(0, 0, 0, 0))
+                        Height: =Parent.TemplateHeight
+                        OnSelect: |-
+                            =Select(Parent);
+                            If(IsBlank(DurationSelection) || ThisItem.Time <> DurationSelection.Time, Set(DurationSelection, ThisItem), Set(DurationSelection, Blank()));
+                            UpdateContext({ResetTrue: false})
+                        Text: ="+ " & ThisItem.Time
+                        Width: =Parent.TemplateWidth
+                        ZIndex: =3
+
+                Container17_1 As groupContainer.manualLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =60
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    PaddingBottom: =30
+                    PaddingLeft: =30
+                    PaddingRight: =30
+                    PaddingTop: =30
+                    ZIndex: =5
+
+                    ButtonSaveTime_4 As button:
+                        DisplayMode: |-
+                            =If (
+                                Label13_1.Visible,
+                                DisplayMode.Disabled,
+                                DisplayMode.Edit
+                            )
+                        Height: =Parent.Height - Self.PaddingBottom - Self.PaddingTop
+                        OnSelect: |
+                            =Set(StartDateTime, DateAdd(DateSelected, DropdownStartTime_4.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes', TimeUnit.Minutes));
+                            Set(EndDateTime, DateAdd(StartDateTime, If(DropdownStartTime_4.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' >= DropdownEndTime_4.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes', DropdownEndTime_4.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' + 1440 - DropdownStartTime_4.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes', DropdownEndTime_4.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes' - DropdownStartTime_4.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes'), TimeUnit.Minutes));
+                            
+                            Set(StartDateTimeUTC, Text(DateAdd(StartDateTime, TimeZoneOffset(), TimeUnit.Minutes), "[$-en-US]yyyy-mm-ddThh:mm") & ":00.000Z");
+                            Set(EndDateTimeUTC, Text(DateAdd(EndDateTime, TimeZoneOffset(), TimeUnit.Minutes), "[$-en-US]yyyy-mm-ddThh:mm") & ":00.000Z");
+                            
+                            Reset(cbx_PhoneSelectRoom_1);
+                            ClearCollect(
+                                    RoomButtons,
+                                    {
+                                        Name: "122",
+                                        Button: room122_7
+                                    },
+                                    {
+                                        Name: "121",
+                                        Button: room121_7
+                                    },
+                                    {
+                                        Name: "120",
+                                        Button: room120_7
+                                    },
+                                    {
+                                        Name: "116-AR",
+                                        Button: 'room116-AR_7'
+                                    },
+                                    {
+                                        Name: "117",
+                                        Button: room117_7
+                                    },
+                                    {
+                                        Name: "116",
+                                        Button: room116_7
+                                    },
+                                    {
+                                        Name: "105",
+                                        Button: room105_7
+                                    },
+                                    {
+                                        Name: "106",
+                                        Button: room106_7
+                                    },
+                                    {
+                                        Name: "107",
+                                        Button: room107_7
+                                    },
+                                    {
+                                        Name: "161",
+                                        Button: room161_7
+                                    },
+                                    {
+                                        Name: "102",
+                                        Button: room102_7
+                                    },
+                                    {
+                                        Name: "104",
+                                        Button: room104_7
+                                    },
+                                    {
+                                        Name: "103",
+                                        Button: room103_7
+                                    },
+                                    {
+                                        Name: "108",
+                                        Button: room108_7
+                                    }
+                                );
+                            
+                            UpdateContext (
+                                {
+                                    varShowProperties:true,
+                                    varShowFacultyMap:true,
+                                    varShowTimeSelection:false
+                                }
+                            );
+                        Text: ="SAVE"
+                        Width: =Parent.Width - Self.PaddingLeft - Self.PaddingRight
+                        X: =Self.PaddingLeft
+                        Y: =Self.PaddingTop
+                        ZIndex: =1
+
+            SyncScreen_1 As groupContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                Height: =Parent.Height
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                Visible: |
+                    =varShowSyncing
+                Width: =App.Width
+                ZIndex: =5
+
+                Rectangle2_14 As rectangle:
+                    BorderColor: =RGBA(255, 255, 255, 1)
+                    Fill: =RGBA(255, 255, 255, 1)
+                    Height: =Parent.Height
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                Container1_1 As groupContainer.verticalAutoLayoutContainer:
+                    Height: =Parent.Height
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =50
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =10
+                    PaddingLeft: =10
+                    PaddingRight: =10
+                    PaddingTop: =10
+                    Width: =Parent.Width
+                    ZIndex: =7
+
+                    Image1_2 As image:
+                        Height: =175
+                        Image: ='Screenshot 2024-03-02 184341'
+                        Width: =175
+                        X: =Parent.Width / 2 - Self.Width / 2
+                        Y: =4
+                        ZIndex: =1
+
+                    Spinner3_1 As Spinner:
+                        Appearance: ='Spinner.Appearance'.Primary
+                        BasePaletteColor: =
+                        DisplayMode: =DisplayMode.Edit
+                        FontColor: =
+                        Height: =71
+                        LayoutMinHeight: =200
+                        LayoutMinWidth: =200
+                        Width: =75
+                        X: =134
+                        Y: =Parent.Height / 2 
+                        ZIndex: =2
+
+                    Label8_14 As label:
+                        Align: =Align.Center
+                        AlignInContainer: =AlignInContainer.Stretch
+                        Height: =34
+                        Size: =15
+                        Text: ="Syncing with Server Studia... "
+                        Width: =344
+                        Y: =310
+                        ZIndex: =3
 
     LoadingScreen As groupContainer:
         Height: =App.Height
