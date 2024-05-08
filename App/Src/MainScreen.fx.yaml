@@ -3419,6 +3419,8 @@ MainScreen As screen:
                             Set(StartDateTimeUTC, Text(DateAdd(StartDateTime, TimeZoneOffset(), TimeUnit.Minutes), "[$-en-US]yyyy-mm-ddThh:mm") & ":00.000Z");
                             Set(EndDateTimeUTC, Text(DateAdd(EndDateTime, TimeZoneOffset(), TimeUnit.Minutes), "[$-en-US]yyyy-mm-ddThh:mm") & ":00.000Z");
                             
+                            Reset(cbx_PhoneSelectRoom)
+                            
                             UpdateContext (
                                 {
                                     varShowProperties:true,
