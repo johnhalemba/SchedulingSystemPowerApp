@@ -1096,6 +1096,22 @@ MainScreen As screen:
                                     ClearCollect(ScheduleRoom102, 'Serwer Studia'.Getclassesfromroom("1030-ETI-102", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
                                     ClearCollect(ScheduleRoom103, 'Serwer Studia'.Getclassesfromroom("1030-ETI-103", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
                                 );
+                                AddColumns(
+                                    ScheduleRoom102,
+                                    "StartDateTime",
+                                    DateTimeValue(
+                                        Text(date, "[$-en-US]0000\\-00\\-00") & "T" & Text(hour, "00") & "15:00"
+                                    ),
+                                    "EndDateTime",
+                                    DateAdd(
+                                        DateTimeValue(
+                                            Text(date, "[$-en-US]0000\\-00\\00") && "T" && Text(hour + length, "00") & ":00:00"
+                                        ),
+                                        -1,
+                                        TimeUnit.Minutes
+                                    )
+                                
+                                );
                                 UpdateContext({LoadingDone: LoadingDone + 1});
                                 
                                 Concurrent(
