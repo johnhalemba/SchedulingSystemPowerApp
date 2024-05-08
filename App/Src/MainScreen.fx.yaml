@@ -3244,7 +3244,7 @@ MainScreen As screen:
                         Height: =Label4_18.Height
                         Icon: =Icon.Cancel
                         OnSelect: |-
-                            =UpdateContext(
+                            =UpdateContext (
                                 {
                                     varShowProperties:true,
                                     varShowFacultyMap:true,
