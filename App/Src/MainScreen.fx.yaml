@@ -8,16 +8,17 @@ MainScreen As screen:
                 varShowMainScreen:true
             }
         );
-    OnVisible: |
+    OnVisible: |-
         =Set(DurationSelection, Blank());
         UpdateContext({ResetTrue: false});
         UpdateContext({ResetTrue: true});
         UpdateContext(
             {
-                varRoomSelection:false,
-                varShowMainScreen:true
+                varRoomSelection:false
             }
         );
+        Set(varShowMainScreen, true)
+        '
 
     CheckSchedulePopUp_1 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Regular
