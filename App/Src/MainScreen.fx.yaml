@@ -3037,7 +3037,7 @@ MainScreen As screen:
                         RadiusTopRight: =0
                         Text: =SelectedRoom.Text
                         Visible: =App.Width > 400
-                        Width: =Parent.Width
+                        Width: =Parent.Width - 10
                         ZIndex: =2
 
                     cbx_PhoneSelectRoom As combobox:
@@ -3133,6 +3133,7 @@ MainScreen As screen:
                         PaddingTop: =5
                         Size: =15
                         StartOfWeek: =StartOfWeek.Monday
+                        Width: =Parent.Width - 10
                         ZIndex: =3
 
                 Container10_3 As groupContainer.verticalAutoLayoutContainer:
@@ -3178,7 +3179,7 @@ MainScreen As screen:
                         RadiusTopLeft: =0
                         RadiusTopRight: =0
                         Text: =Text(StartDateTime, DateTimeFormat.ShortTime) & " - " & Text(EndDateTime, DateTimeFormat.ShortTime)
-                        Width: =Parent.Width
+                        Width: =Parent.Width - 10
                         ZIndex: =2
 
                 Rectangle4 As rectangle:
@@ -3243,9 +3244,13 @@ MainScreen As screen:
                         Height: =Label4_18.Height
                         Icon: =Icon.Cancel
                         OnSelect: |-
-                            =UpdateContext({varShowProperties:true});
-                            UpdateContext({varShowFacultyMap:true});
-                            UpdateContext({varShowTimeSelection:false})
+                            =UpdateContext(
+                                {
+                                    varShowProperties:true,
+                                    varShowFacultyMap:true,
+                                    varShowTimeSelection:false
+                                }
+                            );
                         PaddingBottom: =5
                         PaddingLeft: =5
                         PaddingRight: =5
