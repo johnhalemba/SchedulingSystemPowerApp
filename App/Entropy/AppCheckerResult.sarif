@@ -1514,6 +1514,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.varSelectedDateDatePicker"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.varSelectedDateDatePicker",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varSelectedDateDatePicker",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.DateTimeRoomChange"
                 }
               ],

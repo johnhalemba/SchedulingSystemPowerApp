@@ -1298,43 +1298,27 @@ MainScreen As screen:
                     ZIndex: =3
 
                 con_CalendarType As groupContainer.verticalAutoLayoutContainer:
-                    AlignInContainer: =AlignInContainer.SetByContainer
                     DropShadow: =DropShadow.None
                     FillPortions: =0
-                    Height: =Label3_4.Height + DropdownCalendarType_2.Height + 2*Self.LayoutGap
-                    LayoutAlignItems: =LayoutAlignItems.Center
+                    Height: =100
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutGap: =5
                     LayoutMinHeight: =Label3_4.Height + Self.LayoutGap + DropdownCalendarType_2.Height
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
-                    LayoutOverflowX: =LayoutOverflow.Scroll
-                    LayoutOverflowY: =LayoutOverflow.Scroll
                     LayoutWrap: =true
                     Visible: =showSettings
                     Width: =Parent.Width
                     ZIndex: =4
 
-                    Container1 As groupContainer.manualLayoutContainer:
-                        AlignInContainer: =AlignInContainer.SetByContainer
-                        Height: =Parent.Height
-                        LayoutMinHeight: =100
-                        LayoutMinWidth: =250
-                        Visible: =false
-                        Width: =
-                        ZIndex: =4
-
-                    Container2 As groupContainer.manualLayoutContainer:
-                        LayoutMinHeight: =100
-                        LayoutMinWidth: =250
-                        Visible: =false
-                        ZIndex: =5
-
                     Container5 As groupContainer.verticalAutoLayoutContainer:
-                        AlignInContainer: =AlignInContainer.Center
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
                         Height: =Parent.Height
                         LayoutAlignItems: =LayoutAlignItems.Center
                         LayoutDirection: =LayoutDirection.Vertical
-                        LayoutMinHeight: =100
+                        LayoutGap: =5
+                        LayoutMinHeight: =0
                         LayoutMinWidth: =250
                         LayoutMode: =LayoutMode.Auto
                         ZIndex: =6
@@ -1370,12 +1354,11 @@ MainScreen As screen:
                     con_Calendar As groupContainer.verticalAutoLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
                         DropShadow: =DropShadow.None
-                        FillPortions: =0
                         Height: =Label3_3.Height + Dropdown1_2.Height + 2 * Self.LayoutGap
                         LayoutAlignItems: =LayoutAlignItems.Center
                         LayoutDirection: =LayoutDirection.Vertical
                         LayoutGap: =5
-                        LayoutMinHeight: =100
+                        LayoutMinHeight: =0
                         LayoutMinWidth: =250
                         LayoutMode: =LayoutMode.Auto
                         LayoutWrap: =true
@@ -1412,7 +1395,7 @@ MainScreen As screen:
                     ZIndex: =6
 
                 Container4 As groupContainer.horizontalAutoLayoutContainer:
-                    AlignInContainer: =AlignInContainer.SetByContainer
+                    AlignInContainer: =AlignInContainer.Center
                     DropShadow: =DropShadow.None
                     FillPortions: =0
                     Height: =DatePicker2.Height + 2 * DatePicker2.BorderThickness
@@ -1435,9 +1418,11 @@ MainScreen As screen:
                         ZIndex: =1
 
                     DatePicker2 As datepicker:
-                        DefaultDate: =varSelectedDateDatePicker
+                        DefaultDate: |-
+                            =//varSelectedDateDatePicker
+                            Today()
                         OnChange: =Set(varSelectedDate, Self.SelectedDate)
-                        Width: =160
+                        Width: =180
                         ZIndex: =3
 
                     Icon1_6 As icon.ArrowRight:
