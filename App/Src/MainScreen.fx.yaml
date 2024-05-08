@@ -3127,6 +3127,65 @@ MainScreen As screen:
                                     ClearCollect(ScheduleRoom122, 'Serwer Studia'.Getclassesfromroom("1030-ETI-122", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
                                 );
                             );
+                            ClearCollect(
+                                    RoomButtons,
+                                    {
+                                        Name: "122",
+                                        Button: room122_6
+                                    },
+                                    {
+                                        Name: "121",
+                                        Button: room121_6
+                                    },
+                                    {
+                                        Name: "120",
+                                        Button: room120_6
+                                    },
+                                    {
+                                        Name: "116-AR",
+                                        Button: 'room116-AR_6'
+                                    },
+                                    {
+                                        Name: "117",
+                                        Button: room117_6
+                                    },
+                                    {
+                                        Name: "116",
+                                        Button: room116_6
+                                    },
+                                    {
+                                        Name: "105",
+                                        Button: room105_6
+                                    },
+                                    {
+                                        Name: "106",
+                                        Button: room106_6
+                                    },
+                                    {
+                                        Name: "107",
+                                        Button: room107_6
+                                    },
+                                    {
+                                        Name: "161",
+                                        Button: room161_6
+                                    },
+                                    {
+                                        Name: "102",
+                                        Button: room102_6
+                                    },
+                                    {
+                                        Name: "104",
+                                        Button: room104_6
+                                    },
+                                    {
+                                        Name: "103",
+                                        Button: room103_6
+                                    },
+                                    {
+                                        Name: "108",
+                                        Button: room108_6
+                                    }
+                                );
                             UpdateContext({varShowSyncing: false});
                             UpdateContext({varShowProperties: true});
                         PaddingLeft: =17
@@ -3419,7 +3478,7 @@ MainScreen As screen:
                             Set(StartDateTimeUTC, Text(DateAdd(StartDateTime, TimeZoneOffset(), TimeUnit.Minutes), "[$-en-US]yyyy-mm-ddThh:mm") & ":00.000Z");
                             Set(EndDateTimeUTC, Text(DateAdd(EndDateTime, TimeZoneOffset(), TimeUnit.Minutes), "[$-en-US]yyyy-mm-ddThh:mm") & ":00.000Z");
                             
-                            Reset(cbx_PhoneSelectRoom)
+                            Reset(cbx_PhoneSelectRoom);
                             
                             UpdateContext (
                                 {
