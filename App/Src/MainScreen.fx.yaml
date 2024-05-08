@@ -3309,6 +3309,7 @@ MainScreen As screen:
                     ZIndex: =6
 
                 btn_Book As button:
+                    AlignInContainer: =AlignInContainer.Center
                     DisplayMode: =If(IsBlank(SelectedRoom), DisplayMode.Disabled, DisplayMode.Edit)
                     OnSelect: =Navigate(BookingConfirmationScreen,ScreenTransition.Cover)
                     PaddingBottom: =0
@@ -3316,6 +3317,7 @@ MainScreen As screen:
                     PaddingRight: =0
                     PaddingTop: =0
                     Text: ="Book!"
+                    Width: =Parent.Width - 10
                     ZIndex: =7
 
             ContainerTimeSelection As groupContainer.verticalAutoLayoutContainer:
