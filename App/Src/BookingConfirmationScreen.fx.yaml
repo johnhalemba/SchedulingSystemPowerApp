@@ -200,8 +200,8 @@ BookingConfirmationScreen As screen:
                     =Navigate(MainScreen,ScreenTransition.UnCover,{
                         varShowFacultyMap: true,
                         varShowProperties: true,
-                        varShowMainScreen: false
-                    })
+                    });
+                    Set(varShowMainScreen, true)
                 PressedColor: =ColorFade(Self.Color, 18%)
                 PressedFill: =Color.Transparent
                 Text: ="Book another room"
