@@ -5071,7 +5071,7 @@ MainScreen As screen:
                     Icon: =Icon.Cancel
                     LayoutMinWidth: =32
                     OnSelect: |-
-                        =UpdateContext({varRoomSelection: false});
+                        =UpdateContext({varCheckSchedule: false});
                         Set(varShowMainScreen, true);
                         Reset(cbx_PhoneSelectRoom_1);
                         Reset(DatePicker1_1);
