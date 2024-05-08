@@ -1303,7 +1303,6 @@ MainScreen As screen:
                     FillPortions: =0
                     Height: =Label3_4.Height + DropdownCalendarType_2.Height + 2*Self.LayoutGap
                     LayoutAlignItems: =LayoutAlignItems.Center
-                    LayoutDirection: =LayoutDirection.Vertical
                     LayoutGap: =5
                     LayoutMinHeight: =Label3_4.Height + Self.LayoutGap + DropdownCalendarType_2.Height
                     LayoutMinWidth: =250
@@ -1315,67 +1314,94 @@ MainScreen As screen:
                     Width: =Parent.Width
                     ZIndex: =4
 
-                    Label3_4 As label:
-                        Align: =Align.Center
-                        AutoHeight: =true
-                        Size: =15
-                        Text: |-
-                            ="Source
-                            "
-                        Width: =100
-                        ZIndex: =1
+                    Container1 As groupContainer.manualLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        Height: =Parent.Height
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        Visible: =false
+                        Width: =
+                        ZIndex: =4
 
-                    DropdownCalendarType_2 As dropdown:
-                        AllowEmptySelection: =true
-                        Default: =""
-                        Items: =["Serwer Studia", "Outlook"]
-                        OnChange: |-
-                            =If (
-                                Self.Selected.Value = "Serwer Studia",
-                                UpdateContext({serwerStudia: true}),
-                                UpdateContext({serwerStudia: false})
-                            )
-                        Tooltip: ="Select calendar..."
-                        Width: =200
-                        X: =713
-                        Y: =20
-                        ZIndex: =3
+                    Container2 As groupContainer.manualLayoutContainer:
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        Visible: =false
+                        ZIndex: =5
 
-                con_Calendar As groupContainer.verticalAutoLayoutContainer:
-                    AlignInContainer: =AlignInContainer.SetByContainer
-                    DropShadow: =DropShadow.None
-                    FillPortions: =0
-                    Height: =Label3_3.Height + Dropdown1_2.Height + 2 * Self.LayoutGap
-                    LayoutAlignItems: =LayoutAlignItems.Center
-                    LayoutDirection: =LayoutDirection.Vertical
-                    LayoutGap: =5
-                    LayoutMinHeight: =100
-                    LayoutMinWidth: =250
-                    LayoutMode: =LayoutMode.Auto
-                    LayoutWrap: =true
-                    Visible: =DropdownCalendarType_2.Selected.Value = "Outlook" && showSettings
-                    Width: =Parent.Width
-                    ZIndex: =5
+                    Container5 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.Center
+                        Height: =Parent.Height
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =6
 
-                    Label3_3 As label:
-                        Align: =Align.Center
-                        AutoHeight: =true
-                        Size: =15
-                        Text: |-
-                            ="Calendar
-                            "
-                        ZIndex: =1
+                        Label3_4 As label:
+                            Align: =Align.Center
+                            AutoHeight: =true
+                            Size: =15
+                            Text: |-
+                                ="Source
+                                "
+                            Width: =100
+                            X: =50
+                            Y: =8
+                            ZIndex: =1
 
-                    Dropdown1_2 As dropdown:
-                        Default: ="Kalendarz"
-                        Items: =Office365Outlook.CalendarGetTablesV2().value
-                        Width: |
-                            =200
-                        X: =440
-                        Y: =205
-                        ZIndex: =2
+                        DropdownCalendarType_2 As dropdown:
+                            AllowEmptySelection: =true
+                            Default: =""
+                            Items: =["Serwer Studia", "Outlook"]
+                            OnChange: |-
+                                =If (
+                                    Self.Selected.Value = "Serwer Studia",
+                                    UpdateContext({serwerStudia: true}),
+                                    UpdateContext({serwerStudia: false})
+                                )
+                            Tooltip: ="Select calendar..."
+                            Width: =200
+                            X: =56
+                            Y: =35
+                            ZIndex: =2
 
-                Label11_1 As label:
+                    con_Calendar As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
+                        FillPortions: =0
+                        Height: =Label3_3.Height + Dropdown1_2.Height + 2 * Self.LayoutGap
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutGap: =5
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        LayoutWrap: =true
+                        Visible: =DropdownCalendarType_2.Selected.Value = "Outlook" && showSettings
+                        Width: =Parent.Width
+                        ZIndex: =7
+
+                        Label3_3 As label:
+                            Align: =Align.Center
+                            AutoHeight: =true
+                            Size: =15
+                            Text: |-
+                                ="Calendar
+                                "
+                            ZIndex: =1
+
+                        Dropdown1_2 As dropdown:
+                            Default: ="Kalendarz"
+                            Items: =Office365Outlook.CalendarGetTablesV2().value
+                            Width: |
+                                =200
+                            X: =440
+                            Y: =205
+                            ZIndex: =2
+
+                lbl_Schedule As label:
                     AlignInContainer: =AlignInContainer.Stretch
                     AutoHeight: =true
                     FontWeight: =FontWeight.Semibold
@@ -1676,7 +1702,7 @@ MainScreen As screen:
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
-                    Visible: =!serwerStudia && Gallery2_11.AllItemsCount = 0 && DropdownCalendarType_2.Selected.Value = "Serwer Studia"x
+                    Visible: =!serwerStudia && Gallery2_11.AllItemsCount = 0 && DropdownCalendarType_2.Selected.Value = "Serwer Studia"
                     ZIndex: =11
 
                     Label1_1 As label:
