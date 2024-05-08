@@ -3309,6 +3309,7 @@ MainScreen As screen:
                     ZIndex: =6
 
                 btn_Book As button:
+                    DisplayMode: =If(IsBlank(SelectedRoom), DisplayMode.Disabled, DisplayMode.Edit)
                     OnSelect: =Navigate(BookingConfirmationScreen,ScreenTransition.Cover)
                     PaddingBottom: =0
                     PaddingLeft: =0
@@ -3415,7 +3416,7 @@ MainScreen As screen:
                         Label6_6 As label:
                             FontWeight: =FontWeight.Semibold
                             Text: ="Start"
-                            Width: =158
+                            Width: =Parent.Width
                             X: =54
                             Y: =76
                             ZIndex: =1
@@ -3450,7 +3451,7 @@ MainScreen As screen:
                         Label6_7 As label:
                             FontWeight: =FontWeight.Semibold
                             Text: ="End"
-                            Width: =158
+                            Width: =Parent.Width
                             X: =232
                             Y: =76
                             ZIndex: =1
@@ -3486,7 +3487,7 @@ MainScreen As screen:
                     Items: =Durations
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =300
-                    LayoutMinWidth: =320
+                    LayoutMinWidth: =200
                     LoadingSpinner: =LoadingSpinner.Data
                     ShowScrollbar: =false
                     TemplatePadding: =15
@@ -3613,11 +3614,11 @@ MainScreen As screen:
                         ZIndex: =1
 
             SyncScreen As groupContainer:
-                AlignInContainer: =AlignInContainer.SetByContainer
                 Height: =Parent.Height
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
-                Visible: =varShowSyncing
+                Visible: |
+                    =varShowSyncing
                 Width: =App.Width
                 ZIndex: =5
 
@@ -3628,22 +3629,19 @@ MainScreen As screen:
                     Width: =Parent.Width
                     ZIndex: =1
 
-                Container8_1 As groupContainer:
-                    DropShadow: =DropShadow.None
-                    Height: =367
+                Container1 As groupContainer.verticalAutoLayoutContainer:
+                    Height: =Parent.Height
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =50
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =10
+                    PaddingLeft: =10
+                    PaddingRight: =10
+                    PaddingTop: =10
                     Width: =Parent.Width
-                    X: =Parent.Width / 2 - Self.Width / 2
-                    Y: =150
-                    ZIndex: =6
-
-                    Label8_13 As label:
-                        Align: =Align.Center
-                        Height: =34
-                        Size: =15
-                        Text: ="Syncing with Server Studia... "
-                        Width: =344
-                        Y: =314
-                        ZIndex: =1
+                    ZIndex: =7
 
                     Image1_1 As image:
                         Height: =175
@@ -3651,7 +3649,7 @@ MainScreen As screen:
                         Width: =175
                         X: =Parent.Width / 2 - Self.Width / 2
                         Y: =4
-                        ZIndex: =2
+                        ZIndex: =1
 
                     Spinner3 As Spinner:
                         Appearance: ='Spinner.Appearance'.Primary
@@ -3659,9 +3657,21 @@ MainScreen As screen:
                         DisplayMode: =DisplayMode.Edit
                         FontColor: =
                         Height: =71
+                        LayoutMinHeight: =200
+                        LayoutMinWidth: =200
                         Width: =75
                         X: =134
                         Y: =Parent.Height / 2 
+                        ZIndex: =2
+
+                    Label8_13 As label:
+                        Align: =Align.Center
+                        AlignInContainer: =AlignInContainer.Stretch
+                        Height: =34
+                        Size: =15
+                        Text: ="Syncing with Server Studia... "
+                        Width: =344
+                        Y: =310
                         ZIndex: =3
 
         ContainerFooter As groupContainer.manualLayoutContainer:

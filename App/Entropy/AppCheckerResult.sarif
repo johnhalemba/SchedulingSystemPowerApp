@@ -854,19 +854,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.SyncScreen.Container8_1.Spinner3.AccessibleLabel"
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.SyncScreen.Container1.Spinner3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.SyncScreen.Container8_1.Spinner3.AccessibleLabel",
+                  "fullyQualifiedName": "MainScreen.mainContainer.ContainerRoomSelection.SyncScreen.Container1.Spinner3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "MainScreen",
-                "type": "MainScreen.mainContainer.ContainerRoomSelection.SyncScreen.Container8_1.Spinner3"
+                "type": "MainScreen.mainContainer.ContainerRoomSelection.SyncScreen.Container1.Spinner3"
               }
             }
           ],

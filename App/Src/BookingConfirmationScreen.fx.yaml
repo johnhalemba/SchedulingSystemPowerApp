@@ -189,17 +189,36 @@ BookingConfirmationScreen As screen:
                     Y: =iconCheck1.Y + iconCheck1.Height + 100
                     ZIndex: =2
 
+            Button2 As button:
+                AlignInContainer: =AlignInContainer.Center
+                Color: =WEITI_Szafirowy
+                Fill: =Color.Transparent
+                HoverColor: =Self.Color
+                HoverFill: =Color.Transparent
+                OnSelect: |-
+                    =Navigate(MainScreen,ScreenTransition.UnCover,{
+                        varShowFacultyMap: true,
+                        varShowProperties: true,
+                        varShowMainScreen: false
+                    })
+                PressedColor: =ColorFade(Self.Color, 18%)
+                PressedFill: =Color.Transparent
+                Text: ="Book another room"
+                Width: =200
+                ZIndex: =2
+
             Button1 As button:
                 AlignInContainer: =AlignInContainer.Center
+                Fill: =WEITI_Szafirowy
                 Height: =60
-                OnSelect: =Navigate(MainScreen,ScreenTransition.CoverRight)
+                OnSelect: =Navigate(MainScreen,ScreenTransition.Cover)
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
                 Text: ="DONE"
                 Width: =240
-                ZIndex: =2
+                ZIndex: =3
 
         ContainerFooter_1 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Regular
