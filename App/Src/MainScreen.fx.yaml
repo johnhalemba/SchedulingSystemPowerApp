@@ -1098,11 +1098,11 @@ MainScreen As screen:
                                 );
                                 AddColumns(
                                     ScheduleRoom102,
-                                    "StartDateTime",
+                                    StartDate,
                                     DateTimeValue(
                                         Text(date, "[$-en-US]0000\\-00\\-00") & "T" & Text(hour, "00") & "15:00"
                                     ),
-                                    "EndDateTime",
+                                    EndDate,
                                     DateAdd(
                                         DateTimeValue(
                                             Text(date, "[$-en-US]0000\\-00\\00") && "T" && Text(hour + length, "00") & ":00:00"
