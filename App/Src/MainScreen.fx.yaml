@@ -6,11 +6,6 @@ MainScreen As screen:
         =Set(DurationSelection, Blank());
         UpdateContext({ResetTrue: false});
         UpdateContext({ResetTrue: true});
-        UpdateContext(
-            {
-                varRoomSelection:false
-            }
-        );
 
     CheckSchedulePopUp_1 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Regular
