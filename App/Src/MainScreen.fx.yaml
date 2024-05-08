@@ -1661,7 +1661,6 @@ MainScreen As screen:
                             ZIndex: =3
 
                 ContainerNoClassesInfo As groupContainer.verticalAutoLayoutContainer:
-                    AlignInContainer: =AlignInContainer.SetByContainer
                     DropShadow: =DropShadow.None
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutJustifyContent: =LayoutJustifyContent.Center
