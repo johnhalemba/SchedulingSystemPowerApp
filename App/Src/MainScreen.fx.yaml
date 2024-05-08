@@ -1088,7 +1088,7 @@ MainScreen As screen:
                                 Reset(DatePicker1);
                                 Reset(cbx_PhoneSelectRoom);
                                 UpdateContext({LoadingDone: LoadingDone + 1});
-                                UpdateContext({varShowMainScreen: false});
+                                Set(varShowMainScreen, false);
                                 UpdateContext({LoadingDone: LoadingDone + 1});
                                 Set(DateSelected, Today());
                                 UpdateContext({LoadingDone: LoadingDone + 1});
@@ -3032,7 +3032,7 @@ MainScreen As screen:
                     LayoutMinWidth: =32
                     OnSelect: |-
                         =UpdateContext({varRoomSelection: false});
-                        Set(varShowMainScreen, true)
+                        Set(varShowMainScreen, true);
                         Reset(cbx_PhoneSelectRoom);
                         Reset(DatePicker1);
                     PaddingLeft: =20
