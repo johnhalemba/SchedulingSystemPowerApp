@@ -1,10 +1,17 @@
 MainScreen As screen:
     Fill: =RGBA(244, 244, 244, 1)
     LoadingSpinner: =LoadingSpinner.Data
+    OnHidden: |
+        =UpdateContext(
+            {
+                varRoomSelection:false,
+                varShowMainScreen:true
+            }
+        );
     OnVisible: |
         =Set(DurationSelection, Blank());
-        //UpdateContext({ResetTrue: false});
-        //UpdateContext({ResetTrue: true});
+        UpdateContext({ResetTrue: false});
+        UpdateContext({ResetTrue: true});
         //UpdateContext(
         //    {
         //        varRoomSelection:false,
@@ -975,7 +982,8 @@ MainScreen As screen:
             PaddingLeft: =10
             PaddingRight: =10
             PaddingTop: =10
-            Visible: =varShowMainScreen
+            Visible: |
+                =varShowMainScreen
             ZIndex: =2
 
             con_MainLeftHandSide As groupContainer.verticalAutoLayoutContainer:
