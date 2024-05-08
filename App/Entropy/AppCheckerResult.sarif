@@ -1364,6 +1364,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "BookingConfirmationScreen.mainContainer_1.ContainerHeader_3.BadgeCanvas1_3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BookingConfirmationScreen.mainContainer_1.ContainerHeader_3.BadgeCanvas1_3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "BookingConfirmationScreen",
+                "type": "BookingConfirmationScreen.mainContainer_1.ContainerHeader_3.BadgeCanvas1_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BookingConfirmationScreen.mainContainer_1.ContainerFooter_1.TextInput1_3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BookingConfirmationScreen.mainContainer_1.ContainerFooter_1.TextInput1_3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "BookingConfirmationScreen",
+                "type": "BookingConfirmationScreen.mainContainer_1.ContainerFooter_1.TextInput1_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.WEITI_Wrzosowy"
                 }
               ],
@@ -1827,6 +1887,36 @@
                 "member": "varViewSchedule",
                 "module": "MainScreen",
                 "type": "MainScreen"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BookingConfirmationScreen.varRoomSelection"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BookingConfirmationScreen.varRoomSelection",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varRoomSelection",
+                "module": "BookingConfirmationScreen",
+                "type": "BookingConfirmationScreen"
               }
             }
           ],

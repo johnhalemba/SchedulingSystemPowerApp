@@ -1078,6 +1078,8 @@ MainScreen As screen:
                                 =UpdateContext({LoadingDone: 0});
                                 Set(ShowLoading, true);
                                 UpdateContext({varRoomSelection: true});
+                                Reset(DatePicker1);
+                                Reset(cbx_PhoneSelectRoom);
                                 UpdateContext({LoadingDone: LoadingDone + 1});
                                 UpdateContext({varShowMainScreen: false});
                                 UpdateContext({LoadingDone: LoadingDone + 1});
@@ -2949,7 +2951,7 @@ MainScreen As screen:
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
                 LayoutOverflowY: =LayoutOverflow.Scroll
-                PaddingBottom: =5
+                PaddingBottom: =15
                 PaddingLeft: =5
                 PaddingRight: =5
                 PaddingTop: =5
@@ -2974,9 +2976,10 @@ MainScreen As screen:
                     AlignInContainer: =AlignInContainer.SetByContainer
                     FillPortions: =0
                     Height: =100
-                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutAlignItems: =LayoutAlignItems.Center
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutGap: =4
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
@@ -2988,9 +2991,9 @@ MainScreen As screen:
                     ZIndex: =2
 
                     Label12_3 As label:
+                        Align: =Align.Center
                         Size: =15
-                        Text: |-
-                            ="Caller:"
+                        Text: ="Caller"
                         ZIndex: =1
 
                     Button4_1 As button:
@@ -3001,15 +3004,16 @@ MainScreen As screen:
                         RadiusTopLeft: =0
                         RadiusTopRight: =0
                         Text: =User().FullName
+                        Width: =Parent.Width
                         ZIndex: =2
 
                 con_RoomSelection As groupContainer.verticalAutoLayoutContainer:
                     AlignInContainer: =AlignInContainer.SetByContainer
-                    FillPortions: =0
                     Height: =100
-                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutAlignItems: =LayoutAlignItems.Center
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutGap: =4
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
@@ -3021,8 +3025,7 @@ MainScreen As screen:
 
                     Label12 As label:
                         Size: =15
-                        Text: |-
-                            ="Selected room:"
+                        Text: ="Selected room"
                         ZIndex: =1
 
                     Button4 As button:
@@ -3034,6 +3037,7 @@ MainScreen As screen:
                         RadiusTopRight: =0
                         Text: =SelectedRoom.Text
                         Visible: =App.Width > 400
+                        Width: =Parent.Width
                         ZIndex: =2
 
                     cbx_PhoneSelectRoom As combobox:
@@ -3053,11 +3057,11 @@ MainScreen As screen:
 
                 Container10_2 As groupContainer.verticalAutoLayoutContainer:
                     AlignInContainer: =AlignInContainer.SetByContainer
-                    FillPortions: =0
                     Height: =100
-                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutAlignItems: =LayoutAlignItems.Center
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutGap: =4
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
@@ -3069,12 +3073,10 @@ MainScreen As screen:
 
                     Label12_1 As label:
                         Size: =15
-                        Text: |-
-                            ="Selected date:"
+                        Text: ="Selected date"
                         ZIndex: =1
 
                     DatePicker1 As datepicker:
-                        AlignInContainer: =AlignInContainer.Stretch
                         BorderThickness: =0
                         Color: =RGBA(255, 255, 255, 1)
                         Fill: =WEITI_Szafirowy
@@ -3135,11 +3137,11 @@ MainScreen As screen:
 
                 Container10_3 As groupContainer.verticalAutoLayoutContainer:
                     AlignInContainer: =AlignInContainer.SetByContainer
-                    FillPortions: =0
                     Height: =100
-                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutAlignItems: =LayoutAlignItems.Center
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutGap: =4
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
@@ -3151,8 +3153,7 @@ MainScreen As screen:
 
                     Label12_2 As label:
                         Size: =15
-                        Text: |-
-                            ="Selected time:"
+                        Text: ="Selected time"
                         ZIndex: =1
 
                     Button4_2 As button:
@@ -3177,16 +3178,18 @@ MainScreen As screen:
                         RadiusTopLeft: =0
                         RadiusTopRight: =0
                         Text: =Text(StartDateTime, DateTimeFormat.ShortTime) & " - " & Text(EndDateTime, DateTimeFormat.ShortTime)
+                        Width: =Parent.Width
                         ZIndex: =2
 
                 Rectangle4 As rectangle:
                     Fill: =RGBA(0,0,0,0)
                     FillPortions: =1
                     LayoutMinHeight: =0
+                    LayoutMinWidth: =0
                     ZIndex: =6
 
-                Button2 As button:
-                    OnSelect: =
+                btn_Book As button:
+                    OnSelect: =Navigate(BookingConfirmationScreen,ScreenTransition.Cover)
                     PaddingBottom: =0
                     PaddingLeft: =0
                     PaddingRight: =0

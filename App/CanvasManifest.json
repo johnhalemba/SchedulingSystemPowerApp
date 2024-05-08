@@ -133,6 +133,7 @@
     "UserLocale": "en-US"
   },
   "ScreenOrder": [
-    "MainScreen"
+    "MainScreen",
+    "BookingConfirmationScreen"
   ]
 }
