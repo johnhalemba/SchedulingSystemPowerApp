@@ -2964,9 +2964,9 @@ MainScreen As screen:
                     LayoutMinWidth: =32
                     OnSelect: |-
                         =UpdateContext({varRoomSelection: false});
-                        UpdateContext({varShowMainScreen: true})
+                        UpdateContext({varShowMainScreen: true});
                         Reset(cbx_PhoneSelectRoom);
-                        Reset(DatePicker1)
+                        Reset(DatePicker1);
                     PaddingLeft: =20
                     ZIndex: =1
 
