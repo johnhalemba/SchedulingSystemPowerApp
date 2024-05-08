@@ -1291,6 +1291,7 @@ MainScreen As screen:
                                     ClearCollect(ScheduleRoom122, 'Serwer Studia'.Getclassesfromroom("1030-ETI-122", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
                                 );
                                 UpdateContext({varCheckSchedule: true});
+                                Set(varShowMainScreen, false);
                                 Set(ShowLoading, false);
                             PressedColor: =Color.Transparent
                             PressedFill: =Color.Transparent
@@ -3707,30 +3708,6 @@ MainScreen As screen:
                         Y: =310
                         ZIndex: =3
 
-        ContainerFooter As groupContainer.manualLayoutContainer:
-            DropShadow: =DropShadow.Regular
-            Fill: =RGBA(244, 244, 244, 1)
-            FillPortions: =0
-            Height: =TextInput1_2.Height
-            LayoutMinHeight: =100
-            LayoutMinWidth: =250
-            ZIndex: =5
-
-            TextInput1_2 As text:
-                Align: =Align.Center
-                BorderThickness: =0
-                Default: ="Jan Halemba (305979)"
-                DisabledFill: =Color.Transparent
-                DisplayMode: =DisplayMode.Disabled
-                Height: =20
-                RadiusBottomLeft: =10
-                RadiusBottomRight: =10
-                RadiusTopLeft: =10
-                RadiusTopRight: =10
-                Size: =9
-                Width: =Parent.Width
-                ZIndex: =1
-
         ContainerCheckSchedule As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.Regular
             LayoutAlignItems: =LayoutAlignItems.Stretch
@@ -3742,7 +3719,7 @@ MainScreen As screen:
             LayoutOverflowY: =LayoutOverflow.Scroll
             LayoutWrap: =true
             Visible: =varCheckSchedule
-            ZIndex: =6
+            ZIndex: =4
 
             ContainerFacultyMap_1 As groupContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
@@ -5110,8 +5087,9 @@ MainScreen As screen:
                     ZIndex: =4
 
                     Label12_5 As label:
+                        Align: =Align.Center
                         Size: =15
-                        Text: ="Selected date"
+                        Text: ="Date"
                         ZIndex: =1
 
                     DatePicker1_1 As datepicker:
@@ -5251,8 +5229,9 @@ MainScreen As screen:
                     ZIndex: =5
 
                     Label12_6 As label:
+                        Align: =Align.Center
                         Size: =15
-                        Text: ="Selected time"
+                        Text: ="Time"
                         ZIndex: =1
 
                     Button4_4 As button:
@@ -5279,13 +5258,6 @@ MainScreen As screen:
                         Text: =Text(StartDateTime, DateTimeFormat.ShortTime) & " - " & Text(EndDateTime, DateTimeFormat.ShortTime)
                         Width: =Parent.Width - 10
                         ZIndex: =2
-
-                Rectangle4_1 As rectangle:
-                    Fill: =RGBA(0,0,0,0)
-                    FillPortions: =1
-                    LayoutMinHeight: =0
-                    LayoutMinWidth: =0
-                    ZIndex: =6
 
                 btn_Book_1 As button:
                     AlignInContainer: =AlignInContainer.Center
@@ -5692,6 +5664,30 @@ MainScreen As screen:
                         Width: =344
                         Y: =310
                         ZIndex: =3
+
+        ContainerFooter As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Regular
+            Fill: =RGBA(244, 244, 244, 1)
+            FillPortions: =0
+            Height: =TextInput1_2.Height
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            ZIndex: =5
+
+            TextInput1_2 As text:
+                Align: =Align.Center
+                BorderThickness: =0
+                Default: ="Jan Halemba (305979)"
+                DisabledFill: =Color.Transparent
+                DisplayMode: =DisplayMode.Disabled
+                Height: =20
+                RadiusBottomLeft: =10
+                RadiusBottomRight: =10
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Size: =9
+                Width: =Parent.Width
+                ZIndex: =1
 
     LoadingScreen As groupContainer:
         Height: =App.Height
