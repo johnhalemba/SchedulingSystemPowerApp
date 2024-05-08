@@ -1300,7 +1300,7 @@ MainScreen As screen:
                 con_CalendarType As groupContainer.verticalAutoLayoutContainer:
                     DropShadow: =DropShadow.None
                     FillPortions: =0
-                    Height: =If(App.Width > 400, 100, 300)
+                    Height: =If(App.Width > 400, 100, 100)
                     LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutGap: =5
                     LayoutMinHeight: =Label3_4.Height + Self.LayoutGap + DropdownCalendarType_2.Height
