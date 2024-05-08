@@ -3311,7 +3311,21 @@ MainScreen As screen:
                 btn_Book As button:
                     AlignInContainer: =AlignInContainer.Center
                     DisplayMode: =If(IsBlank(SelectedRoom), DisplayMode.Disabled, DisplayMode.Edit)
-                    OnSelect: =Navigate(BookingConfirmationScreen,ScreenTransition.Cover)
+                    OnSelect: |-
+                        =Office365Outlook.V4CalendarPostItem(
+                            myCalendar,
+                            User().FullName&"'s reservation",
+                            StartDateTimeUTC,
+                            EndDateTimeUTC,
+                            "(UTC+01:00) Sarajevo, Skopje, Warsaw, Zagreb",
+                            {
+                                Location: "room "&SelectedRoom.Text,
+                                importance: "normal",
+                                requiredAttendees:If(SelectedRoom.Text = "107", "eiti.107.teams.rooms@pw.edu.pl"),
+                                showAs: "busy"
+                            }
+                        )
+                        Navigate(BookingConfirmationScreen,ScreenTransition.Cover);
                     PaddingBottom: =0
                     PaddingLeft: =0
                     PaddingRight: =0
