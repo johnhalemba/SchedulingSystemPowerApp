@@ -3537,7 +3537,7 @@ MainScreen As screen:
                                         Name: "108",
                                         Button: room108_6
                                     }
-                                )
+                                );
                             
                             UpdateContext (
                                 {
