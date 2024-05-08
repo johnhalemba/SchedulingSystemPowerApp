@@ -1664,36 +1664,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.O365User"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.O365User",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "O365User",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "App.R"
                 }
               ],

@@ -3320,8 +3320,8 @@ MainScreen As screen:
                                 Caller: {
                                         Claims: "c:0o.c|federateddirectoryclaimprovider|" &User().Email,
                                         Department: "",
-                                        DisplayName: "Power Members",
-                                        Email: "PowerApps@xxxxxx.xxmicrosoft.com",
+                                        DisplayName: Concat(O365User,DisplayName),
+                                        Email: Concat(O365User, Mail),
                                         JobTitle: "",
                                         Picture: ""
                                   }
