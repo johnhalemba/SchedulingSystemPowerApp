@@ -3040,7 +3040,7 @@ MainScreen As screen:
                         AccessibleLabel: ="Test"
                         DisplayFields: =["Name"]
                         IsSearchable: =false
-                        Items: =SortByColumns(RoomButtons, "Name")
+                        Items: =Filter(SortByColumns(RoomButtons, "Name"), Button.Fill = Color.Green)
                         OnChange: |-
                             =If(IsBlank(Self.Selected), UpdateContext({SelectedRoom: Blank()}), UpdateContext({SelectedRoom: Self.Selected.Button}))
                         OnSelect: |-
