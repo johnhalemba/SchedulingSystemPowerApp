@@ -1418,9 +1418,7 @@ MainScreen As screen:
                         ZIndex: =1
 
                     DatePicker2 As datepicker:
-                        DefaultDate: |-
-                            =//varSelectedDateDatePicker
-                            Today()
+                        DefaultDate: =varSelectedDateDatePicker
                         OnChange: =Set(varSelectedDate, Self.SelectedDate)
                         Width: =180
                         ZIndex: =3
