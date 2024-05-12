@@ -4164,6 +4164,7 @@ MainScreen As screen:
                                     AddColumns(
                                     ScheduleRoom102,
                                     dateStart,
+                                    DateTimeValue(
                                     DateAdd(
                                         DateValue(
                                             date,
@@ -4171,8 +4172,9 @@ MainScreen As screen:
                                         ),
                                         hour + 0.25,
                                         TimeUnit.Hours
-                                    ),
+                                    )),
                                     dateEnd,
+                                    DateTimeValue(
                                     DateAdd(
                                         DateValue(
                                             date,
@@ -4180,6 +4182,7 @@ MainScreen As screen:
                                         ),
                                         hour + Value(length),
                                         TimeUnit.Hours
+                                    )
                                     )
                                 )
                                 );
