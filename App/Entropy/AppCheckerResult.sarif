@@ -23,10 +23,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 10,
+                  "charLength": 9,
                   "charOffset": 1494,
                   "snippet": {
-                    "text": "classStart"
+                    "text": "dateStart"
                   }
                 }
               },
@@ -39,7 +39,7 @@
           ],
           "message": {
             "arguments": [
-              "classStart"
+              "dateStart"
             ],
             "id": "issue"
           },
@@ -63,10 +63,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 8,
-                  "charOffset": 1675,
+                  "charLength": 7,
+                  "charOffset": 1674,
                   "snippet": {
-                    "text": "classEnd"
+                    "text": "dateEnd"
                   }
                 }
               },
@@ -79,7 +79,7 @@
           ],
           "message": {
             "arguments": [
-              "classEnd"
+              "dateEnd"
             ],
             "id": "issue"
           },

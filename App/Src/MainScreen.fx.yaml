@@ -4163,7 +4163,7 @@ MainScreen As screen:
                                     ScheduleRoom102,
                                     AddColumns(
                                     ScheduleRoom102,
-                                    classStart,
+                                    dateStart,
                                     DateAdd(
                                         DateValue(
                                             date,
@@ -4172,7 +4172,7 @@ MainScreen As screen:
                                         hour + 0.25,
                                         TimeUnit.Hours
                                     ),
-                                    classEnd,
+                                    dateEnd,
                                     DateAdd(
                                         DateValue(
                                             date,
