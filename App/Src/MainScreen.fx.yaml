@@ -4159,8 +4159,6 @@ MainScreen As screen:
                                     ClearCollect(ScheduleRoom105, 'Serwer Studia'.Getclassesfromroom("1030-ETI-105-AR", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
                                 );
                             
-                                ClearCollect(
-                                    ScheduleRoom102,
                                     AddColumns(
                                     ScheduleRoom102,
                                     dateStart,
