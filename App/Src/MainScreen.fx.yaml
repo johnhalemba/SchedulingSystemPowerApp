@@ -1399,7 +1399,7 @@ MainScreen As screen:
                                         SelectedRoom: Blank(),
                                         varShowFacultyMap: true,
                                         varShowProperties: true,
-                                        varCheckSchedule: false,
+                                        varCheckSchedule: true,
                                         varShowSyncing: false,
                                         LoadingDone: LoadingDone + 1
                                     }
@@ -3217,7 +3217,7 @@ MainScreen As screen:
                         OnSelect: |-
                             =If(IsBlank(Self.Selected), UpdateContext({SelectedRoom: Blank()}), UpdateContext({SelectedRoom: Self.Selected.Button}))
                         SearchFields: =["Name"]
-                        SearchItems: =Search(Filter(SortByColumns(RoomButtons, "Name"), Button.Fill = Color.Green),cbx_PhoneSelectRoom.SearchText,Name)
+                        SearchItems: =[]
                         SelectMultiple: =false
                         Visible: =App.Width < 400
                         ZIndex: =3
@@ -5177,7 +5177,7 @@ MainScreen As screen:
                         OnSelect: |-
                             =If(IsBlank(Self.Selected), UpdateContext({SelectedRoom: Blank()}), UpdateContext({SelectedRoom: Self.Selected.Button}))
                         SearchFields: =["Name"]
-                        SearchItems: =Search(Filter(SortByColumns(RoomButtons, "Name"), Button.Fill = Color.Green),cbx_PhoneSelectRoom_1.SearchText,Name)
+                        SearchItems: =[]
                         SelectMultiple: =false
                         Visible: =App.Width < 400
                         ZIndex: =3
