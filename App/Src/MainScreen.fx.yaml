@@ -3905,8 +3905,8 @@ MainScreen As screen:
                                             StartDateTime >= classStart
                                         )
                                     )
-                                    )
-                                ) = 0,
+                                )
+                            ) = 0,
                             If (SelectedRoom = Self,
                                 Color.Yellow,
                                 Color.Green
