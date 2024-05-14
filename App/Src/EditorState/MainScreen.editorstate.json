@@ -1901,7 +1901,7 @@
       "MetaDataIDKey": "",
       "Name": "btn_Settings_Home",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 9,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3567,7 +3567,7 @@
       "MetaDataIDKey": "",
       "Name": "Button4",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6574,7 +6574,7 @@
       "MetaDataIDKey": "",
       "Name": "cbx_PhoneSelectRoom",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8467,7 +8467,7 @@
       "MetaDataIDKey": "",
       "Name": "con_CalendarType",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9347,7 +9347,7 @@
       "MetaDataIDKey": "",
       "Name": "con_MainScreen",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9922,7 +9922,7 @@
       "MetaDataIDKey": "",
       "Name": "con_RoomSelection_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -11736,7 +11736,7 @@
       "MetaDataIDKey": "",
       "Name": "Container10_4",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12026,7 +12026,7 @@
       "MetaDataIDKey": "",
       "Name": "Container10_5",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12319,7 +12319,7 @@
       "MetaDataIDKey": "",
       "Name": "Container10_6",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13474,7 +13474,7 @@
       "MetaDataIDKey": "",
       "Name": "Container15_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15683,7 +15683,7 @@
       "MetaDataIDKey": "",
       "Name": "Container4",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -17883,7 +17883,7 @@
       "MetaDataIDKey": "",
       "Name": "ContainerHeader_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -18100,7 +18100,7 @@
       "MetaDataIDKey": "",
       "Name": "ContainerNoClassesInfo",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 7,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -18332,7 +18332,7 @@
       "MetaDataIDKey": "",
       "Name": "ContainerNoEventsInCalendar",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 8,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -18964,7 +18964,7 @@
       "MetaDataIDKey": "",
       "Name": "ContainerProperties_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -19237,7 +19237,7 @@
       "MetaDataIDKey": "",
       "Name": "ContainerRoomSelection",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -19764,7 +19764,7 @@
       "MetaDataIDKey": "",
       "Name": "ContainerTimeSelection_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -24826,7 +24826,7 @@
         {
           "Category": "Design",
           "PropertyName": "X",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -25048,7 +25048,7 @@
       "MetaDataIDKey": "",
       "Name": "Gallery2_11",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 6,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -25408,7 +25408,7 @@
       "MetaDataIDKey": "",
       "Name": "GalleryScheduleServerStudia",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -26055,7 +26055,7 @@
       "MetaDataIDKey": "",
       "Name": "icn_CloseSettings",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -27292,7 +27292,7 @@
       "MetaDataIDKey": "",
       "Name": "Icon7",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -27550,7 +27550,7 @@
       "MetaDataIDKey": "",
       "Name": "Icon7_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -29936,7 +29936,7 @@
       "MetaDataIDKey": "",
       "Name": "Label12",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -32484,7 +32484,7 @@
       "MetaDataIDKey": "",
       "Name": "Label13_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -37846,7 +37846,7 @@
       "MetaDataIDKey": "",
       "Name": "lbl_Schedule",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -38229,7 +38229,7 @@
       "MetaDataIDKey": "",
       "Name": "lbl_ViewSettings",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -40301,7 +40301,7 @@
       "MetaDataIDKey": "",
       "Name": "room102",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 6,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -41078,7 +41078,7 @@
       "MetaDataIDKey": "",
       "Name": "room103",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 7,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -41848,7 +41848,7 @@
       "MetaDataIDKey": "",
       "Name": "room104",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 8,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -42618,7 +42618,7 @@
       "MetaDataIDKey": "",
       "Name": "room105",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 14,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -43388,7 +43388,7 @@
       "MetaDataIDKey": "",
       "Name": "room106",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 9,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -44158,7 +44158,7 @@
       "MetaDataIDKey": "",
       "Name": "room107",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 10,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -44928,7 +44928,7 @@
       "MetaDataIDKey": "",
       "Name": "room108",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 11,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -45698,7 +45698,7 @@
       "MetaDataIDKey": "",
       "Name": "room116",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 12,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -46468,7 +46468,7 @@
       "MetaDataIDKey": "",
       "Name": "room116-AR",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 15,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -47238,7 +47238,7 @@
       "MetaDataIDKey": "",
       "Name": "room117",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 13,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -48008,7 +48008,7 @@
       "MetaDataIDKey": "",
       "Name": "room120",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -48778,7 +48778,7 @@
       "MetaDataIDKey": "",
       "Name": "room121",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -49548,7 +49548,7 @@
       "MetaDataIDKey": "",
       "Name": "room122",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -50318,7 +50318,7 @@
       "MetaDataIDKey": "",
       "Name": "room133",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -51088,7 +51088,7 @@
       "MetaDataIDKey": "",
       "Name": "room161",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -54274,7 +54274,7 @@
       "MetaDataIDKey": "",
       "Name": "SyncScreen_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

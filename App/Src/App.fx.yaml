@@ -1,25 +1,18 @@
 App As appinfo:
     BackEnabled: =true
+    Formulas: |-
+        =varUserPlan = 'Serwer Studia'.Getuserschedule("json", Text(Today(), "yyyy-mm-dd"));
+        varUserCalendars = Office365Outlook.CalendarGetTablesV2().value;
+        varTodayDate = Today();
+        WEITI_Szafirowy = RGBA(120,150,207,1);
+        WEITI_Grafitowy =RGBA(60,60,76,1);
+        WEITI_Wrzosowy = RGBA(180,160,170,1);
     OnStart: |
         =Set(
             ShowLoading,
             true
         );
-        Set(
-            varUserPlan,
-            'Serwer Studia'.Getuserschedule(
-                "json",
-                Text(
-                    Today(),
-                    "yyyy-mm-dd"
-                )
-            )
-        );
         Set(varShowMainScreen, true);
-        Set(
-            varUserCalendars,
-            Office365Outlook.CalendarGetTablesV2().value
-        );
         Concurrent(
             Collect(
                 CalendarLocalizedLabel,
@@ -296,37 +289,6 @@ App As appinfo:
                     Text: "11:30 pm",
                     Minutes: 1410
                 }
-            ),
-            Set(
-                varTodayDate,
-                Today()
-            ),
-            Set(
-                WEITI_Szafirowy,
-                RGBA(
-                    120,
-                    150,
-                    207,
-                    1
-                )
-            ),
-            Set(
-                WEITI_Grafitowy,
-                RGBA(
-                    60,
-                    60,
-                    76,
-                    1
-                )
-            ),
-            Set(
-                WEITI_Wrzosowy,
-                RGBA(
-                    180,
-                    160,
-                    170,
-                    1
-                )
             ),
             Set(
                 varSelectedDateDatePicker,
