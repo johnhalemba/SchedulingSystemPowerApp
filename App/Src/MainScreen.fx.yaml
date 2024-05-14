@@ -1499,12 +1499,20 @@ MainScreen As screen:
                                         "Class"
                                     )
                                 );
+                                
                                 ClearCollect(
                                     CombinedRoom102,
-                                    AddColums(
-                                
+                                    ScheduleRoom102,
+                                    AddColumns(
+                                        ReservationsRoom102,
+                                        EventType,
+                                        "Reservation",
+                                        classStart,
+                                        DateTimeValue(dateStart),
+                                        classEnd,
+                                        DateTimeValue(dateEnd)
                                     )
-                                )
+                                );
                                 
                                 UpdateContext({LoadingDone: LoadingDone + 1});
                                 ClearCollect(
