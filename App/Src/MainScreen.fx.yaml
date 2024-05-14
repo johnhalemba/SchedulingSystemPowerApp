@@ -6314,7 +6314,7 @@ MainScreen As screen:
                     BorderColor: =App.Theme.Colors.Darker40
                     DelayItemLoading: =true
                     Height: =322
-                    Items: =Filter(RoomButtons,Name = SelectedRoom.Text).Schedule.Value
+                    Items: =Sort(First(Filter(RoomButtons, Name = SelectedRoom.Text)).Schedule, classStart, SortOrder.Ascending)
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =100
                     LayoutMinWidth: =320
@@ -6401,7 +6401,7 @@ MainScreen As screen:
                         PaddingRight: =0
                         PaddingTop: =0
                         Size: =11
-                        Text: =ThisItem.Schedule.
+                        Text: =ThisItem.Schedule
                         Width: =0
                         X: =1
                         Y: =40
@@ -6454,8 +6454,7 @@ MainScreen As screen:
                             PaddingRight: =0
                             PaddingTop: =0
                             Size: =11
-                            Text: |-
-                                =DateAdd(TimeValue(ThisItem.hour&":00"),15,TimeUnit.Minutes)&" - "&DateAdd(TimeValue(ThisItem.hour&":00"),ThisItem.length,TimeUnit.Hours)
+                            Text: =
                             Width: =1
                             Y: =25
                             ZIndex: =2
