@@ -3343,26 +3343,7 @@ MainScreen As screen:
                         =If(
                             CountRows(
                                 Filter(
-                                    ScheduleRoom117,
-                                    With(
-                                        {
-                                            classStart: DateAdd(
-                                                DateValue(
-                                                    date,
-                                                    "en"
-                                                ),
-                                                hour + 0.25,
-                                                TimeUnit.Hours
-                                            ),
-                                            classEnd: DateAdd(
-                                                DateValue(
-                                                    date,
-                                                    "en"
-                                                ),
-                                                hour + Value(length),
-                                                TimeUnit.Hours
-                                            )
-                                        },
+                                    CombinedRoom121,
                                         Or(
                                             And(
                                                 classStart <= EndDateTime,
@@ -3378,7 +3359,7 @@ MainScreen As screen:
                                             )
                                         )
                                     )
-                                )
+                                
                             ) = 0,
                             If (SelectedRoom = Self,
                                 Color.Yellow,
