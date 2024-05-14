@@ -34,8 +34,8 @@
       "ID": "ID",
       "Modified": "Modified",
       "OData__ColorTag": "Color Tag",
-      "ReservationEnd": "ReservationEnd",
-      "ReservationStart": "ReservationStart",
+      "ReservationEnd": "dateEnd",
+      "ReservationStart": "dateStart",
       "Room": "Room",
       "Title": "Title"
     },
