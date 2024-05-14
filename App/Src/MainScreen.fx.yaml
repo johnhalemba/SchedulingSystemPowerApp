@@ -1434,6 +1434,23 @@ MainScreen As screen:
                                         )
                                     )
                                 );
+                                Concurrent(
+                                    ClearCollect(ReservationsRoom102, Filter(ReservationDatabase, Room = "102")),
+                                    ClearCollect(ReservationsRoom103, Filter(ReservationDatabase, Room = "103")),
+                                    ClearCollect(ReservationsRoom104, Filter(ReservationDatabase, Room = "104")),
+                                    ClearCollect(ReservationsRoom105, Filter(ReservationDatabase, Room = "105")),
+                                    ClearCollect(ReservationsRoom106, Filter(ReservationDatabase, Room = "106")),
+                                    ClearCollect(ReservationsRoom107, Filter(ReservationDatabase, Room = "107")),
+                                    ClearCollect(ReservationsRoom108, Filter(ReservationDatabase, Room = "108")),
+                                    ClearCollect(ReservationsRoom161, Filter(ReservationDatabase, Room = "161")),
+                                    ClearCollect(ReservationsRoom116, Filter(ReservationDatabase, Room = "116")),
+                                    ClearCollect(ReservationsRoom117, Filter(ReservationDatabase, Room = "117")),
+                                    ClearCollect('ReservationsRoom116-AR', Filter(ReservationDatabase, Room = "116-AR")),
+                                    ClearCollect(ReservationsRoom120, Filter(ReservationDatabase, Room = "120")),
+                                    ClearCollect(ReservationsRoom121, Filter(ReservationDatabase, Room = "121")),
+                                    ClearCollect(ReservationsRoom122, Filter(ReservationDatabase, Room = "122")),
+                                    ClearCollect(ReservationsRoom133, Filter(ReservationDatabase, Room = "133"))
+                                );
                                 UpdateContext({LoadingDone: LoadingDone + 1});
                                 Concurrent(
                                     ClearCollect(
