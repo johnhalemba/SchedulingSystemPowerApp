@@ -1330,59 +1330,59 @@ MainScreen As screen:
                                     RoomButtons,
                                     {
                                         Name: "122",
-                                        Button: room122_6
+                                        Button: room122
                                     },
                                     {
                                         Name: "121",
-                                        Button: room121_6
+                                        Button: room121
                                     },
                                     {
                                         Name: "120",
-                                        Button: room120_6
+                                        Button: room120
                                     },
                                     {
                                         Name: "116-AR",
-                                        Button: 'room116-AR_6'
+                                        Button: 'room116-AR'
                                     },
                                     {
                                         Name: "117",
-                                        Button: room117_6
+                                        Button: room117
                                     },
                                     {
                                         Name: "116",
-                                        Button: room116_6
+                                        Button: room116
                                     },
                                     {
                                         Name: "105",
-                                        Button: room105_6
+                                        Button: room105
                                     },
                                     {
                                         Name: "106",
-                                        Button: room106_6
+                                        Button: room106
                                     },
                                     {
                                         Name: "107",
-                                        Button: room107_6
+                                        Button: room107
                                     },
                                     {
                                         Name: "161",
-                                        Button: room161_6
+                                        Button: room161
                                     },
                                     {
                                         Name: "102",
-                                        Button: room102_6
+                                        Button: room102
                                     },
                                     {
                                         Name: "104",
-                                        Button: room104_6
+                                        Button: room104
                                     },
                                     {
                                         Name: "103",
-                                        Button: room103_6
+                                        Button: room103
                                     },
                                     {
                                         Name: "108",
-                                        Button: room108_6
+                                        Button: room108
                                     }
                                 );
                                 UpdateContext({LoadingDone: LoadingDone + 1});
@@ -1532,59 +1532,59 @@ MainScreen As screen:
                                         RoomButtons,
                                         {
                                             Name: "122",
-                                            Button: room122_6
+                                            Button: room122
                                         },
                                         {
                                             Name: "121",
-                                            Button: room121_6
+                                            Button: room121
                                         },
                                         {
                                             Name: "120",
-                                            Button: room120_6
+                                            Button: room120
                                         },
                                         {
                                             Name: "116-AR",
-                                            Button: 'room116-AR_6'
+                                            Button: 'room116-AR'
                                         },
                                         {
                                             Name: "117",
-                                            Button: room117_6
+                                            Button: room117
                                         },
                                         {
                                             Name: "116",
-                                            Button: room116_6
+                                            Button: room116
                                         },
                                         {
                                             Name: "105",
-                                            Button: room105_6
+                                            Button: room105
                                         },
                                         {
                                             Name: "106",
-                                            Button: room106_6
+                                            Button: room106
                                         },
                                         {
                                             Name: "107",
-                                            Button: room107_6
+                                            Button: room107
                                         },
                                         {
                                             Name: "161",
-                                            Button: room161_6
+                                            Button: room161
                                         },
                                         {
                                             Name: "102",
-                                            Button: room102_6
+                                            Button: room102
                                         },
                                         {
                                             Name: "104",
-                                            Button: room104_6
+                                            Button: room104
                                         },
                                         {
                                             Name: "103",
-                                            Button: room103_6
+                                            Button: room103
                                         },
                                         {
                                             Name: "108",
-                                            Button: room108_6
+                                            Button: room108
                                         }
                                     );
                                 UpdateContext(
@@ -2256,7 +2256,7 @@ MainScreen As screen:
                 Y: =10
                 ZIndex: =2
 
-                Image2_6 As image:
+                facultyMapImage As image:
                     BorderColor: =App.Theme.Colors.Darker40
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
@@ -2266,7 +2266,7 @@ MainScreen As screen:
                     Width: =Parent.Width
                     ZIndex: =1
 
-                room103_6 As button:
+                room103 As button:
                     BorderColor: =App.Theme.Colors.Primary
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =1
@@ -2334,7 +2334,7 @@ MainScreen As screen:
                     Y: =Parent.Height*357/668
                     ZIndex: =2
 
-                room104_6 As button:
+                room104 As button:
                     BorderColor: =App.Theme.Colors.Primary
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =1
@@ -2402,7 +2402,7 @@ MainScreen As screen:
                     Y: =Parent.Height * 357 / 668
                     ZIndex: =3
 
-                room102_6 As button:
+                room102 As button:
                     BorderColor: =App.Theme.Colors.Primary
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =1
@@ -2478,7 +2478,7 @@ MainScreen As screen:
                         (Parent.Height * 357)/668
                     ZIndex: =4
 
-                room161_6 As button:
+                room161 As button:
                     BorderColor: =App.Theme.Colors.Primary
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =1
@@ -2554,7 +2554,7 @@ MainScreen As screen:
                         (Parent.Height * 176)/668
                     ZIndex: =11
 
-                room107_6 As button:
+                room107 As button:
                     BorderColor: =App.Theme.Colors.Primary
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =1
@@ -2623,7 +2623,7 @@ MainScreen As screen:
                     Y: =Parent.Height * 357/668
                     ZIndex: =12
 
-                room108_6 As button:
+                room108 As button:
                     BorderColor: =App.Theme.Colors.Primary
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =1
@@ -2692,7 +2692,7 @@ MainScreen As screen:
                     Y: =Parent.Height*357/668
                     ZIndex: =13
 
-                room106_6 As button:
+                room106 As button:
                     BorderColor: =App.Theme.Colors.Primary
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =1
@@ -2761,7 +2761,7 @@ MainScreen As screen:
                     Y: =Parent.Height * 357 / 668
                     ZIndex: =14
 
-                room105_6 As button:
+                room105 As button:
                     BorderColor: =App.Theme.Colors.Primary
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =1
@@ -2829,7 +2829,7 @@ MainScreen As screen:
                     Y: =Parent.Height * 427 / 668
                     ZIndex: =15
 
-                room116_6 As button:
+                room116 As button:
                     BorderColor: =App.Theme.Colors.Primary
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =1
@@ -2898,7 +2898,7 @@ MainScreen As screen:
                     Y: =Parent.Height * 357/668
                     ZIndex: =16
 
-                room117_6 As button:
+                room117 As button:
                     BorderColor: =App.Theme.Colors.Primary
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =1
@@ -2967,7 +2967,7 @@ MainScreen As screen:
                     Y: =Parent.Height * 357/668
                     ZIndex: =17
 
-                room133_6 As button:
+                room133 As button:
                     BorderColor: =App.Theme.Colors.Primary
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =1
@@ -3036,7 +3036,7 @@ MainScreen As screen:
                     Y: =Parent.Height * 176/668
                     ZIndex: =18
 
-                "'room116-AR_6' As button":
+                "'room116-AR' As button":
                     BorderColor: =App.Theme.Colors.Primary
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =1
@@ -3105,7 +3105,7 @@ MainScreen As screen:
                     Y: =Parent.Height*427/668
                     ZIndex: =19
 
-                room120_6 As button:
+                room120 As button:
                     BorderColor: =App.Theme.Colors.Primary
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =1
@@ -3174,7 +3174,7 @@ MainScreen As screen:
                     Y: =Parent.Height*356/668
                     ZIndex: =20
 
-                room121_6 As button:
+                room121 As button:
                     BorderColor: =App.Theme.Colors.Primary
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =1
@@ -3243,7 +3243,7 @@ MainScreen As screen:
                     Y: =Parent.Height*356/668
                     ZIndex: =21
 
-                room122_6 As button:
+                room122 As button:
                     BorderColor: =App.Theme.Colors.Primary
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =1
@@ -3599,59 +3599,59 @@ MainScreen As screen:
                                     RoomButtons,
                                     {
                                         Name: "122",
-                                        Button: room122_6
+                                        Button: room122
                                     },
                                     {
                                         Name: "121",
-                                        Button: room121_6
+                                        Button: room121
                                     },
                                     {
                                         Name: "120",
-                                        Button: room120_6
+                                        Button: room120
                                     },
                                     {
                                         Name: "116-AR",
-                                        Button: 'room116-AR_6'
+                                        Button: 'room116-AR'
                                     },
                                     {
                                         Name: "117",
-                                        Button: room117_6
+                                        Button: room117
                                     },
                                     {
                                         Name: "116",
-                                        Button: room116_6
+                                        Button: room116
                                     },
                                     {
                                         Name: "105",
-                                        Button: room105_6
+                                        Button: room105
                                     },
                                     {
                                         Name: "106",
-                                        Button: room106_6
+                                        Button: room106
                                     },
                                     {
                                         Name: "107",
-                                        Button: room107_6
+                                        Button: room107
                                     },
                                     {
                                         Name: "161",
-                                        Button: room161_6
+                                        Button: room161
                                     },
                                     {
                                         Name: "102",
-                                        Button: room102_6
+                                        Button: room102
                                     },
                                     {
                                         Name: "104",
-                                        Button: room104_6
+                                        Button: room104
                                     },
                                     {
                                         Name: "103",
-                                        Button: room103_6
+                                        Button: room103
                                     },
                                     {
                                         Name: "108",
-                                        Button: room108_6
+                                        Button: room108
                                     }
                                 );
                                 Reset(cbx_PhoneSelectRoom);
@@ -4095,59 +4095,59 @@ MainScreen As screen:
                                     RoomButtons,
                                     {
                                         Name: "122",
-                                        Button: room122_6
+                                        Button: room122
                                     },
                                     {
                                         Name: "121",
-                                        Button: room121_6
+                                        Button: room121
                                     },
                                     {
                                         Name: "120",
-                                        Button: room120_6
+                                        Button: room120
                                     },
                                     {
                                         Name: "116-AR",
-                                        Button: 'room116-AR_6'
+                                        Button: 'room116-AR'
                                     },
                                     {
                                         Name: "117",
-                                        Button: room117_6
+                                        Button: room117
                                     },
                                     {
                                         Name: "116",
-                                        Button: room116_6
+                                        Button: room116
                                     },
                                     {
                                         Name: "105",
-                                        Button: room105_6
+                                        Button: room105
                                     },
                                     {
                                         Name: "106",
-                                        Button: room106_6
+                                        Button: room106
                                     },
                                     {
                                         Name: "107",
-                                        Button: room107_6
+                                        Button: room107
                                     },
                                     {
                                         Name: "161",
-                                        Button: room161_6
+                                        Button: room161
                                     },
                                     {
                                         Name: "102",
-                                        Button: room102_6
+                                        Button: room102
                                     },
                                     {
                                         Name: "104",
-                                        Button: room104_6
+                                        Button: room104
                                     },
                                     {
                                         Name: "103",
-                                        Button: room103_6
+                                        Button: room103
                                     },
                                     {
                                         Name: "108",
-                                        Button: room108_6
+                                        Button: room108
                                     }
                                 );
                             
