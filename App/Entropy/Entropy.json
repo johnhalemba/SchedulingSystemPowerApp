@@ -259,7 +259,7 @@
   "DoesTestStepsMetadataExist": false,
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "05/14/2024 10:18:49",
+  "HeaderLastSavedDateTimeUTC": "05/14/2024 10:24:43",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "0253e953-0abb-4432-8b50-3649b7e6dbd8": "\"/providers/microsoft.powerapps/apis/shared_office365users/connections/3291602532d64bf3afac64084224feb4\"",
@@ -288,6 +288,8 @@
     "CombinedRoom103": 28,
     "CombinedRoom104": 7,
     "CombinedRoom105": 44,
+    "CombinedRoom106": 45,
+    "CombinedRoom107": 46,
     "ComboBoxSample": 5,
     "CustomGallerySample": 3,
     "DropDownSample": 4,
