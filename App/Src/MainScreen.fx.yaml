@@ -3,7 +3,7 @@ MainScreen As screen:
     LoadingSpinner: =LoadingSpinner.Data
     LoadingSpinnerColor: =App.Theme.Colors.Primary
     OnHidden: =
-    OnVisible: |
+    OnVisible: |-
         =Set(DurationSelection, Blank());
         UpdateContext({ResetTrue: false});
         UpdateContext({ResetTrue: true});

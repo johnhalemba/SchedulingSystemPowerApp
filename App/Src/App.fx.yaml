@@ -1,6 +1,6 @@
 App As appinfo:
     BackEnabled: =true
-    Formulas: |-
+    Formulas: |
         =varUserPlan = 'Serwer Studia'.Getuserschedule("json", Text(Today(), "yyyy-mm-dd"));
         varUserCalendars = Office365Outlook.CalendarGetTablesV2().value;
         varTodayDate = Today();
@@ -63,10 +63,6 @@ App As appinfo:
                 {Value: "行事曆"},
                 {Value: "日历"},
                 {Value: "క్యాలెండర్"}
-            ),
-            Set(
-                varToogleRoomSelection,
-                false
             ),
             ClearCollect(
                 Durations,
@@ -290,10 +286,7 @@ App As appinfo:
                     Minutes: 1410
                 }
             ),
-            Set(
-                varSelectedDateDatePicker,
-                Today()
-            ),
+            Set(varSelectedDateDatePicker, Today());
             Set(varSelectedDate, Today())
         );
         Set(
