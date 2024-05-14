@@ -61,7 +61,7 @@
       "fluentv9controlspreview": true,
       "formuladataprefetch": true,
       "formularepair": false,
-      "generatedebugpublishedapp": false,
+      "generatedebugpublishedapp": true,
       "herocontrols": false,
       "improvedtabstopbehavior": false,
       "isemptyrequirestableargument": true,
