@@ -1472,8 +1472,6 @@ MainScreen As screen:
                                     ShowLoading,
                                     true
                                 );
-                                UpdateContext({varRoomSelection: true});
-                                
                                 UpdateContext({LoadingDone: LoadingDone + 1});
                                 
                                 Reset(DatePicker1);
@@ -2504,59 +2502,73 @@ MainScreen As screen:
                                     RoomButtons,
                                     {
                                         Name: "122",
-                                        Button: room122
+                                        Button: room122_7,
+                                        Schedule: CombinedRoom122
                                     },
                                     {
                                         Name: "121",
-                                        Button: room121
+                                        Button: room121_7,
+                                        Schedule: CombinedRoom121
                                     },
                                     {
                                         Name: "120",
-                                        Button: room120
+                                        Button: room120_7,
+                                        Schedule: CombinedRoom120
                                     },
                                     {
                                         Name: "116-AR",
-                                        Button: 'room116-AR'
+                                        Button: 'room116-AR_7',
+                                        Schedule: CombinedRoom116AR
                                     },
                                     {
                                         Name: "117",
-                                        Button: room117
+                                        Button: room117_7,
+                                        Schedule: CombinedRoom117
                                     },
                                     {
                                         Name: "116",
-                                        Button: room116
+                                        Button: room116_7,
+                                        Schedule: CombinedRoom116
                                     },
                                     {
                                         Name: "105",
-                                        Button: room105
+                                        Button: room105_7,
+                                        Schedule: CombinedRoom105
                                     },
                                     {
                                         Name: "106",
-                                        Button: room106
+                                        Button: room106_7,
+                                        Schedule: CombinedRoom106
                                     },
                                     {
                                         Name: "107",
-                                        Button: room107
+                                        Button: room107_7,
+                                        Schedule: CombinedRoom107
                                     },
                                     {
                                         Name: "161",
-                                        Button: room161
+                                        Button: room161_7,
+                                        Schedule: CombinedRoom161
                                     },
                                     {
                                         Name: "102",
-                                        Button: room102
+                                        Button: room102_7,
+                                        Schedule: CombinedRoom102
                                     },
                                     {
                                         Name: "104",
-                                        Button: room104
+                                        Button: room104_7,
+                                        Schedule: CombinedRoom104
                                     },
                                     {
                                         Name: "103",
-                                        Button: room103
+                                        Button: room103_7,
+                                        Schedule: CombinedRoom103
                                     },
                                     {
                                         Name: "108",
-                                        Button: room108
+                                        Button: room108_7,
+                                        Schedule: CombinedRoom108
                                     }
                                 );
                                 UpdateContext({LoadingDone: LoadingDone + 1});
@@ -6302,52 +6314,7 @@ MainScreen As screen:
                     BorderColor: =App.Theme.Colors.Darker40
                     DelayItemLoading: =true
                     Height: =322
-                    Items: |-
-                        =Sort(Filter(
-                            'Serwer Studia'.Getclassesfromroom(
-                                "1030-ETI-" & SelectedRoom.Text,
-                                {
-                                    date: Text(
-                                        DateSelected,
-                                        "yyyy-mm-dd"
-                                    )
-                                }
-                            ).plan,
-                            With(
-                                {
-                                    classStart: DateAdd(
-                                        DateValue(
-                                            date,
-                                            "en"
-                                        ),
-                                        hour + 0.25,
-                                        TimeUnit.Hours
-                                    ),
-                                    classEnd: DateAdd(
-                                        DateValue(
-                                            date,
-                                            "en"
-                                        ),
-                                        hour + Value(length),
-                                        TimeUnit.Hours
-                                    )
-                                },
-                                Or(
-                                    And(
-                                        classStart <= EndDateTime,
-                                        classStart >= StartDateTime
-                                    ),
-                                    And(
-                                        classEnd <= EndDateTime,
-                                        classEnd >= StartDateTime
-                                    ),
-                                    And(
-                                        StartDateTime <= classEnd,
-                                        StartDateTime >= classStart
-                                    )
-                                )
-                            )
-                        ),hour,SortOrder.Ascending)
+                    Items: =Filter(RoomButtons,Name = SelectedRoom.Text).Schedule.Value
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =100
                     LayoutMinWidth: =320
@@ -6434,7 +6401,7 @@ MainScreen As screen:
                         PaddingRight: =0
                         PaddingTop: =0
                         Size: =11
-                        Text: =ThisItem.type
+                        Text: =ThisItem.Schedule.
                         Width: =0
                         X: =1
                         Y: =40
