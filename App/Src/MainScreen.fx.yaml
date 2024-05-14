@@ -1635,8 +1635,8 @@ MainScreen As screen:
                                     )
                                 );
                                 
+                                UpdateContext({LoadingDone: LoadingDone + 1}); // Room 105
                                 
-                                UpdateContext({LoadingDone: LoadingDone + 1});
                                 ClearCollect(
                                     ScheduleRoom105,
                                     'Serwer Studia'.Getclassesfromroom(
