@@ -2366,8 +2366,7 @@ MainScreen As screen:
                                             DateTimeValue(dateEnd)
                                         )
                                     )
-                                
-                                )
+                                );
                                 
                                 UpdateContext({LoadingDone: LoadingDone + 1});
                                 
