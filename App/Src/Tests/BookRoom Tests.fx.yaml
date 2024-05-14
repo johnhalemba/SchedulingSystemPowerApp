@@ -1,0 +1,34 @@
+"'a0b2e92e-2b42-4cf0-852f-11804f1c83c2' As TestSuite":
+    Description: =""
+    DisplayName: ="BookRoom Tests"
+
+    "'03a43c5b-f384-4962-aac1-320b386576cd' As TestCase":
+        Description: =""
+        DisplayName: ="Case"
+
+        Step1 As TestStep:
+            Description: ="Select 'btn_Overlay_8'"
+            Screen: =MainScreen
+            Value: =Select('btn_Overlay_8')
+
+        Step2 As TestStep:
+            Description: ="Select 'Button4_2'"
+            Screen: =MainScreen
+            Value: =Select('Button4_2')
+
+        Step3 As TestStep:
+            Description: |-
+                ="Set 'DropdownStartTime_3'.Selected to {'Value':""10:30 pm""}"
+            Screen: =MainScreen
+            Value: |-
+                =SetProperty('DropdownStartTime_3'.Selected, {'Value':"10:30 pm"})
+
+        Step5 As TestStep:
+            Description: ="New step"
+            Value: |-
+                =SetProperty('DropdownEndTime_3'.Selected, {'Value':"8:30 pm"})
+
+        Step4 As TestStep:
+            Description: ="Assert()"
+            Value: =Assert(ButtonSaveTime_3.DisplayMode = DisplayMode.Disabled)
+
