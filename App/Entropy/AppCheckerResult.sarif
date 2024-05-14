@@ -2084,6 +2084,96 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "BookingConfirmationScreen.dateEnd"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BookingConfirmationScreen.dateEnd",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "dateEnd",
+                "module": "BookingConfirmationScreen",
+                "type": "BookingConfirmationScreen"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BookingConfirmationScreen.dateStart"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BookingConfirmationScreen.dateStart",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "dateStart",
+                "module": "BookingConfirmationScreen",
+                "type": "BookingConfirmationScreen"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BookingConfirmationScreen.room"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BookingConfirmationScreen.room",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "room",
+                "module": "BookingConfirmationScreen",
+                "type": "BookingConfirmationScreen"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "BookingConfirmationScreen.varRoomSelection"
                 }
               ],
