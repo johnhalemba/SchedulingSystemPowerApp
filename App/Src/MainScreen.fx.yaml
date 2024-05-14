@@ -1353,7 +1353,9 @@ MainScreen As screen:
                                     true
                                 );
                                 UpdateContext({varRoomSelection: true});
+                                UpdateContext({LoadingDone: LoadingDone + 1});
                                 Reset(DatePicker1);
+                                UpdateContext({LoadingDone: LoadingDone + 1});
                                 Reset(cbx_PhoneSelectRoom);
                                 UpdateContext({LoadingDone: LoadingDone + 1});
                                 Set(
@@ -1434,6 +1436,7 @@ MainScreen As screen:
                                         )
                                     )
                                 );
+                                UpdateContext({LoadingDone: LoadingDone + 1});
                                 Concurrent(
                                     ClearCollect(ReservationsRoom102, Filter(ReservationDatabase, Room = "102")),
                                     ClearCollect(ReservationsRoom103, Filter(ReservationDatabase, Room = "103")),
@@ -1452,58 +1455,56 @@ MainScreen As screen:
                                     ClearCollect(ReservationsRoom133, Filter(ReservationDatabase, Room = "133"))
                                 );
                                 UpdateContext({LoadingDone: LoadingDone + 1});
-                                Concurrent(
-                                    ClearCollect(
-                                        ScheduleRoom102,
-                                        'Serwer Studia'.Getclassesfromroom(
-                                            "1030-ETI-102",
-                                            {
-                                                date: Text(
-                                                    DateSelected,
-                                                    "yyyy-mm-dd"
-                                                )
-                                            }
-                                        ).plan
-                                    ),
-                                    ClearCollect(
-                                        ScheduleRoom103,
-                                        'Serwer Studia'.Getclassesfromroom(
-                                            "1030-ETI-103",
-                                            {
-                                                date: Text(
-                                                    DateSelected,
-                                                    "yyyy-mm-dd"
-                                                )
-                                            }
-                                        ).plan
-                                    )
+                                ClearCollect(
+                                    ScheduleRoom102,
+                                    'Serwer Studia'.Getclassesfromroom(
+                                        "1030-ETI-102",
+                                        {
+                                            date: Text(
+                                                DateSelected,
+                                                "yyyy-mm-dd"
+                                            )
+                                        }
+                                    ).plan
                                 );
                                 UpdateContext({LoadingDone: LoadingDone + 1});
-                                Concurrent(
-                                    ClearCollect(
-                                        ScheduleRoom104,
-                                        'Serwer Studia'.Getclassesfromroom(
-                                            "1030-ETI-104",
-                                            {
-                                                date: Text(
-                                                    DateSelected,
-                                                    "yyyy-mm-dd"
-                                                )
-                                            }
-                                        ).plan
-                                    ),
-                                    ClearCollect(
-                                        ScheduleRoom105,
-                                        'Serwer Studia'.Getclassesfromroom(
-                                            "1030-ETI-105-AR",
-                                            {
-                                                date: Text(
-                                                    DateSelected,
-                                                    "yyyy-mm-dd"
-                                                )
-                                            }
-                                        ).plan
-                                    )
+                                ClearCollect(
+                                    ScheduleRoom103,
+                                    'Serwer Studia'.Getclassesfromroom(
+                                        "1030-ETI-103",
+                                        {
+                                            date: Text(
+                                                DateSelected,
+                                                "yyyy-mm-dd"
+                                            )
+                                        }
+                                    ).plan
+                                );
+                                UpdateContext({LoadingDone: LoadingDone + 1});
+                                ClearCollect(
+                                    ScheduleRoom104,
+                                    'Serwer Studia'.Getclassesfromroom(
+                                        "1030-ETI-104",
+                                        {
+                                            date: Text(
+                                                DateSelected,
+                                                "yyyy-mm-dd"
+                                            )
+                                        }
+                                    ).plan
+                                );
+                                UpdateContext({LoadingDone: LoadingDone + 1});
+                                ClearCollect(
+                                    ScheduleRoom105,
+                                    'Serwer Studia'.Getclassesfromroom(
+                                        "1030-ETI-105-AR",
+                                        {
+                                            date: Text(
+                                                DateSelected,
+                                                "yyyy-mm-dd"
+                                            )
+                                        }
+                                    ).plan
                                 );
                                 UpdateContext({LoadingDone: LoadingDone + 1});
                                 Concurrent(
@@ -1651,6 +1652,7 @@ MainScreen As screen:
                                         ).plan
                                     )
                                 );
+                                UpdateContext({LoadingDone: LoadingDone + 1});
                                 ClearCollect(
                                     RoomButtons,
                                     {
@@ -1710,6 +1712,7 @@ MainScreen As screen:
                                         Button: room108_6
                                     }
                                 );
+                                UpdateContext({LoadingDone: LoadingDone + 1});
                                 UpdateContext(
                                     {
                                         SelectedRoom: Blank(),
@@ -1720,6 +1723,7 @@ MainScreen As screen:
                                         LoadingDone: LoadingDone + 1
                                     }
                                 );
+                                UpdateContext({LoadingDone: LoadingDone + 1});
                                 Set(
                                     ShowLoading,
                                     false
@@ -6733,7 +6737,7 @@ MainScreen As screen:
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 Height: =45
-                Max: =11
+                Max: =18
                 Value: =LoadingDone
                 Width: =Parent.Width
                 X: =0

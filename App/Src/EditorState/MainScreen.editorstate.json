@@ -42017,7 +42017,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "100",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "Max",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -42049,7 +42049,7 @@
         {
           "Category": "Data",
           "PropertyName": "Max",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",
