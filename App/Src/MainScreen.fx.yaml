@@ -432,12 +432,16 @@ MainScreen As screen:
                                         DateTimeValue(
                                             Text(
                                                 DateAdd(
-                                                    DateValue(
-                                                        date,
-                                                        "en"
+                                                    DateAdd(
+                                                        DateValue(
+                                                            date,
+                                                            "en"
+                                                        ),
+                                                        hour,
+                                                        TimeUnit.Hours
                                                     ),
-                                                    hour + 0.25,
-                                                    TimeUnit.Hours
+                                                    15,
+                                                    TimeUnit.Minutes
                                                 ),
                                                 "yyyy-mm-dd HH:mm:ss"
                                             )
@@ -479,12 +483,16 @@ MainScreen As screen:
                                         DateTimeValue(
                                             Text(
                                                 DateAdd(
-                                                    DateValue(
-                                                        date,
-                                                        "en"
+                                                    DateAdd(
+                                                        DateValue(
+                                                            date,
+                                                            "en"
+                                                        ),
+                                                        hour,
+                                                        TimeUnit.Hours
                                                     ),
-                                                    hour + 0.25,
-                                                    TimeUnit.Hours
+                                                    15,
+                                                    TimeUnit.Minutes
                                                 ),
                                                 "yyyy-mm-dd HH:mm:ss"
                                             )
@@ -526,12 +534,16 @@ MainScreen As screen:
                                         DateTimeValue(
                                             Text(
                                                 DateAdd(
-                                                    DateValue(
-                                                        date,
-                                                        "en"
+                                                    DateAdd(
+                                                        DateValue(
+                                                            date,
+                                                            "en"
+                                                        ),
+                                                        hour,
+                                                        TimeUnit.Hours
                                                     ),
-                                                    hour + 0.25,
-                                                    TimeUnit.Hours
+                                                    15,
+                                                    TimeUnit.Minutes
                                                 ),
                                                 "yyyy-mm-dd HH:mm:ss"
                                             )
@@ -573,12 +585,16 @@ MainScreen As screen:
                                         DateTimeValue(
                                             Text(
                                                 DateAdd(
-                                                    DateValue(
-                                                        date,
-                                                        "en"
+                                                    DateAdd(
+                                                        DateValue(
+                                                            date,
+                                                            "en"
+                                                        ),
+                                                        hour,
+                                                        TimeUnit.Hours
                                                     ),
-                                                    hour + 0.25,
-                                                    TimeUnit.Hours
+                                                    15,
+                                                    TimeUnit.Minutes
                                                 ),
                                                 "yyyy-mm-dd HH:mm:ss"
                                             )
@@ -620,12 +636,16 @@ MainScreen As screen:
                                         DateTimeValue(
                                             Text(
                                                 DateAdd(
-                                                    DateValue(
-                                                        date,
-                                                        "en"
+                                                    DateAdd(
+                                                        DateValue(
+                                                            date,
+                                                            "en"
+                                                        ),
+                                                        hour,
+                                                        TimeUnit.Hours
                                                     ),
-                                                    hour + 0.25,
-                                                    TimeUnit.Hours
+                                                    15,
+                                                    TimeUnit.Minutes
                                                 ),
                                                 "yyyy-mm-dd HH:mm:ss"
                                             )
@@ -667,12 +687,16 @@ MainScreen As screen:
                                         DateTimeValue(
                                             Text(
                                                 DateAdd(
-                                                    DateValue(
-                                                        date,
-                                                        "en"
+                                                    DateAdd(
+                                                        DateValue(
+                                                            date,
+                                                            "en"
+                                                        ),
+                                                        hour,
+                                                        TimeUnit.Hours
                                                     ),
-                                                    hour + 0.25,
-                                                    TimeUnit.Hours
+                                                    15,
+                                                    TimeUnit.Minutes
                                                 ),
                                                 "yyyy-mm-dd HH:mm:ss"
                                             )
@@ -714,12 +738,16 @@ MainScreen As screen:
                                         DateTimeValue(
                                             Text(
                                                 DateAdd(
-                                                    DateValue(
-                                                        date,
-                                                        "en"
+                                                    DateAdd(
+                                                        DateValue(
+                                                            date,
+                                                            "en"
+                                                        ),
+                                                        hour,
+                                                        TimeUnit.Hours
                                                     ),
-                                                    hour + 0.25,
-                                                    TimeUnit.Hours
+                                                    15,
+                                                    TimeUnit.Minutes
                                                 ),
                                                 "yyyy-mm-dd HH:mm:ss"
                                             )
@@ -762,12 +790,16 @@ MainScreen As screen:
                                         DateTimeValue(
                                             Text(
                                                 DateAdd(
-                                                    DateValue(
-                                                        date,
-                                                        "en"
+                                                    DateAdd(
+                                                        DateValue(
+                                                            date,
+                                                            "en"
+                                                        ),
+                                                        hour,
+                                                        TimeUnit.Hours
                                                     ),
-                                                    hour + 0.25,
-                                                    TimeUnit.Hours
+                                                    15,
+                                                    TimeUnit.Minutes
                                                 ),
                                                 "yyyy-mm-dd HH:mm:ss"
                                             )
@@ -809,12 +841,16 @@ MainScreen As screen:
                                         DateTimeValue(
                                             Text(
                                                 DateAdd(
-                                                    DateValue(
-                                                        date,
-                                                        "en"
+                                                    DateAdd(
+                                                        DateValue(
+                                                            date,
+                                                            "en"
+                                                        ),
+                                                        hour,
+                                                        TimeUnit.Hours
                                                     ),
-                                                    hour + 0.25,
-                                                    TimeUnit.Hours
+                                                    15,
+                                                    TimeUnit.Minutes
                                                 ),
                                                 "yyyy-mm-dd HH:mm:ss"
                                             )
@@ -858,12 +894,16 @@ MainScreen As screen:
                                         DateTimeValue(
                                             Text(
                                                 DateAdd(
-                                                    DateValue(
-                                                        date,
-                                                        "en"
+                                                    DateAdd(
+                                                        DateValue(
+                                                            date,
+                                                            "en"
+                                                        ),
+                                                        hour,
+                                                        TimeUnit.Hours
                                                     ),
-                                                    hour + 0.25,
-                                                    TimeUnit.Hours
+                                                    15,
+                                                    TimeUnit.Minutes
                                                 ),
                                                 "yyyy-mm-dd HH:mm:ss"
                                             )
@@ -905,12 +945,16 @@ MainScreen As screen:
                                         DateTimeValue(
                                             Text(
                                                 DateAdd(
-                                                    DateValue(
-                                                        date,
-                                                        "en"
+                                                    DateAdd(
+                                                        DateValue(
+                                                            date,
+                                                            "en"
+                                                        ),
+                                                        hour,
+                                                        TimeUnit.Hours
                                                     ),
-                                                    hour + 0.25,
-                                                    TimeUnit.Hours
+                                                    15,
+                                                    TimeUnit.Minutes
                                                 ),
                                                 "yyyy-mm-dd HH:mm:ss"
                                             )
@@ -953,12 +997,16 @@ MainScreen As screen:
                                         DateTimeValue(
                                             Text(
                                                 DateAdd(
-                                                    DateValue(
-                                                        date,
-                                                        "en"
+                                                    DateAdd(
+                                                        DateValue(
+                                                            date,
+                                                            "en"
+                                                        ),
+                                                        hour,
+                                                        TimeUnit.Hours
                                                     ),
-                                                    hour + 0.25,
-                                                    TimeUnit.Hours
+                                                    15,
+                                                    TimeUnit.Minutes
                                                 ),
                                                 "yyyy-mm-dd HH:mm:ss"
                                             )
@@ -1001,12 +1049,16 @@ MainScreen As screen:
                                         DateTimeValue(
                                             Text(
                                                 DateAdd(
-                                                    DateValue(
-                                                        date,
-                                                        "en"
+                                                    DateAdd(
+                                                        DateValue(
+                                                            date,
+                                                            "en"
+                                                        ),
+                                                        hour,
+                                                        TimeUnit.Hours
                                                     ),
-                                                    hour + 0.25,
-                                                    TimeUnit.Hours
+                                                    15,
+                                                    TimeUnit.Minutes
                                                 ),
                                                 "yyyy-mm-dd HH:mm:ss"
                                             )
@@ -1048,12 +1100,16 @@ MainScreen As screen:
                                         DateTimeValue(
                                             Text(
                                                 DateAdd(
-                                                    DateValue(
-                                                        date,
-                                                        "en"
+                                                    DateAdd(
+                                                        DateValue(
+                                                            date,
+                                                            "en"
+                                                        ),
+                                                        hour,
+                                                        TimeUnit.Hours
                                                     ),
-                                                    hour + 0.25,
-                                                    TimeUnit.Hours
+                                                    15,
+                                                    TimeUnit.Minutes
                                                 ),
                                                 "yyyy-mm-dd HH:mm:ss"
                                             )
@@ -1096,12 +1152,16 @@ MainScreen As screen:
                                         DateTimeValue(
                                             Text(
                                                 DateAdd(
-                                                    DateValue(
-                                                        date,
-                                                        "en"
+                                                    DateAdd(
+                                                        DateValue(
+                                                            date,
+                                                            "en"
+                                                        ),
+                                                        hour,
+                                                        TimeUnit.Hours
                                                     ),
-                                                    hour + 0.25,
-                                                    TimeUnit.Hours
+                                                    15,
+                                                    TimeUnit.Minutes
                                                 ),
                                                 "yyyy-mm-dd HH:mm:ss"
                                             )
@@ -1706,12 +1766,16 @@ MainScreen As screen:
                                         DateTimeValue(
                                             Text(
                                                 DateAdd(
-                                                    DateValue(
-                                                        date,
-                                                        "en"
+                                                    DateAdd(
+                                                        DateValue(
+                                                            date,
+                                                            "en"
+                                                        ),
+                                                        hour,
+                                                        TimeUnit.Hours
                                                     ),
-                                                    hour + 0.25,
-                                                    TimeUnit.Hours
+                                                    15,
+                                                    TimeUnit.Minutes
                                                 ),
                                                 "yyyy-mm-dd HH:mm:ss"
                                             )
@@ -1753,12 +1817,16 @@ MainScreen As screen:
                                         DateTimeValue(
                                             Text(
                                                 DateAdd(
-                                                    DateValue(
-                                                        date,
-                                                        "en"
+                                                    DateAdd(
+                                                        DateValue(
+                                                            date,
+                                                            "en"
+                                                        ),
+                                                        hour,
+                                                        TimeUnit.Hours
                                                     ),
-                                                    hour + 0.25,
-                                                    TimeUnit.Hours
+                                                    15,
+                                                    TimeUnit.Minutes
                                                 ),
                                                 "yyyy-mm-dd HH:mm:ss"
                                             )
@@ -1800,12 +1868,16 @@ MainScreen As screen:
                                         DateTimeValue(
                                             Text(
                                                 DateAdd(
-                                                    DateValue(
-                                                        date,
-                                                        "en"
+                                                    DateAdd(
+                                                        DateValue(
+                                                            date,
+                                                            "en"
+                                                        ),
+                                                        hour,
+                                                        TimeUnit.Hours
                                                     ),
-                                                    hour + 0.25,
-                                                    TimeUnit.Hours
+                                                    15,
+                                                    TimeUnit.Minutes
                                                 ),
                                                 "yyyy-mm-dd HH:mm:ss"
                                             )
@@ -1847,12 +1919,16 @@ MainScreen As screen:
                                         DateTimeValue(
                                             Text(
                                                 DateAdd(
-                                                    DateValue(
-                                                        date,
-                                                        "en"
+                                                    DateAdd(
+                                                        DateValue(
+                                                            date,
+                                                            "en"
+                                                        ),
+                                                        hour,
+                                                        TimeUnit.Hours
                                                     ),
-                                                    hour + 0.25,
-                                                    TimeUnit.Hours
+                                                    15,
+                                                    TimeUnit.Minutes
                                                 ),
                                                 "yyyy-mm-dd HH:mm:ss"
                                             )
@@ -1894,12 +1970,16 @@ MainScreen As screen:
                                         DateTimeValue(
                                             Text(
                                                 DateAdd(
-                                                    DateValue(
-                                                        date,
-                                                        "en"
+                                                    DateAdd(
+                                                        DateValue(
+                                                            date,
+                                                            "en"
+                                                        ),
+                                                        hour,
+                                                        TimeUnit.Hours
                                                     ),
-                                                    hour + 0.25,
-                                                    TimeUnit.Hours
+                                                    15,
+                                                    TimeUnit.Minutes
                                                 ),
                                                 "yyyy-mm-dd HH:mm:ss"
                                             )
@@ -1942,12 +2022,16 @@ MainScreen As screen:
                                         DateTimeValue(
                                             Text(
                                                 DateAdd(
-                                                    DateValue(
-                                                        date,
-                                                        "en"
+                                                    DateAdd(
+                                                        DateValue(
+                                                            date,
+                                                            "en"
+                                                        ),
+                                                        hour,
+                                                        TimeUnit.Hours
                                                     ),
-                                                    hour + 0.25,
-                                                    TimeUnit.Hours
+                                                    15,
+                                                    TimeUnit.Minutes
                                                 ),
                                                 "yyyy-mm-dd HH:mm:ss"
                                             )
@@ -1989,12 +2073,16 @@ MainScreen As screen:
                                         DateTimeValue(
                                             Text(
                                                 DateAdd(
-                                                    DateValue(
-                                                        date,
-                                                        "en"
+                                                    DateAdd(
+                                                        DateValue(
+                                                            date,
+                                                            "en"
+                                                        ),
+                                                        hour,
+                                                        TimeUnit.Hours
                                                     ),
-                                                    hour + 0.25,
-                                                    TimeUnit.Hours
+                                                    15,
+                                                    TimeUnit.Minutes
                                                 ),
                                                 "yyyy-mm-dd HH:mm:ss"
                                             )
@@ -2038,12 +2126,16 @@ MainScreen As screen:
                                         DateTimeValue(
                                             Text(
                                                 DateAdd(
-                                                    DateValue(
-                                                        date,
-                                                        "en"
+                                                    DateAdd(
+                                                        DateValue(
+                                                            date,
+                                                            "en"
+                                                        ),
+                                                        hour,
+                                                        TimeUnit.Hours
                                                     ),
-                                                    hour + 0.25,
-                                                    TimeUnit.Hours
+                                                    15,
+                                                    TimeUnit.Minutes
                                                 ),
                                                 "yyyy-mm-dd HH:mm:ss"
                                             )
@@ -2085,12 +2177,16 @@ MainScreen As screen:
                                         DateTimeValue(
                                             Text(
                                                 DateAdd(
-                                                    DateValue(
-                                                        date,
-                                                        "en"
+                                                    DateAdd(
+                                                        DateValue(
+                                                            date,
+                                                            "en"
+                                                        ),
+                                                        hour,
+                                                        TimeUnit.Hours
                                                     ),
-                                                    hour + 0.25,
-                                                    TimeUnit.Hours
+                                                    15,
+                                                    TimeUnit.Minutes
                                                 ),
                                                 "yyyy-mm-dd HH:mm:ss"
                                             )
@@ -2133,12 +2229,16 @@ MainScreen As screen:
                                         DateTimeValue(
                                             Text(
                                                 DateAdd(
-                                                    DateValue(
-                                                        date,
-                                                        "en"
+                                                    DateAdd(
+                                                        DateValue(
+                                                            date,
+                                                            "en"
+                                                        ),
+                                                        hour,
+                                                        TimeUnit.Hours
                                                     ),
-                                                    hour + 0.25,
-                                                    TimeUnit.Hours
+                                                    15,
+                                                    TimeUnit.Minutes
                                                 ),
                                                 "yyyy-mm-dd HH:mm:ss"
                                             )
@@ -2181,12 +2281,16 @@ MainScreen As screen:
                                         DateTimeValue(
                                             Text(
                                                 DateAdd(
-                                                    DateValue(
-                                                        date,
-                                                        "en"
+                                                    DateAdd(
+                                                        DateValue(
+                                                            date,
+                                                            "en"
+                                                        ),
+                                                        hour,
+                                                        TimeUnit.Hours
                                                     ),
-                                                    hour + 0.25,
-                                                    TimeUnit.Hours
+                                                    15,
+                                                    TimeUnit.Minutes
                                                 ),
                                                 "yyyy-mm-dd HH:mm:ss"
                                             )
@@ -2228,12 +2332,16 @@ MainScreen As screen:
                                         DateTimeValue(
                                             Text(
                                                 DateAdd(
-                                                    DateValue(
-                                                        date,
-                                                        "en"
+                                                    DateAdd(
+                                                        DateValue(
+                                                            date,
+                                                            "en"
+                                                        ),
+                                                        hour,
+                                                        TimeUnit.Hours
                                                     ),
-                                                    hour + 0.25,
-                                                    TimeUnit.Hours
+                                                    15,
+                                                    TimeUnit.Minutes
                                                 ),
                                                 "yyyy-mm-dd HH:mm:ss"
                                             )
@@ -2276,12 +2384,16 @@ MainScreen As screen:
                                         DateTimeValue(
                                             Text(
                                                 DateAdd(
-                                                    DateValue(
-                                                        date,
-                                                        "en"
+                                                    DateAdd(
+                                                        DateValue(
+                                                            date,
+                                                            "en"
+                                                        ),
+                                                        hour,
+                                                        TimeUnit.Hours
                                                     ),
-                                                    hour + 0.25,
-                                                    TimeUnit.Hours
+                                                    15,
+                                                    TimeUnit.Minutes
                                                 ),
                                                 "yyyy-mm-dd HH:mm:ss"
                                             )
@@ -6376,11 +6488,13 @@ MainScreen As screen:
                         ZIndex: =9
 
                         Title4_3 As label:
+                            Align: =Align.Center
+                            AutoHeight: =true
                             Color: =RGBA(50, 49, 48, 1)
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             FillPortions: =1
                             Font: =App.Theme.Font
-                            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                            FontWeight: =
                             Height: =25
                             LayoutMinWidth: =0
                             OnSelect: =
@@ -6396,11 +6510,12 @@ MainScreen As screen:
 
                         Subtitle2_26 As label:
                             Align: =Align.Center
+                            AutoHeight: =true
                             Color: =RGBA(0, 0, 0, 1)
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             FillPortions: =1
                             Font: =App.Theme.Font
-                            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                            FontWeight: =
                             Height: =23
                             LayoutMinWidth: =0
                             OnSelect: =
@@ -6417,11 +6532,12 @@ MainScreen As screen:
 
                         Subtitle2_27 As label:
                             Align: =Align.Center
+                            AutoHeight: =true
                             Color: =RGBA(0, 0, 0, 1)
                             DisabledColor: =RGBA(166, 166, 166, 1)
                             FillPortions: =1
                             Font: =App.Theme.Font
-                            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                            FontWeight: =
                             Height: =13
                             LayoutMinWidth: =0
                             OnSelect: =
