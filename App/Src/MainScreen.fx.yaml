@@ -4165,26 +4165,33 @@ MainScreen As screen:
                                     AddColumns(
                                         ScheduleRoom102,
                                         classStart,
-                                        DateTimeValue(
-                                        DateAdd(
-                                            DateValue(
-                                                date,
-                                                "en"
+                                            DateTimeValue(
+                                                Text(
+                                                    DateAdd(
+                                                        DateValue(
+                                                            date,
+                                                            "en"
+                                                        ),
+                                                        hour + 0.25,
+                                                        TimeUnit.Hours
+                                                    ),
+                                                    "yyyy-mm-dd HH:mm:ss"
+                                                )
                                             ),
-                                            hour + 0.25,
-                                            TimeUnit.Hours
-                                        )),
                                         classEnd,
                                         DateTimeValue(
-                                        DateAdd(
-                                            DateValue(
-                                                date,
-                                                "en"
-                                            ),
-                                            hour + Value(length),
-                                            TimeUnit.Hours
-                                        )
-                                        ),
+                                            Text(
+                                                DateAdd(
+                                                    DateValue(
+                                                        date,
+                                                        "en"
+                                                    ),
+                                                    hour + Value(length),
+                                                    TimeUnit.Hours
+                                                ),
+                                                "yyyy-mm-dd HH:mm:ss"
+                                            )
+                                         ),
                                         EventType,
                                         "Class"
                                 )
