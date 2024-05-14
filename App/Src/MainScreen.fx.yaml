@@ -4205,44 +4205,10 @@ MainScreen As screen:
                                     ClearCollect(ScheduleRoom104, 'Serwer Studia'.Getclassesfromroom("1030-ETI-104", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
                                     ClearCollect(ScheduleRoom105, 'Serwer Studia'.Getclassesfromroom("1030-ETI-105-AR", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
                                 );
-                                ClearCollect(ScheduleRoom102, 'Serwer Studia'.Getclassesfromroom("1030-ETI-102", {date:Text(DateSelected, "yyyy-mm-dd")}).plan);
                                 ClearCollect(ReservationsRoom102, Filter(ReservationDatabase, Room = "102"));
                             
                                 ClearCollect(
                                     CombinedRoom102,
-                                    AddColumns(
-                                        ScheduleRoom102,
-                                        classStart,
-                                            DateTimeValue(
-                                                Text(
-                                                    DateAdd(
-                                                        DateValue(
-                                                            date,
-                                                            "en"
-                                                        ),
-                                                        hour + 0.25,
-                                                        TimeUnit.Hours
-                                                    ),
-                                                    "yyyy-mm-dd HH:mm:ss"
-                                                )
-                                            ),
-                                        classEnd,
-                                        DateTimeValue(
-                                            Text(
-                                                DateAdd(
-                                                    DateValue(
-                                                        date,
-                                                        "en"
-                                                    ),
-                                                    hour + Value(length),
-                                                    TimeUnit.Hours
-                                                ),
-                                                "yyyy-mm-dd HH:mm:ss"
-                                            )
-                                         ),
-                                        EventType,
-                                        "Class"
-                                    ),
                                     AddColumns(
                                         ReservationsRoom102,
                                         EventType,
