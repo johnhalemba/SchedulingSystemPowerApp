@@ -4157,99 +4157,68 @@ MainScreen As screen:
                                     ClearCollect(ScheduleRoom104, 'Serwer Studia'.Getclassesfromroom("1030-ETI-104", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
                                     ClearCollect(ScheduleRoom105, 'Serwer Studia'.Getclassesfromroom("1030-ETI-105-AR", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
                                 );
-                            
-                                /*
+                                ClearCollect(ScheduleRoom102, 'Serwer Studia'.Getclassesfromroom("1030-ETI-102", {date:Text(DateSelected, "yyyy-mm-dd")}).plan);
+                                ClearCollect(ReservationsRoom102, Filter(ReservationDatabase, Room = "102"));
+                                
                                 ClearCollect(
                                     ScheduleRoom102New,
                                     AddColumns(
-                                    ScheduleRoom102,
-                                    dateStart,
-                                    DateTimeValue(
-                                    DateAdd(
-                                        DateValue(
-                                            date,
-                                            "en"
-                                        ),
-                                        hour + 0.25,
-                                        TimeUnit.Hours
-                                    )),
-                                    dateEnd,
-                                    DateTimeValue(
-                                    DateAdd(
-                                        DateValue(
-                                            date,
-                                            "en"
-                                        ),
-                                        hour + Value(length),
-                                        TimeUnit.Hours
-                                    )
-                                    )
-                                )
-                                );
-                                */
-                                    ClearCollect(ScheduleRoom102, 'Serwer Studia'.Getclassesfromroom("1030-ETI-102", {date:Text(DateSelected, "yyyy-mm-dd")}).plan);
-                                    ClearCollect(ReservationsRoom102, Filter(ReservationDatabase, Room = "102"));
-                                    ClearCollect(
-                                        ScheduleRoom102New,
-                                        AddColumns (
-                                            ScheduleRoom102,
-                                            dateStart,
+                                        ScheduleRoom102,
+                                        dateStart,
                                         DateTimeValue(
-                                            Text(
-                                                DateAdd(
-                                                    DateValue(
-                                                        Left(date, 4) & "-" & Mid(date, 5, 2) & "-" & Right(date, 2),
-                                                        "en"
-                                                    ),
-                                                    Value(hour),  // Assure hour is a number
-                                                    TimeUnit.Hours
-                                                ) + Time(0, 15, 0),  // Adding 15 minutes to the hour
-                                                "yyyy-mm-dd HH:mm:ss"
-                                            )
-                                        ),
+                                        DateAdd(
+                                            DateValue(
+                                                date,
+                                                "en"
+                                            ),
+                                            hour + 0.25,
+                                            TimeUnit.Hours
+                                        )),
                                         dateEnd,
                                         DateTimeValue(
-                                            Text(
-                                                DateAdd(
-                                                    DateValue(
-                                                        Left(date, 4) & "-" & Mid(date, 5, 2) & "-" & Right(date, 2),
-                                                        "en"
-                                                    ),
-                                                    Value(hour) + Value(length),  // Adding length in hours to the hour
-                                                    TimeUnit.Hours
-                                                ),
-                                                "yyyy-mm-dd HH:mm:ss"
-                                            )
+                                        DateAdd(
+                                            DateValue(
+                                                date,
+                                                "en"
+                                            ),
+                                            hour + Value(length),
+                                            TimeUnit.Hours
                                         )
-                                        )
-                                    );
+                                        ),
+                                        EventType,
+                                        "Class"
+                                )
+                                );
                             
-                                    ClearCollect(
-                                        CombinedRoom102,
-                                        ScheduleRoom102New,
+                                ClearCollect(
+                                    CombinedRoom102,
+                                    ScheduleRoom102New,
+                                    AddColumns(
+                                        ReservationsRoom102,
+                                        EventType,
+                                        "Reservation"
+                                    )
+                                );
                             
-                                    );
+                                Concurrent(
+                                    ClearCollect(ScheduleRoom106, 'Serwer Studia'.Getclassesfromroom("1030-ETI-106", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom107, 'Serwer Studia'.Getclassesfromroom("1030-ETI-107", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom161, 'Serwer Studia'.Getclassesfromroom("1030-ETI-161", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom108, 'Serwer Studia'.Getclassesfromroom("1030-ETI-108", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
+                                );
                             
+                                Concurrent(
+                                    ClearCollect(ScheduleRoom116, 'Serwer Studia'.Getclassesfromroom("1030-ETI-116", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom117, 'Serwer Studia'.Getclassesfromroom("1030-ETI-117", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom116AR, 'Serwer Studia'.Getclassesfromroom("1030-ETI-116-AR", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom133, 'Serwer Studia'.Getclassesfromroom("1030-ETI-108", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
+                                );
                             
-                                    Concurrent(
-                                        ClearCollect(ScheduleRoom106, 'Serwer Studia'.Getclassesfromroom("1030-ETI-106", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                                        ClearCollect(ScheduleRoom107, 'Serwer Studia'.Getclassesfromroom("1030-ETI-107", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                                        ClearCollect(ScheduleRoom161, 'Serwer Studia'.Getclassesfromroom("1030-ETI-161", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                                        ClearCollect(ScheduleRoom108, 'Serwer Studia'.Getclassesfromroom("1030-ETI-108", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
-                                    );
-                            
-                                    Concurrent(
-                                        ClearCollect(ScheduleRoom116, 'Serwer Studia'.Getclassesfromroom("1030-ETI-116", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                                        ClearCollect(ScheduleRoom117, 'Serwer Studia'.Getclassesfromroom("1030-ETI-117", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                                        ClearCollect(ScheduleRoom116AR, 'Serwer Studia'.Getclassesfromroom("1030-ETI-116-AR", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                                        ClearCollect(ScheduleRoom133, 'Serwer Studia'.Getclassesfromroom("1030-ETI-108", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
-                                    );
-                            
-                                    Concurrent(
-                                        ClearCollect(ScheduleRoom120, 'Serwer Studia'.Getclassesfromroom("1030-ETI-120", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                                        ClearCollect(ScheduleRoom121, 'Serwer Studia'.Getclassesfromroom("1030-ETI-121", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
-                                        ClearCollect(ScheduleRoom122, 'Serwer Studia'.Getclassesfromroom("1030-ETI-122", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
-                                    );
+                                Concurrent(
+                                    ClearCollect(ScheduleRoom120, 'Serwer Studia'.Getclassesfromroom("1030-ETI-120", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom121, 'Serwer Studia'.Getclassesfromroom("1030-ETI-121", {date:Text(DateSelected, "yyyy-mm-dd")}).plan),
+                                    ClearCollect(ScheduleRoom122, 'Serwer Studia'.Getclassesfromroom("1030-ETI-122", {date:Text(DateSelected, "yyyy-mm-dd")}).plan)
+                                );
                             );
                             ClearCollect(
                                     RoomButtons,
