@@ -1609,7 +1609,7 @@ MainScreen As screen:
                                                             date,
                                                             "en"
                                                         ),
-                                                        hour + 0.25,
+                                                        hour,
                                                         TimeUnit.Hours
                                                     ),
                                                     15,
@@ -1655,12 +1655,16 @@ MainScreen As screen:
                                         DateTimeValue(
                                             Text(
                                                 DateAdd(
-                                                    DateValue(
-                                                        date,
-                                                        "en"
+                                                    DateAdd(
+                                                        DateValue(
+                                                            date,
+                                                            "en"
+                                                        ),
+                                                        hour,
+                                                        TimeUnit.Hours
                                                     ),
-                                                    hour + 0.25,
-                                                    TimeUnit.Hours
+                                                    15,
+                                                    TimeUnit.Minutes
                                                 ),
                                                 "yyyy-mm-dd HH:mm:ss"
                                             )
