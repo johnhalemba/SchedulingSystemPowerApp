@@ -4164,7 +4164,7 @@ MainScreen As screen:
                                     ScheduleRoom102New,
                                     AddColumns(
                                         ScheduleRoom102,
-                                        dateStart,
+                                        classStart,
                                         DateTimeValue(
                                         DateAdd(
                                             DateValue(
@@ -4174,7 +4174,7 @@ MainScreen As screen:
                                             hour + 0.25,
                                             TimeUnit.Hours
                                         )),
-                                        dateEnd,
+                                        classEnd,
                                         DateTimeValue(
                                         DateAdd(
                                             DateValue(
@@ -4196,7 +4196,10 @@ MainScreen As screen:
                                     AddColumns(
                                         ReservationsRoom102,
                                         EventType,
-                                        "Reservation"
+                                        "Reservation",
+                                        classStart,
+                                        DateTimeValue(ReservationStart),
+                            
                                     )
                                 );
                             
