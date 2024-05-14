@@ -7,6 +7,8 @@ App As appinfo:
         WEITI_Szafirowy = RGBA(120,150,207,1);
         WEITI_Grafitowy =RGBA(60,60,76,1);
         WEITI_Wrzosowy = RGBA(180,160,170,1);
+        myCalendar = LookUp(Office365Outlook.CalendarGetTablesV2().value, name = LookUp(CalendarLocalizedLabel, Value = name).Value);
+        O365User = Office365Users.SearchUserV2({searchTerm: User().Email}).value;
     OnStart: |
         =Set(
             ShowLoading,
@@ -289,17 +291,7 @@ App As appinfo:
             Set(varSelectedDateDatePicker, Today());
             Set(varSelectedDate, Today())
         );
-        Set(
-            myCalendar,
-            LookUp(
-                Office365Outlook.CalendarGetTablesV2().value,
-                name = LookUp(
-                    CalendarLocalizedLabel,
-                    Value = name
-                ).Value
-            ) //.name
-        );
-        Set(O365User, Office365Users.SearchUserV2({searchTerm: User().Email}).value);
+        
         Set(
             ShowLoading,
             false
