@@ -1348,30 +1348,42 @@ MainScreen As screen:
                             HoverFill: =RGBA(0, 0, 0, 0.05)
                             OnSelect: |
                                 =UpdateContext({LoadingDone: 0});
+                                
                                 Set(
                                     ShowLoading,
                                     true
                                 );
                                 UpdateContext({varRoomSelection: true});
+                                
                                 UpdateContext({LoadingDone: LoadingDone + 1});
+                                
                                 Reset(DatePicker1);
+                                
                                 UpdateContext({LoadingDone: LoadingDone + 1});
+                                
                                 Reset(cbx_PhoneSelectRoom);
+                                
                                 UpdateContext({LoadingDone: LoadingDone + 1});
+                                
                                 Set(
                                     varShowMainScreen,
                                     false
                                 );
+                                
                                 UpdateContext({LoadingDone: LoadingDone + 1});
+                                
                                 Set(
                                     DateSelected,
                                     Today()
                                 );
+                                
                                 UpdateContext({LoadingDone: LoadingDone + 1});
+                                
                                 Set(
                                     DateTimeRoomChange,
                                     true
                                 );
+                                
                                 UpdateContext({LoadingDone: LoadingDone + 1});
                                 If(
                                     Mod(
@@ -1504,7 +1516,6 @@ MainScreen As screen:
                                     )
                                 );
                                 
-                                
                                 UpdateContext({LoadingDone: LoadingDone + 1}); // Room 103
                                 
                                 ClearCollect(
@@ -1551,7 +1562,6 @@ MainScreen As screen:
                                         "Class"
                                     )
                                 );
-                                
                                 
                                 UpdateContext({LoadingDone: LoadingDone + 1}); // Room 104
                                 
@@ -1788,7 +1798,7 @@ MainScreen As screen:
                                     )
                                 );
                                 
-                                
+                                UpdateContext({LoadingDone: LoadingDone + 1});
                                 // Room 108
                                 
                                 ClearCollect(
@@ -1835,7 +1845,6 @@ MainScreen As screen:
                                         "Class"
                                     )
                                 );
-                                
                                 
                                 UpdateContext({LoadingDone: LoadingDone + 1}); // Room 116
                                 
@@ -1885,7 +1894,7 @@ MainScreen As screen:
                                 );
                                 
                                 
-                                
+                                UpdateContext({LoadingDone: LoadingDone + 1});
                                 
                                 
                                 ClearCollect(
@@ -1933,6 +1942,7 @@ MainScreen As screen:
                                     )
                                 );
                                 
+                                UpdateContext({LoadingDone: LoadingDone + 1});
                                 
                                 ClearCollect(
                                     ScheduleRoom116AR,
@@ -1979,7 +1989,7 @@ MainScreen As screen:
                                     )
                                 );
                                 
-                                
+                                UpdateContext({LoadingDone: LoadingDone + 1});
                                 
                                 
                                 ClearCollect(
@@ -2075,8 +2085,7 @@ MainScreen As screen:
                                     )
                                 );
                                 
-                                
-                                
+                                UpdateContext({LoadingDone: LoadingDone + 1});
                                 
                                 ClearCollect(
                                     ScheduleRoom121,
@@ -2122,6 +2131,7 @@ MainScreen As screen:
                                         "Class"
                                     )
                                 );
+                                UpdateContext({LoadingDone: LoadingDone + 1});
                                 
                                 
                                 
@@ -2169,6 +2179,7 @@ MainScreen As screen:
                                         "Class"
                                     )
                                 );
+                                UpdateContext({LoadingDone: LoadingDone + 1});
                                 
                                 Concurrent (
                                     ClearCollect(
@@ -7411,7 +7422,7 @@ MainScreen As screen:
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 Height: =45
-                Max: =18
+                Max: =26
                 Value: =LoadingDone
                 Width: =Parent.Width
                 X: =0
