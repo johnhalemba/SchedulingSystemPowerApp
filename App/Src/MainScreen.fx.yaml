@@ -1503,19 +1503,7 @@ MainScreen As screen:
                                         "Class"
                                     )
                                 );
-                                ClearCollect(
-                                    CombinedRoom102,
-                                    ScheduleRoom102,
-                                    AddColumns(
-                                        ReservationsRoom102,
-                                        EventType,
-                                        "Reservation",
-                                        classStart,
-                                        DateTimeValue(dateStart),
-                                        classEnd,
-                                        DateTimeValue(dateEnd)
-                                    )
-                                );
+                                
                                 
                                 UpdateContext({LoadingDone: LoadingDone + 1}); // Room 103
                                 
@@ -1563,19 +1551,7 @@ MainScreen As screen:
                                         "Class"
                                     )
                                 );
-                                ClearCollect(
-                                    CombinedRoom103,
-                                    ScheduleRoom103,
-                                    AddColumns(
-                                        ReservationsRoom103,
-                                        EventType,
-                                        "Reservation",
-                                        classStart,
-                                        DateTimeValue(dateStart),
-                                        classEnd,
-                                        DateTimeValue(dateEnd)
-                                    )
-                                );
+                                
                                 
                                 UpdateContext({LoadingDone: LoadingDone + 1}); // Room 104
                                 
@@ -1621,19 +1597,6 @@ MainScreen As screen:
                                         ),
                                         EventType,
                                         "Class"
-                                    )
-                                );
-                                ClearCollect(
-                                    CombinedRoom104,
-                                    ScheduleRoom104,
-                                    AddColumns(
-                                        ReservationsRoom104,
-                                        EventType,
-                                        "Reservation",
-                                        classStart,
-                                        DateTimeValue(dateStart),
-                                        classEnd,
-                                        DateTimeValue(dateEnd)
                                     )
                                 );
                                 
@@ -1683,19 +1646,6 @@ MainScreen As screen:
                                         "Class"
                                     )
                                 );
-                                ClearCollect(
-                                    CombinedRoom105,
-                                    ScheduleRoom105,
-                                    AddColumns(
-                                        ReservationsRoom105,
-                                        EventType,
-                                        "Reservation",
-                                        classStart,
-                                        DateTimeValue(dateStart),
-                                        classEnd,
-                                        DateTimeValue(dateEnd)
-                                    )
-                                );
                                 
                                 UpdateContext({LoadingDone: LoadingDone + 1}); // Room 106
                                 
@@ -1741,19 +1691,6 @@ MainScreen As screen:
                                         ),
                                         EventType,
                                         "Class"
-                                    )
-                                );
-                                ClearCollect(
-                                    CombinedRoom106,
-                                    ScheduleRoom106,
-                                    AddColumns(
-                                        ReservationsRoom106,
-                                        EventType,
-                                        "Reservation",
-                                        classStart,
-                                        DateTimeValue(dateStart),
-                                        classEnd,
-                                        DateTimeValue(dateEnd)
                                     )
                                 );
                                 
@@ -1803,19 +1740,6 @@ MainScreen As screen:
                                         "Class"
                                     )
                                 );
-                                ClearCollect(
-                                    CombinedRoom107,
-                                    ScheduleRoom107,
-                                    AddColumns(
-                                        ReservationsRoom107,
-                                        EventType,
-                                        "Reservation",
-                                        classStart,
-                                        DateTimeValue(dateStart),
-                                        classEnd,
-                                        DateTimeValue(dateEnd)
-                                    )
-                                );
                                 
                                 UpdateContext({LoadingDone: LoadingDone + 1}); // Room 161
                                 
@@ -1863,19 +1787,7 @@ MainScreen As screen:
                                         "Class"
                                     )
                                 );
-                                ClearCollect(
-                                    CombinedRoom161,
-                                    ScheduleRoom161,
-                                    AddColumns(
-                                        ReservationsRoom161,
-                                        EventType,
-                                        "Reservation",
-                                        classStart,
-                                        DateTimeValue(dateStart),
-                                        classEnd,
-                                        DateTimeValue(dateEnd)
-                                    )
-                                );
+                                
                                 
                                 // Room 108
                                 
@@ -1923,19 +1835,7 @@ MainScreen As screen:
                                         "Class"
                                     )
                                 );
-                                ClearCollect(
-                                    CombinedRoom108,
-                                    ScheduleRoom108,
-                                    AddColumns(
-                                        ReservationsRoom108,
-                                        EventType,
-                                        "Reservation",
-                                        classStart,
-                                        DateTimeValue(dateStart),
-                                        classEnd,
-                                        DateTimeValue(dateEnd)
-                                    )
-                                );
+                                
                                 
                                 UpdateContext({LoadingDone: LoadingDone + 1}); // Room 116
                                 
@@ -1983,19 +1883,7 @@ MainScreen As screen:
                                         "Class"
                                     )
                                 );
-                                ClearCollect(
-                                    CombinedRoom116,
-                                    ScheduleRoom116,
-                                    AddColumns(
-                                        ReservationsRoom116,
-                                        EventType,
-                                        "Reservation",
-                                        classStart,
-                                        DateTimeValue(dateStart),
-                                        classEnd,
-                                        DateTimeValue(dateEnd)
-                                    )
-                                );
+                                
                                 
                                 
                                 
@@ -2044,19 +1932,7 @@ MainScreen As screen:
                                         "Class"
                                     )
                                 );
-                                ClearCollect(
-                                    CombinedRoom117,
-                                    ScheduleRoom117,
-                                    AddColumns(
-                                        ReservationsRoom117,
-                                        EventType,
-                                        "Reservation",
-                                        classStart,
-                                        DateTimeValue(dateStart),
-                                        classEnd,
-                                        DateTimeValue(dateEnd)
-                                    )
-                                );
+                                
                                 
                                 ClearCollect(
                                     ScheduleRoom116AR,
@@ -2102,19 +1978,7 @@ MainScreen As screen:
                                         "Class"
                                     )
                                 );
-                                ClearCollect(
-                                    CombinedRoom116AR,
-                                    ScheduleRoom116AR,
-                                    AddColumns(
-                                        ReservationsRoom116AR,
-                                        EventType,
-                                        "Reservation",
-                                        classStart,
-                                        DateTimeValue(dateStart),
-                                        classEnd,
-                                        DateTimeValue(dateEnd)
-                                    )
-                                );
+                                
                                 
                                 
                                 
@@ -2162,19 +2026,7 @@ MainScreen As screen:
                                         "Class"
                                     )
                                 );
-                                ClearCollect(
-                                    CombinedRoom133,
-                                    ScheduleRoom133,
-                                    AddColumns(
-                                        ReservationsRoom133,
-                                        EventType,
-                                        "Reservation",
-                                        classStart,
-                                        DateTimeValue(dateStart),
-                                        classEnd,
-                                        DateTimeValue(dateEnd)
-                                    )
-                                );
+                                
                                 
                                 UpdateContext({LoadingDone: LoadingDone + 1});
                                 
@@ -2222,19 +2074,7 @@ MainScreen As screen:
                                         "Class"
                                     )
                                 );
-                                ClearCollect(
-                                    CombinedRoom120,
-                                    ScheduleRoom120,
-                                    AddColumns(
-                                        ReservationsRoom120,
-                                        EventType,
-                                        "Reservation",
-                                        classStart,
-                                        DateTimeValue(dateStart),
-                                        classEnd,
-                                        DateTimeValue(dateEnd)
-                                    )
-                                );
+                                
                                 
                                 
                                 
@@ -2282,19 +2122,7 @@ MainScreen As screen:
                                         "Class"
                                     )
                                 );
-                                ClearCollect(
-                                    CombinedRoom121,
-                                    ScheduleRoom121,
-                                    AddColumns(
-                                        ReservationsRoom121,
-                                        EventType,
-                                        "Reservation",
-                                        classStart,
-                                        DateTimeValue(dateStart),
-                                        classEnd,
-                                        DateTimeValue(dateEnd)
-                                    )
-                                );
+                                
                                 
                                 
                                 ClearCollect(
@@ -2341,19 +2169,205 @@ MainScreen As screen:
                                         "Class"
                                     )
                                 );
-                                ClearCollect(
-                                    CombinedRoom122,
-                                    ScheduleRoom122,
-                                    AddColumns(
-                                        ReservationsRoom122,
-                                        EventType,
-                                        "Reservation",
-                                        classStart,
-                                        DateTimeValue(dateStart),
-                                        classEnd,
-                                        DateTimeValue(dateEnd)
+                                
+                                Concurrent (
+                                    ClearCollect(
+                                        CombinedRoom102,
+                                        ScheduleRoom102,
+                                        AddColumns(
+                                            ReservationsRoom102,
+                                            EventType,
+                                            "Reservation",
+                                            classStart,
+                                            DateTimeValue(dateStart),
+                                            classEnd,
+                                            DateTimeValue(dateEnd)
+                                        )
+                                    ),
+                                    ClearCollect(
+                                        CombinedRoom103,
+                                        ScheduleRoom103,
+                                        AddColumns(
+                                            ReservationsRoom103,
+                                            EventType,
+                                            "Reservation",
+                                            classStart,
+                                            DateTimeValue(dateStart),
+                                            classEnd,
+                                            DateTimeValue(dateEnd)
+                                        )
+                                    ),
+                                    ClearCollect(
+                                        CombinedRoom104,
+                                        ScheduleRoom104,
+                                        AddColumns(
+                                            ReservationsRoom104,
+                                            EventType,
+                                            "Reservation",
+                                            classStart,
+                                            DateTimeValue(dateStart),
+                                            classEnd,
+                                            DateTimeValue(dateEnd)
+                                        )
+                                    ),
+                                    ClearCollect(
+                                        CombinedRoom105,
+                                        ScheduleRoom105,
+                                        AddColumns(
+                                            ReservationsRoom105,
+                                            EventType,
+                                            "Reservation",
+                                            classStart,
+                                            DateTimeValue(dateStart),
+                                            classEnd,
+                                            DateTimeValue(dateEnd)
+                                        )
+                                    ),
+                                    ClearCollect(
+                                        CombinedRoom106,
+                                        ScheduleRoom106,
+                                        AddColumns(
+                                            ReservationsRoom106,
+                                            EventType,
+                                            "Reservation",
+                                            classStart,
+                                            DateTimeValue(dateStart),
+                                            classEnd,
+                                            DateTimeValue(dateEnd)
+                                        )
+                                    ),
+                                    ClearCollect(
+                                        CombinedRoom107,
+                                        ScheduleRoom107,
+                                        AddColumns(
+                                            ReservationsRoom107,
+                                            EventType,
+                                            "Reservation",
+                                            classStart,
+                                            DateTimeValue(dateStart),
+                                            classEnd,
+                                            DateTimeValue(dateEnd)
+                                        )
+                                    ),
+                                    ClearCollect(
+                                        CombinedRoom161,
+                                        ScheduleRoom161,
+                                        AddColumns(
+                                            ReservationsRoom161,
+                                            EventType,
+                                            "Reservation",
+                                            classStart,
+                                            DateTimeValue(dateStart),
+                                            classEnd,
+                                            DateTimeValue(dateEnd)
+                                        )
+                                    ),
+                                    ClearCollect(
+                                        CombinedRoom108,
+                                        ScheduleRoom108,
+                                        AddColumns(
+                                            ReservationsRoom108,
+                                            EventType,
+                                            "Reservation",
+                                            classStart,
+                                            DateTimeValue(dateStart),
+                                            classEnd,
+                                            DateTimeValue(dateEnd)
+                                        )
+                                    ),
+                                    ClearCollect(
+                                        CombinedRoom116,
+                                        ScheduleRoom116,
+                                        AddColumns(
+                                            ReservationsRoom116,
+                                            EventType,
+                                            "Reservation",
+                                            classStart,
+                                            DateTimeValue(dateStart),
+                                            classEnd,
+                                            DateTimeValue(dateEnd)
+                                        )
+                                    ),
+                                    ClearCollect(
+                                        CombinedRoom117,
+                                        ScheduleRoom117,
+                                        AddColumns(
+                                            ReservationsRoom117,
+                                            EventType,
+                                            "Reservation",
+                                            classStart,
+                                            DateTimeValue(dateStart),
+                                            classEnd,
+                                            DateTimeValue(dateEnd)
+                                        )
+                                    ),
+                                    ClearCollect(
+                                        CombinedRoom116AR,
+                                        ScheduleRoom116AR,
+                                        AddColumns(
+                                            ReservationsRoom116AR,
+                                            EventType,
+                                            "Reservation",
+                                            classStart,
+                                            DateTimeValue(dateStart),
+                                            classEnd,
+                                            DateTimeValue(dateEnd)
+                                        )
+                                    ),
+                                    ClearCollect(
+                                        CombinedRoom133,
+                                        ScheduleRoom133,
+                                        AddColumns(
+                                            ReservationsRoom133,
+                                            EventType,
+                                            "Reservation",
+                                            classStart,
+                                            DateTimeValue(dateStart),
+                                            classEnd,
+                                            DateTimeValue(dateEnd)
+                                        )
+                                    ),
+                                    ClearCollect(
+                                        CombinedRoom120,
+                                        ScheduleRoom120,
+                                        AddColumns(
+                                            ReservationsRoom120,
+                                            EventType,
+                                            "Reservation",
+                                            classStart,
+                                            DateTimeValue(dateStart),
+                                            classEnd,
+                                            DateTimeValue(dateEnd)
+                                        )
+                                    ),
+                                    ClearCollect(
+                                        CombinedRoom121,
+                                        ScheduleRoom121,
+                                        AddColumns(
+                                            ReservationsRoom121,
+                                            EventType,
+                                            "Reservation",
+                                            classStart,
+                                            DateTimeValue(dateStart),
+                                            classEnd,
+                                            DateTimeValue(dateEnd)
+                                        )
+                                    ),
+                                    ClearCollect(
+                                        CombinedRoom122,
+                                        ScheduleRoom122,
+                                        AddColumns(
+                                            ReservationsRoom122,
+                                            EventType,
+                                            "Reservation",
+                                            classStart,
+                                            DateTimeValue(dateStart),
+                                            classEnd,
+                                            DateTimeValue(dateEnd)
+                                        )
                                     )
-                                );
+                                
+                                )
                                 
                                 UpdateContext({LoadingDone: LoadingDone + 1});
                                 
