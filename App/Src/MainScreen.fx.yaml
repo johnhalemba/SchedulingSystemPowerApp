@@ -4195,12 +4195,44 @@ MainScreen As screen:
                                          ),
                                         EventType,
                                         "Class"
-                                )
+                                    )
                                 );
                             
                                 ClearCollect(
                                     CombinedRoom102,
-                                    ScheduleRoom102New,
+                                    AddColumns(
+                                        ScheduleRoom102,
+                                        classStart,
+                                            DateTimeValue(
+                                                Text(
+                                                    DateAdd(
+                                                        DateValue(
+                                                            date,
+                                                            "en"
+                                                        ),
+                                                        hour + 0.25,
+                                                        TimeUnit.Hours
+                                                    ),
+                                                    "yyyy-mm-dd HH:mm:ss"
+                                                )
+                                            ),
+                                        classEnd,
+                                        DateTimeValue(
+                                            Text(
+                                                DateAdd(
+                                                    DateValue(
+                                                        date,
+                                                        "en"
+                                                    ),
+                                                    hour + Value(length),
+                                                    TimeUnit.Hours
+                                                ),
+                                                "yyyy-mm-dd HH:mm:ss"
+                                            )
+                                         ),
+                                        EventType,
+                                        "Class"
+                                    ),
                                     AddColumns(
                                         ReservationsRoom102,
                                         EventType,
