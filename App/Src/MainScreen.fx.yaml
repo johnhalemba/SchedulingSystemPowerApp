@@ -4198,8 +4198,9 @@ MainScreen As screen:
                                         EventType,
                                         "Reservation",
                                         classStart,
-                                        DateTimeValue(ReservationStart),
-                            
+                                        DateTimeValue(dateStart),
+                                        classEnd,
+                                        DateTimeValue(dateEnd)
                                     )
                                 );
                             
