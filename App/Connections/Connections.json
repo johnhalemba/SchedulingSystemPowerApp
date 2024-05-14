@@ -35,28 +35,6 @@
     "dependents": [],
     "id": "05bca85e-d27b-4b0c-b940-b6620bd3edfd"
   },
-  "44ad0bbb-930c-41e0-916d-e0f44a7540ac": {
-    "connectionRef": {
-      "displayName": "SharePoint",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1685/1.0.1685.3700/sharepointonline/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
-    },
-    "datasets": {
-      "https://wutwaw-my.sharepoint.com/personal/01151661_pw_edu_pl": {
-        "dataSources": {
-          "ReservationDatabase": {
-            "tableName": "2daf9adc-e32e-4b43-9cf9-5e6047985039"
-          }
-        }
-      }
-    },
-    "dataSources": [
-      "ReservationDatabase"
-    ],
-    "dependencies": {},
-    "dependents": [],
-    "id": "44ad0bbb-930c-41e0-916d-e0f44a7540ac"
-  },
   "5114463c-ab7d-4222-94b2-467fbc6d07a5": {
     "appActions": [
       "CalendarGetTables_V2",
@@ -77,5 +55,27 @@
     "dependencies": {},
     "dependents": [],
     "id": "5114463c-ab7d-4222-94b2-467fbc6d07a5"
+  },
+  "a1953f81-8c77-4a99-a009-a2814ee50b22": {
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1685/1.0.1685.3700/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {
+      "https://wutwaw-my.sharepoint.com/personal/01151661_pw_edu_pl": {
+        "dataSources": {
+          "ReservationDatabase": {
+            "tableName": "2daf9adc-e32e-4b43-9cf9-5e6047985039"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "ReservationDatabase"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "a1953f81-8c77-4a99-a009-a2814ee50b22"
   }
 }
