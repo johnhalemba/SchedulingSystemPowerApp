@@ -3338,43 +3338,23 @@ MainScreen As screen:
                         =If(
                             CountRows(
                                 Filter(
-                                    ScheduleRoom103,
-                                    With(
-                                        {
-                                            classStart: DateAdd(
-                                                DateValue(
-                                                    date,
-                                                    "en"
-                                                ),
-                                                hour + 0.25,
-                                                TimeUnit.Hours
-                                            ),
-                                            classEnd: DateAdd(
-                                                DateValue(
-                                                    date,
-                                                    "en"
-                                                ),
-                                                hour + Value(length),
-                                                TimeUnit.Hours
-                                            )
-                                        },
-                                        Or(
-                                            And(
-                                                classStart <= EndDateTime,
-                                                classStart >= StartDateTime
-                                            ),
-                                            And(
-                                                classEnd <= EndDateTime,
-                                                classEnd >= StartDateTime
-                                            ),
-                                            And(
-                                                StartDateTime <= classEnd,
-                                                StartDateTime >= classStart
-                                            )
+                                    CombinedRoom103,
+                                    Or(
+                                        And(
+                                            classStart <= EndDateTime,
+                                            classStart >= StartDateTime
+                                        ),
+                                        And(
+                                            classEnd <= EndDateTime,
+                                            classEnd >= StartDateTime
+                                        ),
+                                        And(
+                                            StartDateTime <= classEnd,
+                                            StartDateTime >= classStart
                                         )
                                     )
-                                )
-                            ) = 0,
+                                    )
+                                ) = 0,
                             If (SelectedRoom = Self,
                                 Color.Yellow,
                                 Color.Green
@@ -3426,43 +3406,23 @@ MainScreen As screen:
                         =If(
                             CountRows(
                                 Filter(
-                                    ScheduleRoom104,
-                                    With(
-                                        {
-                                            classStart: DateAdd(
-                                                DateValue(
-                                                    date,
-                                                    "en"
-                                                ),
-                                                hour + 0.25,
-                                                TimeUnit.Hours
-                                            ),
-                                            classEnd: DateAdd(
-                                                DateValue(
-                                                    date,
-                                                    "en"
-                                                ),
-                                                hour + Value(length),
-                                                TimeUnit.Hours
-                                            )
-                                        },
-                                        Or(
-                                            And(
-                                                classStart <= EndDateTime,
-                                                classStart >= StartDateTime
-                                            ),
-                                            And(
-                                                classEnd <= EndDateTime,
-                                                classEnd >= StartDateTime
-                                            ),
-                                            And(
-                                                StartDateTime <= classEnd,
-                                                StartDateTime >= classStart
-                                            )
+                                    CombinedRoom104,
+                                    Or(
+                                        And(
+                                            classStart <= EndDateTime,
+                                            classStart >= StartDateTime
+                                        ),
+                                        And(
+                                            classEnd <= EndDateTime,
+                                            classEnd >= StartDateTime
+                                        ),
+                                        And(
+                                            StartDateTime <= classEnd,
+                                            StartDateTime >= classStart
                                         )
                                     )
-                                )
-                            ) = 0,
+                                    )
+                                ) = 0,
                             If (SelectedRoom = Self,
                                 Color.Yellow,
                                 Color.Green
@@ -3590,43 +3550,23 @@ MainScreen As screen:
                         =If(
                             CountRows(
                                 Filter(
-                                    ScheduleRoom161,
-                                    With(
-                                        {
-                                            classStart: DateAdd(
-                                                DateValue(
-                                                    date,
-                                                    "en"
-                                                ),
-                                                hour + 0.25,
-                                                TimeUnit.Hours
-                                            ),
-                                            classEnd: DateAdd(
-                                                DateValue(
-                                                    date,
-                                                    "en"
-                                                ),
-                                                hour + Value(length),
-                                                TimeUnit.Hours
-                                            )
-                                        },
-                                        Or(
-                                            And(
-                                                classStart <= EndDateTime,
-                                                classStart >= StartDateTime
-                                            ),
-                                            And(
-                                                classEnd <= EndDateTime,
-                                                classEnd >= StartDateTime
-                                            ),
-                                            And(
-                                                StartDateTime <= classEnd,
-                                                StartDateTime >= classStart
-                                            )
+                                    CombinedRoom161,
+                                    Or(
+                                        And(
+                                            classStart <= EndDateTime,
+                                            classStart >= StartDateTime
+                                        ),
+                                        And(
+                                            classEnd <= EndDateTime,
+                                            classEnd >= StartDateTime
+                                        ),
+                                        And(
+                                            StartDateTime <= classEnd,
+                                            StartDateTime >= classStart
                                         )
                                     )
-                                )
-                            ) = 0,
+                                    )
+                                ) = 0,
                             If (SelectedRoom = Self,
                                 Color.Yellow,
                                 Color.Green
@@ -3950,43 +3890,23 @@ MainScreen As screen:
                         =If(
                             CountRows(
                                 Filter(
-                                    ScheduleRoom161,
-                                    With(
-                                        {
-                                            classStart: DateAdd(
-                                                DateValue(
-                                                    date,
-                                                    "en"
-                                                ),
-                                                hour + 0.25,
-                                                TimeUnit.Hours
-                                            ),
-                                            classEnd: DateAdd(
-                                                DateValue(
-                                                    date,
-                                                    "en"
-                                                ),
-                                                hour + Value(length),
-                                                TimeUnit.Hours
-                                            )
-                                        },
-                                        Or(
-                                            And(
-                                                classStart <= EndDateTime,
-                                                classStart >= StartDateTime
-                                            ),
-                                            And(
-                                                classEnd <= EndDateTime,
-                                                classEnd >= StartDateTime
-                                            ),
-                                            And(
-                                                StartDateTime <= classEnd,
-                                                StartDateTime >= classStart
-                                            )
+                                    CombinedRoom105,
+                                    Or(
+                                        And(
+                                            classStart <= EndDateTime,
+                                            classStart >= StartDateTime
+                                        ),
+                                        And(
+                                            classEnd <= EndDateTime,
+                                            classEnd >= StartDateTime
+                                        ),
+                                        And(
+                                            StartDateTime <= classEnd,
+                                            StartDateTime >= classStart
                                         )
                                     )
-                                )
-                            ) = 0,
+                                    )
+                                ) = 0,
                             If (SelectedRoom = Self,
                                 Color.Yellow,
                                 Color.Green
